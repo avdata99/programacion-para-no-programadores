@@ -32,7 +32,7 @@ sphinx-build -b html source docs
 ```
 
 Subido ya se ve así:
-![Versión inicial](img/web-inicial.png)
+![Versión inicial](imgs/web-inicial.png)
 
 ## Usando un template
 
@@ -42,4 +42,4 @@ El _template_ inicial no es muy atractivo. Instalo el template
 pip install sphinx_rtd_theme
 ```
 
-![rtd](img/web-rtd.png)
+![rtd](imgs/web-rtd.png)
