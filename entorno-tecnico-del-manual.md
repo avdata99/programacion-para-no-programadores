@@ -23,3 +23,10 @@ Detalles:
  - Si va a publicarse en _GitHub pages_ aceptar la creación del archivo _.nojekyll_.
  - Prestar atención a todas las opciones (salida epub, autodoc, doctest, etc).
 
+## Compilando
+
+Para usar la utilidad de Github Pages de publicar el dicrectorio docs lo creo y compilo apuntando como destino este directorio.  
+
+```
+sphinx-build -b html source docs
+```
