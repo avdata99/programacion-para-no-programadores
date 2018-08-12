@@ -41,3 +41,5 @@ El _template_ inicial no es muy atractivo. Instalo el template
 ```
 pip install sphinx_rtd_theme
 ```
+
+![rtd](img/web-rtd.png)
