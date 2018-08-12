@@ -30,3 +30,14 @@ Para usar la utilidad de Github Pages de publicar el dicrectorio docs lo creo y 
 ```
 sphinx-build -b html source docs
 ```
+
+Subido ya se ve así:
+![Versión inicial](img/web-inicial.png)
+
+## Usando un template
+
+El _template_ inicial no es muy atractivo. Instalo el template
+
+```
+pip install sphinx_rtd_theme
+```

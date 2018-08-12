@@ -4,7 +4,7 @@
 #
 # This file does only contain a selection of the most common options. For a
 # full list see the documentation:
-# http://www.sphinx-doc.org/en/stable/config
+# http://www.sphinx-doc.org/en/master/config
 
 # -- Path setup --------------------------------------------------------------
 
@@ -19,14 +19,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'Curso de programación'
-copyright = u'2018, Andrés Vázquez'
-author = u'Andrés Vázquez'
+project = 'Curso de Programación'
+copyright = '2018, Andrés Vázquez'
+author = 'Andrés Vázquez'
 
 # The short X.Y version
-version = u''
+version = ''
 # The full version, including alpha/beta/rc tags
-release = u'v 0.1'
+release = 'v 0.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -59,7 +59,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = u'es'
+language = 'es'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -102,7 +102,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Cursodeprogramacindoc'
+htmlhelp_basename = 'CursodeProgramacindoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -129,8 +129,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Cursodeprogramacin.tex', u'Curso de programación Documentation',
-     u'Andrés Vázquez', 'manual'),
+    (master_doc, 'CursodeProgramacin.tex', 'Curso de Programación Documentation',
+     'Andrés Vázquez', 'manual'),
 ]
 
 
@@ -139,7 +139,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'cursodeprogramacin', u'Curso de programación Documentation',
+    (master_doc, 'cursodeprogramacin', 'Curso de Programación Documentation',
      [author], 1)
 ]
 
@@ -150,8 +150,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Cursodeprogramacin', u'Curso de programación Documentation',
-     author, 'Cursodeprogramacin', 'One line description of project.',
+    (master_doc, 'CursodeProgramacin', 'Curso de Programación Documentation',
+     author, 'CursodeProgramacin', 'One line description of project.',
      'Miscellaneous'),
 ]
 

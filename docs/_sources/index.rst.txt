@@ -1,9 +1,9 @@
-.. Curso de programación documentation master file, created by
-   sphinx-quickstart on Sun Aug 12 16:28:13 2018.
+.. Curso de Programación documentation master file, created by
+   sphinx-quickstart on Sun Aug 12 16:52:37 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Curso de programación's documentation!
+Welcome to Curso de Programación's documentation!
 =================================================
 
 .. toctree::
