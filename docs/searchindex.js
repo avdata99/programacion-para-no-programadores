@@ -1,1 +1,1 @@
-Search.setIndex({docnames:["index"],envversion:53,filenames:["index.rst"],objects:{},objnames:{},objtypes:{},terms:{busqued:0,modul:0,pagin:0},titles:["Welcome to Curso de Programaci\u00f3n\u2019s documentation!"],titleterms:{and:0,curs:0,documentation:0,indic:0,program:0,tabl:0,welcom:0}})
+Search.setIndex({docnames:["index"],envversion:53,filenames:["index.rst"],objects:{},objnames:{},objtypes:{},terms:{busqued:0,modul:0,pagin:0},titles:["Curso de Programaci\u00f3n para no programadores"],titleterms:{and:0,curs:0,documentation:[],indic:0,par:0,program:0,tabl:0,welcom:[]}})
