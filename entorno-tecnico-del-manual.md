@@ -36,7 +36,7 @@ Subido ya se ve así:
 
 ## Usando un template
 
-El _template_ inicial no es muy atractivo. Instalo el template
+El _template_ inicial no es muy atractivo. Instalo el template _Read the docs_.  
 
 ```
 pip install sphinx_rtd_theme
