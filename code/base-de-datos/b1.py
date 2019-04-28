@@ -9,7 +9,10 @@ c = conn.cursor()
 
 # Create table
 c.execute('''CREATE TABLE IF NOT EXISTS peliculas2
-             (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre text, director text, anio int)''')
+                (id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                nombre text, 
+                director text, 
+                anio int)''')
 
 # Insert a row of data
 c.execute("INSERT INTO peliculas2 (nombre, director, anio) VALUES ('Martix','Juan Perez', 1971)")
