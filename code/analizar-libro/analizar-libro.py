@@ -43,13 +43,9 @@ print('-------------------------------')
 print('Palabras mas usadas')
 print('-------------------------------')
 palabras = {}
-omitir = ['de', 'la', 'y', 'en', 'que', 'el', '', 'a', 'los', 'del', 'no',
-            'las', 'por', 'se', 'su', 'con', 'mi', 'es', 'al', 'the', 'un',
-            'una', 'of', 'para', 'como', 'o', 'lo', 'sus', 'más', 'si', 'me',
-            'sin', 'and', 'to', 'ang', 'tu', 'ya', 'you']
 for palabra in text.split(' '):
     palabra = palabra.lower()
-    if palabra in omitir:
+    if len(palabra) < 6:  # omitir las cortas
         continue
     if palabra not in palabras.keys():
         palabras[palabra] = 0
