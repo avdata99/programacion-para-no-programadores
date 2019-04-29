@@ -28,16 +28,3 @@ class MiBase:
     
     def close(self):
         self.connection.close()
-
-    # We can also close the connection if we are done with it.
-    # Just be sure any changes have been committed or they will be lost.
-
-mb = MiBase()
-mb.execute(query="INSERT INTO peliculas3 (nombre, director, anio) VALUES ('Martix','Juan Perez', 1971)")
-resultados = mb.execute(query='SELECT * FROM peliculas3')
-print('Resultados')
-for peli in resultados:
-    print('Peli: {}'.format(peli))
-
-mb.close()
-print('TERMINADO')

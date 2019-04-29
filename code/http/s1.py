@@ -8,7 +8,6 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from jinja2 import Template
 import os
 import socket
-from code.base-de-datos import b1
 
 host = '0.0.0.0'
 port = 8082
