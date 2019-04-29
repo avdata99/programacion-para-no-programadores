@@ -7,14 +7,21 @@ https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHa
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from jinja2 import Template
 import os
+import socket
+from code.base-de-datos import b1
 
+host = '0.0.0.0'
+port = 8082
 
-# HTTPRequestHandler class
-class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
+def get_my_ip_address():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    return s.getsockname()[0]
 
-  # GET
-  def do_GET(self):
-        
+class Servidor(BaseHTTPRequestHandler):
+
+    def do_GET(self):
+            
         # Send response status code
         self.send_response(200)
 
@@ -24,14 +31,17 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
 
         # Send message back to client
         carpeta = os.path.dirname(os.path.abspath(__file__))
-        path = '{}/templates{}'.format(carpeta, self.path)
-        f = open(path, 'r')
+        path = '/index.html' if self.path in ['/', ''] else self.path
+        
+        full_path = '{}/templates{}'.format(carpeta, path)
+        f = open(full_path, 'r')
         template = Template(f.read())
         f.close()
-        context = {'python_version': self.sys_version}
+        context = {'python_version': self.sys_version,
+                    'direccion': self.client_address,
+                    'ip_publica': get_my_ip_address()}
         message = template.render(context)
         
-        # Write content as utf-8 data
         self.wfile.write(bytes(message, "utf8"))
         return
 
@@ -40,7 +50,8 @@ print('starting server...')
 
 # Server settings
 # Choose port 8080, for port 80, which is normally used for a http server, you need root access
-server_address = ('127.0.0.1', 8081)
-httpd = HTTPServer(server_address, testHTTPServer_RequestHandler)
+# server_address = ('127.0.0.1', 8082)
+server_address = (host, port)
+httpd = HTTPServer(server_address, Servidor)
 print('running server...')
 httpd.serve_forever()
