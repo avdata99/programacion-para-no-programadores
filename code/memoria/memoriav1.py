@@ -3,8 +3,9 @@ Juego de memoria
 Tablero con Fichas que el jugador debe recordar
 """
 
-filas = 4
-columnas = 6
+letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+filas = 3
+columnas = 4
 
 f = 0
 c = 0
@@ -15,7 +16,7 @@ for fila in range(filas):
         print('|X', end='')
     print('|')
 
-letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
 resultados = [[]]
 f = 0
 c = 0
