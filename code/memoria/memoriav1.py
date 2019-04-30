@@ -5,9 +5,9 @@ Tablero con Fichas que el jugador debe recordar
 
 filas = 3
 columnas = 4
+letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
+
 celdas = filas * columnas
-letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-letras = letras[:celdas]
 
 print('Letras: ' + letras)
 
