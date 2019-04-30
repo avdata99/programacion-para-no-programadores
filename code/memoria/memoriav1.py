@@ -3,9 +3,13 @@ Juego de memoria
 Tablero con Fichas que el jugador debe recordar
 """
 
-letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 filas = 3
 columnas = 4
+celdas = filas * columnas
+letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+letras = letras[:celdas]
+
+print('Letras: ' + letras)
 
 f = 0
 c = 0
@@ -16,15 +20,3 @@ for fila in range(filas):
         print('|X', end='')
     print('|')
 
-
-resultados = [[]]
-f = 0
-c = 0
-for fila in range(filas):
-    
-    for columna in range(columnas):
-        resultados[f]
-
-        c = c + 1
-    
-    f = f + 1
