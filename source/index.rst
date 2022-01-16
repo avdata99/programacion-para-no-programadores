@@ -31,14 +31,17 @@ Ejemplo
 
 La computadora interna de un lavarropas que gestiona los dispositivos y conexiones internas podría tener estas instrucciones:
 
-#. Abrir el conducto de agua durante 20 segundos
+#. Abrir el conducto de agua hasta que el sensor detecte que se llegó al nivel esperado
+#.  -- Si no se cumple en 20 segundos mostrar en pantalla codigo de error ERR01
 #. Abrir el conducto de jabón líquido 10 segundos
 #. Girar a velocidad normal el tambor 20 vueltas hacia la derecha
 #. Girar a velocidad normal el tambor 20 vueltas hacia la izquierda
 #. Abrir el desagote del tambor mientras gira durante 1 minuto
+#.  -- Si el sensor detecta que todavia hay agua mostrar en pantalla codigo de error ERR02
 #. Abrir el conducto de agua durante 20 segundos (para enjuague)
 #. Girar a velocidad normal el tambor 20 segundos
 #. Abrir el desagote del tambor
+#.  -- Si el sensor detecta que todavia hay agua mostrar en pantalla codigo de error ERR03
 #. Girar a velocidad rápida el tambor 2 minutos hacia la derecha
 #. Girar a velocidad rápida el tambor 2 minutos hacia la izquierda
 #. Destrabar la puerta del tambor, trabajo terminado.
@@ -63,7 +66,7 @@ Acotar estos entornos donde un software se ejecuta es difícil, son múltiples.
 ---------------------------------
 
 Como dijimos programar es escribir instrucciones (las denominaremos código o *código fuente*). Para esto podríamos usar algún 
-software de edición de texto pero existen herramientas específicas para esta tarea. Incluso hay editores específicos para lenguajes de programación.  
+software de edición de texto pero existen herramientas específicas para esta tarea.  
 
 `Atom <https://ide.atom.io/>`_
 
@@ -77,11 +80,9 @@ A estos entornos de trabajo se los conoce *Entornos de desarrollo Integrado* o I
 Estas herramientas proveen funcionalidades que simplifican el trabajo de un programador
 
 
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
 
 
 Indices y tablas

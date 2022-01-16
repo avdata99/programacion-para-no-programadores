@@ -9,7 +9,7 @@ letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
 
 celdas = filas * columnas
 
-print('Letras: ' + letras)
+print(f'Letras: {letras}')
 
 f = 0
 c = 0
