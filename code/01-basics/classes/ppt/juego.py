@@ -1,33 +1,3 @@
-from random import choice
-
-opciones = ["piedra", "papel", "tijeras"]
-
-class PiedraPapelTijerasPlayer:
-    jugados = 0
-    ganados = 0
-    empatados = 0
-    perdidos = 0
-
-    def name(self):
-        raise NotImplementedError("Debe darle un nombre")
-
-    def move(self):
-        raise NotImplementedError("Debe implementar el metodo move")
-
-class AzarPlayer(PiedraPapelTijerasPlayer):
-
-    def name(self):
-        return "Azar"
-    def move(self):
-        return choice(opciones)
-
-class PiedraPlayer(PiedraPapelTijerasPlayer):
-
-    def name(self):
-        return "Piedra"
-    def move(self):
-        return "piedra"
-
 def ganador(op1, op2):
     """ devuelve 0 en empate, 1 si gana op1 y 2 si gana op2 """
     if op1 == op2:
@@ -49,7 +19,7 @@ def ganador(op1, op2):
         raise ValueError(f"No se puede determinar ganador entre {op1} y {op2}")
 
 def competir(jugador1, jugador2):
-    for rondas in range(100):
+    for ronda in range(100):
         opcion_elegida1 = jugador1.move()
         opcion_elegida2 = jugador2.move()
 
@@ -65,5 +35,3 @@ def competir(jugador1, jugador2):
             jugador2.ganados += 1
         
     print(f"Gana Jugador {jugador1.name()}: {jugador1.ganados} - Gana Jugador {jugador2.name()}: {jugador2.ganados} - Empates: {jugador1.empatados}")
-    
-competir(jugador1=AzarPlayer(), jugador2=PiedraPlayer())

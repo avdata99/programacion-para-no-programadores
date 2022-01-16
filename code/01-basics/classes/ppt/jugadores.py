@@ -49,6 +49,13 @@ def ganador(op1, op2):
         raise ValueError(f"No se puede determinar ganador entre {op1} y {op2}")
 
 def competir(jugador1, jugador2):
+    """ Los jugadores deben ser alguna clase heredada de PiedraPapelTijerasPlayer """
+    if not isinstance(jugador1, PiedraPapelTijerasPlayer):
+        raise TypeError("jugador1 debe ser una instancia de PiedraPapelTijerasPlayer")
+    if not isinstance(jugador2, PiedraPapelTijerasPlayer):
+        raise TypeError("jugador2 debe ser una instancia de PiedraPapelTijerasPlayer")
+
+def competir(jugador1, jugador2):
     for rondas in range(100):
         opcion_elegida1 = jugador1.move()
         opcion_elegida2 = jugador2.move()
