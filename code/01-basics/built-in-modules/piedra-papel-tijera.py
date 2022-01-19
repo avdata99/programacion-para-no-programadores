@@ -1,6 +1,6 @@
 # dos jugadores aleatorios compitiendo
 
-from random import choice, randint
+from random import choice
 
 opciones = ["piedra", "papel", "tijeras"]
 

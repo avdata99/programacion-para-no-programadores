@@ -1,4 +1,4 @@
-#Algunas funciones de los "strings"
+# Algunas funciones de los "strings"
 nombre = "Juan Gonzalez"
 nombre_minuscula = nombre.lower()
 print(nombre_minuscula)

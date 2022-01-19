@@ -24,7 +24,7 @@ ultimas_2_combinaciones = combinaciones[-2:]
 print(f'La últimas dos combinaciones son: {ultimas_2_combinaciones}')
 # La últimas dos combinaciones son: ['luis gomez', 'luis rodriguez']
 
-# eliminar elementos
+# eliminar elementos especìficos
 combinaciones.remove("juan gonzalez")
 # eliminar el primer elemento
 del combinaciones[0]

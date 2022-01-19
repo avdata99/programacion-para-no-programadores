@@ -1,7 +1,6 @@
 def ganador(op1, op2):
     """ devuelve 0 en empate, 1 si gana op1 y 2 si gana op2 """
-    if op1 == op2:
-        return 0
+    if op1 == op2: return 0
     if   (op1, op2) == ("piedra", "tijeras"): return 1
     elif (op1, op2) == ("piedra", "papel"): return 2
     elif (op1, op2) == ("tijeras", "piedra"): return 2
