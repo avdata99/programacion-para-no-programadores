@@ -1,4 +1,5 @@
-# Usando una funcion
+# Format strings
+
 def hello_world(nombre, pais):
     print("Hello world {} de {}!".format(nombre, pais))
     # valores enumerados
