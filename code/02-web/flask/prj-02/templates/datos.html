@@ -8,8 +8,9 @@
     <h2>{{ site_title }}</h2>
     <p>
       <ul>
-        <li>Bondis activos: {{ data.bondis_activos }}</li>
+        <li>Bondis activos: <b>{{ data.bondis_activos }}</b></li>
         <li>Bondi más rápido: {{ data.bondi_mas_rapido }} km/h</li>
+        <li>Bondis adaptados: {{ data.adaptados }} ({{ (100 * data.adaptados / data.bondis_activos)|round }} %)</li>
       </ul>
     </p>
     <p>

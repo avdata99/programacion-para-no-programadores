@@ -1,8 +1,6 @@
-nombre = "juan"
-a_en_nombre = "a" in nombre
-# otra opcion a_en_nombre = nombre.find("a") >= 0
+edad = 30
 
-if a_en_nombre:
-    print(f"La letra 'a' está en {nombre}")
+if edad > 20:
+    print(f"La edad es mayor a 20")
 else:
-    print(f"La letra 'a' no está en {nombre}")
+    print(f"La edad es menor a 20")

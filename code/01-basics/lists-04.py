@@ -1,7 +1,8 @@
-# Listas por/de comprension
-# mas ejemplos https://www.analyticslane.com/2019/09/23/listas-por-comprension-en-python/
+nombre = "Pedro"
 
-lista = [1, 2]
-lista.append(3)
+print(f"La primera letra de mi nombre es {nombre[0]}")
+print(f"La última letra de mi nombre es {nombre[-1]}")
 
-print(lista)
+# los strings pueden ser tratados como listas de letras (caracteres)
+for letra in nombre:
+    print(letra, end='-')

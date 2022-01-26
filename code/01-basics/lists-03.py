@@ -1,23 +1,42 @@
-# Listas por/de comprension
-# mas ejemplos https://www.analyticslane.com/2019/09/23/listas-por-comprension-en-python/
+nombres = ["juan", "pedro", "luis"]
+apellidos = ["gonzalez", "gomez", "rodriguez"]
 
-lista = [x for x in "algunos caracteres mezclados" if x != "e"]
+# combinar todos los nombres completos posibles
+combinaciones = []
+for nombre in nombres:
+    for apellido in apellidos:
+        nombre_completo = f"{nombre} {apellido}"
+        combinaciones.append(nombre_completo)
 
-""" También podría escribirse como 
-lista = [
-    x
-    for x in "algunos caracteres mezclados"
-    if x != "e"
-]
-"""
+total_combinaciones = len(combinaciones)
+print(f'Total de combinaciones: {total_combinaciones}')
+# Total de combinaciones: 9
 
-# Equivalente a:
-lista2 = []
-for x in "algunos caracteres mezclados":
-    if x != "e":
-        lista2.append(x)
+primer_combinacion = combinaciones[0]
+print(f'La primera combinación es: {primer_combinacion}')
+# La primera combinación es: juan gonzalez
 
-print(f"Lista 1 {lista}")
-print(f"Lista 2 {lista2}")
+primeras_2_combinaciones = combinaciones[0:2]
+print(f'Las primeras dos combinación son: {primeras_2_combinaciones}')
+# Las primeras dos combinación son: ['juan gonzalez', 'juan gomez']
 
-print(f"lista == lista2 {lista==lista2}")
+ultimas_2_combinaciones = combinaciones[-2:]
+print(f'La últimas dos combinaciones son: {ultimas_2_combinaciones}')
+# La últimas dos combinaciones son: ['luis gomez', 'luis rodriguez']
+
+# eliminar elementos especìficos
+combinaciones.remove("juan gonzalez")
+# eliminar el primer elemento
+del combinaciones[0]
+
+# eliminar y devolver lo eliminado
+primer_elemento = combinaciones.pop(0)
+print(f'La primera combinación era: {primer_elemento} y ahora es {combinaciones[0]}')
+
+# ordenar
+combinaciones.sort()
+print(f'Lista ordenada: {combinaciones}')
+
+# invertir orden
+combinaciones.reverse()
+print(f'Lista invertida: {combinaciones}')

@@ -5,6 +5,7 @@ f = open("archivo.txt", "w")
 f.write(texto)
 f.close()
 
+# --------------------
 # leer un archivo
 
 f = open("archivo.txt")  # predeterminado lo abre para lectura
