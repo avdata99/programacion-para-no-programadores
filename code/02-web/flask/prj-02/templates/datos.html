@@ -16,5 +16,20 @@
     <p>
       <a href="{{ url_for('index') }}">Volver al inicio</a>
     </p>
+    <p>
+      <h3>Lista de bondis</h3>
+      <ul>
+        {% for bondi in data.bondis %}
+        {% if bondi.id %}
+        <li>
+          <a href="{{ url_for('bondi', bondi_id=bondi.id) }}">
+            <b>{{ bondi.properties.nombre }}</b>
+          </a>
+          : 
+          {{ bondi.properties.ultimas_velocidades_promedio }} km/h</li>
+        {% endif%}
+        {% endfor %}
+      </ul>
+    </p>
 </body>
 </html>

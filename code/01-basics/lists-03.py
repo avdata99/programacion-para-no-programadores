@@ -1,42 +1,41 @@
-nombres = ["juan", "pedro", "luis"]
-apellidos = ["gonzalez", "gomez", "rodriguez"]
+apellidos = ["gonzalez", "gomez", "rodriguez", "lopez", "garcia"]
 
-# combinar todos los nombres completos posibles
-combinaciones = []
-for nombre in nombres:
-    for apellido in apellidos:
-        nombre_completo = f"{nombre} {apellido}"
-        combinaciones.append(nombre_completo)
+total_apellidos = len(apellidos)
+print(f'Total de apellidos: {total_apellidos}')
+# Total de apellidos: 5
 
-total_combinaciones = len(combinaciones)
-print(f'Total de combinaciones: {total_combinaciones}')
-# Total de combinaciones: 9
+primer_apellido = apellidos[0]
+print(f'El primer apellido es: {primer_apellido}')
+# El primer apellido es: gonzalez
 
-primer_combinacion = combinaciones[0]
-print(f'La primera combinación es: {primer_combinacion}')
-# La primera combinación es: juan gonzalez
+ultimo_apellido = apellidos[-1]
+print(f'El último apellido es: {ultimo_apellido}')
+# El último apellido es: garcia
 
-primeras_2_combinaciones = combinaciones[0:2]
-print(f'Las primeras dos combinación son: {primeras_2_combinaciones}')
-# Las primeras dos combinación son: ['juan gonzalez', 'juan gomez']
+primeros_2 = apellidos[0:2]
+print(f'Los primeros dos: {primeros_2}')
+# Los primeros dos: ['gonzalez', 'gomez']
 
-ultimas_2_combinaciones = combinaciones[-2:]
-print(f'La últimas dos combinaciones son: {ultimas_2_combinaciones}')
-# La últimas dos combinaciones son: ['luis gomez', 'luis rodriguez']
+ultimos_2 = apellidos[-2:]
+print(f'Los últimos dos son: {ultimos_2}')
+# Los últimos dos son: ['lopez', 'garcia']
 
 # eliminar elementos especìficos
-combinaciones.remove("juan gonzalez")
+apellidos.remove("lopez")
 # eliminar el primer elemento
-del combinaciones[0]
+del apellidos[0]
 
 # eliminar y devolver lo eliminado
-primer_elemento = combinaciones.pop(0)
-print(f'La primera combinación era: {primer_elemento} y ahora es {combinaciones[0]}')
+primer_elemento = apellidos.pop(0)
+print(f'El primero era: {primer_elemento} y ahora es {apellidos[0]}')
+# El primero era: gomez y ahora es rodriguez
 
 # ordenar
-combinaciones.sort()
-print(f'Lista ordenada: {combinaciones}')
+apellidos.sort()
+print(f'Lista ordenada: {apellidos}')
+# Lista ordenada: ['garcia', 'rodriguez']
 
 # invertir orden
-combinaciones.reverse()
-print(f'Lista invertida: {combinaciones}')
+apellidos.reverse()
+print(f'Lista invertida: {apellidos}')
+# Lista invertida: ['rodriguez', 'garcia']

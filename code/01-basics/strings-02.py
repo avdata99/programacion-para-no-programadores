@@ -2,23 +2,23 @@
 nombre = "Juan Gonzalez"
 nombre_minuscula = nombre.lower()
 print(nombre_minuscula)
+# juan gonzalez
 
 nombre_mayuscula = nombre.upper()
 print(nombre_mayuscula)
+# JUAN GONZALEZ
 
-# buscar
+# buscar (devuielve la posicion donde se encontró)
 print(nombre.find("Gonzalez"))
+# 5
+
 # buscar tambien
 print("Gonzalez" in nombre)
-
-separador = "+"
-lista = ["Juan", "Pedro", "Luis"]
-print(separador.join(lista))
-# muestra Juan+Pedro+Luis
+# True
 
 # limpiar caracteres a los costados
-print("   hola   ".strip())
-# muestra hola
+print("   ho la   ".strip())
+# muestra ho la (sin espacios al principio o al final)
 
 print("[algo]".strip("[]"))
 # muestra algo

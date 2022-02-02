@@ -15,6 +15,6 @@ print(division3)
 # 0
 
 # resto de division
-resto = 2 % 3
+resto = 8 % 3
 print(f"resto = {resto}")
 # resto = 2

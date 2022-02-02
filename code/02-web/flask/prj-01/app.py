@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello, World!'
+    return 'Hello, World 3!'
 
 
 @app.route("/user/<string:user_name>/")
@@ -13,6 +13,7 @@ def show_user(user_name):
     return f"Mostrando datos del usuario {user_name}"
 
 """
+(opcionalmente ejecutar export FLASK_ENV=development para que los cambios se apliquen sin reiniciar el servidor)
 Ejecutar "flask run" desde la linea de comandos
 
 * Environment: production

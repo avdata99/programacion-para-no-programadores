@@ -17,9 +17,3 @@ print(f"Raiz cubica 27 = {raiz_cubica}")
 resultado = 3 + 2 * (2 + 2)
 print(resultado)
 # 11
-
-# sumar 1
-a = 2
-a += 1  # lo mismo que a = a + 1
-print(a)
-# 3

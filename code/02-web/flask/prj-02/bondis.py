@@ -27,6 +27,18 @@ def get_bondis_info():
         'bondis_activos': activos,
         'bondi_mas_rapido': maxima_velocidad,
         'adaptados': adaptados,
+        'bondis': bondis,
     }
 
     return results
+
+def get_bondi_info(bondi_id):
+    """ obtener informacion de UN colectivos de la ciudad de Córdoba """
+
+    # La URL requiere un ID de colectivo al final
+    url = f'https://cordobus.apps.cordoba.gob.ar/tracking/api/internos-activos-ahora/{bondi_id}'
+    response = requests.get(url)
+
+    bondi = response.json()
+    
+    return bondi
