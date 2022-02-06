@@ -1,21 +1,24 @@
+"""
+Descargar un libro en formato texto y analizar 
+algunos detalles generales de su contenido
+"""
+
 import requests
 import os
 
-carpeta = os.path.dirname(os.path.abspath(__file__))
-path_libro = '{}/florante.txt'.format(carpeta)
-if os.path.exists(path_libro):
-    f = open(path_libro, 'r')
-    text = f.read()
-    f.close()
-    print('Leyendo archivo local')
-else:
+path_libro = 'florante.txt'
+if not os.path.exists(path_libro):    
     print('DESCARGANDO LIBRO')
     url = 'http://www.gutenberg.org/cache/epub/15531/pg15531.txt'
     req = requests.get(url)
-    text = req.text
     f = open(path_libro, 'w')
-    f.write(text)
+    f.write(req.text)
     f.close()
+
+f = open(path_libro, 'r')
+text = f.read()
+f.close()
+print('Leyendo archivo local')
 
 print('Largo del texto {}'.format(len(text)))
 print('Primeras 30 letras: {}'.format(text[:30]))
@@ -45,7 +48,7 @@ print('-------------------------------')
 palabras = {}
 for palabra in text.split(' '):
     palabra = palabra.lower()
-    if len(palabra) < 6:  # omitir las cortas
+    if len(palabra) < 5:  # omitir las palabras cortas
         continue
     if palabra not in palabras.keys():
         palabras[palabra] = 0

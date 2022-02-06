@@ -12,23 +12,30 @@ class Carta:
     def __repr__(self):
         return f'<Carta {self.numero} de {self.palo}>'
 
+
 class Mazo:
+    """ Mazo general de cartas de tipo no especificado """
+
     def __init__(self, palos):
         self.cartas = []
         self.palos = palos
         self.cargar_cartas()
 
     def cargar_cartas(self):
+        """ No esta definido de que tipo es, no se sabe que cartas cargar
+            Forzar a las clases hijas a que implementen esta función """
         raise NotImplementedError
 
     def entregar_carta(self):
-        """ Entregaer una carta al azar y quitarla del mazo """
+        """ Entregaer una carta al azar (y quitarla del mazo) """
         carta = choice(self.cartas)
         self.cartas.remove(carta)
         return carta
 
 
 class MazoEspaniola(Mazo):
+    """ Mazo de cartas españolas """
+
     def __init__(self):
         super().__init__(palos=['Oro', 'Copa', 'Espada', 'Basto'])
 
@@ -46,6 +53,8 @@ class MazoEspaniola(Mazo):
 
 
 class MazoTruco(MazoEspaniola):
+    """ Mazo de cartas truco (españolas quitando comodines, ochos y nueves) """
+
     def cargar_cartas(self):
         """ Cargar las cartas del mazo español
             y quitar las que no usamos para el truco

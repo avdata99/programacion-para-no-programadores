@@ -11,10 +11,13 @@ class Persona:
             con mayúscula y no tengan espacios al principio
             o al final
         """
-        self.nombre = self.nombre.strip()
-        self.apellido = self.apellido.strip()
-        self.nombre = self.nombre.title()
-        self.apellido = self.apellido.title()
+        self.nombre = self.nombre.lower().strip().title()
+        self.apellido = self.apellido.lower().strip().title()
+
+    def lower(self):
+        """ Representacion en minúsculas del nombre completo
+            No cambia los valores del objeto real """
+        return f'{self.nombre.lower()} {self.apellido.lower()}'
 
     def __str__(self):
         return f'{self.nombre} {self.apellido}'
