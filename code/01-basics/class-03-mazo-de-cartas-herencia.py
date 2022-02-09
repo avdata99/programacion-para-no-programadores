@@ -114,8 +114,13 @@ class ManoTruco(Mano):
     def envido(self):
         self._validate_mano_completa()
         # ver todos los envidos posibles y elegir el mejor
-        envidos = [max([self._carta_cuenta_envido(carta) for carta in self.cartas])]
+        # aun si las tres cartas fueran de distinto palo, 
+        #   la carta que sea mayor de ellas sería un envido posible
+        envidos = [
+            max([self._carta_cuenta_envido(carta) for carta in self.cartas])
+        ]
         palos = [carta.palo for carta in self.cartas]
+        # Si hay otros envidos ponerlos en la lista para ver cual es el mejor
         if palos[0] == palos[1]:
             envidos.append(self._sumar_envido(self.cartas[0], self.cartas[1]))
         if palos[0] == palos[2]:
@@ -123,6 +128,7 @@ class ManoTruco(Mano):
         if palos[1] == palos[2]:
             envidos.append(self._sumar_envido(self.cartas[1], self.cartas[2]))
 
+        # devolver el mas alto de todos
         return max(envidos)
 
     def __str__(self):
