@@ -1,6 +1,10 @@
 """
-carta = {'palo': 'xxx', 'numero': N}
+La funcion envido, dada una lista de (estrictamente) tres cartas,
+me devuelve el envido de esa mano de truco.
+Cada elemento de la lista es de la forma:
+    carta = {'palo': 'xxx', 'numero': N}
 """
+
 
 def carta_simple_envido(carta):
     """ de una carta data obtiene cuanto suma al envido
