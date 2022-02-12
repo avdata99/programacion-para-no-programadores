@@ -108,10 +108,13 @@ class ManoTruco(Mano):
         return carta.numero if carta.numero < 10 else 0
 
     def _sumar_envido(self, carta1, carta2):
-        """ Aqui las dos cartas finales se suman luego de detectar palos similares """
+        """ Aqui las dos cartas finales se suman luego de detectar palos iguales """
         return 20 + self._carta_cuenta_envido(carta1) + self._carta_cuenta_envido(carta2)
 
     def envido(self):
+        """ Carlcular el envido dadas 3 cartas """
+
+        # Asegurarse que tiene 3 cartas
         self._validate_mano_completa()
         # ver todos los envidos posibles y elegir el mejor
         # aun si las tres cartas fueran de distinto palo, 
