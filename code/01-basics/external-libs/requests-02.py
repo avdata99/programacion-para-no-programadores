@@ -6,6 +6,9 @@ response = requests.get(url)
 data = response.json()
 print(f'Datos: {data}')
 
+# De que tipo es data?
+print(type(data))
+
 """
 Ejemplo
 

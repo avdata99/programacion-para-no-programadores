@@ -8,7 +8,7 @@ Cada elemento de la lista es de la forma:
 
 def carta_simple_envido(carta):
     """ de una carta data obtiene cuanto suma al envido
-        De un 12 devuelve 2, de un 10 cero y de un 7, devuelve 7"""
+        De un 2 devuelve 2, de un 10 cero y de un 7, devuelve 7"""
     return carta['numero'] if carta['numero'] < 10 else 0
 
 def envido_dos_cartas(carta1, carta2):

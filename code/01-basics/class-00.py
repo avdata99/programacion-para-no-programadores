@@ -4,8 +4,10 @@ class Persona:
         self.nombre = nombre
         self.apellido = apellido
 
-    # def __str__(self):
-    #     return f'{self.nombre} {self.apellido}'
+    # definir __str__
+    # definir lower
+    # definitr clean
+    # allow init auto_clean
 
 
 juan = Persona(nombre='juan carlos', apellido='perez')
