@@ -50,7 +50,13 @@ def cartas_recibidas(jugador):
     cartas=f"{v1} de {p1}, {v2} de {p2} y {v3} de {p3}"
     
     return cartas
-    
+
+def _puntaje_real_una_carta(numero):
+    if numero < 10:
+        return numero
+    else:
+        return 0
+
 def calcular_envido(jugador):
 
     envido=0
@@ -63,34 +69,19 @@ def calcular_envido(jugador):
     v3=jugador[2].get("numero")
 
     if p1 == p2:
-        if v1<8 and v2<8:
-            envido=20+v1+v2
-        elif v1>7 and v2>7:
-            envido=20
-        elif v1>7 and v2<8:
-            envido=20+v2
-        else:
-            envido=20+v1
+        envido = 20 + _puntaje_real_una_carta(v1) + _puntaje_real_una_carta(v2)
     elif p1==p3:
-        if v1<8 and v3<8:
-            envido=20+v1+v3
-        elif v1>7 and v3>7:
-            envido=20
-        elif v1>7 and v3<8:
-            envido=20+v3
-        else:
-            envido=20+v1
+        envido = 20 + _puntaje_real_una_carta(v1) + _puntaje_real_una_carta(v3)
     elif p2==p3:
-        if v2<8 and v3<8:
-            envido=20+v2+v3
-        elif v2>7 and v3>7:
-            envido=20
-        elif v2>7 and v3<8:
-            envido=20+v3
-        else:
-            envido=20+v2
+        envido = 20 + _puntaje_real_una_carta(v2) + _puntaje_real_una_carta(v3)
     else:
-        envido=max(v1,v2,v3)
+        # esta bien tomar el máximo pero debe tenerse en cuenta las cartas 
+        # mayores o iguales a 10 tambien aca
+        envido=max(
+            _puntaje_real_una_carta(v1),
+            _puntaje_real_una_carta(v2),
+            _puntaje_real_una_carta(v3)
+        )
 
     if p1 == p2 == p3:
         if v1>7 and v2<8 and v3<8:
