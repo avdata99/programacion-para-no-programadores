@@ -10,7 +10,6 @@ jugador2=[]
 
 #Si activan esta prueba deben anular repartir() y si reparten flor coloquen la vandera que corresponda al jugador!!
 
-dictioresult={}
 mazo=[]
 flor=False
 
