@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-from bondis import get_bondis_info, get_bondi_info
+from models.bondis import get_bondis_info, get_bondi_info
+
 
 app = Flask(__name__)
 
