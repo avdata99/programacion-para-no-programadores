@@ -16,12 +16,9 @@ flor=False
 def mezclar():
     palos=["oro","basto","copa","espada"]
     numeros=[1,2,3,4,5,6,7,10,11,12]
-    dictio={}
     for palo in palos:
         for numero in numeros:
-            dictio["palo"]=palo
-            dictio["numero"]=numero
-            dictioresult=(dictio["numero"],dictio["palo"])
+            dictioresult={"numero": numero ,"palo": palo}
             mazo.append(dictioresult)
 
     random.shuffle(mazo)    #Con esta función mezclamos el mazo
@@ -31,9 +28,9 @@ def repartir():
     cont=1
     for carta in mazo:
         if cont%2==1:
-            jugador1.append({"numero":carta[0],"palo":carta[1]})
+            jugador1.append(carta)
         else:
-            jugador2.append({"numero":carta[0],"palo":carta[1]})
+            jugador2.append(carta)
         cont+=1
         
         if cont==7:
