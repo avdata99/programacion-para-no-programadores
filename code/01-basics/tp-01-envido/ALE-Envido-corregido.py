@@ -1,7 +1,5 @@
 import random
 
-jugador1=[]
-jugador2=[]
 
 #jugador1=[{'numero': 1, 'palo': 'copa'}, {'numero': 3, 'palo': 'copa'}, {'numero': 7, 'palo': 'copa'}]
 #flor=True
@@ -10,10 +8,10 @@ jugador2=[]
 
 #Si activan esta prueba deben anular repartir() y si reparten flor coloquen la vandera que corresponda al jugador!!
 
-mazo=[]
 flor=False
 
 def mezclar():
+    mazo=[]
     palos=["oro","basto","copa","espada"]
     numeros=[1,2,3,4,5,6,7,10,11,12]
     for palo in palos:
@@ -22,9 +20,11 @@ def mezclar():
             mazo.append(dictioresult)
 
     random.shuffle(mazo)    #Con esta función mezclamos el mazo
-    return (mazo)
+    return mazo
 
-def repartir():
+def repartir(mazo):
+    jugador1 = []
+    jugador2 = []
     cont=1
     for carta in mazo:
         if cont%2==1:
@@ -36,7 +36,7 @@ def repartir():
         if cont==7:
             break
     
-    return(jugador1,jugador2)
+    return jugador1, jugador2
 
 def cartas_recibidas(jugador):
     
@@ -49,7 +49,7 @@ def cartas_recibidas(jugador):
     
     cartas=f"{v1} de {p1}, {v2} de {p2} y {v3} de {p3}"
     
-    return (cartas)
+    return cartas
     
 def calcular_envido(jugador):
 
@@ -112,14 +112,14 @@ def calcular_envido(jugador):
         flor=True
         print("Este jugador tiene flor!!!")
 
-    return(envido)
+    return envido
 
 
 print("Mezclamos el mazo")
-mezclar()
+mazo = mezclar()
 
 print("Repartimos las cartas")
-repartir()
+jugador1, jugador2 = repartir(mazo)
 
 cartas1=cartas_recibidas(jugador1)
 cartas2=cartas_recibidas(jugador2)
