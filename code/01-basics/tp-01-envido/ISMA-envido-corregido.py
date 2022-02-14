@@ -28,8 +28,11 @@ for orden in ['primera', 'segunda', 'tercera']:
     else:
         cartas[posicion-1]+=numero
 
-if max(palo)>1:
-    tanto=max(cartas)+20
+# ver si el 2 esta en palo (o sea, hay 2 cartas de un mismo palo)
+if 2 in palo:
+    # ver en que indice esta un elemento especifico
+    palo_con_dos_cartas = palo.index(2)
+    tanto = cartas[palo_con_dos_cartas] + 20
 else:
-    tanto=max(cartas)
+    tanto = max(cartas)
 print(f"tiene {tanto} tantos para el envido")
