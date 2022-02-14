@@ -31,8 +31,5 @@ for orden in ['primera', 'segunda', 'tercera']:
 if max(palo)>1:
     tanto=max(cartas)+20
 else:
-   tanto=max(cartas)
+    tanto=max(cartas)
 print(f"tiene {tanto} tantos para el envido")
-
-palo=[0,0,0,0]
-cartas=[0,0,0,0]
