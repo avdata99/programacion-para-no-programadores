@@ -11,54 +11,22 @@ figura=[10,11,12]
 palo=[0,0,0,0]
 cartas=[0,0,0,0]
 
+for orden in ['primera', 'segunda', 'tercera']:
 
+    print(f"ingrese el numero de la {orden} carta")
+    numero=int(input())
 
-print("ingrese el numero de la primera carta")
-numero=int(input())
+    print(f"ingrese el palo segun corresponda:")
+    for x in palos:
+        print(x,":",palos[x])
 
-print(f"ingrese el palo segun corresponda:")
-for x in palos:
-    print(x,":",palos[x])
+    posicion=int(input())
+    palo[posicion-1]+=1
 
-posicion=int(input())
-palo[posicion-1]+=1
-
-if numero in figura:
-    cartas[posicion-1]+=0
-else:
-    cartas[posicion-1]+=numero
-
-print("ingrese el numero de la segunda carta")
-numero=int(input())
-
-print(f"ingrese el palo segun corresponda:")
-for x in palos:
-    print(x,":",palos[x])
-
-posicion=int(input())
-palo[posicion-1]+=1
-
-if numero in figura:
-    cartas[posicion-1]+=0
-else:
-    cartas[posicion-1]+=numero
-
-print("ingrese el numero de la tercera carta")
-numero=int(input())
-
-
-print(f"ingrese el palo segun corresponda:")
-for x in palos:
-    print(x,":",palos[x])
-
-posicion=int(input())
-palo[posicion-1]+=1
-
-if numero in figura:
-    cartas[posicion-1]+=0
-else:
-    cartas[posicion-1]+=numero
-
+    if numero in figura:
+        cartas[posicion-1]+=0
+    else:
+        cartas[posicion-1]+=numero
 
 if max(palo)>1:
     tanto=max(cartas)+20
