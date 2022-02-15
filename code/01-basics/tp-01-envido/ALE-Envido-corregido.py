@@ -27,7 +27,7 @@ def repartir(mazo):
     jugador2 = []
     cont=1
     for carta in mazo:
-        if cont%2==1:
+        if cont % 2 == 1:
             jugador1.append(carta)
         else:
             jugador2.append(carta)

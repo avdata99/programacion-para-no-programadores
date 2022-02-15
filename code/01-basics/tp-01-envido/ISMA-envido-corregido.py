@@ -4,7 +4,6 @@ palos={
     'basto':'2',
     'Espada':'3',
     'Copa':'4',
-
 }
 figura=[10,11,12]
 
@@ -21,17 +20,17 @@ for orden in ['primera', 'segunda', 'tercera']:
         print(x,":",palos[x])
 
     posicion=int(input())
-    palo[posicion-1]+=1
+    palo[posicion-1] += 1
 
     if numero in figura:
-        cartas[posicion-1]+=0
+        cartas[posicion-1] += 0
     else:
-        cartas[posicion-1]+=numero
+        cartas[posicion-1] += numero
 
 # ver si el 2 esta en palo (o sea, hay 2 cartas de un mismo palo)
-if 2 in palo:
+if max(palo) > 1:
     # ver en que indice esta un elemento especifico
-    palo_con_dos_cartas = palo.index(2)
+    palo_con_dos_cartas = palo.index(max(palo))
     tanto = cartas[palo_con_dos_cartas] + 20
 else:
     tanto = max(cartas)
