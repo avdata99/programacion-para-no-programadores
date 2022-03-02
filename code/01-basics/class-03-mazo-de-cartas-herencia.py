@@ -1,6 +1,5 @@
 from random import choice
 
-
 class Carta:
     def __init__(self, numero, palo):
         self.numero = numero
@@ -26,11 +25,14 @@ class Mazo:
             Forzar a las clases hijas a que implementen esta función """
         raise NotImplementedError
 
-    def entregar_carta(self):
-        """ Entregaer una carta al azar (y quitarla del mazo) """
-        carta = choice(self.cartas)
-        self.cartas.remove(carta)
-        return carta
+    def entregar_cartas(self):
+        """ Entrega 3 cartas al azar y las quita del mazo """
+        mano = []
+        for carta in range(1,4):#modifico para entregar 3 cartas, y no llamar a la funcion 3 veces
+            carta = choice(self.cartas)
+            mano.append(carta)
+            self.cartas.remove(carta)
+        return mano #retorno un array de 3 cartas aleatorias
 
 
 class MazoEspaniola(Mazo):
@@ -75,33 +77,11 @@ class MazoTruco(MazoEspaniola):
 
 class Mano:
     """ Una mano de cartas de cualquier juego """
-    def __init__(self):
-        self.cartas = []
-
+    def __init__(self, cartas):
+        self.cartas = cartas
 
 class ManoTruco(Mano):
-    def __add__(self, otro):
-        """ La funcion suma es agregar una carta 
-            Solo esta definida para objetos tipo carta
-            (solo puedo sumarle cartas)
-            """
-        if type(otro) != Carta:
-            raise ValueError('Solo se le pueden sumar Cartas')
-        self._agregar_carta(otro)
-        return self
-
-    def _agregar_carta(self, carta):
-        """ Solo para llamar internalemte """
-        if len(self.cartas) > 3:
-            raise ValueError('Una mano de truco no puede tener mas de tres cartas')
-        self.cartas.append(carta)
-
-    def _validate_mano_completa(self):
-        """ Completa = tengo 3 cartas.
-            Esta funcion da error si la mano no esta completa """
-        if not len(self.cartas) == 3:
-            raise ValueError('Mano incompleta')
-
+    """Elimino funcion suma, funcion agregar carta y comprobacion de 3 cartas ya que la funcion entregar_cartas siempre entrega 3"""
     def _carta_cuenta_envido(self, carta):
         """ de una carta data obtiene cuanto suma al envido
             De un 12 devuelve 2, de un 10 cero y de un 7, devuelve 7"""
@@ -112,10 +92,8 @@ class ManoTruco(Mano):
         return 20 + self._carta_cuenta_envido(carta1) + self._carta_cuenta_envido(carta2)
 
     def envido(self):
-        """ Carlcular el envido dadas 3 cartas """
+        """ Calcular el envido dadas 3 cartas """
 
-        # Asegurarse que tiene 3 cartas
-        self._validate_mano_completa()
         # ver todos los envidos posibles y elegir el mejor
         # aun si las tres cartas fueran de distinto palo, 
         #   la carta que sea mayor de ellas sería un envido posible
@@ -138,14 +116,7 @@ class ManoTruco(Mano):
         return ', '.join(map(str, self.cartas))
 
 tr = MazoTruco()
-mn = ManoTruco()
-
-carta1 = tr.entregar_carta()
-mn += carta1
-carta2 = tr.entregar_carta()
-mn += carta2
-carta3 = tr.entregar_carta()
-mn += carta3
+mn = ManoTruco(tr.entregar_cartas()) # llamo una sola vez a la funcion entregar carta
 
 print(f'Mano: {mn}')
 print(f'Envido: {mn.envido()}')
