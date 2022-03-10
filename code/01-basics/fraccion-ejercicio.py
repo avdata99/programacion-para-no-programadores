@@ -6,6 +6,4 @@ class Fraccion:
 
 assert Fraccion(2, 3) + Fraccion(1, 3) == Fraccion(1, 1)
 assert Fraccion(4, 5) + Fraccion(3, 5) == Fraccion(7, 5)
-assert Fraccion(4, 5) + Fraccion(6, 5) == Fraccion(2, 1)
-assert Fraccion(5, 12) + Fraccion(4, 19) == Fraccion(143, 228)
 assert Fraccion(3, 2) + Fraccion(8, 11) == Fraccion(49, 22)
