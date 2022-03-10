@@ -1,5 +1,6 @@
 from datetime import date, datetime, timedelta
 
+
 hoy = date.today()
 print(hoy)
 # 2022-02-12
