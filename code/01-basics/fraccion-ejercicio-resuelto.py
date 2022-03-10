@@ -1,4 +1,6 @@
 class Fraccion:
+    """ Clase para manejar fracciones de numeros enteros positivos """
+
     def __init__(self, numerador, denominador):
         if type(numerador) != int or type(denominador) != int:
             raise ValueError('Solo numeros enteros aceptados')
@@ -10,9 +12,10 @@ class Fraccion:
         self._simplificar()
 
     def _simplificar(self):
-        """ Simplificar la fraccion a los numeros mas simples posibles """
+        """ Simplificar la fraccion a los numeros mas bajos posibles """
         men = min(self.numerador, self.denominador)
         for n in range(men, 1, -1):
+            # Si este numero divide a los dos, entonces los divido
             if self.numerador % n == 0 and self.denominador % n == 0:
                 self.numerador = self.numerador / n
                 self.denominador = self.denominador / n
