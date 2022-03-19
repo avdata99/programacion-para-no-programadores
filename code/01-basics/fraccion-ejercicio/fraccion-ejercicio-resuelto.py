@@ -17,8 +17,8 @@ class Fraccion:
         for n in range(men, 1, -1):
             # Si este numero divide a los dos, entonces los divido
             if self.numerador % n == 0 and self.denominador % n == 0:
-                self.numerador = self.numerador / n
-                self.denominador = self.denominador / n
+                self.numerador = int(self.numerador / n)
+                self.denominador = int(self.denominador / n)
                 break
 
     def __add__(self, otro):
