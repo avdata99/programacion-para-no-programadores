@@ -14,8 +14,9 @@ headers = {
 }
 
 # preparar un archivo CSV para guardar los datos
-final_csv_file = open('final.csv', 'w')
-fieldnames = [f'nro', 'cuil', 'nombre', 'categoria', 'registro', 'localidad', 'barrio', 'contacto']
+final_csv_file = open('final.csv', 'w', encoding='utf-8')
+fieldnames = ['nro', 'cuil', 'nombre', 'categoria', 'registro',
+              'localidad', 'barrio', 'contacto']
 writer = csv.DictWriter(final_csv_file, fieldnames=fieldnames)
 writer.writeheader()
 
@@ -31,12 +32,12 @@ for page in range(1, 202):
     if not os.path.exists(html_file):
         print(f' - Descargando {paginated_url}')
         response = requests.get(paginated_url, headers=headers)
-        f = open(html_file, 'w')
+        f = open(html_file, 'w', encoding='utf-8')
         f.write(response.text)
         f.close()
 
     # abrimos el archivo local que ya está descargado
-    f = open(html_file, 'r')
+    f = open(html_file, 'r', encoding='utf-8')
     texto_pagina = f.read()
     f.close()
 

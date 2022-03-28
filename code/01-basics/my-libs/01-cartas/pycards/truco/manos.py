@@ -2,7 +2,6 @@
 Manos
 """
 
-from pycards.cartas import Carta
 from pycards.manos import Mano
 
 
