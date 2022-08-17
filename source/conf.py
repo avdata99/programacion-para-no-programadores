@@ -19,14 +19,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'Curso de programación'
-copyright = u'2018, Andrés Vázquez'
+project = u'Curso de programación para no programadores con Python.'
+copyright = u'Andrés Vázquez @avdata99 Creative Commons BY-SA'
 author = u'Andrés Vázquez'
 
 # The short X.Y version
-version = u'0.1'
+version = u'0.3'
 # The full version, including alpha/beta/rc tags
-release = u'v 0.1'
+release = u'v 0.3'
 
 
 # -- General configuration ---------------------------------------------------
@@ -99,6 +99,10 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
+html_show_sourcelink = True
+html_sidebars = {
+    "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
+}
 
 # -- Options for HTMLHelp output ---------------------------------------------
 

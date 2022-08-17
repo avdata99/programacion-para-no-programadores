@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escribiendo nuestro primer código &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Números enteros &lt;int&gt;" href="int.html" />
+    <link rel="prev" title="¿Donde escribimos nuestro código?" href="donde.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="que.html#ejemplo">Ejemplo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Escribiendo nuestro primer código</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-una-variable">¿Qué es una variable?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Escribiendo nuestro primer código</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/interactivo.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="escribiendo-nuestro-primer-codigo">
+<h1>Escribiendo nuestro primer código<a class="headerlink" href="#escribiendo-nuestro-primer-codigo" title="Enlace permanente a este encabezado"></a></h1>
+<p>Cuando programamos parte de nuestro trabajo es tomar datos de entrada,
+procesarlos y finalmente transformarlos en datos de salida que necesitamos.
+Esta es una parte muy importante de nuestro trabajo como programadores. Es por
+esto que todos los lenguajes de programación incluyen formas de procesar datos
+de diferentes tipos.</p>
+<p>En Python (y en casi todos los lenguajes de programación) se utiliza el
+operador <cite>=</cite> como forma de asignar un valor (el de la izquierda) a una <em>variable</em>
+(a la derecha). De tal forma el código.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>quiere decir: <em>asignar el valor 1 a la variable llamada</em> <cite>a</cite>.
+Si mas adelante en el código usamos <cite>a</cite> nos estaremos refiriendo a su contenido: <em>1</em>.
+Entonces …</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>quiere decir <em>asignar el valor a+1 a la variable llamada</em> <cite>b</cite>.
+En este caso <cite>b</cite> será igual a 2 (1+1).</p>
+<section id="que-es-una-variable">
+<h2>¿Qué es una variable?<a class="headerlink" href="#que-es-una-variable" title="Enlace permanente a este encabezado"></a></h2>
+<p>Las <em>variables</em> son los instrumentos que usan los lenguajes de programación para
+almacenar datos de diferentes tipos.
+Deben tener un identificador o nombre (en los ejemplos anteriores <cite>a</cite> y <cite>b</cite>).</p>
+<p>Estos identificadores deben ser letras, números y el símbolo <em>_</em> (guión bajo) con estos límites:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>no puede tener espacios.</p></li>
+<li><p>no empezar con un número (si puede usarse despues del primer caracter).</p></li>
+<li><p>no puede ser una palabra que Python ya tiene reservado para otras funciones como <cite>if</cite>, <cite>for</cite>, etc.</p></li>
+</ul>
+</div></blockquote>
+<p>De tal forma, los siguientes identificadores de variables son válidos:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>nombre</cite></p></li>
+<li><p><cite>n3</cite></p></li>
+<li><p><cite>nombre_y_apellido</cite></p></li>
+<li><p><cite>_dato_privado</cite></p></li>
+<li><p><cite>f910293</cite></p></li>
+</ul>
+</div></blockquote>
+<p>y los sigiuentes no son válidos:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>3n</cite> (no se puede empezar con números)</p></li>
+<li><p><cite>while</cite>  (es una palabra reservada de Python)</p></li>
+<li><p><cite>nombre apellido</cite> (no se pueden usar espacios)</p></li>
+</ul>
+</div></blockquote>
+<p>Los siguientes son ejemplo de uso de los tipos básicos de datos de los que
+disponemos en Python.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="donde.html" class="btn btn-neutral float-left" title="¿Donde escribimos nuestro código?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="int.html" class="btn btn-neutral float-right" title="Números enteros &lt;int&gt;" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons By-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
