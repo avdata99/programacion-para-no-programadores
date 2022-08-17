@@ -2,7 +2,7 @@ Números enteros <int>
 ---------------------
 
 Desde la consola interactiva de Python podemos usar numeros enteros.  
-Estos son llamados `int` en Python (vienen de *Integer* en inglṕes).  
+Estos son llamados `int` en Python (vienen de *Integer* en inglés).  
 Con los enteros podemos hacer operaciones de cálculo básicas en Python.  
 
 .. code-block:: python
