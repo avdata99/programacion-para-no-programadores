@@ -2,7 +2,7 @@ Cadenadas de caracteres o *strings* <str>
 -----------------------------------------
 
 Las cadenas de caracteres o *strings* son el tipo de dato para almacenar textos.  
-Estos son llamados ``str`` en Python (vienen de *Integer* en inglés).  
+Estos son llamados ``str`` en Python.  
 
 .. code-block:: python
 
