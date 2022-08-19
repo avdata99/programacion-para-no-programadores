@@ -11,9 +11,9 @@ Estos son llamados ``str`` en Python.
     print(nombre)
     Juana Velez
 
-**Nota: Como los textos suelen naturalmente tener espacios es necesario
-delimitar donde empiezan y terminan con las " o ' (comillas simples
-o doblres).**  
+Nota: Como los textos suelen naturalmente tener espacios es necesario
+delimitar donde empiezan y terminan con las ``"`` o ``'`` (comillas simples
+o dobles).  
 
 Si intentamos definir una variable de tipo ``str`` sin comillas vamos a
 recibir un error de sintaxis.  
