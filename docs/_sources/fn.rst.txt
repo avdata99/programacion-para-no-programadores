@@ -63,10 +63,16 @@ Ejemplo de una función con parámetros.
 
     resultado = sumar(10, 20)
     print(f'Resultado de la suma: {resultado}')
-    30
+    Resultado de la suma: 30
+
     resultado = sumar(7, 27)
     print(f'Resultado de la suma: {resultado}')
-    34
+    Resultado de la suma: 34
+
+    resultado = sumar("10", "20")
+    print(f'Resultado de la suma: {resultado}')
+    Resultado de la suma: 1020
+    # Para pensar: ¿Que sucedió?)
 
     # ¿Qué pasa si no completamos todos los parámetros esperados?
     sumar(10)
