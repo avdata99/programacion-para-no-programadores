@@ -48,10 +48,16 @@
 <li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Escribiendo nuestro primer código</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#que-es-una-variable">¿Qué es una variable?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-una-variable">¿Qué es una variable?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#como-puede-saber-que-tipo-de-datos-almacena-una-variable">¿Cómo puede saber que tipo de datos almacena una variable?</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
 </ul>
 
         </div>
@@ -86,7 +92,7 @@ Esta es una parte muy importante de nuestro trabajo como programadores. Es por
 esto que todos los lenguajes de programación incluyen formas de procesar datos
 de diferentes tipos.</p>
 <p>En Python (y en casi todos los lenguajes de programación) se utiliza el
-operador <cite>=</cite> como forma de asignar un valor (el de la izquierda) a una <em>variable</em>
+operador <code class="docutils literal notranslate"><span class="pre">=</span></code> como forma de asignar un valor (el de la izquierda) a una <em>variable</em>
 (a la derecha). De tal forma el código.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
@@ -97,41 +103,53 @@ Entonces …</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>quiere decir <em>asignar el valor a+1 a la variable llamada</em> <cite>b</cite>.
-En este caso <cite>b</cite> será igual a 2 (1+1).</p>
+<p>quiere decir <em>asignar el valor a+1 a la variable llamada</em> <code class="docutils literal notranslate"><span class="pre">b</span></code>.
+En este caso <code class="docutils literal notranslate"><span class="pre">b</span></code> será igual a 2 (1+1).</p>
 <section id="que-es-una-variable">
 <h2>¿Qué es una variable?<a class="headerlink" href="#que-es-una-variable" title="Enlace permanente a este encabezado"></a></h2>
 <p>Las <em>variables</em> son los instrumentos que usan los lenguajes de programación para
 almacenar datos de diferentes tipos.
-Deben tener un identificador o nombre (en los ejemplos anteriores <cite>a</cite> y <cite>b</cite>).</p>
+Deben tener un identificador o nombre (en los ejemplos anteriores <code class="docutils literal notranslate"><span class="pre">a</span></code> y <code class="docutils literal notranslate"><span class="pre">b</span></code>).</p>
 <p>Estos identificadores deben ser letras, números y el símbolo <em>_</em> (guión bajo) con estos límites:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>no puede tener espacios.</p></li>
 <li><p>no empezar con un número (si puede usarse despues del primer caracter).</p></li>
-<li><p>no puede ser una palabra que Python ya tiene reservado para otras funciones como <cite>if</cite>, <cite>for</cite>, etc.</p></li>
+<li><p>no puede ser una palabra que Python ya tiene reservado para otras funciones como <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, etc.</p></li>
 </ul>
 </div></blockquote>
 <p>De tal forma, los siguientes identificadores de variables son válidos:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><cite>nombre</cite></p></li>
-<li><p><cite>n3</cite></p></li>
-<li><p><cite>nombre_y_apellido</cite></p></li>
-<li><p><cite>_dato_privado</cite></p></li>
-<li><p><cite>f910293</cite></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nombre</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nombre_y_apellido</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_dato_privado</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f910293</span></code></p></li>
 </ul>
 </div></blockquote>
 <p>y los sigiuentes no son válidos:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><cite>3n</cite> (no se puede empezar con números)</p></li>
-<li><p><cite>while</cite>  (es una palabra reservada de Python)</p></li>
-<li><p><cite>nombre apellido</cite> (no se pueden usar espacios)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3n</span></code> (no se puede empezar con números)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code>  (es una palabra reservada de Python)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">apellido</span></code> (no se pueden usar espacios)</p></li>
 </ul>
 </div></blockquote>
+<section id="como-puede-saber-que-tipo-de-datos-almacena-una-variable">
+<h3>¿Cómo puede saber que tipo de datos almacena una variable?<a class="headerlink" href="#como-puede-saber-que-tipo-de-datos-almacena-una-variable" title="Enlace permanente a este encabezado"></a></h3>
+<p>Python incluye una función (ya veremos más adelante que son)
+llamada <code class="docutils literal notranslate"><span class="pre">type</span></code> que informa que tipo de datos contiene una variable dada.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>a = 5
+type(a)
+&lt;class &#39;int&#39;&gt;
+</pre></div>
+</div>
+<p>En este caso, la variable <code class="docutils literal notranslate"><span class="pre">a</span></code> es del typo <code class="docutils literal notranslate"><span class="pre">int</span></code> (que veremos a continuación).
+_Nota: La palabra <code class="docutils literal notranslate"><span class="pre">class</span></code> cobrará sentido más adelante._</p>
 <p>Los siguientes son ejemplo de uso de los tipos básicos de datos de los que
 disponemos en Python.</p>
+</section>
 </section>
 </section>
 

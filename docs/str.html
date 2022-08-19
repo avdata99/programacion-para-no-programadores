@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadenadas de caracteres o strings &lt;str&gt; &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Funciones en Python" href="fn.html" />
+    <link rel="prev" title="Números enteros &lt;int&gt;" href="int.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="que.html#ejemplo">Ejemplo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/str.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cadenadas-de-caracteres-o-strings-str">
+<h1>Cadenadas de caracteres o <em>strings</em> &lt;str&gt;<a class="headerlink" href="#cadenadas-de-caracteres-o-strings-str" title="Enlace permanente a este encabezado"></a></h1>
+<p>Las cadenas de caracteres o <em>strings</em> son el tipo de dato para almacenar textos.
+Estos son llamados <code class="docutils literal notranslate"><span class="pre">str</span></code> en Python (vienen de <em>Integer</em> en inglés).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Juana Velez&quot;</span>
+<span class="c1"># tambien es posible mostrar (imprimir) el contenido</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+<span class="n">Juana</span> <span class="n">Velez</span>
+</pre></div>
+</div>
+<p><strong>Nota: Como los textos suelen naturalmente tener espacios es necesario
+delimitar donde empiezan y terminan con las » o “ (comillas simples
+o doblres).</strong></p>
+<p>Si intentamos definir una variable de tipo <code class="docutils literal notranslate"><span class="pre">str</span></code> sin comillas vamos a
+recibir un error de sintaxis.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="n">Juana</span> <span class="n">Velez</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="n">Juana</span> <span class="n">Velez</span>
+               <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></div>
+</div>
+<p>Con los <em>strings</em> podemos hacer también algunas operaciones en Python.
+La suma en <em>strings</em> (se llama <em>concatenar</em>) es posible:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Juana&quot;</span>
+<span class="n">apellido</span> <span class="o">=</span> <span class="s2">&quot;Velez&quot;</span>
+
+<span class="n">nombre_completo</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">apellido</span>
+</pre></div>
+</div>
+<p><strong>Nota: esta suma incluye tres strings, dos tienen nombre y otro es un
+espacio definido directamente.</strong></p>
+<p>La multiplicación tambien esta definida para <em>strings</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">letra</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+<span class="n">letra</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="n">aaaa</span>
+</pre></div>
+</div>
+<p>Otras funciones disponibles para los <em>strings</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Juana Velez&quot;</span>
+<span class="c1"># funcion lower -&gt; pasar a minúsculas</span>
+<span class="n">nombre</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="s1">&#39;juana velez&#39;</span>
+<span class="c1"># funcion upper -&gt; pasar a mayúsculas</span>
+<span class="n">nombre</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="s1">&#39;JUANA VELEZ&#39;</span>
+<span class="c1"># funcion format -&gt; completar las llaves dentro de un string con</span>
+<span class="c1"># valores definidos fuera</span>
+<span class="n">saludo</span> <span class="o">=</span> <span class="s2">&quot;Hola, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+<span class="c1"># otra forma de hacer los mismo (se le llama &quot;f strings&quot;)</span>
+<span class="n">saludo</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hola, </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Los objetos de typo <code class="docutils literal notranslate"><span class="pre">str</span></code> tienen muchas propiedades o funciones</p>
+<section id="tareas">
+<h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+<p>Investigar, usar y describir para que sirven las siguientes funciones para objetos
+<code class="docutils literal notranslate"><span class="pre">str</span></code> en Python.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capitalize</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">strip</span></code>:</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="int.html" class="btn btn-neutral float-left" title="Números enteros &lt;int&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="fn.html" class="btn btn-neutral float-right" title="Funciones en Python" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

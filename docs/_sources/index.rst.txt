@@ -17,6 +17,9 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    donde
    interactivo
    int
+   str
+   fn
+   builtins
 
 
 Indices y tablas

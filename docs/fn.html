@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funciones en Python &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Funciones incluidas en Python" href="builtins.html" />
+    <link rel="prev" title="Cadenadas de caracteres o strings &lt;str&gt;" href="str.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="que.html#ejemplo">Ejemplo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Funciones en Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#anatomia-de-una-funcion-simple">Anatomía de una función simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funciones-con-parametros">Funciones con parámetros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funciones-con-parametros-opcionales">Funciones con parámetros opcionales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Funciones en Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/fn.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="funciones-en-python">
+<h1>Funciones en Python<a class="headerlink" href="#funciones-en-python" title="Enlace permanente a este encabezado"></a></h1>
+<p>En este curso hemos nombrado y usado sin definir todavia a las <em>funciones</em>.
+Una funcion en Python es una porción de código que cumple una tarea determinada
+y opcionalmente devuelve un resultado.</p>
+<p>Veamos un ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">segundos_en_un_dia</span><span class="p">():</span>
+    <span class="n">segundos_en_una_hora</span> <span class="o">=</span> <span class="mi">60</span>
+    <span class="n">minutos_en_una_hora</span> <span class="o">=</span> <span class="mi">60</span>
+    <span class="n">horas_en_un_dia</span> <span class="o">=</span> <span class="mi">24</span>
+    <span class="n">segundos_en_un_dia</span> <span class="o">=</span> <span class="n">segundos_en_una_hora</span> <span class="o">*</span> <span class="n">minutos_en_una_hora</span> <span class="o">*</span> <span class="n">horas_en_un_dia</span>
+    <span class="k">return</span> <span class="n">segundos_en_un_dia</span>
+
+<span class="n">segundos</span> <span class="o">=</span> <span class="n">segundos_en_un_dia</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">segundos</span><span class="p">)</span>
+<span class="mi">86400</span>
+</pre></div>
+</div>
+<section id="anatomia-de-una-funcion-simple">
+<h2>Anatomía de una función simple<a class="headerlink" href="#anatomia-de-una-funcion-simple" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span></code> es una palabra reservada de Python (no la podemos usar como nombre de variable)
+que usamos para indicar que estamos definiendo una función.</p></li>
+<li><p>Despues de <code class="docutils literal notranslate"><span class="pre">def</span></code> agregamos el nombre de nuestra función. Se deben cumplir las mismas
+reglas que para los nombres de variables (no pueden empezar con números, no pueden tener
+espacios, etc).</p></li>
+<li><p>Despues del nombre de la funcion colocamos parentesis (es obligatorio). En el futuro
+vamos a usarlas para agregar los que se llaman <em>parámetros</em>. Por ahora solo es importante
+no olvidar agregarlos.</p></li>
+<li><p>Finalmente agregamos <em>:</em> (dos puntos) para indicar que terminamos de definir el encabezado
+de la función y vamos a comenzar con el código.</p></li>
+<li><p>El código de la función debe estar tabulado hacia la derecha. <strong>Esta es una de las grandes
+diferencias que Python tiene con los demás lenguajes de programación</strong>. El código propio de
+la función comienza tabulado y termina cuando el código vuelve a la izquierda. Muchos otros
+lenguajes de programación usan las llaves <code class="docutils literal notranslate"><span class="pre">{}</span></code> para delimitar donde empiezan y terminan
+los bloques de código.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">return</span></code> se usa para indicar cual es el valor que devolverá nuestra función cuando sea
+llamada. En este caso es el resultado de un cálculo. No es obligario usarla, a veces simplemente
+necesitamos procesar datos sin entregar resultados.</p></li>
+<li><p>Una vez definida (y terminada anulando la tabulación y volviendo a la izquierda el código),
+una función se puede llamar simplemente con su nombre y los paréntesis.</p></li>
+</ul>
+</section>
+<section id="funciones-con-parametros">
+<h2>Funciones con parámetros<a class="headerlink" href="#funciones-con-parametros" title="Enlace permanente a este encabezado"></a></h2>
+<p>Muchas funciones procesan datos que ya conocemos pero en muchos casos necesitamos que nuestra
+función procese datos que pueden variar. Para estos casos necesitamos darle a nuestra funcion
+la posibilidad de agregar valores variables llamados <em>parámetros</em>.
+Estos parámetros se incluyen dentro de los paréntesis del encabezado de nuestra funcion
+<strong>separados por comas</strong>.</p>
+<p>Ejemplo de una función con parámetros.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Se llamo a la funcion sumar con </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1"> y </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">sumar</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Resultado de la suma: </span><span class="si">{</span><span class="n">resultado</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="mi">30</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">sumar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">27</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Resultado de la suma: </span><span class="si">{</span><span class="n">resultado</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="mi">34</span>
+
+<span class="c1"># ¿Qué pasa si no completamos todos los parámetros esperados?</span>
+<span class="n">sumar</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">sumar</span><span class="p">()</span> <span class="n">missing</span> <span class="mi">1</span> <span class="n">required</span> <span class="n">positional</span> <span class="n">argument</span><span class="p">:</span> <span class="s1">&#39;b&#39;</span>
+
+<span class="c1"># Obtenemos un error. Los parámetros asi como estan definidos son obligatorios.</span>
+</pre></div>
+</div>
+<p>Nótese que dentros del código de la función los parametros son variables disponibles
+para usar libremente. Fuera de ella (por ejemplo tratar de usar <code class="docutils literal notranslate"><span class="pre">a</span></code> fuera de la
+funcion <code class="docutils literal notranslate"><span class="pre">suma</span></code>) no estan definidas y darán error. El alcance y validez de <code class="docutils literal notranslate"><span class="pre">a</span></code>
+es solo dentro de la función que la declaró como parámetro.</p>
+</section>
+<section id="funciones-con-parametros-opcionales">
+<h2>Funciones con parámetros opcionales<a class="headerlink" href="#funciones-con-parametros-opcionales" title="Enlace permanente a este encabezado"></a></h2>
+<p>En algunos casos no necesitamos que todos los parámetros sean obligatorios.
+Muchas veces hay valores que son de uso más frecuente y el usuario no querrá
+definirlos cada vez que llama a la función.
+Para esto existen parámetros <em>opcionales</em>. Simplemente colocamos cual es el
+valor predeterminado para los parámetros en el encabezado de la función y
+es suficiente.
+Tomemos el ejemplo de la funcion <em>potencia</em> y asumamos que en general los
+usuarios querrán elevar números al cuadrado.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencia</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Se llamo a la funcion potencia con </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1"> y </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">potencia</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Resultado de la potencia 3 ** 2: </span><span class="si">{</span><span class="n">resultado</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">potencia</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Resultado de la potencia 3 ** 3: </span><span class="si">{</span><span class="n">resultado</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="tareas">
+<h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="str.html" class="btn btn-neutral float-left" title="Cadenadas de caracteres o strings &lt;str&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="builtins.html" class="btn btn-neutral float-right" title="Funciones incluidas en Python" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
