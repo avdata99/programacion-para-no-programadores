@@ -19,8 +19,8 @@ Algunos ejemplos:
     print(nombre)
 
 Pero ``print`` no es la única función disponible, son muchas.  
-**Nota: La lista de todas las funciones built-ins de Python esta disponible 
-aquí: https://docs.python.org/3/library/functions.html**
+Nota: La lista de todas las funciones built-ins de Python esta disponible 
+`aquí <https://docs.python.org/3/library/functions.html>`_.  
 
 Algunos ejemplos
 
