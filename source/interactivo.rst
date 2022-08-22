@@ -63,7 +63,7 @@ llamada ``type`` que informa que tipo de datos contiene una variable dada.
 
     a = 5
     type(a)
-    <class 'int'>
+    # devuelve <class 'int'>
 
 En este caso, la variable ``a`` es del typo ``int`` (que veremos a continuación).  
 _Nota: La palabra ``class`` cobrará sentido más adelante._  

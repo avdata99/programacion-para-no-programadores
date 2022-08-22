@@ -1,5 +1,5 @@
 Cadenadas de caracteres o *strings* <str>
------------------------------------------
+=========================================
 
 Las cadenas de caracteres o *strings* son el tipo de dato para almacenar textos.  
 Estos son llamados ``str`` en Python.  
@@ -10,10 +10,12 @@ Estos son llamados ``str`` en Python.
     # tambien es posible mostrar (imprimir) el contenido
     print(nombre)
     Juana Velez
+    type(nombre)
+    # devuelve <class 'str'>
 
 Nota: Como los textos suelen naturalmente tener espacios es necesario
-delimitar donde empiezan y terminan con las ``"`` o ``'`` (comillas simples
-o dobles).  
+delimitar donde empiezan y terminan con las ``"`` o ``'`` (comillas
+dobles o simples).  
 
 Si intentamos definir una variable de tipo ``str`` sin comillas vamos a
 recibir un error de sintaxis.  
@@ -76,3 +78,5 @@ Investigar, usar y describir para que sirven las siguientes funciones para objet
 * ``capitalize``:
 * ``title``:
 * ``strip``:
+
+Se espera un archivo de Python con estas funciones en uso como ejemplo.  

@@ -44,7 +44,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="que.html#ejemplo">Ejemplo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Escribiendo nuestro primer código</a><ul>
@@ -58,6 +57,8 @@
 <li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
 </ul>
 
         </div>
@@ -140,9 +141,9 @@ Deben tener un identificador o nombre (en los ejemplos anteriores <code class="d
 <h3>¿Cómo puede saber que tipo de datos almacena una variable?<a class="headerlink" href="#como-puede-saber-que-tipo-de-datos-almacena-una-variable" title="Enlace permanente a este encabezado"></a></h3>
 <p>Python incluye una función (ya veremos más adelante que son)
 llamada <code class="docutils literal notranslate"><span class="pre">type</span></code> que informa que tipo de datos contiene una variable dada.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>a = 5
-type(a)
-&lt;class &#39;int&#39;&gt;
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="c1"># devuelve &lt;class &#39;int&#39;&gt;</span>
 </pre></div>
 </div>
 <p>En este caso, la variable <code class="docutils literal notranslate"><span class="pre">a</span></code> es del typo <code class="docutils literal notranslate"><span class="pre">int</span></code> (que veremos a continuación).

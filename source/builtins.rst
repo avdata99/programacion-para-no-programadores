@@ -19,10 +19,11 @@ Algunos ejemplos:
     print(nombre)
 
 Pero ``print`` no es la única función disponible, son muchas.  
+
 Nota: La lista de todas las funciones built-ins de Python esta disponible 
 `aquí <https://docs.python.org/3/library/functions.html>`_.  
 
-Algunos ejemplos
+Algunos ejemplos:
 
 .. code-block:: python
 
@@ -38,9 +39,9 @@ Algunos ejemplos
     6
     # type -> devuelve el tipo de un objeto
     type('hola')
-    <class 'str'>
+    # devuelve <class 'str'>
     type(nombre)
-    <class 'str'>
+    # devuelve <class 'str'>
     # max y min -> devuelven el elemento maximo y minimo de una lista de elementos
     max(3, 5, 15, 1)
     15
@@ -52,3 +53,11 @@ Algunos ejemplos
 
 Tareas
 ~~~~~~
+
+*  Escribir una función que dadas tres palabras devuelva el
+   largo total de todas ellas juntas. Por ejemplo (si la funcion se llamara
+   ``largo_total``) la llamada ``largo_text('hola', 'chau', 'tercera')``
+   debe devolver 15.
+
+**En todos los casos usar la función para asegurarse
+que funciona como es esperado.**  

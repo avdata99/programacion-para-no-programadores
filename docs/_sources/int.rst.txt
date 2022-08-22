@@ -22,6 +22,8 @@ Con los enteros podemos hacer operaciones de cálculo básicas en Python.
     potencia = 2 ** 3  # ** hace calculos de potencias, en este caso: 2 al cubo
     division = 8 / 4
 
+    resto = 5 % 2  # (calcula el resto de la division, en este caso 5/2 es 2 con resto 1)
+
 Nota: Las palabras a la izquierda del signo igual son los nombres que elegimos
 para nuestras variables. Son arbitrarios y no representan nada más que un nombre
 interno, no tienen un significado especial para Python.  
@@ -93,8 +95,8 @@ Tareas
 
 Calcular cuantos segundos tiene un día definiendo las variables:
 
-* ``segundos_en_minuto``
-* ``minutos_en_hora``
-* ``horas_en_dia``
+*  ``segundos_en_minuto``
+*  ``minutos_en_hora``
+*  ``horas_en_dia``
 
 Finalmente asignar el resultado a una variable llamada ``segundos_en_dia``

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listas en Python &lt;list&gt; &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Booleanos &lt;bool&gt; + operadores de comparación + ìf" href="bool.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Listas en Python &lt;list&gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#los-strings-tambien-son-listas">Los <em>strings</em> tambien son listas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcion-split-de-los-strings">Función <code class="docutils literal notranslate"><span class="pre">split</span></code> de los <em>strings</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Listas en Python &lt;list&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/list.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="listas-en-python-list">
+<h1>Listas en Python &lt;list&gt;<a class="headerlink" href="#listas-en-python-list" title="Enlace permanente a este encabezado"></a></h1>
+<p>Las listas en Python se usan para representar conjuntos ordenados de elementos.
+Los objetos contenidos pueden ser de cualquier tipo (incluidas otras listas).</p>
+<p>Nota: <em>Ordenado</em> quiere decir que la lista preserva el orden en que los elementos se
+definieron, no que sus elementos se van a ordenar automaticamente.</p>
+<p>Veamos un ejemplo simple de como definir una lista:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mi_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">otra_lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jose&quot;</span><span class="p">,</span> <span class="s2">&quot;Luisa&quot;</span><span class="p">,</span> <span class="s2">&quot;Rafaela&quot;</span><span class="p">]</span>
+
+<span class="c1"># tambien puede contener tipos diferentes</span>
+<span class="n">variado</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Pedro&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Nombre&quot;</span><span class="p">]</span>
+
+<span class="c1"># Puede contener variables</span>
+<span class="n">listas</span> <span class="o">=</span> <span class="p">[</span><span class="n">mi_lista</span><span class="p">,</span> <span class="n">otra_lista</span><span class="p">,</span> <span class="n">variado</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">listas</span><span class="p">)</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Jose&#39;</span><span class="p">,</span> <span class="s1">&#39;Luisa&#39;</span><span class="p">,</span> <span class="s1">&#39;Rafaela&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Pedro&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Nombre&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Python usa los corchetes <code class="docutils literal notranslate"><span class="pre">[]</span></code> para delimitar donde empieza y donde
+termina una lista. Para separar los elementos se usa la coma.</p>
+<p>Veamos algunas funciones de las listas:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="c1"># agregar un elemento</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="c1"># [1, 2, 3]</span>
+
+<span class="c1"># elimiar un elemento</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="c1"># [1, 3]</span>
+<span class="c1"># Cuidado! si se intenta eliminar un elemento que no existe Python lanzar un error</span>
+
+<span class="c1"># Tambien es posible eliminar por numero de indice y devolver lo eliminado</span>
+<span class="n">primer_elemento</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El primero era: </span><span class="si">{</span><span class="n">primer_elemento</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Para obtener el largo de una lista, se usa la funcion len()</span>
+<span class="n">apellidos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;gonzalez&quot;</span><span class="p">,</span> <span class="s2">&quot;gomez&quot;</span><span class="p">,</span> <span class="s2">&quot;rodriguez&quot;</span><span class="p">,</span> <span class="s2">&quot;lopez&quot;</span><span class="p">,</span> <span class="s2">&quot;garcia&quot;</span><span class="p">]</span>
+<span class="n">total_apellidos</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">apellidos</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total de apellidos: </span><span class="si">{</span><span class="n">total_apellidos</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># Total de apellidos: 5</span>
+
+<span class="c1"># Ordenar los elementos de una lista</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="c1"># Si hay tipos que no son comparables, Python lanzara un error.</span>
+<span class="c1"># Si todos son numeros se ordenaran de mayor a menor</span>
+<span class="c1"># Si todos son strings, se ordenaran alfabéticamente</span>
+</pre></div>
+</div>
+<p>Las listas tambien permiten obtener rápido cada uno de sus elementos u
+obtener sub listas incluidas.
+Usar los corchetes junto a la variable permite acceder a cualquier elemento
+de la lista por su número de orden (comenzando por cero).
+Por ejemplo</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[0]</span></code> devuelve el <strong>primer</strong> elemento de una lista.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[1]</span></code> devuelve el <strong>segundo</strong> elemento de una lista.</p></li>
+</ul>
+<p><strong>Nota: si se pide un numero de elemento (se les llama índices) mayor a los
+disponibles, Python lanzara un error.</strong></p>
+<p>Es posible tambien acceder a los elementos en orden inverso:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[-1]</span></code> devuelve el <strong>último</strong> elemento de una lista.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[-2]</span></code> devuelve el <strong>anteúltimo</strong> elemento de una lista.</p></li>
+</ul>
+<p>Es posible tambien obtener una sublista:
+<strong>Nota: esto es anti-intuitivo y confuso. Requiere poráctica habituarse</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[0:3]</span></code> devuelve una nueva lista cuyo primer elemento es
+<code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[0]</span></code> y el últimos es <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[2]</span></code> (si, hasta
+el 2). El segundo <em>parámetro</em> no esta incluido, el primero si. ¯_(ツ)_/¯</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[2:-2]</span></code> devuelve una nueva lista cuyo primer elemento es
+<code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[2]</span></code> (el tercer elemento) y el últimos es
+<code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[-3]</span></code> ¯_(ツ)_/¯</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[-2:]</span></code> devuelve los ultimos dos elementos, desde
+<code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[-2]</span></code> hasta el final (no especificar nada significa hasta
+el final).</p></li>
+</ul>
+<p>Veamos algunos ejemplos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">apellidos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;gonzalez&quot;</span><span class="p">,</span> <span class="s2">&quot;gomez&quot;</span><span class="p">,</span> <span class="s2">&quot;rodriguez&quot;</span><span class="p">,</span> <span class="s2">&quot;lopez&quot;</span><span class="p">,</span> <span class="s2">&quot;garcia&quot;</span><span class="p">]</span>
+<span class="n">primer_apellido</span> <span class="o">=</span> <span class="n">apellidos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El primer apellido es: </span><span class="si">{</span><span class="n">primer_apellido</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># El primer apellido es: gonzalez</span>
+
+<span class="n">ultimo_apellido</span> <span class="o">=</span> <span class="n">apellidos</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El último apellido es: </span><span class="si">{</span><span class="n">ultimo_apellido</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># El último apellido es: garcia</span>
+
+<span class="n">primeros_2</span> <span class="o">=</span> <span class="n">apellidos</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Los primeros dos: </span><span class="si">{</span><span class="n">primeros_2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># Los primeros dos: [&#39;gonzalez&#39;, &#39;gomez&#39;]</span>
+
+<span class="n">ultimos_2</span> <span class="o">=</span> <span class="n">apellidos</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Los últimos dos son: </span><span class="si">{</span><span class="n">ultimos_2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># Los últimos dos son: [&#39;lopez&#39;, &#39;garcia&#39;]</span>
+
+<span class="c1"># ordenar</span>
+<span class="n">apellidos</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Lista ordenada: </span><span class="si">{</span><span class="n">apellidos</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># Lista ordenada: [&#39;garcia&#39;, &#39;gomez&#39;, &#39;gonzalez&#39;, &#39;lopez&#39;, &#39;rodriguez&#39;]</span>
+
+<span class="c1"># invertir orden</span>
+<span class="n">apellidos</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Lista invertida: </span><span class="si">{</span><span class="n">apellidos</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># Lista invertida: [&#39;rodriguez&#39;, &#39;lopez&#39;, &#39;gonzalez&#39;, &#39;gomez&#39;, &#39;garcia&#39;]</span>
+</pre></div>
+</div>
+<p>¿Puede ser más complicado?
+Si, un poco más. Podemos usar un tercer parámetro. Este indica los saltos que
+damos para seleccionar elementos. Predeterminado es 1 (vamos de un elemento al otro).</p>
+<p>De esta forma <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[1:6:2]</span></code> significa <em>los elementos desde el primero
+al quinto de dos en dos</em> y <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[::-1]</span></code> significa toda la lista completa
+en sentido inverso (tambien podemos usar <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista.reverse()</span></code>).</p>
+<section id="los-strings-tambien-son-listas">
+<h2>Los <em>strings</em> tambien son listas<a class="headerlink" href="#los-strings-tambien-son-listas" title="Enlace permanente a este encabezado"></a></h2>
+<p>Python permite tratar a los <em>strings</em> como listas.
+Podemos pensar que una palabra es una lista de letras.</p>
+<p>Veamos algunos ejemplos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Pedro&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La primera letra de mi nombre es </span><span class="si">{</span><span class="n">nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La última letra de mi nombre es </span><span class="si">{</span><span class="n">nombre</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="funcion-split-de-los-strings">
+<h2>Función <code class="docutils literal notranslate"><span class="pre">split</span></code> de los <em>strings</em><a class="headerlink" href="#funcion-split-de-los-strings" title="Enlace permanente a este encabezado"></a></h2>
+<p>Si quiero separar una frase en palabras Python ya incluye la funcion <code class="docutils literal notranslate"><span class="pre">split</span></code> en
+los <em>strings</em>. Esta función devuelve un objeto de tipo lista.</p>
+<p>Veamos un ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Era el mejor de los tiempos y era el peor de los tiempos&quot;</span>
+<span class="n">palabras</span> <span class="o">=</span> <span class="n">frase</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">palabras</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;Era&#39;</span><span class="p">,</span> <span class="s1">&#39;el&#39;</span><span class="p">,</span> <span class="s1">&#39;mejor&#39;</span><span class="p">,</span> <span class="s1">&#39;de&#39;</span><span class="p">,</span> <span class="s1">&#39;los&#39;</span><span class="p">,</span> <span class="s1">&#39;tiempos&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;era&#39;</span><span class="p">,</span> <span class="s1">&#39;el&#39;</span><span class="p">,</span> <span class="s1">&#39;peor&#39;</span><span class="p">,</span> <span class="s1">&#39;de&#39;</span><span class="p">,</span> <span class="s1">&#39;los&#39;</span><span class="p">,</span> <span class="s1">&#39;tiempos&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>La función <code class="docutils literal notranslate"><span class="pre">split</span></code> tiene un parámetro llamado <code class="docutils literal notranslate"><span class="pre">separator</span></code> que tiene como valor prederminado
+<code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code> (un espacio, su uso más común). Esté parámetro indica que <em>caracter</em> se va a usar para
+separar los elementos de la lista resultande.</p>
+<p>Existen casos en que necesitamos separar por otros carcateres.</p>
+<p>Veamos un ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">raw_data</span> <span class="o">=</span> <span class="s2">&quot;juana,pedro,fabiana,victor,jose,laura&quot;</span>
+<span class="n">nombres</span> <span class="o">=</span> <span class="n">raw_data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nombres</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;juana&#39;</span><span class="p">,</span> <span class="s1">&#39;pedro&#39;</span><span class="p">,</span> <span class="s1">&#39;fabiana&#39;</span><span class="p">,</span> <span class="s1">&#39;victor&#39;</span><span class="p">,</span> <span class="s1">&#39;jose&#39;</span><span class="p">,</span> <span class="s1">&#39;laura&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="tareas">
+<h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p>Escribir una funcion que dada una palabra devuelva la tercera letra.</p></li>
+<li><p>Escribir una funcion que dados tres parametros individuales, devuelva
+una lista con ellos contenidos.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="bool.html" class="btn btn-neutral float-left" title="Booleanos &lt;bool&gt; + operadores de comparación + ìf" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

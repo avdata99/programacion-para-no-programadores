@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booleanos &lt;bool&gt; + operadores de comparación + ìf &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Listas en Python &lt;list&gt;" href="list.html" />
+    <link rel="prev" title="Funciones incluidas en Python" href="builtins.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#control-de-flujo-if-elif-else">Control de flujo -&gt; <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">/</span> <span class="pre">elif</span> <span class="pre">/</span> <span class="pre">else</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#if"><code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#else"><code class="docutils literal notranslate"><span class="pre">else</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elif"><code class="docutils literal notranslate"><span class="pre">elif</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#and-y-or"><code class="docutils literal notranslate"><span class="pre">and</span></code> y <code class="docutils literal notranslate"><span class="pre">or</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tareas">Tareas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bool.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="booleanos-bool-operadores-de-comparacion-if">
+<h1>Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code><a class="headerlink" href="#booleanos-bool-operadores-de-comparacion-if" title="Enlace permanente a este encabezado"></a></h1>
+<p>El tipo de datos <code class="docutils literal notranslate"><span class="pre">&lt;bool&gt;</span></code> (nombrados así en memoria de matemático inglés
+George Boole) solo usa dos valores: <code class="docutils literal notranslate"><span class="pre">True</span></code> y <code class="docutils literal notranslate"><span class="pre">False</span></code> (<em>verdadero</em> y <em>falso</em>).
+Es el tipo de datos más simple y uno de los más usados.
+Se puede asignar directamente o puede ser el resultado de una comparación.
+Los operadores de comparación en Python son:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">==</span></code>: Compara si dos variables valen lo mismo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">!=</span></code>: Compara si dos variables son distintas. En general en signo <code class="docutils literal notranslate"><span class="pre">!</span></code>
+se usa para negar. Podemos pensar a este operador como <em>no igual</em>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> y <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>: Compara si una variable es mayor o menor que otra.</p></li>
+</ul>
+<p>Para los números estas comparaciones son fáciles de intuir pero pueden significar
+diferentes cosas para diferentes tipos de datos. Como vimos antes en las
+funciones <code class="docutils literal notranslate"><span class="pre">max</span></code> y <code class="docutils literal notranslate"><span class="pre">min</span></code> usadas para <em>strings</em>, las comparaciones son alfabeticas.
+Es por esto que en Python podemos decir que “alpha” &lt; “beta” es <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>Veamos algunos ejemplo con código.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># &quot;a&quot; es igual a uno.</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># ¿Es &quot;a&quot; igual a 1?</span>
+<span class="n">a</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="c1"># Si, es verdadero</span>
+<span class="kc">True</span>
+
+<span class="c1"># ¿Es &quot;a&quot; mayor que &quot;b&quot;?</span>
+<span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span>
+<span class="c1"># No, es falso</span>
+<span class="kc">False</span>
+
+<span class="c1"># ¿Es &quot;a&quot; distinto de &quot;b&quot;?</span>
+<span class="n">a</span> <span class="o">!=</span> <span class="n">b</span>
+<span class="c1"># Si, es verdadero</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+<section id="control-de-flujo-if-elif-else">
+<h2>Control de flujo -&gt; <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">/</span> <span class="pre">elif</span> <span class="pre">/</span> <span class="pre">else</span></code><a class="headerlink" href="#control-de-flujo-if-elif-else" title="Enlace permanente a este encabezado"></a></h2>
+<p>El flujo de un programa no tiene que ser siempre lineal.
+Diferentes porciones de código pueden ejecutarse si alguna condicion esperada se cumple.
+Para esto existe la sentencia <code class="docutils literal notranslate"><span class="pre">if</span></code> (traducido, es el <em>si</em> condicional del español).</p>
+<p>Veamos su funcionamiento con simples ejemplos:</p>
+<section id="if">
+<h3><code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Enlace permanente a este encabezado"></a></h3>
+<p>Uso de <code class="docutils literal notranslate"><span class="pre">if</span></code> solo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># nótese que la línea debe terminar en &quot;:&quot; como las funciones</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;a&quot; es mayor que cero&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Nota importante: la porción de código a ejecutaerse *si* se cumple la condición
+debe estar tabulada (tal como lo hacemos en las funciones).</strong></p>
+</section>
+<section id="else">
+<h3><code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#else" title="Enlace permanente a este encabezado"></a></h3>
+<p>Opcionalmente, podemos usar <code class="docutils literal notranslate"><span class="pre">else</span></code> para capturar los casos que no cumplen la condición.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es mayor de edad&#39;</span><span class="p">)</span>
+    <span class="n">prohibir_entrada</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No es mayor de edad&#39;</span><span class="p">)</span>
+    <span class="n">prohibir_entrada</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p><strong>Nota importante: Las tabulaciones definen el inicio y el fin de las porciones
+de código a ejecutar según la condición. Puede ser más de una línea.</strong></p>
+</section>
+<section id="elif">
+<h3><code class="docutils literal notranslate"><span class="pre">elif</span></code><a class="headerlink" href="#elif" title="Enlace permanente a este encabezado"></a></h3>
+<p>Entre <code class="docutils literal notranslate"><span class="pre">if</span></code> y <code class="docutils literal notranslate"><span class="pre">else</span></code> podemos usar uno o varios <code class="docutils literal notranslate"><span class="pre">elif</span></code> para identificar mas casos buscados.
+Nota: <code class="docutils literal notranslate"><span class="pre">elif</span></code> es una forma abreviada para <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code>.</p>
+<p>Veamos un ejemplo un poco mas complejo de una función que usa <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">identificar_bicho</span><span class="p">(</span><span class="n">patas</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">patas</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es un insecto&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">patas</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es un arácnico&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bicho no identificado&#39;</span><span class="p">)</span>
+
+<span class="n">identificar_bicho</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="s1">&#39;Es un insecto&#39;</span>
+<span class="n">identificar_bicho</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="s1">&#39;Es un arácnico&#39;</span>
+<span class="n">identificar_bicho</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="s1">&#39;Bicho no identificado&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="and-y-or">
+<h3><code class="docutils literal notranslate"><span class="pre">and</span></code> y <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#and-y-or" title="Enlace permanente a este encabezado"></a></h3>
+<p>Si queremos consultar mas de una condicón simultanemante podemos
+usar <code class="docutils literal notranslate"><span class="pre">and</span></code> u <code class="docutils literal notranslate"><span class="pre">or</span></code> (<em>y</em> u <em>o</em>).</p>
+<p>Por ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;a&quot; o &quot;b&quot; valen dos (pueden ser ambos o cualquiera de los dos&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;a&quot; Y &quot;b&quot; valen dos&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="tareas">
+<h3>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h3>
+<ul class="simple">
+<li><p>Escribir una función que se llame <code class="docutils literal notranslate"><span class="pre">es_par</span></code> y que dado un número devuelva
+<code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code> según corresponda. Tip: Los numeros pares tienen resto
+cero al dividirlos por 2.</p></li>
+<li><p>Escribir una función que reciba 3 parametros: <code class="docutils literal notranslate"><span class="pre">nombre</span></code>, <code class="docutils literal notranslate"><span class="pre">edad</span></code> y <code class="docutils literal notranslate"><span class="pre">termino_secundario</span></code>.
+Si la edad es mayor que 18, <code class="docutils literal notranslate"><span class="pre">termino_secundario</span></code> es <code class="docutils literal notranslate"><span class="pre">True``y</span> <span class="pre">el</span> <span class="pre">nombre</span> <span class="pre">termina</span> <span class="pre">(tip:</span>
+<span class="pre">función</span> <span class="pre">``endswith</span></code> de los <em>strings</em>) con «s» devuelve <code class="docutils literal notranslate"><span class="pre">True</span></code>. En cualquier otro caso,
+devuelve <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="builtins.html" class="btn btn-neutral float-left" title="Funciones incluidas en Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="list.html" class="btn btn-neutral float-right" title="Listas en Python &lt;list&gt;" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

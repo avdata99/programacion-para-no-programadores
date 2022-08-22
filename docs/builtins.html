@@ -20,6 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Booleanos &lt;bool&gt; + operadores de comparación + ìf" href="bool.html" />
     <link rel="prev" title="Funciones en Python" href="fn.html" /> 
 </head>
 
@@ -43,7 +44,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="que.html#ejemplo">Ejemplo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
@@ -54,6 +54,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
 </ul>
 
         </div>
@@ -94,37 +96,45 @@ valor que se le pase como parámetro.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Pero <code class="docutils literal notranslate"><span class="pre">print</span></code> no es la única función disponible, son muchas.
-Nota: La lista de todas las funciones built-ins de Python esta disponible
+<p>Pero <code class="docutils literal notranslate"><span class="pre">print</span></code> no es la única función disponible, son muchas.</p>
+<p>Nota: La lista de todas las funciones built-ins de Python esta disponible
 <a class="reference external" href="https://docs.python.org/3/library/functions.html">aquí</a>.</p>
-<p>Algunos ejemplos</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># abs -&gt; obtener el valor abosoluto de un numero
-abs(-3)
-3
-# len -&gt; obtener el largo de un objeto. No disponible para cualquier
-# objeto. En el caso de los strings, cuenta las letras
-len(&#39;hola&#39;)
-4
-nombre = &#39;Victor&#39;
-len(victor)
-6
-# type -&gt; devuelve el tipo de un objeto
-type(&#39;hola&#39;)
-&lt;class &#39;str&#39;&gt;
-type(nombre)
-&lt;class &#39;str&#39;&gt;
-# max y min -&gt; devuelven el elemento maximo y minimo de una lista de elementos
-max(3, 5, 15, 1)
-15
-min(3, 5, 15, 1)
-1
-# en caso de strings, max y min resuelven ordenando alfabéticamente.
-max(&quot;hola&quot;, &quot;chau&quot;)
-&#39;hola&#39;
+<p>Algunos ejemplos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># abs -&gt; obtener el valor abosoluto de un numero</span>
+<span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="c1"># len -&gt; obtener el largo de un objeto. No disponible para cualquier</span>
+<span class="c1"># objeto. En el caso de los strings, cuenta las letras</span>
+<span class="nb">len</span><span class="p">(</span><span class="s1">&#39;hola&#39;</span><span class="p">)</span>
+<span class="mi">4</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="s1">&#39;Victor&#39;</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">victor</span><span class="p">)</span>
+<span class="mi">6</span>
+<span class="c1"># type -&gt; devuelve el tipo de un objeto</span>
+<span class="nb">type</span><span class="p">(</span><span class="s1">&#39;hola&#39;</span><span class="p">)</span>
+<span class="c1"># devuelve &lt;class &#39;str&#39;&gt;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+<span class="c1"># devuelve &lt;class &#39;str&#39;&gt;</span>
+<span class="c1"># max y min -&gt; devuelven el elemento maximo y minimo de una lista de elementos</span>
+<span class="nb">max</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="mi">15</span>
+<span class="nb">min</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="c1"># en caso de strings, max y min resuelven ordenando alfabéticamente.</span>
+<span class="nb">max</span><span class="p">(</span><span class="s2">&quot;hola&quot;</span><span class="p">,</span> <span class="s2">&quot;chau&quot;</span><span class="p">)</span>
+<span class="s1">&#39;hola&#39;</span>
 </pre></div>
 </div>
 <section id="tareas">
 <h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p>Escribir una función que dadas tres palabras devuelva el
+largo total de todas ellas juntas. Por ejemplo (si la funcion se llamara
+<code class="docutils literal notranslate"><span class="pre">largo_total</span></code>) la llamada <code class="docutils literal notranslate"><span class="pre">largo_text('hola',</span> <span class="pre">'chau',</span> <span class="pre">'tercera')</span></code>
+debe devolver 15.</p></li>
+</ul>
+<p><strong>En todos los casos usar la función para asegurarse
+que funciona como es esperado.</strong></p>
 </section>
 </section>
 
@@ -133,6 +143,7 @@ max(&quot;hola&quot;, &quot;chau&quot;)
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="fn.html" class="btn btn-neutral float-left" title="Funciones en Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="bool.html" class="btn btn-neutral float-right" title="Booleanos &lt;bool&gt; + operadores de comparación + ìf" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

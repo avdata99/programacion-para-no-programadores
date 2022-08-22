@@ -115,3 +115,15 @@ usuarios querrán elevar números al cuadrado.
 
 Tareas
 ~~~~~~
+
+*  Crear una funcion que calcule y devuelva la superficie de un rectangulo
+   dados (como parámetros) los valores de sus lados.
+*  Crear una funcion que dados un nombre y un apellido imprima en pantalla
+   *"Hola NOMBRE APELLIDO!"*. La función no debe devolver ningun valor.
+*  Crear una función que dado un texto pasado como parámetro, devuelva
+   el mismo texto pero con todas las vocales cambiadas por un asterisco. 
+*  Crear una funcion que dada una temperatura en grados Celsius devuelva
+   el equivalente en grados Fahrenheit
+
+**En todos los casos usar la función para asegurarse
+que funciona como es esperado.**  

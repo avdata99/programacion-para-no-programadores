@@ -19,7 +19,7 @@ En general muchos electrodomésticos ya incluyen computadoras y por lo tanto pro
 Estas *instrucciones* organizadas con alguna finalidad específica conforman lo que denominamos *software*.  
 
 Ejemplo
--------
+~~~~~~~
 
 La computadora interna de un lavarropas que gestiona los dispositivos y conexiones internas podría tener estas instrucciones:
 

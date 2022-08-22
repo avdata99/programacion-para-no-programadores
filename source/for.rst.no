@@ -1,0 +1,61 @@
+Flujos de control en Python
+----------------------------
+
+Hasta aquí el flujo de nuestro código es lineal.
+
+
+.. code-block:: python
+
+    edad = 30
+
+    if edad > 20:
+        print(f"La edad es mayor a 20")
+    else:
+        print(f"La edad es menor a 20")
+
+    lista = ["Juan", "Pedro", "Maria"]
+
+    for persona in lista:
+        print(f'Hola {persona}')
+
+    """ Muestra
+    Hola Juan
+    Hola Pedro
+    Hola Maria
+    """
+
+
+    lista = [1, 2, 3, 4, 5]
+
+    if 6 in lista:
+        print("6 está en la lista")
+    else:
+        lista.append(6)
+
+    print(lista)
+
+    # for
+    paises = ["Argentina", "Brasil", "Chile", "Uruguay"]
+    print('Paises')
+    for pais in paises:
+        print(f" - {pais}")
+
+    # for / continue / break
+    paises = ["Argentina", "Brasil", "Chile", "Uruguay", "Venezuela", "Colombia"]
+    print('Paises')
+    for pais in paises:
+        if pais == "Chile":
+            continue
+        print(f" - {pais}")
+        if pais == "Venezuela":
+            break
+    print('FIN')
+
+    # while
+    a = 10
+    while a > 0:
+        print(f" - {a}")
+        a -= 1
+
+Tareas
+~~~~~~

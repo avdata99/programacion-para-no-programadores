@@ -1,8 +1,3 @@
-.. Curso de Programación documentation master file, created by
-   sphinx-quickstart on Sun Aug 12 16:52:37 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Curso de Programación para no programadores
 ===========================================
 
@@ -20,7 +15,20 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    str
    fn
    builtins
+   bool
+   list
+   
 
+..
+  for
+  dict
+  *args and **kwargs
+  files, open
+  Class
+  built-in modules (datetime random, math)
+  my modules
+  requests and external modules (local env?)
+  comprehension lists
 
 Indices y tablas
 ================
