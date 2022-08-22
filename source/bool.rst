@@ -132,6 +132,6 @@ Tareas
    ``True`` o ``False`` según corresponda. Tip: Los numeros pares tienen resto
    cero al dividirlos por 2.  
 *  Escribir una función que reciba 3 parametros: ``nombre``, ``edad`` y ``termino_secundario``.
-   Si la edad es mayor que 18, ``termino_secundario`` es ``True``y el nombre termina (tip:
+   Si la edad es mayor que 18, ``termino_secundario`` es ``True`` y el nombre termina (tip:
    función ``endswith`` de los *strings*) con "s" devuelve ``True``. En cualquier otro caso,
    devuelve ``False``.
