@@ -154,7 +154,7 @@ listas y por lo tanto se puede iterar.
     """
 
 Agregado: ``range``
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Python tiene una funcion (técnicamente no es una función pero
 por ahora podemos pensarla como tal) includa (*built-in*) que
