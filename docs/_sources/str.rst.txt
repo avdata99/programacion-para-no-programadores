@@ -66,7 +66,7 @@ Otras funciones disponibles para los *strings*:
     # otra forma de hacer los mismo (se le llama "f strings")
     saludo = f"Hola, {nombre}"
 
-Los objetos de typo ``str`` tienen muchas propiedades o funciones
+Los objetos de tipo ``str`` tienen muchas propiedades o funciones
 
 Tareas
 ~~~~~~

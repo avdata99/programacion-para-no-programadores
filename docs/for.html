@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flujos de control en Python &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
+  <title>Iterando ando: for &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,7 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="prev" title="Listas en Python" href="list.html" /> 
+    <link rel="prev" title="Listas en Python &lt;list&gt;" href="list.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,12 +48,20 @@
 <li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
-<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Flujos de control en Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#anatomia-de-un-for">Anatomía de un <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#continue-y-break-en-ciclos-for"><code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">break</span></code> en ciclos <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-in"><code class="docutils literal notranslate"><span class="pre">if</span></code> + <code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iterando-strings">Iterando <em>strings</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#agregado-range">Agregado: <code class="docutils literal notranslate"><span class="pre">range</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tareas">Tareas</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -72,7 +80,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Flujos de control en Python</li>
+      <li>Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/for.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -82,34 +90,77 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="flujos-de-control-en-python">
-<h1>Flujos de control en Python<a class="headerlink" href="#flujos-de-control-en-python" title="Enlace permanente a este encabezado"></a></h1>
-<p>Hasta aquí el flujo de nuestro código es lineal.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span> <span class="o">=</span> <span class="mi">30</span>
+  <section id="iterando-ando-for">
+<h1>Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#iterando-ando-for" title="Enlace permanente a este encabezado"></a></h1>
+<p>En Python algunos objetos se pueden iterar. Esto es: <strong>recorrer su
+elementos de uno a la vez</strong>. Muchos objetos tiene definida una forma
+de iterarse, por ejemplo las listas.</p>
+<p>Veamos un ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mi_lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="s2">&quot;Pedro&quot;</span><span class="p">,</span> <span class="s2">&quot;María&quot;</span><span class="p">]</span>
 
-<span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La edad es mayor a 20&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La edad es menor a 20&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">persona</span> <span class="ow">in</span> <span class="n">mi_lista</span><span class="p">:</span>
+    <span class="n">saludo</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Hola </span><span class="si">{</span><span class="n">persona</span><span class="si">}</span><span class="s1">!&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">saludo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Iteración terminada&#39;</span><span class="p">)</span>
 
+<span class="sd">&quot;&quot;&quot; Imprime</span>
+<span class="sd">Hola Juan</span>
+<span class="sd">Hola Pedro</span>
+<span class="sd">Hola María</span>
+<span class="sd">Iteración terminada</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Como podemos imaginar, la línea <code class="docutils literal notranslate"><span class="pre">print(saludo)</span></code> se ejecuta tres veces.
+Estos es, una por cada uno de los elementos de <code class="docutils literal notranslate"><span class="pre">mi_lista</span></code>.
+La sentencia <code class="docutils literal notranslate"><span class="pre">for</span></code> inicia un loop que <strong>va a terminar cuando se quede
+sin elementos que recorrer</strong>.</p>
+<section id="anatomia-de-un-for">
+<h2>Anatomía de un <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#anatomia-de-un-for" title="Enlace permanente a este encabezado"></a></h2>
+<p>La línea <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">persona</span> <span class="pre">in</span> <span class="pre">mi_lista:</span></code> podría traducirse como:
+<em>por cada persona en mi_lista hacer lo siguiente:</em></p>
+<p>Analicémosla:</p>
+<ul class="simple">
+<li><p>La sentencia <code class="docutils literal notranslate"><span class="pre">for</span></code> indica que vamos a iniciar una iteración.</p></li>
+<li><p>A continuación se requiere un nombre de variable (en nuestro
+ejemplo <code class="docutils literal notranslate"><span class="pre">persona</span></code>) para contener cada uno de los elementos de la iteración
+dentro de la porción de código que se va a ejecutar en cada vuelta del bucle.</p></li>
+<li><p>Luego sigue la palabra <code class="docutils literal notranslate"><span class="pre">in</span></code> para que esta linea sea fácil de leer y como
+indicador de que vamos a continuar con algún objeto iterable.</p></li>
+<li><p>Finalmente se coloca el objeto sobre el que deseamos iterar.</p></li>
+<li><p>Como todas las líneas que preceden a un bloque de código termina con <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p></li>
+<li><p>Todo el código que necesitamos que se ejecute para cada uno de los elementos
+debe estar tabulado. <strong>La forma de saber donde termina esta porción de
+codigo es que se termina la tabulación</strong>.</p></li>
+<li><p>Nota: la variable <code class="docutils literal notranslate"><span class="pre">persona</span></code> solo está definida dentro del bloque del
+código del <code class="docutils literal notranslate"><span class="pre">for</span></code>. Fuera de el no está definida y dará un error si se
+intenta usar.</p></li>
+</ul>
+<p>¿Se puede anidar iteraciones?
+Si, claro. Veamos un ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lista_con_listas</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="p">]</span>
 
-<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">lista</span> <span class="ow">in</span> <span class="n">lista_con_listas</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;6 está en la lista&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
-
-<span class="c1"># for</span>
-<span class="n">paises</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Argentina&quot;</span><span class="p">,</span> <span class="s2">&quot;Brasil&quot;</span><span class="p">,</span> <span class="s2">&quot;Chile&quot;</span><span class="p">,</span> <span class="s2">&quot;Uruguay&quot;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Paises&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">pais</span> <span class="ow">in</span> <span class="n">paises</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - </span><span class="si">{</span><span class="n">pais</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># for / continue / break</span>
-<span class="n">paises</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Argentina&quot;</span><span class="p">,</span> <span class="s2">&quot;Brasil&quot;</span><span class="p">,</span> <span class="s2">&quot;Chile&quot;</span><span class="p">,</span> <span class="s2">&quot;Uruguay&quot;</span><span class="p">,</span> <span class="s2">&quot;Venezuela&quot;</span><span class="p">,</span> <span class="s2">&quot;Colombia&quot;</span><span class="p">]</span>
+<span class="c1"># imprimirá:</span>
+<span class="mi">1</span>
+<span class="mi">12</span>
+<span class="mi">20</span>
+<span class="mi">22</span>
+<span class="mi">5</span>
+<span class="mi">8</span>
+</pre></div>
+</div>
+</section>
+<section id="continue-y-break-en-ciclos-for">
+<h2><code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">break</span></code> en ciclos <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#continue-y-break-en-ciclos-for" title="Enlace permanente a este encabezado"></a></h2>
+<p>Dentro de una iteración, existen formas de salir de
+ella (<code class="docutils literal notranslate"><span class="pre">break</span></code>) y de saltearse un elemento (<code class="docutils literal notranslate"><span class="pre">continue</span></code>).</p>
+<p>Veamos un ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># for / continue / break</span>
+<span class="n">paises</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Argentina&quot;</span><span class="p">,</span> <span class="s2">&quot;Brasil&quot;</span><span class="p">,</span> <span class="s2">&quot;Chile&quot;</span><span class="p">,</span> <span class="s2">&quot;Uruguay&quot;</span><span class="p">,</span> <span class="s2">&quot;Venezuela&quot;</span><span class="p">,</span> <span class="s2">&quot;Colombia&quot;</span><span class="p">,</span> <span class="s2">&quot;Japón&quot;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Paises&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">pais</span> <span class="ow">in</span> <span class="n">paises</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">pais</span> <span class="o">==</span> <span class="s2">&quot;Chile&quot;</span><span class="p">:</span>
@@ -118,16 +169,133 @@
     <span class="k">if</span> <span class="n">pais</span> <span class="o">==</span> <span class="s2">&quot;Venezuela&quot;</span><span class="p">:</span>
         <span class="k">break</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;FIN&#39;</span><span class="p">)</span>
-
-<span class="c1"># while</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="k">while</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">a</span> <span class="o">-=</span> <span class="mi">1</span>
+<span class="sd">&quot;&quot;&quot; imprime</span>
+<span class="sd">Paises</span>
+<span class="sd">- Argentina</span>
+<span class="sd">- Brasil</span>
+<span class="sd">- Uruguay</span>
+<span class="sd">- Venezuela</span>
+<span class="sd">FIN</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
 </div>
+<p>Algunos elementos no pueden iterarse, por ejemplo los <code class="docutils literal notranslate"><span class="pre">int</span></code>.
+El error <code class="docutils literal notranslate"><span class="pre">'XXX'</span> <span class="pre">object</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">iterable</span></code> es la forma de informar esto.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot; devolverá el error.</span>
+<span class="sd">Traceback (most recent call last):</span>
+<span class="sd">File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span>
+<span class="sd">TypeError: &#39;int&#39; object is not iterable</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="if-in">
+<h2><code class="docutils literal notranslate"><span class="pre">if</span></code> + <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#if-in" title="Enlace permanente a este encabezado"></a></h2>
+<p>Tambien podemos combinar <code class="docutils literal notranslate"><span class="pre">if</span></code> con <code class="docutils literal notranslate"><span class="pre">in</span></code> para saber si un objeto
+esta contenido en una lista.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="mi">4</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4 está en la lista&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4 no está en la lista&quot;</span><span class="p">)</span>
+<span class="c1"># imprime</span>
+<span class="c1"># 4 no está en la lista</span>
+</pre></div>
+</div>
+</section>
+<section id="iterando-strings">
+<h2>Iterando <em>strings</em><a class="headerlink" href="#iterando-strings" title="Enlace permanente a este encabezado"></a></h2>
+<p>Como ya vimos antes, los strings tambien pueden usarse como
+listas y por lo tanto se puede iterar.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Victor&quot;</span>
+
+<span class="k">for</span> <span class="n">letra</span> <span class="ow">in</span> <span class="n">nombre</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letra</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot; imprimirá</span>
+<span class="sd">V</span>
+<span class="sd">i</span>
+<span class="sd">c</span>
+<span class="sd">t</span>
+<span class="sd">o</span>
+<span class="sd">r</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<section id="agregado-range">
+<h3>Agregado: <code class="docutils literal notranslate"><span class="pre">range</span></code><a class="headerlink" href="#agregado-range" title="Enlace permanente a este encabezado"></a></h3>
+<p>Python tiene una funcion (técnicamente no es una función pero
+por ahora podemos pensarla como tal) includa (<em>built-in</em>) que
+permite iterar sobre una serie de números. Se llama <code class="docutils literal notranslate"><span class="pre">range</span></code>
+y podemos ver su funcionamiento con algunos ejemplos.
+Cuando llamamos a <code class="docutils literal notranslate"><span class="pre">range</span></code> con un solo un parámetro (siempre numeros)
+este devuelve un objeto que se puede iterar. Incluye los números
+desde cero hasta el valor pasado como parámetro menos uno
+(comportamiento similar a los indices de las listas).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="c1"># imprimira (en lineas diferentes): 0 1 2</span>
+</pre></div>
+</div>
+<p>Cuando llamamos a <code class="docutils literal notranslate"><span class="pre">range</span></code> con dos parámetros (siempre numeros)
+este devuelve un objeto que se puede iterar. Incluye los números
+desde el primer parámetro hasta el valor pasado como segundo
+parámetro menos uno.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="c1"># imprimira (en lineas diferentes): 2 3 4 5 6 7</span>
+</pre></div>
+</div>
+<p>Cuando llamamos a <code class="docutils literal notranslate"><span class="pre">range</span></code> con tres parámetros (siempre numeros)
+este devuelve un objeto que se puede iterar. Incluye los números
+desde el primer parámetro hasta el valor pasado como segundo
+parámetro menos uno. El último parámetro indica el tamaño del
+salto entre un elemento y otro (por ejemṕlo 2 hará que el
+resultado vaya de dos en dos).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="c1"># imprimira (en lineas diferentes): 3 5 7 9</span>
+</pre></div>
+</div>
+<p>Tambien es posible convertir el resultado de <code class="docutils literal notranslate"><span class="pre">range</span></code> a una lista
+(que ya conocemos).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pares</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">lista_pares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pares</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_pares</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span>
+<span class="mi">34</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span>
+<span class="mi">66</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
 <section id="tareas">
-<h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+<h3>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h3>
+<ul class="simple">
+<li><p>Escribir un programa que:</p>
+<ul>
+<li><p>Incluya al inicio una funcion llamada <code class="docutils literal notranslate"><span class="pre">es_par</span></code> y que devuelva
+<em>verdadero</em> o <em>falso</em> según corresponda</p></li>
+<li><p>Le solicite al usuario que ingrese una lista de números separados por coma.</p></li>
+<li><p>Transformarme este texto ingresado a lista con <code class="docutils literal notranslate"><span class="pre">split(',')</span></code></p></li>
+<li><p>Iterere todos ellos e imprima solo aquellos que son pares.</p></li>
+</ul>
+</li>
+<li><p>Escribir un programa que itere todos los múltiplos de 3 desde el cero
+al 500000 e imprima solo aquellos que además son divisibles (el resto
+de la division es cero) por 13.</p></li>
+<li><p>Escribir un programa que responda estas preguntas:</p>
+<ul>
+<li><p>¿Cuantos números multiplos de siete menores a 10.000 terminan en <em>999</em>?</p></li>
+<li><p>¿Cuales son?</p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -135,7 +303,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="list.html" class="btn btn-neutral float-left" title="Listas en Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="list.html" class="btn btn-neutral float-left" title="Listas en Python &lt;list&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>

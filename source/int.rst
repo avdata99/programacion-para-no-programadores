@@ -47,7 +47,7 @@ llamados *atributos*) y funciones.
 Por ejemplo, en el código anterior la variable *unidades* (definida en la linea que dice
 ``unidades = 3``) es en realidad un *objeto* de tipo ``int``.  
 
-Los objetos de typo ``int`` no tienen muchas propiedades y funciones
+Los objetos de tipo ``int`` no tienen muchas propiedades y funciones
 A mono de ejemplo, la funcion ``bit_length`` permite saber el numero
 de dígitos que este número tiene en su versión binaria.  
 

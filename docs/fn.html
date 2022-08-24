@@ -21,7 +21,7 @@
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Funciones incluidas en Python" href="builtins.html" />
-    <link rel="prev" title="Cadenadas de caracteres o strings &lt;str&gt;" href="str.html" /> 
+    <link rel="prev" title="Recibir datos del usuario input" href="input.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Funciones en Python</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#anatomia-de-una-funcion-simple">Anatomía de una función simple</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#funciones-con-parametros">Funciones con parámetros</a></li>
@@ -59,6 +60,7 @@
 <li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 </ul>
 
         </div>
@@ -187,6 +189,13 @@ usuarios querrán elevar números al cuadrado.</p>
 
 <span class="n">resultado</span> <span class="o">=</span> <span class="n">potencia</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Resultado de la potencia 3 ** 3: </span><span class="si">{</span><span class="n">resultado</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Es tambien posible cambiar el orden de los parametros al</span>
+<span class="c1"># llamar a la función usando su nombre.</span>
+<span class="c1"># Las siguientes opciones devolverán el mismo resultado.</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">potencia</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">potencia</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">potencia</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -194,13 +203,15 @@ usuarios querrán elevar números al cuadrado.</p>
 <h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
 <li><p>Crear una funcion que calcule y devuelva la superficie de un rectangulo
-dados (como parámetros) los valores de sus lados.</p></li>
+dados (como parámetros) los valores de sus lados. Usar esta funcion con
+valores ingresados por el usuario con <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p></li>
 <li><p>Crear una funcion que dados un nombre y un apellido imprima en pantalla
 <em>«Hola NOMBRE APELLIDO!»</em>. La función no debe devolver ningun valor.</p></li>
 <li><p>Crear una función que dado un texto pasado como parámetro, devuelva
 el mismo texto pero con todas las vocales cambiadas por un asterisco.</p></li>
 <li><p>Crear una funcion que dada una temperatura en grados Celsius devuelva
-el equivalente en grados Fahrenheit</p></li>
+el equivalente en grados Fahrenheit. Usar esta funcion con
+valores ingresados por el usuario con <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p></li>
 </ul>
 <p><strong>En todos los casos usar la función para asegurarse
 que funciona como es esperado.</strong></p>
@@ -211,7 +222,7 @@ que funciona como es esperado.</strong></p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="str.html" class="btn btn-neutral float-left" title="Cadenadas de caracteres o strings &lt;str&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="input.html" class="btn btn-neutral float-left" title="Recibir datos del usuario input" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="builtins.html" class="btn btn-neutral float-right" title="Funciones incluidas en Python" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

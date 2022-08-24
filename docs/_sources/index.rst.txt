@@ -13,14 +13,14 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    interactivo
    int
    str
+   input
    fn
    builtins
    bool
    list
-   
+   for
 
 ..
-  for
   dict
   *args and **kwargs
   files, open

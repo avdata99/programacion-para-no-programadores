@@ -20,6 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Iterando ando: for" href="for.html" />
     <link rel="prev" title="Booleanos &lt;bool&gt; + operadores de comparación + ìf" href="bool.html" /> 
 </head>
 
@@ -48,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
@@ -57,6 +59,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 </ul>
 
         </div>
@@ -152,7 +155,7 @@ disponibles, Python lanzara un error.</strong></p>
 <li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[-2]</span></code> devuelve el <strong>anteúltimo</strong> elemento de una lista.</p></li>
 </ul>
 <p>Es posible tambien obtener una sublista:
-<strong>Nota: esto es anti-intuitivo y confuso. Requiere poráctica habituarse</strong></p>
+<strong>Nota: esto es anti-intuitivo y confuso. Requiere práctica habituarse</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[0:3]</span></code> devuelve una nueva lista cuyo primer elemento es
 <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[0]</span></code> y el últimos es <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[2]</span></code> (si, hasta
@@ -235,10 +238,43 @@ separar los elementos de la lista resultande.</p>
 </section>
 <section id="tareas">
 <h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+<ul>
+<li><p>Escribir una funcion que dada una palabra devuelva su tercera letra.</p></li>
+<li><p>Escribir una funcion que reciba cuatro parametros obligatorios.</p>
 <ul class="simple">
-<li><p>Escribir una funcion que dada una palabra devuelva la tercera letra.</p></li>
-<li><p>Escribir una funcion que dados tres parametros individuales, devuelva
-una lista con ellos contenidos.</p></li>
+<li><p>Devuelva una lista</p></li>
+<li><p>Esta lista debe contener tres de los cuatro elementos (hay que quitar el que sea más pequeño)</p></li>
+<li><p>La lista devuelta debe estar ordenada de mayor a menor.</p></li>
+<li><p>Ejemplo: <code class="docutils literal notranslate"><span class="pre">ordenar_y_quitar(4,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">12)</span></code> debe devolver <code class="docutils literal notranslate"><span class="pre">[12,</span> <span class="pre">9,</span> <span class="pre">8]</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Escribir una funcion que reciba un parametro llamado <code class="docutils literal notranslate"><span class="pre">nombre_completo</span></code> y devuelva una
+lista de tres elementos (siempre con tres elementos).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>El primero de los elementos de la lista devuelta debe ser la primera
+palabra de <code class="docutils literal notranslate"><span class="pre">nombre_completo</span></code> (separada con la función <code class="docutils literal notranslate"><span class="pre">split</span></code>)</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">nombre_completo</span></code> separado con <code class="docutils literal notranslate"><span class="pre">split</span></code> tiene solo un elemento,
+agregar dos <em>strings</em> vacios para cumplir el requisito de devolver una
+lista con tres elementos.</p></li>
+<li><p>Si el <code class="docutils literal notranslate"><span class="pre">nombre_completo</span></code> tiene solo dos palabras, devolver una lista de la
+forma <code class="docutils literal notranslate"><span class="pre">['palabra1',</span> <span class="pre">'',</span> <span class="pre">'palabra2']</span></code></p></li>
+<li><p>Si el <code class="docutils literal notranslate"><span class="pre">nombre_completo</span></code> tiene tres palabras, devolver una lista de la
+forma <code class="docutils literal notranslate"><span class="pre">['palabra1',</span> <span class="pre">'palabra2',</span> <span class="pre">'palabra3']</span></code></p></li>
+<li><p>Si el <code class="docutils literal notranslate"><span class="pre">nombre_completo</span></code> tiene <strong>más</strong> de tres palabras, devolver una lista de la
+forma <code class="docutils literal notranslate"><span class="pre">['palabra1',</span> <span class="pre">'palabra2',</span> <span class="pre">'palabra3']</span></code></p></li>
+<li><p>Algunos ejemplos (suponiendo que la funcion se llame <code class="docutils literal notranslate"><span class="pre">separar_nombre</span></code>, puede ser otro).
+Probarlos todos para asegurarse que funciona como es esperado.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">separar_nombre('Juan')</span></code> debe devolver <code class="docutils literal notranslate"><span class="pre">['Juan',</span> <span class="pre">'',</span> <span class="pre">'']</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">separar_nombre('Juan</span> <span class="pre">Perez')</span></code> debe devolver <code class="docutils literal notranslate"><span class="pre">['Juan',</span> <span class="pre">'',</span> <span class="pre">'Perez']</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">separar_nombre('Juan</span> <span class="pre">Carlos</span> <span class="pre">Perez')</span></code> debe devolver <code class="docutils literal notranslate"><span class="pre">['Juan',</span> <span class="pre">'Carlos',</span> <span class="pre">'Perez']</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">separar_nombre('Juan</span> <span class="pre">Carlos</span> <span class="pre">Perez</span> <span class="pre">Valdez')</span></code> debe devolver <code class="docutils literal notranslate"><span class="pre">['Juan',</span> <span class="pre">'Carlos',</span> <span class="pre">'Perez']</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</li>
 </ul>
 </section>
 </section>
@@ -248,6 +284,7 @@ una lista con ellos contenidos.</p></li>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="bool.html" class="btn btn-neutral float-left" title="Booleanos &lt;bool&gt; + operadores de comparación + ìf" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="for.html" class="btn btn-neutral float-right" title="Iterando ando: for" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

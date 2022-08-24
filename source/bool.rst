@@ -135,3 +135,8 @@ Tareas
    Si la edad es mayor que 18, ``termino_secundario`` es ``True`` y el nombre termina (tip:
    función ``endswith`` de los *strings*) con "s" devuelve ``True``. En cualquier otro caso,
    devuelve ``False``.
+*  Escribir un programa que le pida al usuario que ingrese los datos
+   necesarios luego de calcular el
+   `índice de masa corporal <https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal>`_
+   informe (imprima algún mensaje) si el usuario tiene *Peso bajo*, *Normal*,
+   *Sobrepeso* u *Obesidad*.

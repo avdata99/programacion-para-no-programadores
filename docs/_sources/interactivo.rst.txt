@@ -56,17 +56,18 @@ y los sigiuentes no son válidos:
 ¿Cómo puede saber que tipo de datos almacena una variable?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Python incluye una función (ya veremos más adelante que son)
-llamada ``type`` que informa que tipo de datos contiene una variable dada.
+Python incluye una herramienta llamada ``type`` que informa
+que tipo de datos contiene una variable dada.  
 
 .. code-block:: python
 
     a = 5
     type(a)
-    # devuelve <class 'int'>
+    # devuelve 
+    # <class 'int'>
 
-En este caso, la variable ``a`` es del typo ``int`` (que veremos a continuación).  
-_Nota: La palabra ``class`` cobrará sentido más adelante._  
+En este caso, la variable ``a`` es del tipo ``int`` (que veremos a continuación).  
+*Nota: La palabra ``class`` cobrará sentido más adelante*.  
 
 Los siguientes son ejemplo de uso de los tipos básicos de datos de los que
 disponemos en Python.  

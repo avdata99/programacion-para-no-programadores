@@ -76,7 +76,7 @@ Es posible tambien acceder a los elementos en orden inverso:
 *  ``nombre_de_mi_lista[-2]`` devuelve el **anteúltimo** elemento de una lista.
 
 Es posible tambien obtener una sublista:
-**Nota: esto es anti-intuitivo y confuso. Requiere poráctica habituarse**
+**Nota: esto es anti-intuitivo y confuso. Requiere práctica habituarse**
 
 *  ``nombre_de_mi_lista[0:3]`` devuelve una nueva lista cuyo primer elemento es
    ``nombre_de_mi_lista[0]`` y el últimos es ``nombre_de_mi_lista[2]`` (si, hasta 
@@ -176,6 +176,36 @@ Veamos un ejemplo:
 Tareas
 ~~~~~~
 
-*  Escribir una funcion que dada una palabra devuelva la tercera letra.
-*  Escribir una funcion que dados tres parametros individuales, devuelva
-   una lista con ellos contenidos.
+*  Escribir una funcion que dada una palabra devuelva su tercera letra.
+
+*  Escribir una funcion que reciba cuatro parametros obligatorios.
+
+   *  Devuelva una lista
+
+   *  Esta lista debe contener tres de los cuatro elementos (hay que quitar el que sea más pequeño)
+
+   *  La lista devuelta debe estar ordenada de mayor a menor.
+
+   *  Ejemplo: ``ordenar_y_quitar(4, 8, 9, 12)`` debe devolver ``[12, 9, 8]``.
+
+*  Escribir una funcion que reciba un parametro llamado ``nombre_completo`` y devuelva una
+   lista de tres elementos (siempre con tres elementos). 
+
+    *  El primero de los elementos de la lista devuelta debe ser la primera
+       palabra de ``nombre_completo`` (separada con la función ``split``)
+    *  Si ``nombre_completo`` separado con ``split`` tiene solo un elemento,
+       agregar dos *strings* vacios para cumplir el requisito de devolver una
+       lista con tres elementos.
+    *  Si el ``nombre_completo`` tiene solo dos palabras, devolver una lista de la
+       forma ``['palabra1', '', 'palabra2']``
+    *  Si el ``nombre_completo`` tiene tres palabras, devolver una lista de la
+       forma ``['palabra1', 'palabra2', 'palabra3']``
+    *  Si el ``nombre_completo`` tiene **más** de tres palabras, devolver una lista de la
+       forma ``['palabra1', 'palabra2', 'palabra3']``
+    *  Algunos ejemplos (suponiendo que la funcion se llame ``separar_nombre``, puede ser otro).
+       Probarlos todos para asegurarse que funciona como es esperado. 
+
+       *  ``separar_nombre('Juan')`` debe devolver ``['Juan', '', '']``
+       *  ``separar_nombre('Juan Perez')`` debe devolver ``['Juan', '', 'Perez']``
+       *  ``separar_nombre('Juan Carlos Perez')`` debe devolver ``['Juan', 'Carlos', 'Perez']``
+       *  ``separar_nombre('Juan Carlos Perez Valdez')`` debe devolver ``['Juan', 'Carlos', 'Perez']``

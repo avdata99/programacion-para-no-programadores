@@ -112,18 +112,26 @@ usuarios querrán elevar números al cuadrado.
     resultado = potencia(3, 3)
     print(f'Resultado de la potencia 3 ** 3: {resultado}')
 
+    # Es tambien posible cambiar el orden de los parametros al
+    # llamar a la función usando su nombre.
+    # Las siguientes opciones devolverán el mismo resultado.
+    resultado = potencia(3, 4)
+    resultado = potencia(a=3, b=4)
+    resultado = potencia(b=4, a=3)
 
 Tareas
 ~~~~~~
 
 *  Crear una funcion que calcule y devuelva la superficie de un rectangulo
-   dados (como parámetros) los valores de sus lados.
+   dados (como parámetros) los valores de sus lados. Usar esta funcion con
+   valores ingresados por el usuario con ``input``.
 *  Crear una funcion que dados un nombre y un apellido imprima en pantalla
    *"Hola NOMBRE APELLIDO!"*. La función no debe devolver ningun valor.
 *  Crear una función que dado un texto pasado como parámetro, devuelva
    el mismo texto pero con todas las vocales cambiadas por un asterisco. 
 *  Crear una funcion que dada una temperatura en grados Celsius devuelva
-   el equivalente en grados Fahrenheit
+   el equivalente en grados Fahrenheit. Usar esta funcion con
+   valores ingresados por el usuario con ``input``. 
 
 **En todos los casos usar la función para asegurarse
 que funciona como es esperado.**  
