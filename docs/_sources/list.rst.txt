@@ -76,7 +76,7 @@ Por ejemplo
 *  ``nombre_de_mi_lista[1]`` devuelve el **segundo** elemento de una lista.
 
 **Nota: si se pide un numero de elemento (se les llama índices) mayor a los
-disponibles, Python lanzara un error.**  d values (Claves y Valores). Todos los elementos en el diccionario se encuentran encerrados en un par de corchetes {} .Sep 27, 2021
+disponibles, Python lanzara un error.**  
 
 Comprensión de Diccionario en Python: Explicado con ejemplos
 
