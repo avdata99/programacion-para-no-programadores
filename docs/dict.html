@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diccionarios: dict &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Git en la nube: GitHub" href="github.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vscode.html">Entorno de desarrollo: Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="github.html">Git en la nube: GitHub</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dict.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="diccionarios-dict">
+<h1>Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code><a class="headerlink" href="#diccionarios-dict" title="Enlace permanente a este encabezado"></a></h1>
+<p>Los diccionarios en Python son una estructura de datos preparadas para almacenar
+colecciones de elementos (separados por coma) compuestos de una clave y un valor
+(suele llamarlos en ingles <em>key</em>, <em>value</em>).
+Los diccionarios se delimitan con llaves <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
+<p>Veamos un ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">persona</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Luis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;apellido&quot;</span><span class="p">:</span> <span class="s2">&quot;Colon&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">32</span>
+<span class="p">}</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">persona</span><span class="p">)</span>
+<span class="c1"># devuelve &lt;class &#39;dict&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Los valores pueden accederse directamente desde sus claves.
+Esto es así tanto para leer como para modificar cada elemento.
+Las claves son únicas, no puede haber dos elementos con la misma clave.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">persona</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Luis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;apellido&quot;</span><span class="p">:</span> <span class="s2">&quot;Colon&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">32</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Nombre: </span><span class="si">{</span><span class="n">persona</span><span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">persona</span><span class="p">[</span><span class="s2">&quot;apellido&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1"> tiene </span><span class="si">{</span><span class="n">persona</span><span class="p">[</span><span class="s2">&quot;edad&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1"> años&#39;</span><span class="p">)</span>
+<span class="s1">&#39;Luis Colon tiene 32 años&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">persona</span><span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">])</span>
+<span class="s1">&#39;Luis&#39;</span>
+
+<span class="n">edad</span> <span class="o">=</span> <span class="n">persona</span><span class="p">[</span><span class="s2">&quot;edad&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span>
+<span class="mi">32</span>
+
+<span class="n">persona</span><span class="p">[</span><span class="s2">&quot;apellido&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Gonzalez&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">persona</span><span class="p">)</span>
+<span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Luis&quot;</span><span class="p">,</span> <span class="s2">&quot;apellido&quot;</span><span class="p">:</span> <span class="s2">&quot;Gonzalez&quot;</span><span class="p">,</span> <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>En algunas ocasiones no vamos a tener certeza de que las claves a las
+que queremos acceder existen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">persona</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Luis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;apellido&quot;</span><span class="p">:</span> <span class="s2">&quot;Colon&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">32</span>
+<span class="p">}</span>
+
+<span class="c1"># La siguiente línea lanzará un error (la clave no existe)</span>
+<span class="n">persona</span><span class="p">[</span><span class="s2">&quot;clave_que_no_exite&quot;</span><span class="p">]</span>
+
+<span class="c1"># Para acceder a elementos de los que no sabemos si su clave existe,</span>
+<span class="c1"># usamos la función &quot;get&quot; de los diccionarios</span>
+<span class="n">persona</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;clave_que_no_exite&quot;</span><span class="p">)</span>
+<span class="c1"># Si la clave (key) no existe la anterior línea no va a lanzar</span>
+<span class="c1"># un error. Simplemente devolverá None (es el &quot;nada&quot; de Python)</span>
+
+<span class="c1"># Si queremos un valor predeterminado para cuando la clave no</span>
+<span class="c1"># esta definida podemos usar el segundo parámetro opcional de &quot;get&quot;</span>
+<span class="n">persona</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;clave_que_no_exite&quot;</span><span class="p">,</span> <span class="s2">&quot;valor_predeterminado&quot;</span><span class="p">)</span>
+
+<span class="c1"># Tambien es posible &quot;preguntar&quot; si una clave existe</span>
+<span class="k">if</span> <span class="s2">&quot;clave_buscada&quot;</span> <span class="ow">in</span> <span class="n">persona</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;clave_buscada SI existe como clave en &#39;persona&#39;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Esto es posible porque los diccionarios definen un iterador con la</span>
+<span class="c1"># lista de sus claves</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">persona</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Clave en persona: </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Cada par de clave-valor es denominado como elemento (item).
+La función <code class="docutils literal notranslate"><span class="pre">items</span></code> de los diccionarios devuleve un objeto iterable
+que podemos navegar con <code class="docutils literal notranslate"><span class="pre">for</span></code> y que devuelve en cada paso una
+clave y un valor.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">persona</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;apellido&quot;</span><span class="p">:</span> <span class="s2">&quot;Colon&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">32</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">persona</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Item encontrado: Key:</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">, Value: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Item encontrado: Key:nombre, Value: Juan</span>
+<span class="c1"># Item encontrado: Key:apellido, Value: Colon</span>
+<span class="c1"># Item encontrado: Key:edad, Value: 32</span>
+</pre></div>
+</div>
+<p>Los valores puede ser de cualquier tipo e incluso conformar estructuras muy complejas.</p>
+<p>Ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">persona</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Luis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;apellido&quot;</span><span class="p">:</span> <span class="s2">&quot;Colon&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+    <span class="s2">&quot;estudios&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;primario&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;secundario&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;terciario&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;universitario&quot;</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;experiencia_laboral&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;2005-2008&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;empresa&quot;</span><span class="p">:</span> <span class="s2">&quot;Ferreteria el cosito del coso&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cargo&quot;</span><span class="p">:</span> <span class="s2">&quot;Vendedor&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sueldo&quot;</span><span class="p">:</span> <span class="mi">45000</span><span class="p">,</span>
+            <span class="s2">&quot;tareas&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;atender publico&quot;</span><span class="p">,</span> <span class="s2">&quot;compras&quot;</span><span class="p">]</span>
+            <span class="p">},</span>
+        <span class="s2">&quot;2009-2011&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;empresa&quot;</span><span class="p">:</span> <span class="s2">&quot;Escuela Tecnica San Martin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cargo&quot;</span><span class="p">:</span> <span class="s2">&quot;profesor&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sueldo&quot;</span><span class="p">:</span> <span class="mi">75000</span><span class="p">,</span>
+            <span class="s2">&quot;tareas&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;dictar clases&quot;</span><span class="p">,</span> <span class="s2">&quot;elaborar cursos&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>En el ejemplo anterior <code class="docutils literal notranslate"><span class="pre">persona[&quot;estudios&quot;]</span></code> es a su vez un diccionario por lo que
+tiene a su ves las propiedades de un nuevo objeto de este tipo.
+Las siguientes lineas son válidas para la estructura recién definida.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">persona</span><span class="p">[</span><span class="s2">&quot;estudios&quot;</span><span class="p">][</span><span class="s2">&quot;primario&quot;</span><span class="p">])</span>
+<span class="kc">True</span>
+
+<span class="k">if</span> <span class="n">persona</span><span class="p">[</span><span class="s2">&quot;estudios&quot;</span><span class="p">][</span><span class="s2">&quot;secundario&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;La persona termino el secundario&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>En el ejemplo anterior <code class="docutils literal notranslate"><span class="pre">persona[&quot;experiencia_laboral&quot;][&quot;2005-2008&quot;][&quot;tareas&quot;]</span></code> es a
+su vez una lista por lo que tiene a su ves las propiedades de estas.
+Las siguientes lineas son válidas para la estructura recién definida.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">tareas</span> <span class="ow">in</span> <span class="n">persona</span><span class="p">[</span><span class="s2">&quot;experiencia_laboral&quot;</span><span class="p">][</span><span class="s2">&quot;2005-2008&quot;</span><span class="p">][</span><span class="s2">&quot;tareas&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tarea: </span><span class="si">{</span><span class="n">tarea</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>También es posible usar <code class="docutils literal notranslate"><span class="pre">dict()</span></code> para crear un diccionario.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d3</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">nombre</span><span class="o">=</span><span class="s1">&#39;Laura&#39;</span><span class="p">,</span>
+    <span class="n">edad</span><span class="o">=</span><span class="mi">47</span><span class="p">,</span>
+    <span class="n">documento</span><span class="o">=</span><span class="mi">221029489</span>
+<span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">d3</span><span class="p">)</span>
+<span class="c1"># muestra &lt;class &#39;dict&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d3</span><span class="p">)</span>
+<span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span> <span class="s1">&#39;documento&#39;</span><span class="p">:</span> <span class="mi">221029489</span><span class="p">}</span>
+</pre></div>
+</div>
+<section id="tareas">
+<h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+<p>Analizar la siguiente función y su ejemplo uso</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">contar_palabras</span><span class="p">(</span><span class="n">frase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Esta funcion toma una frase y devuelve un diccionario</span>
+<span class="sd">    con una llave por cada palabra y un valor igual a la</span>
+<span class="sd">    cantidad de veces que aparece en la frase</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Separar la frase en palabras</span>
+    <span class="n">palabras</span> <span class="o">=</span> <span class="n">frase</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="c1"># preparar el diccionario vacio en el que voy a cargar los resultados</span>
+    <span class="n">resultados</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># Iterar por la lista de palabras para contarlos</span>
+    <span class="k">for</span> <span class="n">palabra</span> <span class="ow">in</span> <span class="n">palabras</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">palabra</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">resultados</span><span class="p">:</span>
+            <span class="c1"># si no existía, inicializarla en cero</span>
+            <span class="n">resultados</span><span class="p">[</span><span class="n">palabra</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># si existe, sumarle 1</span>
+            <span class="n">resultados</span><span class="p">[</span><span class="n">palabra</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">resultados</span>
+
+<span class="c1"># Probar la funcion</span>
+<span class="n">contar_palabras</span><span class="p">(</span><span class="s2">&quot;Oid mortales el grito sagrado. Libertad, libertad, libertad. Oid el ruido de rotas cadenas&quot;</span><span class="p">)</span>
+<span class="p">{</span><span class="s1">&#39;Oid&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;mortales&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;el&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;grito&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;sagrado.&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Libertad,&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;libertad,&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;libertad.&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;ruido&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;de&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;rotas&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;cadenas&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Hubieramos esperado que la palabra <em>Oid</em> tenga el valor 2 ya que esta dos veces pero ha fallado.
+Proponer una solución.</p>
+<p>Hubieramos esperado que la palabra <em>libertad</em> tenga el valor 3 ya que esta tres veces pero ha fallado.
+Al parecer los signos de puntuación son un problema y deberían ser limpiados.
+Proponer una solucion.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="github.html" class="btn btn-neutral float-left" title="Git en la nube: GitHub" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

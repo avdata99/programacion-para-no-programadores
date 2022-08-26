@@ -14,14 +14,19 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    int
    str
    input
+   vscode
    fn
    builtins
    bool
    list
    for
+   git
+   github
+   dict
 
 ..
-  dict
+  git
+  
   *args and **kwargs
   files, open
   Class

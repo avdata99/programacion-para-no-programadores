@@ -56,7 +56,7 @@ Tareas
 
 *  Escribir una función que dadas tres palabras devuelva el
    largo total de todas ellas juntas. Por ejemplo (si la funcion se llamara
-   ``largo_total``) la llamada ``largo_text('hola', 'chau', 'tercera')``
+   ``largo_total``) la llamada ``largo_total('hola', 'chau', 'tercera')``
    debe devolver 15.
 *  Escribir una función que dados dos números devuelva el valor
    absoluto del menor de ambos.

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Índice &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
+  <title>Cuidando nuestro código: git &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,8 +18,10 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Índice" href="#" />
-    <link rel="search" title="Búsqueda" href="search.html" /> 
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Git en la nube: GitHub" href="github.html" />
+    <link rel="prev" title="Iterando ando: for" href="for.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -39,7 +42,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
@@ -53,7 +56,12 @@
 <li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="for.html">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="git.html">Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#control-de-versiones">Control de versiones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#descentralizado">Descentralizado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modelo-de-ramificacion">Modelo de ramificación</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="github.html">Git en la nube: GitHub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
 </ul>
@@ -72,8 +80,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Índice</li>
+      <li>Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code></li>
       <li class="wy-breadcrumbs-aside">
+            <a href="_sources/git.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
   </ul>
   <hr/>
@@ -81,17 +90,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-
-<h1 id="index">Índice</h1>
-
-<div class="genindex-jumpbox">
- 
-</div>
+  <section id="cuidando-nuestro-codigo-git">
+<h1>Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code><a class="headerlink" href="#cuidando-nuestro-codigo-git" title="Enlace permanente a este encabezado"></a></h1>
+<p>Git es un sistema de control de versiones para repositorios de código fuente
+descentralizado basado en un modelo de ramificación.
+Actualmente es el instrumento más usado en la industria del software para
+administrar código fuente en equipos de trabajo.</p>
+<section id="control-de-versiones">
+<h2>Control de versiones<a class="headerlink" href="#control-de-versiones" title="Enlace permanente a este encabezado"></a></h2>
+<p>Permite hacer seguimiento del código que
+escribimos y de todos los cambios que le hacemos. Es posible saber
+en cada momento cuando y quien escribión cada línea de código.
+Tambien es posible ver y volver a versiones anteriores cuando sea
+necesario.</p>
+</section>
+<section id="descentralizado">
+<h2>Descentralizado<a class="headerlink" href="#descentralizado" title="Enlace permanente a este encabezado"></a></h2>
+<p>No necesitamos un servidor central donde almacenar todo el codigo
+junto a sus ramas y versiones.
+Cada usuario puede tener copias completas e independientes del material.</p>
+</section>
+<section id="modelo-de-ramificacion">
+<h2>Modelo de ramificación<a class="headerlink" href="#modelo-de-ramificacion" title="Enlace permanente a este encabezado"></a></h2>
+<p>Git permite (y te alienta) a que uses múltiples <em>ramas</em> de trabajo
+(usaremos indistintamente la palabra <em>branch</em> del ingles).
+Cada cambio en el código (para corregir errores o agregar nuevas
+funcionalidades) puede hacerse en una rama de trabajo independiente
+que facilmente puede integrarse a otras ramas de trabajo.</p>
+</section>
+</section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="for.html" class="btn btn-neutral float-left" title="Iterando ando: for" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="github.html" class="btn btn-neutral float-right" title="Git en la nube: GitHub" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

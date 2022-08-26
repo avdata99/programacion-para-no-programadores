@@ -30,16 +30,16 @@ Veamos algunas funciones de las listas:
 
 .. code-block:: python
 
-    lista = [1, 2]
-    # agregar un elemento
+    lista = [8, 9]
+    # agregar un elemento al final
     lista.append(3)
     print(lista)
-    # [1, 2, 3]
+    # [8, 9, 3]
 
-    # elimiar un elemento
-    lista.remove(2)
+    # elimiar un elemento específico
+    lista.remove(9)
     print(lista)
-    # [1, 3]
+    # [8, 3]
     # Cuidado! si se intenta eliminar un elemento que no existe Python lanzar un error
 
     # Tambien es posible eliminar por numero de indice y devolver lo eliminado
@@ -58,6 +58,14 @@ Veamos algunas funciones de las listas:
     # Si todos son numeros se ordenaran de mayor a menor
     # Si todos son strings, se ordenaran alfabéticamente
 
+    # Es posible modificar directamente algun elemento de la lista
+    # usando su numero de índice.
+
+    lista = [3, 4, 5, 7]
+    lista[1] = 9
+    print(lista)
+    [3, 9, 5, 7]
+
 Las listas tambien permiten obtener rápido cada uno de sus elementos u
 obtener sub listas incluidas.  
 Usar los corchetes junto a la variable permite acceder a cualquier elemento
@@ -68,7 +76,9 @@ Por ejemplo
 *  ``nombre_de_mi_lista[1]`` devuelve el **segundo** elemento de una lista.
 
 **Nota: si se pide un numero de elemento (se les llama índices) mayor a los
-disponibles, Python lanzara un error.**  
+disponibles, Python lanzara un error.**  d values (Claves y Valores). Todos los elementos en el diccionario se encuentran encerrados en un par de corchetes {} .Sep 27, 2021
+
+Comprensión de Diccionario en Python: Explicado con ejemplos
 
 Es posible tambien acceder a los elementos en orden inverso:
 
