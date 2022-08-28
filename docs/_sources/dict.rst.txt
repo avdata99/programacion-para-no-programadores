@@ -178,6 +178,6 @@ Tareas
 Algunos ejemplos de uso
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-*  `Diccionarios 00 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dict-00.py>`_
-*  `Diccionarios 01 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dict-01.py>`_
-*  `Diccionarios 02 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dict-02.py>`_
+*  `Diccionarios 00 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dicts-00.py>`_
+*  `Diccionarios 01 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dicts-01.py>`_
+*  `Diccionarios 02 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dicts-02.py>`_
