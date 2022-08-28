@@ -26,8 +26,6 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    dict
 
 ..
-  git
-  
   *args and **kwargs
   files, open
   Class

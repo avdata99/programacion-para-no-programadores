@@ -134,8 +134,25 @@ sea necesario, incluso despues de creado el PR en el paso siguiente.
 Paso 7: *Pull Requets*
 ~~~~~~~~~~~~~~~~~~~~~~
 
+Finalmente desde VSC o desde la página web del repositorio podemos
+iniciar un *PR* y asignar uno o más usuarios como revisores.  
+
+.. image:: /_static/imgs/vscode-pr.png
+
+Es posible que los revisores soliciten nuevos cambios o correcciones.  
+En caso de ser necesario podemos voler a nuestra rama más tarde y
+actualizar el PR haciendo nuevos *commits* hasta que finalmente nuestro
+trabajo quede resuelto.   
 
 Tarea
 ~~~~~~
 
-*  
+La carpeta `ejercicios <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios>`_
+de este repositorio tiene ya problemas para resolver mediante *pull requests*.  
+
+Se espera un *PR* para cada ejercicio, por lo tanto cada uno requiere una
+rama distinta **que siempre** salga desde master.  
+
+**Asegurarse de seguir todos los pasos para cada PR**.  
+
+*   Hacer un PR con una propuesta de solución para el ejercicio 001

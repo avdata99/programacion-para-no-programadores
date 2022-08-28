@@ -135,3 +135,12 @@ Tareas
 
 **En todos los casos usar la función para asegurarse
 que funciona como es esperado.**  
+
+Algunos ejemplos de uso
+~~~~~~~~~~~~~~~~~~~~~~~
+
+*  `Funciones 01 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/functions-01.py>`_
+*  `Funciones 02 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/functions-02.py>`_
+*  `Funciones 03 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/functions-03.py>`_
+*  `Funciones 04 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/functions-04.py>`_
+*  `Funciones 05 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/functions-05.py>`_

@@ -206,3 +206,10 @@ Proponer una solución.
 Hubieramos esperado que la palabra *libertad* tenga el valor 3 ya que esta tres veces pero ha fallado.  
 Al parecer los signos de puntuación son un problema y deberían ser limpiados.  
 Proponer una solucion.  
+
+Algunos ejemplos de uso
+~~~~~~~~~~~~~~~~~~~~~~~
+
+*  `Diccionarios 00 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/lists-00.py>`_
+*  `Diccionarios 01 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/lists-01.py>`_
+*  `Diccionarios 02 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/lists-02.py>`_
