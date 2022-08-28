@@ -239,48 +239,21 @@ Las siguientes lineas son válidas para la estructura recién definida.</p>
 </div>
 <section id="tareas">
 <h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
-<p>Analizar la siguiente función y su ejemplo uso</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">contar_palabras</span><span class="p">(</span><span class="n">frase</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Esta funcion toma una frase y devuelve un diccionario</span>
-<span class="sd">    con una llave por cada palabra y un valor igual a la</span>
-<span class="sd">    cantidad de veces que aparece en la frase</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1"># Separar la frase en palabras</span>
-    <span class="n">palabras</span> <span class="o">=</span> <span class="n">frase</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-    <span class="c1"># preparar el diccionario vacio en el que voy a cargar los resultados</span>
-    <span class="n">resultados</span> <span class="o">=</span> <span class="p">{}</span>
-
-    <span class="c1"># Iterar por la lista de palabras para contarlos</span>
-    <span class="k">for</span> <span class="n">palabra</span> <span class="ow">in</span> <span class="n">palabras</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">palabra</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">resultados</span><span class="p">:</span>
-            <span class="c1"># si no existía, inicializarla en cero</span>
-            <span class="n">resultados</span><span class="p">[</span><span class="n">palabra</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="c1"># si existe, sumarle 1</span>
-            <span class="n">resultados</span><span class="p">[</span><span class="n">palabra</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-
-    <span class="k">return</span> <span class="n">resultados</span>
-
-<span class="c1"># Probar la funcion</span>
-<span class="n">contar_palabras</span><span class="p">(</span><span class="s2">&quot;Oid mortales el grito sagrado. Libertad, libertad, libertad. Oid el ruido de rotas cadenas&quot;</span><span class="p">)</span>
-<span class="p">{</span><span class="s1">&#39;Oid&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;mortales&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;el&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;grito&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;sagrado.&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Libertad,&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;libertad,&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;libertad.&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;ruido&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;de&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;rotas&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;cadenas&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
-</pre></div>
-</div>
-<p>Hubieramos esperado que la palabra <em>Oid</em> tenga el valor 2 ya que esta dos veces pero ha fallado.
-Proponer una solución.</p>
-<p>Hubieramos esperado que la palabra <em>libertad</em> tenga el valor 3 ya que esta tres veces pero ha fallado.
-Al parecer los signos de puntuación son un problema y deberían ser limpiados.
-Proponer una solucion.</p>
+<ul class="simple">
+<li><p>Hacer un PR con una propuesta de solución para el
+<a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-020/ejercicio.py">ejercicio 020</a>
+(contenido en este repositorio)</p></li>
+<li><p>Hacer un PR con una propuesta de solución para el
+<a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-030/ejercicio.py">ejercicio 030</a>
+(contenido en este repositorio)</p></li>
+</ul>
 </section>
 <section id="algunos-ejemplos-de-uso">
 <h2>Algunos ejemplos de uso<a class="headerlink" href="#algunos-ejemplos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/lists-00.py">Diccionarios 00</a></p></li>
-<li><p><a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/lists-01.py">Diccionarios 01</a></p></li>
-<li><p><a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/lists-02.py">Diccionarios 02</a></p></li>
+<li><p><a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dict-00.py">Diccionarios 00</a></p></li>
+<li><p><a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dict-01.py">Diccionarios 01</a></p></li>
+<li><p><a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dict-02.py">Diccionarios 02</a></p></li>
 </ul>
 </section>
 </section>

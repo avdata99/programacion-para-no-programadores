@@ -168,48 +168,16 @@ También es posible usar ``dict()`` para crear un diccionario.
 Tareas
 ~~~~~~
 
-Analizar la siguiente función y su ejemplo uso
-
-.. code-block:: python
-
-    def contar_palabras(frase):
-        """ 
-        Esta funcion toma una frase y devuelve un diccionario
-        con una llave por cada palabra y un valor igual a la
-        cantidad de veces que aparece en la frase
-        """
-
-        # Separar la frase en palabras
-        palabras = frase.split()
-
-        # preparar el diccionario vacio en el que voy a cargar los resultados
-        resultados = {}
-
-        # Iterar por la lista de palabras para contarlos
-        for palabra in palabras:
-            if palabra not in resultados:
-                # si no existía, inicializarla en cero
-                resultados[palabra] = 0
-            else:
-                # si existe, sumarle 1
-                resultados[palabra] += 1
-                
-        return resultados
-
-    # Probar la funcion
-    contar_palabras("Oid mortales el grito sagrado. Libertad, libertad, libertad. Oid el ruido de rotas cadenas")
-    {'Oid': 1, 'mortales': 0, 'el': 1, 'grito': 0, 'sagrado.': 0, 'Libertad,': 0, 'libertad,': 0, 'libertad.': 0, 'ruido': 0, 'de': 0, 'rotas': 0, 'cadenas': 0}
-
-Hubieramos esperado que la palabra *Oid* tenga el valor 2 ya que esta dos veces pero ha fallado.
-Proponer una solución.  
-
-Hubieramos esperado que la palabra *libertad* tenga el valor 3 ya que esta tres veces pero ha fallado.  
-Al parecer los signos de puntuación son un problema y deberían ser limpiados.  
-Proponer una solucion.  
+*   Hacer un PR con una propuesta de solución para el
+    `ejercicio 020 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-020/ejercicio.py>`_
+    (contenido en este repositorio)
+*   Hacer un PR con una propuesta de solución para el
+    `ejercicio 030 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-030/ejercicio.py>`_
+    (contenido en este repositorio)
 
 Algunos ejemplos de uso
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-*  `Diccionarios 00 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/lists-00.py>`_
-*  `Diccionarios 01 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/lists-01.py>`_
-*  `Diccionarios 02 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/lists-02.py>`_
+*  `Diccionarios 00 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dict-00.py>`_
+*  `Diccionarios 01 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dict-01.py>`_
+*  `Diccionarios 02 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dict-02.py>`_

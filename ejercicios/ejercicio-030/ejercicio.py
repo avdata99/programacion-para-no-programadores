@@ -1,7 +1,9 @@
 """
 La siguiente funcion busca contar cuantas veces se repite cada palabra.
 Por ejemplo de "Hola Juan. Hola Pedro" devuelve {"Hola": 2, "Juan.": 1, "Pedro": 1}
-Tarea: Corregir el error de la función para que devuelva el resultado correcto
+Tarea: Corregir el error de la función para que devuelva el resultado correcto.
+Se espera que los signos de puntuacion no afecten el resultado y que las mayusculas
+y minusculas no cuenten como palabras diferentes.
 """
 
 
@@ -19,7 +21,7 @@ def contar_palabras(frase):
             resultados[palabra] += 1
         else:
             # si no existe, inicializarla
-            resultados[palabra] = 1
+            resultados[palabra] = 0
     return resultados
 
 
@@ -35,6 +37,11 @@ def contar_palabras(frase):
 
 
 f1 = contar_palabras("Hola dijo Juan. Hola dijo pedro")
-assert f1['Hola'] == 2, f"La función devolvió {f1['Hola']} y esperamos 2"
+assert f1['Hola'] == 2
+
+himno = "Oid mortales el grito sagrado. Libertad, libertad, libertad. Oid el ruido de rotas cadenas"
+palabras_himno = contar_palabras(himno)
+assert palabras_himno['Oid'] == 2
+assert palabras_himno['libertad'] == 3
 
 print('Ejercicio terminado OK')
