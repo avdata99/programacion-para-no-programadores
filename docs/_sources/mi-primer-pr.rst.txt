@@ -155,4 +155,9 @@ rama distinta **que siempre** salga desde master.
 
 **Asegurarse de seguir todos los pasos para cada PR**.  
 
-*   Hacer un PR con una propuesta de solución para el ejercicio 001
+*   Hacer un PR con una propuesta de solución para el
+    `ejercicio 001 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-001/ejercicio.py>`_
+    (contenido en este repositorio)
+*   Hacer un PR con una propuesta de solución para el
+    `ejercicio 002 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-002/ejercicio.py>`_
+    (contenido en este repositorio)
