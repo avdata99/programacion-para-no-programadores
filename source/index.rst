@@ -22,6 +22,7 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    for
    git
    github
+   mi-primer-pr
    dict
 
 ..

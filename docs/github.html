@@ -20,7 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Diccionarios: dict" href="dict.html" />
+    <link rel="next" title="Mi primer PR" href="mi-primer-pr.html" />
     <link rel="prev" title="Cuidando nuestro código: git" href="git.html" /> 
 </head>
 
@@ -64,6 +64,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="mi-primer-pr.html">Mi primer <em>PR</em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
 </ul>
 
@@ -94,14 +95,40 @@
   <section id="git-en-la-nube-github">
 <h1>Git en la nube: GitHub<a class="headerlink" href="#git-en-la-nube-github" title="Enlace permanente a este encabezado"></a></h1>
 <p>Luego de la aparición de Git surgieron muchos servicios que
-permitían mantener una copia de tus repositorios en internet.</p>
-<p>El más popular de ellos actualmente es <a class="reference external" href="https://github.com/">GitHub</a>
-y es por esto que lo usaremos en este curso.
+permitían mantener una copia de tus repositorios en internet.
+Todas las empresas de software usan alguno de estos servicios
+por lo que trabajar con desarrollador requiere siempre conocer
+y usar estos servicios.</p>
+<p>El más popular (pero no el único) de ellos actualmente es
+<a class="reference external" href="https://github.com/">GitHub</a> y es por esto que lo usaremos
+en este curso.
 Es importante que accedas al sitio y crees una cuenta (son gratuitas
 para la mayoría de sus funciones).</p>
+<p>Un ejemplo de repositorio de código es este mismo curso.
+Puedes ver el repositorio que incluye este manual y documentación
+<a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores">aquí</a>.</p>
+<img alt="_images/repo-ppnp.png" src="_images/repo-ppnp.png" />
 <section id="github-desde-visual-studio-code">
 <h2>GitHub desde Visual Studio Code<a class="headerlink" href="#github-desde-visual-studio-code" title="Enlace permanente a este encabezado"></a></h2>
-<p>TODO</p>
+<p>Visual Studio Code incluye la posibilidad de conectar tu cuenta de GitHub.
+Estoy es muy útil para conectarte a repositorios de código y enviar tus
+sugerencias o cambios.</p>
+<img alt="_images/vscode-accounts.png" src="_images/vscode-accounts.png" />
+<p>Despues de un proceso de conectar tu cuenta de GitHub, esta ya
+(casi) quedará disponible para usar desde Visual Studio Code.</p>
+<img alt="_images/vscode-accounts-logged-in.png" src="_images/vscode-accounts-logged-in.png" />
+<p>Finalmente, debes ir al menú <em>View</em> -&gt; <em>Terminal</em> y colocar:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.email <span class="s2">&quot;tu-email@xxx.com&quot;</span>
+git config --global user.name <span class="s2">&quot;tu_nombre_de_usuario&quot;</span>
+</pre></div>
+</div>
+<img alt="_images/vscode-terminal.png" src="_images/vscode-terminal.png" />
+<p>Para comenzar a trabajar sobre un repositorio de código debes usar el
+buscador o colocar la URL del repositorio.</p>
+<img alt="_images/vscode-open-clone.png" src="_images/vscode-open-clone.png" />
+<p>Luego de definir en que carpeta quedará tu copia de este repositorio
+podrás comenzar a usarlo.</p>
+<img alt="_images/vscode-cloned.png" src="_images/vscode-cloned.png" />
 <section id="tarea">
 <h3>Tarea<a class="headerlink" href="#tarea" title="Enlace permanente a este encabezado"></a></h3>
 <ul class="simple">
@@ -109,7 +136,6 @@ para la mayoría de sus funciones).</p>
 en <a class="reference external" href="https://github.com/">GitHub</a> para comenzar a trabajar en equipo.</p></li>
 <li><p>Conectar tu cuenta de GitHub a Visual Studio Code.</p></li>
 <li><p>Clonar el <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores">repositorio del curso</a></p></li>
-<li></li>
 </ul>
 </section>
 </section>
@@ -120,7 +146,7 @@ en <a class="reference external" href="https://github.com/">GitHub</a> para come
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="git.html" class="btn btn-neutral float-left" title="Cuidando nuestro código: git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="dict.html" class="btn btn-neutral float-right" title="Diccionarios: dict" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mi-primer-pr.html" class="btn btn-neutral float-right" title="Mi primer PR" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
