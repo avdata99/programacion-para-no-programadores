@@ -26,12 +26,16 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    dict
 
 ..
-  *args and **kwargs
-  files, open
-  Class
   built-in modules (datetime random, math)
+  files, open
+  *args and **kwargs
+  raise
+  Class
+  
   my modules
   requests and external modules (local env?)
+  jinja2
+  flask
   comprehension lists
 
 Indices y tablas

@@ -173,7 +173,10 @@ Tareas
     (contenido en este repositorio)
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 030 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-030/ejercicio.py>`_
-    (contenido en este repositorio)
+*   Hacer un PR con una propuesta de solución para el
+    `ejercicio 031 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-031/ejercicio.py>`_
+*   Hacer un PR con una propuesta de solución para el
+    `ejercicio 032 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-032/ejercicio.py>`_
 
 Algunos ejemplos de uso
 ~~~~~~~~~~~~~~~~~~~~~~~
