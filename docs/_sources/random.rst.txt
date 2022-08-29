@@ -1,5 +1,5 @@
-Librerías incluida: ``random``, ``math`` y ``datetime``
-=======================================================
+Librerías incluida: ``random``
+==============================
 
 Asi como hay funciones incluidas (*built-ins*) que se pueden usar sin
 estar declaradas tambien hay más herramientas de Python disponibles pero

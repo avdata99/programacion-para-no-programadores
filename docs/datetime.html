@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Librerías incluida: datetime &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Librerías incluida: random" href="random.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vscode.html">Entorno de desarrollo: Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="github.html">Git en la nube: GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mi-primer-pr.html">Mi primer <em>PR</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="random.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fecha-y-hora-datetime">Fecha y hora: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fechas-simples-con-date">Fechas simples con <code class="docutils literal notranslate"><span class="pre">date</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variacion-de-tiempo-con-timedelta">Variación de tiempo con <code class="docutils literal notranslate"><span class="pre">timedelta</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fecha-hora-momento-exacto-con-datetime">Fecha + hora = momento exacto con <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fecha-string">fecha &lt;—&gt; string</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/datetime.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="librerias-incluida-datetime">
+<h1>Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code><a class="headerlink" href="#librerias-incluida-datetime" title="Enlace permanente a este encabezado"></a></h1>
+<p>Asi como hay funciones incluidas (<em>built-ins</em>) que se pueden usar sin
+estar declaradas tambien hay más herramientas de Python disponibles pero
+que requieren ser <em>importadas</em>.</p>
+<p>Importar (con el comando <code class="docutils literal notranslate"><span class="pre">import</span></code> o de la forma <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">X</span> <span class="pre">import</span> <span class="pre">Y</span></code>)
+en Python es disponibilizar nueva herramientas (fuenciones y otras) en
+nuestro código.</p>
+<section id="fecha-y-hora-datetime">
+<h2>Fecha y hora: <code class="docutils literal notranslate"><span class="pre">datetime</span></code><a class="headerlink" href="#fecha-y-hora-datetime" title="Enlace permanente a este encabezado"></a></h2>
+<p>El manejo de fechas y horas básico en Python se hace con la librería <code class="docutils literal notranslate"><span class="pre">datetime</span></code>.</p>
+</section>
+<section id="fechas-simples-con-date">
+<h2>Fechas simples con <code class="docutils literal notranslate"><span class="pre">date</span></code><a class="headerlink" href="#fechas-simples-con-date" title="Enlace permanente a este encabezado"></a></h2>
+<p>Si solo necesitamos una fecha general solo con día + mes + año podemos usar
+objetos de tipo <code class="docutils literal notranslate"><span class="pre">date</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+
+<span class="n">hoy</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hoy</span><span class="p">)</span>
+<span class="c1"># 2022-02-12</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">hoy</span><span class="p">))</span>
+<span class="c1"># &lt;class &#39;datetime.date&#39;&gt;</span>
+
+<span class="c1"># date (año, mes, dia)</span>
+<span class="n">agosto_27_2022</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">27</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="variacion-de-tiempo-con-timedelta">
+<h2>Variación de tiempo con <code class="docutils literal notranslate"><span class="pre">timedelta</span></code><a class="headerlink" href="#variacion-de-tiempo-con-timedelta" title="Enlace permanente a este encabezado"></a></h2>
+<p>Para sumar o restar persiodos de tiempo a una fecha existe <code class="docutils literal notranslate"><span class="pre">timedelta</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="n">hoy</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="n">manana</span> <span class="o">=</span> <span class="n">hoy</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">manana</span><span class="p">)</span>
+<span class="c1"># 2022-02-13</span>
+</pre></div>
+</div>
+</section>
+<section id="fecha-hora-momento-exacto-con-datetime">
+<h2>Fecha + hora = momento exacto con <code class="docutils literal notranslate"><span class="pre">datetime</span></code><a class="headerlink" href="#fecha-hora-momento-exacto-con-datetime" title="Enlace permanente a este encabezado"></a></h2>
+<p>Si necesitamos más precision que solo dia + mes + año debemos usar <code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code></p>
+<p><strong>Nota: datetime como libreria incluye un objeto con el mismo nombre pero
+son cosas distintas. Uno es la libreria y otro es la clase para construir
+fecha/horas o datetimes.</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="n">ahora</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ahora</span><span class="p">)</span>
+<span class="c1"># 2022-02-12 14:35:16.687589</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ahora</span><span class="p">))</span>
+<span class="c1"># &lt;class &#39;datetime.datetime&#39;&gt;</span>
+
+<span class="n">en_15</span> <span class="o">=</span> <span class="n">ahora</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">en_15</span><span class="p">)</span>
+<span class="c1"># 2022-02-12 14:50:16.687589</span>
+</pre></div>
+</div>
+</section>
+<section id="fecha-string">
+<h2>fecha &lt;—&gt; string<a class="headerlink" href="#fecha-string" title="Enlace permanente a este encabezado"></a></h2>
+<p>En muchos casos es requirido pasar de fecha a strings y viceversa.
+Para estos casos se usan las funciones <code class="docutils literal notranslate"><span class="pre">strftime</span></code> (fecha a
+string) y <code class="docutils literal notranslate"><span class="pre">strptime</span></code> (string a fecha).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">datetime</span>
+
+<span class="n">hoy</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hoy</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">/%m/%Y&quot;</span><span class="p">))</span>
+<span class="c1"># 12/02/2022</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hoy</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="c1"># 2022-02-12</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hoy</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> de %B de %Y&quot;</span><span class="p">))</span>
+<span class="c1"># 12 de February de 2022</span>
+
+<span class="c1"># pasar de string a fecha</span>
+<span class="n">fecha_str</span> <span class="o">=</span> <span class="s1">&#39;2022-09-21&#39;</span>
+<span class="n">fecha</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">fecha_str</span><span class="p">,</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fecha</span><span class="p">)</span>
+<span class="c1"># 2022-09-21 00:00:00</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="random.html" class="btn btn-neutral float-left" title="Librerías incluida: random" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

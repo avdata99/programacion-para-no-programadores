@@ -25,10 +25,9 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    mi-primer-pr
    dict
    random
-   
+   datetime
 
 ..
-  datetime
   built-in modules (datetime random, math)
   files, open
   *args and **kwargs
