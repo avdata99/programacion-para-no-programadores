@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Librerías incluida: random, math y datetime &mdash; documentación de Curso de programación para no programadores con Python. - v 0.3</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Diccionarios: dict" href="dict.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vscode.html">Entorno de desarrollo: Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="github.html">Git en la nube: GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mi-primer-pr.html">Mi primer <em>PR</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">math</span></code> y <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-al-azar-random">Python al azar: <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#choice-elegir-un-opcion-al-azar-de-una-lista"><code class="docutils literal notranslate"><span class="pre">choice</span></code>: Elegir un opción al azar de una lista.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shuffle-mezclar-una-lista"><code class="docutils literal notranslate"><span class="pre">shuffle</span></code>: Mezclar una lista</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tareas">Tareas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">math</span></code> y <code class="docutils literal notranslate"><span class="pre">datetime</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/random.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="librerias-incluida-random-math-y-datetime">
+<h1>Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">math</span></code> y <code class="docutils literal notranslate"><span class="pre">datetime</span></code><a class="headerlink" href="#librerias-incluida-random-math-y-datetime" title="Enlace permanente a este encabezado"></a></h1>
+<p>Asi como hay funciones incluidas (<em>built-ins</em>) que se pueden usar sin
+estar declaradas tambien hay más herramientas de Python disponibles pero
+que requieren ser <em>importadas</em>.</p>
+<p>Importar (con el comando <code class="docutils literal notranslate"><span class="pre">import</span></code> o de la forma <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">X</span> <span class="pre">import</span> <span class="pre">Y</span></code>)
+en Python es disponibilizar nueva herramientas (fuenciones y otras) en
+nuestro código.</p>
+<section id="python-al-azar-random">
+<h2>Python al azar: <code class="docutils literal notranslate"><span class="pre">random</span></code><a class="headerlink" href="#python-al-azar-random" title="Enlace permanente a este encabezado"></a></h2>
+<p>El módulo <code class="docutils literal notranslate"><span class="pre">random</span></code> incluye una serie de funciones que permiten
+darle aleatoriedad a nuestro código.</p>
+<p>Veamos un ejemplo. La funcion <code class="docutils literal notranslate"><span class="pre">randint</span></code> genera numeros al alzar
+entre dos valores pasados como parámetros.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="n">al_azar</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">al_azar</span><span class="p">)</span>
+
+<span class="c1"># otra forma de usarlo podría ser</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="n">al_azar</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">al_azar</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Asi como el <code class="docutils literal notranslate"><span class="pre">.</span></code> se usa en <code class="docutils literal notranslate"><span class="pre">objeto.propiedad</span></code> tambien se usa
+en <code class="docutils literal notranslate"><span class="pre">modulo.objeto_en_modulo</span></code>.</p>
+</section>
+<section id="choice-elegir-un-opcion-al-azar-de-una-lista">
+<h2><code class="docutils literal notranslate"><span class="pre">choice</span></code>: Elegir un opción al azar de una lista.<a class="headerlink" href="#choice-elegir-un-opcion-al-azar-de-una-lista" title="Enlace permanente a este encabezado"></a></h2>
+<p>La función <code class="docutils literal notranslate"><span class="pre">choice</span></code> recibe como parámetro una lista de la cual
+devolverá un elemento al azar.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+
+<span class="n">opciones</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;piedra&quot;</span><span class="p">,</span> <span class="s2">&quot;papel&quot;</span><span class="p">,</span> <span class="s2">&quot;tijeras&quot;</span><span class="p">]</span>
+<span class="n">opcion_elegida</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">opciones</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">opcion_elegida</span><span class="p">)</span>
+<span class="c1"># tijeras</span>
+</pre></div>
+</div>
+</section>
+<section id="shuffle-mezclar-una-lista">
+<h2><code class="docutils literal notranslate"><span class="pre">shuffle</span></code>: Mezclar una lista<a class="headerlink" href="#shuffle-mezclar-una-lista" title="Enlace permanente a este encabezado"></a></h2>
+<p>Otra función del módulo <code class="docutils literal notranslate"><span class="pre">random</span></code> es <code class="docutils literal notranslate"><span class="pre">shuffle</span></code> que recibe una lista
+como parámetro y la desordena aleatoriamente.</p>
+<p>Ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">shuffle</span>
+
+<span class="n">mazo</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;numero&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;palo&quot;</span><span class="p">:</span> <span class="s2">&quot;espada&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;numero&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;palo&quot;</span><span class="p">:</span> <span class="s2">&quot;espada&quot;</span><span class="p">},</span>
+    <span class="c1"># ...</span>
+    <span class="p">{</span><span class="s2">&quot;numero&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;palo&quot;</span><span class="p">:</span> <span class="s2">&quot;oro&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;numero&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;palo&quot;</span><span class="p">:</span> <span class="s2">&quot;oro&quot;</span><span class="p">},</span>
+<span class="p">]</span>
+<span class="n">suffle</span><span class="p">(</span><span class="n">mazo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mazo</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="c1"># {&quot;numero&quot;: 11, &quot;palo&quot;: &quot;oro&quot;}</span>
+</pre></div>
+</div>
+<section id="tareas">
+<h3>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h3>
+<ul class="simple">
+<li><p>Hacer un PR con una propuesta de solución para el
+<a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-045/ejercicio.py">ejercicio 045</a>
+(contenido en este repositorio)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="dict.html" class="btn btn-neutral float-left" title="Diccionarios: dict" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
