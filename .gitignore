@@ -3,3 +3,4 @@ __pycache__
 cba.json
 *.ps
 .pytest_cache
+epub/

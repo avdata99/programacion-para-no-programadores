@@ -34,6 +34,14 @@ sphinx-build -b html source docs
 Subido ya se ve así:
 ![Versión inicial](imgs/web-inicial.png)
 
+### Compilando epub
+
+Compilando en formato epub
+
+```
+sphinx-build -b epub source epub
+```
+
 ## Usando un template
 
 El _template_ inicial no es muy atractivo. Instalo el template _Read the docs_.  
