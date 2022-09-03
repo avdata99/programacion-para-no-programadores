@@ -40,6 +40,8 @@ Compilando en formato epub
 
 ```
 sphinx-build -b epub source epub
+# mover a la carpeta pública
+mv epub/CursodeprogramacinparanoprogramadoresconPython.epub docs/curso-python.epub
 ```
 
 ## Usando un template
