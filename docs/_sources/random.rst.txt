@@ -77,3 +77,7 @@ Tareas
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 045 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-045/ejercicio.py>`_
     (contenido en este repositorio)
+*   Hacer un PR con una propuesta de solución para el
+    `ejercicio 046 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-046/ejercicio.py>`_
+*   Hacer un PR con una propuesta de solución para el
+    `ejercicio 047 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-047/ejercicio.py>`_

@@ -70,6 +70,16 @@ fecha/horas o datetimes.**
     print(en_15)
     # 2022-02-12 14:50:16.687589
 
+    # la diferencia entre dos fechas, es un timedelta
+    a = datetime(2022,3,4)
+    b = datetime(1988,2,11,6,7,8)
+    c = a - b
+    print(c)
+    # imprime 12439 days, 17:52:52
+    type(c)
+    # imprime <class 'datetime.timedelta'>
+
+
 fecha <---> string
 ------------------
 
@@ -94,3 +104,10 @@ string) y ``strptime`` (string a fecha).
     fecha = datetime.strptime(fecha_str, "%Y-%m-%d")
     print(fecha)
     # 2022-09-21 00:00:00
+
+
+Tareas
+~~~~~~
+
+*   Hacer una función que le pida al usuario que inserte su fecha 
+    de nacimiento y se le devuelva hace cuantos días nacio.  
