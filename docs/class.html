@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clases y objetos &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.3</title>
+  <title>Clases y objetos &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.4</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -32,7 +32,7 @@
             <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
           </a>
               <div class="version">
-                0.4
+                0.4.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -66,6 +66,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#mi-primera-clase">Mi primera clase</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#anatomia-de-una-clase">Anatomia de una clase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id1">Clases y objetos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#self">¿<code class="docutils literal notranslate"><span class="pre">self</span></code>?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#contenido-de-un-clase">Contenido de un clase</a></li>
 </ul>
 </li>
@@ -77,6 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#add">__add__</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#str">__str__</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#eq">__eq__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#codigo-final-de-nuestra-clase">Código final de nuestra clase</a></li>
 </ul>
 
         </div>
@@ -149,7 +151,7 @@ reglas que para los nombres de variables (no pueden empezar con números, no pue
 espacios, etc). Se suele usar aqui el formato <em>CamelCase</em> y siempre con mayúscula inicial.
 No es obligatorio.</p></li>
 <li><p>Despues del nombre de la clase podemos colocar parentesis (no es obligatorio). Se usarán
-en caso de querer aprovechar algo llamada <em>Herencia</em> que veremos más adelante.</p></li>
+en caso de querer aprovechar algo llamado <em>Herencia</em> que veremos más adelante.</p></li>
 <li><p>Finalmente agregamos <em>:</em> (dos puntos) para indicar que terminamos de definir el encabezado
 de la clase y vamos a comenzar con el bloque de código de ella.</p></li>
 <li><p>El código de la clase debe estar tabulado hacia la derecha. <strong>Esta es una de las grandes
@@ -162,9 +164,10 @@ tengan nuestros objetos. Podemos agregar tantas propiedades y funciones como sea
 Veremos más detalles a continuación.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__init__</span></code> es hasta aquí nuestra única función (nos damos cuenta porque usa el <code class="docutils literal notranslate"><span class="pre">def</span></code> que
 ya conocemos junto a un grupo de parámetros). Cuando veamos estos guiones bajos dobles
-debemos interpretar que es una herramienta propia de Python. En este caso, todas las clases
-tienen una función de inicialización de una clase. Esto quiere decir se va a ejecutar cuando
-los usuarios de la clase la usern para contruir un objeto de este tipo.</p></li>
+debemos interpretar que es una herramienta interna de Python. En este caso, todas las clases
+tienen una función de inicialización de una clase (y siempre se llama <code class="docutils literal notranslate"><span class="pre">__init__</span></code>).
+Ser la función inicializadora quiere decir que se va a ejecutar cuando
+los usuarios de la clase la usen para construir un objeto de este tipo.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> es el primer parámetro de la función <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. Hablaremos en particular de este
 parámetro más adelante. Por ahora podemos decir que <strong>es obligatorio que todas las funciones
 de las clases tengan un parametro que represente a cada objeto creado con esta clase</strong>. Es
@@ -196,6 +199,16 @@ lo tanto las propiedades que contienen son independientes y se procesan de maner
 </pre></div>
 </div>
 <p>Podemos pensar a los objetos o <em>instancias</em> como una versión concreta de una clase.</p>
+</section>
+<section id="self">
+<h3>¿<code class="docutils literal notranslate"><span class="pre">self</span></code>?<a class="headerlink" href="#self" title="Enlace permanente a este encabezado"></a></h3>
+<p>Salvo algunas excepciones todas las funciones de las clases deben tener como primer
+parámetro a <code class="docutils literal notranslate"><span class="pre">self</span></code>. De esta forma, todo el objeto estará disponible dentro de cada
+función de la clase. Esto es obligatorio y olvidar colocarla generará errores difíciles
+de detectar en nuestras primeras experiencias con clases.</p>
+<p>Cuando llamamos a funciones de la clase que usan <code class="docutils literal notranslate"><span class="pre">self</span></code>, no debemos pasar nada. Debemos
+ignorarlo cuando estamos usando nuestro objeto. Esto es visible en todos los ejemplos
+usados en este manual.</p>
 </section>
 <section id="contenido-de-un-clase">
 <h3>Contenido de un clase<a class="headerlink" href="#contenido-de-un-clase" title="Enlace permanente a este encabezado"></a></h3>

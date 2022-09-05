@@ -53,7 +53,7 @@ Anatomia de una clase
    espacios, etc). Se suele usar aqui el formato *CamelCase* y siempre con mayúscula inicial.
    No es obligatorio.
 *  Despues del nombre de la clase podemos colocar parentesis (no es obligatorio). Se usarán
-   en caso de querer aprovechar algo llamada *Herencia* que veremos más adelante.
+   en caso de querer aprovechar algo llamado *Herencia* que veremos más adelante.
 *  Finalmente agregamos *:* (dos puntos) para indicar que terminamos de definir el encabezado
    de la clase y vamos a comenzar con el bloque de código de ella.
 *  El código de la clase debe estar tabulado hacia la derecha. **Esta es una de las grandes
@@ -66,9 +66,10 @@ Anatomia de una clase
    Veremos más detalles a continuación.
 *  ``__init__`` es hasta aquí nuestra única función (nos damos cuenta porque usa el ``def`` que
    ya conocemos junto a un grupo de parámetros). Cuando veamos estos guiones bajos dobles
-   debemos interpretar que es una herramienta propia de Python. En este caso, todas las clases
-   tienen una función de inicialización de una clase. Esto quiere decir se va a ejecutar cuando
-   los usuarios de la clase la usern para contruir un objeto de este tipo.
+   debemos interpretar que es una herramienta interna de Python. En este caso, todas las clases
+   tienen una función de inicialización de una clase (y siempre se llama ``__init__``).
+   Ser la función inicializadora quiere decir que se va a ejecutar cuando
+   los usuarios de la clase la usen para construir un objeto de este tipo.
 *  ``self`` es el primer parámetro de la función ``__init__``. Hablaremos en particular de este
    parámetro más adelante. Por ahora podemos decir que **es obligatorio que todas las funciones
    de las clases tengan un parametro que represente a cada objeto creado con esta clase**. Es
@@ -104,6 +105,18 @@ lo tanto las propiedades que contienen son independientes y se procesan de maner
     'pedro'
 
 Podemos pensar a los objetos o *instancias* como una versión concreta de una clase.  
+
+¿``self``?
+~~~~~~~~~~
+
+Salvo algunas excepciones todas las funciones de las clases deben tener como primer
+parámetro a ``self``. De esta forma, todo el objeto estará disponible dentro de cada
+función de la clase. Esto es obligatorio y olvidar colocarla generará errores difíciles
+de detectar en nuestras primeras experiencias con clases.  
+
+Cuando llamamos a funciones de la clase que usan ``self``, no debemos pasar nada. Debemos
+ignorarlo cuando estamos usando nuestro objeto. Esto es visible en todos los ejemplos
+usados en este manual.  
 
 Contenido de un clase
 ~~~~~~~~~~~~~~~~~~~~~
