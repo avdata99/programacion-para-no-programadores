@@ -69,6 +69,18 @@ print(f'Escaleras encontradas {len(escaleras)}')
 #   crear un "pull request" y solicitar revision de un tercero.
 
 # Probar tiros donde yo ya conozco los resultados
+tiros_test = [1, 5, 6,
+              3, 4, 5,
+              1, 5, 6,
+              1, 2, 3,
+              2, 2, 2]
+
+escaleras = detectar_escaleras(tiros_test)
+assert escaleras == [
+    [3, 4, 5],
+    [1, 2, 3],
+]
+
 tiros_test = [1, 5, 2, 3, 2, 1, 4, 5, 5, 1, 2, 6, 3, 3, 3, 1, 2, 5, 5, 2, 4,
               3, 4, 5,
               2, 3, 4, 5,

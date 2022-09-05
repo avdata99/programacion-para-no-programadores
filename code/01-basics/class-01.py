@@ -1,37 +1,56 @@
+class FacturaServicio:
+    """ Cada factura para el pago de servicios hogareños """
+    def __init__(self, monto, servicio):
+        self.monto = monto
+        self.servicio = servicio
 
-class Persona:
-    def __init__(self, nombre, apellido, auto_corregir=True):
-        self.nombre = nombre
-        self.apellido = apellido
-        if auto_corregir:
-            self.corregir_nombre()
+    def __add__(self, otro):
+        """ Sumar esta factura a otra factura 
+            Notar que el resultado no es otro objeto de este tipo,
+            es solo un numero."""
+        if type(otro) != FacturaServicio:
+            raise Exception('La suma solo está permitida para objetos del mismo tipo')
 
-    def corregir_nombre(self):
-        """ Asegurarse que el nombre y el apellido empiecen 
-            con mayúscula y no tengan espacios al principio
-            o al final
-        """
-        self.nombre = self.nombre.lower().strip().title()
-        self.apellido = self.apellido.lower().strip().title()
-
-    def lower(self):
-        """ Representacion en minúsculas del nombre completo
-            No cambia los valores del objeto real """
-        return f'{self.nombre.lower()} {self.apellido.lower()}'
+        return self.monto + otro.monto
 
     def __str__(self):
-        return f'{self.nombre} {self.apellido}'
+        return f'$ {self.monto} a pagar por el servicio de {self.servicio}'
 
-juan = Persona(nombre='juan carlos', apellido='perez')
-pedro = Persona(nombre='pedro', apellido='gomez', auto_corregir=False)
+    def __eq__(self, otro):
+        """ Revisar si son iguales a otra factura """
 
-print(f"Nombre: {juan.nombre}")
-print(f"Apellido: {juan.apellido}")
+        if type(otro) != FacturaServicio:
+            raise Exception('La comparacion solo está permitida para objetos del mismo tipo')
+        
+        montos_iguales = self.monto == otro.monto
+        servicios_iguales = self.servicio == otro.servicio
 
-print(f"Nombre: {juan.nombre}")
-print(f"Apellido: {juan.apellido}")
-print('---- CORRIGIENDO ----')
-pedro.corregir_nombre()
+        return montos_iguales and servicios_iguales
 
-print(juan)
-print(pedro)
+f1 = FacturaServicio(3500.90, 'Internet')
+print(f1)
+
+f1 = FacturaServicio(3500.90, 'Internet')
+f2 = FacturaServicio(1806.06, 'Telefono')
+
+print(f1 + f2)
+5306.96
+
+f1 = FacturaServicio(1500.90, 'Internet')
+f2 = FacturaServicio(1500.90, 'Internet')
+f3 = FacturaServicio(3500.90, 'Internet')
+
+if f1 == f2:
+    print('f1 y f2 SI son iguales')
+else:
+    print('f1 y f2 NO son iguales')
+
+if f2 == f3:
+    print('f2 y f3 SI son iguales')
+else:
+    print('f2 y f3 NO son iguales')
+
+"""
+f1 y f2 SI son iguales
+f2 y f3 NO son iguales
+"""

@@ -1,3 +1,7 @@
+"""
+Opciones para concatenar strings con variables
+"""
+
 nombre = 'Pedro'
 pais = 'Chile'
 
@@ -16,6 +20,6 @@ print("Valores con nombre. Hello world {name} de {country}!".format(name=nombre,
 print("Estilo C. Hello world %s de %s !" % (nombre, pais))
 # Estilo C. Hello world Pedro de Chile !
 
-# Nueva opcion con python 3.6
+# Nueva opcion desde python 3.6
 print(f"Hello world {nombre} de {pais}!")
 # Hello world Pedro de Chile!

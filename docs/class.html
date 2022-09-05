@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clases y objetos &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.3</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Propiedades controladas" href="class-props.html" />
+    <link rel="prev" title="Librerías incluida: datetime" href="datetime.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vscode.html">Entorno de desarrollo: Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="github.html">Git en la nube: GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mi-primer-pr.html">Mi primer <em>PR</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="random.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="datetime.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Clases y objetos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mi-primera-clase">Mi primera clase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#anatomia-de-una-clase">Anatomia de una clase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Clases y objetos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contenido-de-un-clase">Contenido de un clase</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html">Propiedades controladas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html#funciones-de-mi-clase">Funciones de mi clase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html">Funciones especiales de las clases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#add">__add__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#str">__str__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#eq">__eq__</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Clases y objetos</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/class.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="clases-y-objetos">
+<h1>Clases y objetos<a class="headerlink" href="#clases-y-objetos" title="Enlace permanente a este encabezado"></a></h1>
+<p>En Python todo es un objeto. Por ejemplo, todas las variables para almacenar
+textos son <em>objetos</em> del tipo <code class="docutils literal notranslate"><span class="pre">str</span></code> (les decimos <em>strings</em>).
+Hemos visto ya que estos objetos tienen propiedades y funciones (<code class="docutils literal notranslate"><span class="pre">upper</span></code>,
+<code class="docutils literal notranslate"><span class="pre">lower</span></code>, <code class="docutils literal notranslate"><span class="pre">strip</span></code>, etc).
+¿Te preguntaste dónde estan definidas esas funciones?
+¿Quien decide que puede y que no puede hacerse con un objeto?</p>
+<p>La respuestas a todo son las <strong>clases</strong>. En Python (y en cualquier lenguaje que use
+<em>Programación Orientada a Objetos</em>) podemos definir nuestros propios tipos de objetos.
+Cuando los definimos hacemos la elección de que como funcionará y que propiedades y
+funciones incluirá.</p>
+<section id="mi-primera-clase">
+<h2>Mi primera clase<a class="headerlink" href="#mi-primera-clase" title="Enlace permanente a este encabezado"></a></h2>
+<p>Veamos un ejemplo basico. Queremos definir un tipo de dato nuevo: <code class="docutils literal notranslate"><span class="pre">Persona</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+</span><span class="linenos"> 2</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">apellido</span><span class="p">):</span>
+<span class="linenos"> 3</span>        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+<span class="linenos"> 4</span>        <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span> <span class="o">=</span> <span class="n">apellido</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1"># ------------------- FIN DE LA CLASE ------------------------------------</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># Crear nuestros objetos de tipo Persona</span>
+<span class="linenos"> 9</span><span class="n">juan</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s1">&#39;juan carlos&#39;</span><span class="p">,</span> <span class="n">apellido</span><span class="o">=</span><span class="s1">&#39;perez&#39;</span><span class="p">)</span>
+<span class="linenos">10</span><span class="n">pedro</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s1">&#39;pedro &#39;</span><span class="p">,</span> <span class="n">apellido</span><span class="o">=</span><span class="s1">&#39;gomez&#39;</span><span class="p">)</span>
+<span class="linenos">11</span><span class="n">luis</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;Luis&#39;</span><span class="p">,</span> <span class="s1">&#39;Velez &#39;</span><span class="p">)</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># Ver el tipo</span>
+<span class="linenos">14</span><span class="nb">type</span><span class="p">(</span><span class="n">juan</span><span class="p">)</span>
+<span class="linenos">15</span><span class="c1"># imprime &lt;class &#39;__main__.Persona&#39;&gt;</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="c1"># imprimir propiedades de nuestro objeto</span>
+<span class="linenos">18</span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">luis</span><span class="o">.</span><span class="n">nombre</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">luis</span><span class="o">.</span><span class="n">apellido</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos">19</span><span class="s1">&#39;Luis Velez&#39;</span>
+</pre></div>
+</div>
+<section id="anatomia-de-una-clase">
+<h3>Anatomia de una clase<a class="headerlink" href="#anatomia-de-una-clase" title="Enlace permanente a este encabezado"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code> es una palabra reservada de Python (no la podemos usar como nombre de variable)
+que usamos para indicar que estamos definiendo una clase.</p></li>
+<li><p>Despues de <code class="docutils literal notranslate"><span class="pre">class</span></code> agregamos el nombre de nuestra clase. Se deben cumplir las mismas
+reglas que para los nombres de variables (no pueden empezar con números, no pueden tener
+espacios, etc). Se suele usar aqui el formato <em>CamelCase</em> y siempre con mayúscula inicial.
+No es obligatorio.</p></li>
+<li><p>Despues del nombre de la clase podemos colocar parentesis (no es obligatorio). Se usarán
+en caso de querer aprovechar algo llamada <em>Herencia</em> que veremos más adelante.</p></li>
+<li><p>Finalmente agregamos <em>:</em> (dos puntos) para indicar que terminamos de definir el encabezado
+de la clase y vamos a comenzar con el bloque de código de ella.</p></li>
+<li><p>El código de la clase debe estar tabulado hacia la derecha. <strong>Esta es una de las grandes
+diferencias que Python tiene con los demás lenguajes de programación</strong>. El código propio de
+la clase comienza tabulado y termina cuando el código vuelve a la izquierda. Muchos otros
+lenguajes de programación usan las llaves <code class="docutils literal notranslate"><span class="pre">{}</span></code> para delimitar donde empiezan y terminan
+los bloques de código.</p></li>
+<li><p>Dentro del código de la clase debemos definir las propiedades y funciones que queremos que
+tengan nuestros objetos. Podemos agregar tantas propiedades y funciones como sean necesarias.
+Veremos más detalles a continuación.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__init__</span></code> es hasta aquí nuestra única función (nos damos cuenta porque usa el <code class="docutils literal notranslate"><span class="pre">def</span></code> que
+ya conocemos junto a un grupo de parámetros). Cuando veamos estos guiones bajos dobles
+debemos interpretar que es una herramienta propia de Python. En este caso, todas las clases
+tienen una función de inicialización de una clase. Esto quiere decir se va a ejecutar cuando
+los usuarios de la clase la usern para contruir un objeto de este tipo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> es el primer parámetro de la función <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. Hablaremos en particular de este
+parámetro más adelante. Por ahora podemos decir que <strong>es obligatorio que todas las funciones
+de las clases tengan un parametro que represente a cada objeto creado con esta clase</strong>. Es
+por esto que veremos a <code class="docutils literal notranslate"><span class="pre">self</span></code> en (<em>casi</em>, hay situaciones especiales) todas las funciones
+de una clase.</p></li>
+<li><p>Una vez definida la clase (y terminada anulando la tabulación y volviendo a la izquierda
+el código), esta se puede llamar simplemente con su nombre y entre paréntesis todos los
+parámetros que se hayan definido en <code class="docutils literal notranslate"><span class="pre">__init__</span></code> (despues de <code class="docutils literal notranslate"><span class="pre">self</span></code>).</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>Clases y objetos<a class="headerlink" href="#id1" title="Enlace permanente a este encabezado"></a></h3>
+<p>Las clases se usan para definir el comportamiento de los objetos que podremos crear a partir
+de ellas. Al proceso de crear un nuevo objeto se le dice <em>instanciar</em> y a cada objeto se le
+puede llamar <em>instancia</em>.
+En el ejemplo anterior, las líneas</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">juan</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s1">&#39;juan carlos&#39;</span><span class="p">,</span> <span class="n">apellido</span><span class="o">=</span><span class="s1">&#39;perez&#39;</span><span class="p">)</span>
+<span class="n">pedro</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s1">&#39;pedro&#39;</span><span class="p">,</span> <span class="n">apellido</span><span class="o">=</span><span class="s1">&#39;gomez&#39;</span><span class="p">)</span>
+<span class="c1"># como en las funciones, no es obligatorio nombrar los parámetros</span>
+<span class="n">luis</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;Luis&#39;</span><span class="p">,</span> <span class="s1">&#39;Velez &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>crean tres <em>instancias</em> del tipo <code class="docutils literal notranslate"><span class="pre">Persona</span></code>. Cada una de ellas es un objeto distinto y por
+lo tanto las propiedades que contienen son independientes y se procesan de manera aislada.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">juan</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+<span class="s1">&#39;juan carlos&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pedro</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+<span class="s1">&#39;pedro&#39;</span>
+</pre></div>
+</div>
+<p>Podemos pensar a los objetos o <em>instancias</em> como una versión concreta de una clase.</p>
+</section>
+<section id="contenido-de-un-clase">
+<h3>Contenido de un clase<a class="headerlink" href="#contenido-de-un-clase" title="Enlace permanente a este encabezado"></a></h3>
+<p>Dentro de la clase podemos definir las propiedades y funciones que nuestros objetos tendrán
+cuando sean instanciados.</p>
+<p>Cuando escribimos <code class="docutils literal notranslate"><span class="pre">self.PROPIEDAD</span> <span class="pre">=</span> <span class="pre">VALOR</span></code> estamos indicando que los usuarios podrán usar
+estas propiedades en los objetos definidos.</p>
+<p>Estas líneas …</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">apellido</span><span class="p">):</span>
+<span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+</span><span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span> <span class="o">=</span> <span class="n">apellido</span>
+</span></pre></div>
+</div>
+<p>indican que todos los objetos de tipo <code class="docutils literal notranslate"><span class="pre">Persona</span></code> podrán referirse a las propiedades
+<code class="docutils literal notranslate"><span class="pre">nombre</span></code> y <code class="docutils literal notranslate"><span class="pre">apellido</span></code>. Además el valor de ellas será inicializado con los parámetros
+que usuario pase al construir estos objetos.
+Al no tener valores predeterminados (funciona igual que las funciones) ambas propiedades
+son <strong>obligatorias</strong>. Si intentamos crear una <code class="docutils literal notranslate"><span class="pre">Persona</span></code> con algo como:
+<code class="docutils literal notranslate"><span class="pre">juan</span> <span class="pre">=</span> <span class="pre">Persona(nombre='juan</span> <span class="pre">carlos')</span></code> obtendremos un error, el <code class="docutils literal notranslate"><span class="pre">apellido</span></code> es
+obligatorio.</p>
+<p>Asi como estas propiedades están definidas además de poder ser leidas como hemos visto,
+tambien pueden modificarse libremente.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">diego</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;Algun apellido&#39;</span><span class="p">)</span>
+<span class="n">diego</span><span class="o">.</span><span class="n">apellido</span> <span class="o">=</span> <span class="s1">&#39;Solis&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">diego</span><span class="o">.</span><span class="n">apellido</span><span class="p">)</span>
+<span class="s1">&#39;Solis&#39;</span>
+</pre></div>
+</div>
+<p>Esta forma de definir y usar las propiedades en nuestros objetos es poco segura.
+En nuestra clase, el siguiente comportamiento si esta permitido:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">diego</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;Algun apellido&#39;</span><span class="p">)</span>
+<span class="hll"><span class="n">diego</span><span class="o">.</span><span class="n">apellido</span> <span class="o">=</span> <span class="mi">17</span>  <span class="c1"># sería bueno evitar esto</span>
+</span><span class="nb">print</span><span class="p">(</span><span class="n">diego</span><span class="o">.</span><span class="n">apellido</span><span class="p">)</span>
+<span class="mi">17</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="datetime.html" class="btn btn-neutral float-left" title="Librerías incluida: datetime" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="class-props.html" class="btn btn-neutral float-right" title="Propiedades controladas" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

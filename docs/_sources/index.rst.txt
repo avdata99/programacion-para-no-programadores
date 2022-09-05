@@ -26,8 +26,11 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    dict
    random
    datetime
+   class
+   class-props
+   class-extras
 
-..
+..  
   built-in modules (datetime random, math)
   files, open
   *args and **kwargs
@@ -39,6 +42,8 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
   jinja2
   flask
   comprehension lists
+
+  answers, resultados de los ejercicios
 
 Indices y tablas
 ================

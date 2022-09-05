@@ -1,3 +1,7 @@
+"""
+Clases con herencia
+"""
+
 from random import choice
 
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diccionarios: dict &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.2</title>
+  <title>Diccionarios: dict &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.3</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -66,6 +66,13 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="random.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="datetime.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="class.html">Clases y objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html">Propiedades controladas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html#funciones-de-mi-clase">Funciones de mi clase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html">Funciones especiales de las clases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#add">__add__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#str">__str__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#eq">__eq__</a></li>
 </ul>
 
         </div>
@@ -244,27 +251,412 @@ Las siguientes lineas son válidas para la estructura recién definida.</p>
 <h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
 <li><p>Hacer un PR con una propuesta de solución para el
-<a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-020/ejercicio.py">ejercicio 020</a>
-(contenido en este repositorio)</p></li>
+<a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-020/ejercicio.py">ejercicio 020</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Completar la funcion para que devuelva la &quot;frase&quot; pasada como parámetro</span>
+<span class="sd">reemplazadas todas sus vocales con la &quot;a&quot; (o cualquier otra &quot;vocal&quot; que se</span>
+<span class="sd">pase como parámetro)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">cambia_vocales</span><span class="p">(</span><span class="n">frase</span><span class="p">,</span> <span class="n">vocal</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+<span class="k">assert</span> <span class="n">cambia_vocales</span><span class="p">(</span><span class="s2">&quot;hola&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;hala&quot;</span>
+<span class="k">assert</span> <span class="n">cambia_vocales</span><span class="p">(</span><span class="s2">&quot;Juan Carlos&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Jaan Carlas&quot;</span>
+<span class="k">assert</span> <span class="n">cambia_vocales</span><span class="p">(</span><span class="s2">&quot;Pepito&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Pepete&quot;</span>
+<span class="k">assert</span> <span class="n">cambia_vocales</span><span class="p">(</span><span class="n">vocal</span><span class="o">=</span><span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="n">frase</span><span class="o">=</span><span class="s2">&quot;me llamo juan&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;mi llimi jiin&quot;</span>
+
+<span class="c1"># revisar mayúsculas y minúsculas</span>
+<span class="k">assert</span> <span class="n">cambia_vocales</span><span class="p">(</span><span class="s2">&quot;HOli&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;HAla&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p>Hacer un PR con una propuesta de solución para el
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-030/ejercicio.py">ejercicio 030</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">La siguiente funcion busca contar cuantas veces se repite cada palabra.</span>
+<span class="sd">Por ejemplo de &quot;Hola Juan. Hola Pedro&quot; devuelve {&quot;Hola&quot;: 2, &quot;Juan.&quot;: 1, &quot;Pedro&quot;: 1}</span>
+<span class="sd">Tarea: Corregir el error de la función para que devuelva el resultado correcto.</span>
+<span class="sd">Se espera que los signos de puntuacion no afecten el resultado y que las mayusculas</span>
+<span class="sd">y minusculas no cuenten como palabras diferentes.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">contar_palabras</span><span class="p">(</span><span class="n">frase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Esta funcion toma una frase y devuelve un diccionario</span>
+<span class="sd">    con una llave por cada palabra y un valor igual a la</span>
+<span class="sd">    cantidad de veces que aparece en la frase</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">palabras</span> <span class="o">=</span> <span class="n">frase</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">resultados</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">palabra</span> <span class="ow">in</span> <span class="n">palabras</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">palabra</span> <span class="ow">in</span> <span class="n">resultados</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="c1"># si existe, sumarle 1</span>
+            <span class="n">resultados</span><span class="p">[</span><span class="n">palabra</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># si no existe, inicializarla</span>
+            <span class="n">resultados</span><span class="p">[</span><span class="n">palabra</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">resultados</span>
+
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+
+<span class="n">f1</span> <span class="o">=</span> <span class="n">contar_palabras</span><span class="p">(</span><span class="s2">&quot;Hola dijo Juan. Hola dijo pedro&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">f1</span><span class="p">[</span><span class="s1">&#39;Hola&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span>
+
+<span class="n">himno</span> <span class="o">=</span> <span class="s2">&quot;Oid mortales el grito sagrado. Libertad, libertad, libertad. Oid el ruido de rotas cadenas&quot;</span>
+<span class="n">palabras_himno</span> <span class="o">=</span> <span class="n">contar_palabras</span><span class="p">(</span><span class="n">himno</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">palabras_himno</span><span class="p">[</span><span class="s1">&#39;Oid&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="k">assert</span> <span class="n">palabras_himno</span><span class="p">[</span><span class="s1">&#39;libertad&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p>Hacer un PR con una propuesta de solución para el
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-031/ejercicio.py">ejercicio 031</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">La siguiente funcion toma como parámetro una lista de diccionarios</span>
+<span class="sd">y cuenta la cantidad de elementos que tiene un valor especifico en</span>
+<span class="sd">una propiedad definida.</span>
+<span class="sd">Por ejemplo de la lista</span>
+<span class="sd">lista = [</span>
+<span class="sd">    {&quot;genero&quot;: &quot;M&quot;, &quot;nombre&quot;: &quot;Juan&quot;},</span>
+<span class="sd">    {&quot;genero&quot;: &quot;F&quot;, &quot;nombre&quot;: &quot;Pablo&quot;},</span>
+<span class="sd">    {&quot;genero&quot;: &quot;F&quot;, &quot;nombre&quot;: &quot;Juana&quot;, &quot;apellido&quot;: &quot;Gomez&quot;},</span>
+<span class="sd">    {&quot;genero&quot;: &quot;M&quot;, &quot;nombre&quot;: &quot;Victor&quot;},</span>
+<span class="sd">    {&quot;genero&quot;: &quot;M&quot;, &quot;nombre&quot;: &quot;Juan Pablo&quot;, &quot;apellido&quot;: &quot;Velez&quot;},</span>
+<span class="sd">    {&quot;genero&quot;: &quot;F&quot;, &quot;nombre&quot;: &quot;Juana&quot;},</span>
+<span class="sd">    {&quot;genero&quot;: &quot;F&quot;, &quot;nombre&quot;: &quot;Victoria&quot;}</span>
+<span class="sd">]</span>
+<span class="sd">Se esperan estos posibles resultados</span>
+
+<span class="sd">contar_si(lista, &quot;genero&quot;, &quot;M&quot;) = 3</span>
+<span class="sd">contar_si(lista, &quot;genero&quot;, &quot;F&quot;) = 4</span>
+<span class="sd">contar_si(lista, &quot;nombre&quot;, &quot;Juana&quot;) = 2</span>
+
+<span class="sd">pero la funcion da error en algunos casos como</span>
+<span class="sd">contar_si(lista, &quot;apellido&quot;, &quot;Gomez&quot;)</span>
+<span class="sd">donde en realidad esperamos que devuelva 1</span>
+
+<span class="sd">Tarea: Mejorar la función para que no de errores cuando una clave no existe</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">contar_si</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="n">propiedad</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Esta funcion cuenta la cantidad de elementos (diccionarios) en &quot;lista&quot;</span>
+<span class="sd">    que tiene una &quot;propiedad&quot; con un &quot;valor&quot; específico.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">contador</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">elemento</span><span class="p">[</span><span class="n">propiedad</span><span class="p">]</span> <span class="o">==</span> <span class="n">valor</span><span class="p">:</span>
+            <span class="n">contador</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">contador</span>
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;genero&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;genero&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Pablo&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;genero&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Juana&quot;</span><span class="p">,</span> <span class="s2">&quot;apellido&quot;</span><span class="p">:</span> <span class="s2">&quot;Gomez&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;genero&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Victor&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;genero&quot;</span><span class="p">:</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Juan Pablo&quot;</span><span class="p">,</span> <span class="s2">&quot;apellido&quot;</span><span class="p">:</span> <span class="s2">&quot;Velez&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;genero&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Juana&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;genero&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Victoria&quot;</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">contar_si</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="s2">&quot;genero&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+<span class="k">assert</span> <span class="n">contar_si</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="s2">&quot;genero&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+<span class="k">assert</span> <span class="n">contar_si</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="s2">&quot;nombre&quot;</span><span class="p">,</span> <span class="s2">&quot;Juana&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="k">assert</span> <span class="n">contar_si</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="s2">&quot;apellido&quot;</span><span class="p">,</span> <span class="s2">&quot;Gomez&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">contar_si</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="s2">&quot;apellido&quot;</span><span class="p">,</span> <span class="s2">&quot;Perez&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p>Hacer un PR con una propuesta de solución para el
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-032/ejercicio.py">ejercicio 032</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">El siguiente código permite crear facturas de ventas y agregar items.</span>
+<span class="sd">El código no tiene fallas pero el cliente desea que la lista de items</span>
+<span class="sd">no tenga productos duplicados. Si se intenta agregar un producto por</span>
+<span class="sd">segunda vez, la función deberia darse cuenta y actualizar los valores</span>
+<span class="sd">de ese item y no agregarlo como nuevo item.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">agregar_item</span><span class="p">(</span><span class="n">factura</span><span class="p">,</span> <span class="n">producto</span><span class="p">,</span> <span class="n">precio_unitario</span><span class="p">,</span> <span class="n">cantidad</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Agregar un item a una factura que se pasa como parámetro</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">precio_total</span> <span class="o">=</span> <span class="n">cantidad</span> <span class="o">*</span> <span class="n">precio_unitario</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;producto&#39;</span><span class="p">:</span> <span class="n">producto</span><span class="p">,</span>
+        <span class="s1">&#39;precio_unitario&#39;</span><span class="p">:</span> <span class="n">precio_unitario</span><span class="p">,</span>
+        <span class="s1">&#39;cantidad&#39;</span><span class="p">:</span> <span class="n">cantidad</span><span class="p">,</span>
+        <span class="s1">&#39;precio_total&#39;</span><span class="p">:</span> <span class="n">precio_total</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="n">factura</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="n">factura</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">precio_total</span>
+
+<span class="k">def</span> <span class="nf">crear_factura</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Crear una factura &quot;&quot;&quot;</span>
+    <span class="n">factura</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;total&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;items&#39;</span><span class="p">:</span> <span class="p">[]</span>  <span class="c1"># lista de items</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">factura</span>
+
+<span class="n">mi_factura</span> <span class="o">=</span> <span class="n">crear_factura</span><span class="p">()</span>
+<span class="n">agregar_item</span><span class="p">(</span><span class="n">mi_factura</span><span class="p">,</span> <span class="s1">&#39;Alfajor&#39;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">agregar_item</span><span class="p">(</span><span class="n">mi_factura</span><span class="p">,</span> <span class="s1">&#39;Turron&#39;</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span>
+<span class="n">agregar_item</span><span class="p">(</span><span class="n">mi_factura</span><span class="p">,</span> <span class="s1">&#39;Turron&#39;</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span>
+
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+<span class="k">assert</span> <span class="n">mi_factura</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">556</span>
+
+<span class="n">items_en_factura</span> <span class="o">=</span> <span class="n">mi_factura</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">items_en_factura</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p>Hacer un PR con una propuesta de solución para el
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-041/ejercicio.py">ejercicio 041</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">La funcion &quot;crear_mazo_cartas_espaniolas&quot; funciona casi bien.</span>
+<span class="sd">Por algun motivo faltan algunas cartas.</span>
+<span class="sd">La tarea de este ejercicio es reparar esta función para que el mazo este completo</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">crear_mazo_cartas_espaniolas</span><span class="p">():</span>
+    <span class="n">palos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;oro&#39;</span><span class="p">,</span> <span class="s1">&#39;copa&#39;</span><span class="p">,</span> <span class="s1">&#39;espada&#39;</span><span class="p">,</span> <span class="s1">&#39;basto&#39;</span><span class="p">]</span>
+    <span class="n">mazo</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">palo</span> <span class="ow">in</span> <span class="n">palos</span><span class="p">:</span>
+            <span class="n">carta</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="n">n</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="n">palo</span><span class="p">}</span>
+            <span class="n">mazo</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">carta</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mazo</span>
+
+<span class="n">mazo_esp</span> <span class="o">=</span> <span class="n">crear_mazo_cartas_espaniolas</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mazo_esp</span><span class="p">)</span>
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;oro&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;oro&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;oro&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p>Hacer un PR con una propuesta de solución para el
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-042/ejercicio.py">ejercicio 042</a></p></li>
 </ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">La funcion &quot;crear_mazo_cartas_poker&quot; esta incompleta y necesita ser completada para</span>
+<span class="sd">devolver una lista de diccionarios con todas las cartas disponibles en un mazo de poker.</span>
+
+<span class="sd">Nota: El ejercicio 041* ya muestra una función similar que puede usarse como ayuda</span>
+
+<span class="sd">* https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-041/ejercicio.py</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">crear_mazo_cartas_poker</span><span class="p">():</span>
+    <span class="n">palos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pica&#39;</span><span class="p">,</span> <span class="s1">&#39;trebol&#39;</span><span class="p">,</span> <span class="s1">&#39;corazon&#39;</span><span class="p">,</span> <span class="s1">&#39;diamante&#39;</span><span class="p">]</span>
+    <span class="n">mazo</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># COMPLETAR la lista con un diccionario por cada carta de</span>
+    <span class="c1"># la forma {&#39;numero&#39;: X, &#39;palo&#39;: Y}</span>
+    <span class="c1"># El test de la parte inferior de este archivo ayuda a validar</span>
+    <span class="c1"># el resultado esperado</span>
+
+    <span class="k">return</span> <span class="n">mazo</span>
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+<span class="n">mazo_esp</span> <span class="o">=</span> <span class="n">crear_mazo_cartas_poker</span><span class="p">()</span>
+
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="algunos-ejemplos-de-uso">
 <h2>Algunos ejemplos de uso<a class="headerlink" href="#algunos-ejemplos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dicts-00.py">Diccionarios 00</a></p></li>
-<li><p><a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dicts-01.py">Diccionarios 01</a></p></li>
-<li><p><a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dicts-02.py">Diccionarios 02</a></p></li>
-</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+    <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Juan&#39;</span>
+<span class="p">}</span>
+
+<span class="n">nombre</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span>  <span class="c1"># equivalente a data.get(&#39;nombre)</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Nombre: </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1">, edad </span><span class="si">{</span><span class="n">edad</span><span class="si">}</span><span class="s1"> años&#39;</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">data[&#39;algo-que-no-existe&#39;]</span>
+<span class="sd"># genera un error </span>
+<span class="sd"># KeyError: &#39;algo-que-no-existe&#39;</span>
+<span class="sd"># mientras que </span>
+<span class="sd">data.get(&#39;algo-que-no-existe&#39;)</span>
+<span class="sd">devuelve None</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Nombre: Juan, edad 32 años</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Item encontrado: Key:</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">, Value: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Item encontrado: Key:edad, Value: 32</span>
+<span class="c1"># Item encontrado: Key:nombre, Value: Juan</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+    <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Juan&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;educacion&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;secundario&#39;</span><span class="p">:</span> <span class="s1">&#39;Monserrat&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;universidad&#39;</span><span class="p">:</span> <span class="s1">&#39;UNC&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">nombre</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">]</span>
+<span class="n">universidad</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;educacion&#39;</span><span class="p">][</span><span class="s1">&#39;universidad&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Nombre: </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1">, edad </span><span class="si">{</span><span class="n">edad</span><span class="si">}</span><span class="s1"> años. Universidad: </span><span class="si">{</span><span class="n">universidad</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># Nombre: Juan, edad 32 años. Universidad: UNC</span>
+
+<span class="c1"># Agregarle datos</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;ocupacion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Desarrollador&#39;</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;educacion&#39;</span><span class="p">][</span><span class="s1">&#39;primario&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;San Juan&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># {&#39;edad&#39;: 32, &#39;nombre&#39;: &#39;Juan&#39;, &#39;educacion&#39;: {&#39;secundario&#39;: &#39;Monserrat&#39;, &#39;universidad&#39;: &#39;UNC&#39;, &#39;primario&#39;: &#39;San Juan&#39;}, &#39;ocupacion&#39;: &#39;Desarrollador&#39;}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ocupacion&#39;</span><span class="p">))</span>
+<span class="c1"># &#39;Desarrollador&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NO EXISTE&#39;</span><span class="p">))</span>
+<span class="c1"># None</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NO EXISTE&#39;</span><span class="p">,</span> <span class="s1">&#39;valor predeterminado&#39;</span><span class="p">))</span>
+<span class="c1"># valor predeterminado</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># lista de diccionarios</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;personas&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Juan&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Pedro&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;María&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;PERSONAS:&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">persona</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;personas&#39;</span><span class="p">]:</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="n">persona</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span>
+    <span class="n">edad</span> <span class="o">=</span> <span class="n">persona</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; - Nombre: </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1">, edad </span><span class="si">{</span><span class="n">edad</span><span class="si">}</span><span class="s1"> años&#39;</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot; resultados</span>
+
+<span class="sd">PERSONAS:</span>
+<span class="sd"> - Nombre: Juan, edad 20 años</span>
+<span class="sd"> - Nombre: Pedro, edad 30 años</span>
+<span class="sd"> - Nombre: María, edad 40 años</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
 </section>
 </section>
 

@@ -158,6 +158,13 @@ rama distinta **que siempre** salga desde master.
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 001 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-001/ejercicio.py>`_
     (contenido en este repositorio)
+
+.. include:: /ejercicios/ejercicio-001/ejercicio.py
+   :literal:
+
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 002 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-002/ejercicio.py>`_
     (contenido en este repositorio)
+
+.. include:: /ejercicios/ejercicio-002/ejercicio.py
+   :literal:

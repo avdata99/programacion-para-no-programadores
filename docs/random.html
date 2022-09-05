@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Librerías incluida: random &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.2</title>
+  <title>Librerías incluida: random &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.3</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -70,6 +70,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="datetime.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="class.html">Clases y objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html">Propiedades controladas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html#funciones-de-mi-clase">Funciones de mi clase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html">Funciones especiales de las clases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#add">__add__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#str">__str__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#eq">__eq__</a></li>
 </ul>
 
         </div>
@@ -162,11 +169,238 @@ como parámetro y la desordena aleatoriamente.</p>
 <li><p>Hacer un PR con una propuesta de solución para el
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-045/ejercicio.py">ejercicio 045</a>
 (contenido en este repositorio)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">La funcion &quot;carta_poker_al_azar&quot; ya funciona como es esperado</span>
+<span class="sd">La tarea aquí es completar la funcion &quot;carta_espaniola_al_azar&quot;</span>
+<span class="sd">para que devuleva resultados válidos.</span>
+<span class="sd">Nota: se debe importar y usar la funcion &quot;randint&quot; de &quot;random&quot;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+
+<span class="k">def</span> <span class="nf">carta_poker_al_azar</span><span class="p">():</span>
+    <span class="n">palos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pica&#39;</span><span class="p">,</span> <span class="s1">&#39;trebol&#39;</span><span class="p">,</span> <span class="s1">&#39;corazon&#39;</span><span class="p">,</span> <span class="s1">&#39;diamante&#39;</span><span class="p">]</span>
+    <span class="n">numeros</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">]</span>
+    <span class="n">nro</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">numeros</span><span class="p">)</span>
+    <span class="n">palo</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">palos</span><span class="p">)</span>
+
+    <span class="n">carta</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;numero&quot;</span><span class="p">:</span> <span class="n">nro</span><span class="p">,</span> <span class="s2">&quot;palo&quot;</span><span class="p">:</span> <span class="n">palo</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">carta</span>
+
+<span class="k">def</span> <span class="nf">carta_espaniola_al_azar</span><span class="p">():</span>
+    <span class="n">palos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;oro&#39;</span><span class="p">,</span> <span class="s1">&#39;basto&#39;</span><span class="p">,</span> <span class="s1">&#39;espada&#39;</span><span class="p">,</span> <span class="s1">&#39;copa&#39;</span><span class="p">]</span>
+    
+    <span class="c1"># corregir estas dos lineas para devolver valores válidos</span>
+    <span class="n">nro</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">palo</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="n">carta</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;numero&quot;</span><span class="p">:</span> <span class="n">nro</span><span class="p">,</span> <span class="s2">&quot;palo&quot;</span><span class="p">:</span> <span class="n">palo</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">carta</span>
+
+<span class="c1"># mirar ejemplos de ambas funciones</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">carta1</span> <span class="o">=</span> <span class="n">carta_poker_al_azar</span><span class="p">()</span>
+    <span class="n">carta2</span> <span class="o">=</span> <span class="n">carta_espaniola_al_azar</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">carta1</span><span class="p">,</span> <span class="n">carta2</span><span class="p">)</span>
+
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+<span class="n">carta</span> <span class="o">=</span> <span class="n">carta_espaniola_al_azar</span><span class="p">()</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">carta</span><span class="p">[</span><span class="s1">&#39;numero&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="nb">int</span>
+<span class="k">assert</span> <span class="n">carta</span><span class="p">[</span><span class="s1">&#39;numero&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">carta</span><span class="p">[</span><span class="s1">&#39;numero&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">12</span>
+<span class="k">assert</span> <span class="n">carta</span><span class="p">[</span><span class="s1">&#39;palo&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;oro&#39;</span><span class="p">,</span> <span class="s1">&#39;basto&#39;</span><span class="p">,</span> <span class="s1">&#39;espada&#39;</span><span class="p">,</span> <span class="s1">&#39;copa&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p>Hacer un PR con una propuesta de solución para el
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-046/ejercicio.py">ejercicio 046</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">La siguiente funcion pretende ser usada para generar</span>
+<span class="sd">10 numeros como resultados del sorteo de quiniela.</span>
+<span class="sd">Como podrán notar es bastante mala.</span>
+<span class="sd">Tarea:</span>
+<span class="sd"> - Asegurarse que los resultados sean aleatorios</span>
+<span class="sd"> - Asegurarse que la función respete los tres parametros</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">generar_quiniela</span><span class="p">(</span><span class="n">minimo</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maximo</span><span class="o">=</span><span class="mi">9999</span><span class="p">,</span> <span class="n">total_numeros</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Generar varios numeros al azar definidos</span>
+<span class="sd">        entre máximo y minimo (sin numeros duplicados) &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+<span class="n">numeros_quiniela</span> <span class="o">=</span> <span class="n">generar_quiniela</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Numeros resultantes </span><span class="si">{</span><span class="n">numeros_quiniela</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+<span class="c1"># Prueba de resultados basicos</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">numeros_quiniela</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">numeros_quiniela</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numeros_quiniela</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">9999</span>
+
+<span class="c1"># Pruebas con otros parametros</span>
+<span class="n">minimo</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="n">maximo</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">total_numeros</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">numeros_quiniela</span> <span class="o">=</span> <span class="n">generar_quiniela</span><span class="p">(</span><span class="n">minimo</span><span class="o">=</span><span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span><span class="o">=</span><span class="n">maximo</span><span class="p">,</span> <span class="n">total_numeros</span><span class="o">=</span><span class="n">total_numeros</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">numeros_quiniela</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">numeros_quiniela</span><span class="p">)</span> <span class="o">==</span> <span class="n">total_numeros</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numeros_quiniela</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="n">minimo</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">maximo</span>
+
+<span class="n">minimo</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">maximo</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">total_numeros</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">numeros_quiniela</span> <span class="o">=</span> <span class="n">generar_quiniela</span><span class="p">(</span><span class="n">minimo</span><span class="o">=</span><span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span><span class="o">=</span><span class="n">maximo</span><span class="p">,</span> <span class="n">total_numeros</span><span class="o">=</span><span class="n">total_numeros</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">numeros_quiniela</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">numeros_quiniela</span><span class="p">)</span> <span class="o">==</span> <span class="n">total_numeros</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numeros_quiniela</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="n">minimo</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">maximo</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p>Hacer un PR con una propuesta de solución para el
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-047/ejercicio.py">ejercicio 047</a></p></li>
 </ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">La funcion &quot;detectar_escaleras&quot; funciona bastante bien.</span>
+<span class="sd">Toma una lista de numeros y busca escaleras ascendentes</span>
+<span class="sd">dentro de la secuencia de numeros.</span>
+<span class="sd">Esta funcion detecta casi todas las secuencias pero no todas</span>
+<span class="sd">Tarea:</span>
+<span class="sd"> - Arreglar la funcion para que pase los tests y encuentre</span>
+<span class="sd">   todas las escaleras existentes</span>
+<span class="sd">Nota: probablemente vas a necesitar depurar el código para</span>
+<span class="sd">entender como funciona y por que falla.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="k">def</span> <span class="nf">tirar_dados</span><span class="p">(</span><span class="n">lados</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">veces</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Generar aleatoriamente los tiros de un lado de cantidad</span>
+<span class="sd">        de lados variable.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">tiros</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">veces</span><span class="p">):</span>
+        <span class="n">numero</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">lados</span><span class="p">)</span>
+        <span class="n">tiros</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">tiros</span>
+
+<span class="k">def</span> <span class="nf">detectar_escaleras</span><span class="p">(</span><span class="n">lista_tiros</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Detectar las escaleras ascendentes encontradas</span>
+<span class="sd">        en los tiros de al menos 3 elementos &quot;&quot;&quot;</span>
+    
+    <span class="c1"># aqui guardamos las escaleras que se consiguieron con 3 o más elementos</span>
+    <span class="n">escaleras_buenas</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># lista temporal para ir testeando todos los tiros</span>
+    <span class="n">escalera</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">tiro</span> <span class="ow">in</span> <span class="n">lista_tiros</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">escalera</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># recien empiezo a buscar</span>
+            <span class="n">escalera</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tiro</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">escalera</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">tiro</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># La escalera de prueba ya empezo y el numero actual</span>
+            <span class="c1"># esta en escalera con el ultimo encontrado</span>
+            <span class="n">escalera</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tiro</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># este tiro no esta en escalera con el anterior</span>
+            <span class="c1"># ver si la escalera conseguida tiene 3 o mas elementos</span>
+            <span class="c1"># para guardarle</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">escalera</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">escaleras_buenas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">escalera</span><span class="p">)</span>
+            <span class="c1"># como este número no sirve para la escalera anterior</span>
+            <span class="c1"># es el que inicializa la deteccion de la nueva</span>
+            <span class="n">escalera</span> <span class="o">=</span> <span class="p">[</span><span class="n">tiro</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">escaleras_buenas</span>
+
+
+<span class="n">tiros</span> <span class="o">=</span> <span class="n">tirar_dados</span><span class="p">(</span><span class="n">veces</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">escaleras</span> <span class="o">=</span> <span class="n">detectar_escaleras</span><span class="p">(</span><span class="n">tiros</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Escaleras encontradas </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">escaleras</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+<span class="c1"># Probar tiros donde yo ya conozco los resultados</span>
+<span class="n">tiros_test</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span>
+              <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span>
+              <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span>
+              <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+              <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">escaleras</span> <span class="o">=</span> <span class="n">detectar_escaleras</span><span class="p">(</span><span class="n">tiros_test</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">escaleras</span> <span class="o">==</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="n">tiros_test</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span>
+              <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span>
+              <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span>
+              <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
+              <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span>
+              <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="n">escaleras</span> <span class="o">=</span> <span class="n">detectar_escaleras</span><span class="p">(</span><span class="n">tiros_test</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">escaleras</span> <span class="o">==</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="n">tiros_test</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">escaleras</span> <span class="o">=</span> <span class="n">detectar_escaleras</span><span class="p">(</span><span class="n">tiros_test</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">escaleras</span> <span class="o">==</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>

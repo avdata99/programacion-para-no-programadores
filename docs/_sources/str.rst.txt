@@ -80,3 +80,9 @@ Investigar, usar y describir para que sirven las siguientes funciones para objet
 * ``strip``:
 
 Se espera un archivo de Python con estas funciones en uso como ejemplo.  
+
+Algunos ejemplos de uso
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /code/01-basics/strings-03.format.py
+   :literal:

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi primer PR &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.2</title>
+  <title>Mi primer PR &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.3</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -75,6 +75,13 @@
 <li class="toctree-l1"><a class="reference internal" href="dict.html">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="random.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="datetime.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="class.html">Clases y objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html">Propiedades controladas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html#funciones-de-mi-clase">Funciones de mi clase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html">Funciones especiales de las clases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#add">__add__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#str">__str__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#eq">__eq__</a></li>
 </ul>
 
         </div>
@@ -220,10 +227,63 @@ rama distinta <strong>que siempre</strong> salga desde master.</p>
 <li><p>Hacer un PR con una propuesta de solución para el
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-001/ejercicio.py">ejercicio 001</a>
 (contenido en este repositorio)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Completar la funcion para que devuelva &quot;Hola NOMBRE&quot;</span>
+<span class="sd">segun el &quot;nombre&quot; (string) que se pasa como parametro.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">hola</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+<span class="k">assert</span> <span class="n">hola</span><span class="p">(</span><span class="s2">&quot;Juan&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Hola Juan&quot;</span>
+<span class="k">assert</span> <span class="n">hola</span><span class="p">(</span><span class="s2">&quot;Pedro&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Hola Pedro&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p>Hacer un PR con una propuesta de solución para el
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-002/ejercicio.py">ejercicio 002</a>
 (contenido en este repositorio)</p></li>
 </ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Completar la funcion para que devuelva el resultado de la suma</span>
+<span class="sd">de los parámetros pasados a y b.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN</span>
+<span class="c1"># ------------------------------------------------------------------------</span>
+<span class="c1"># Una vez terminada la tarea ejecutar este archivo.</span>
+<span class="c1"># Si se ve la leyenda &#39;Ejercicio terminado OK&#39; el ejercicio se considera completado.</span>
+<span class="c1"># La instruccion &quot;assert&quot; de Python lanzará un error si lo que se indica a</span>
+<span class="c1">#   continuacion es falso.</span>
+<span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
+<span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
+
+<span class="k">assert</span> <span class="n">suma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span>
+<span class="k">assert</span> <span class="n">suma</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>

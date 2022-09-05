@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propiedades controladas &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.3</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Funciones especiales de las clases" href="class-extras.html" />
+    <link rel="prev" title="Clases y objetos" href="class.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vscode.html">Entorno de desarrollo: Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="github.html">Git en la nube: GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mi-primer-pr.html">Mi primer <em>PR</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="random.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="datetime.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="class.html">Clases y objetos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Propiedades controladas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-property">¿Que es <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code>?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#funciones-de-mi-clase">Funciones de mi clase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#algunos-ejemplos-de-uso">Algunos ejemplos de uso</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html">Funciones especiales de las clases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#add">__add__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#str">__str__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#eq">__eq__</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Propiedades controladas</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/class-props.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="propiedades-controladas">
+<h1>Propiedades controladas<a class="headerlink" href="#propiedades-controladas" title="Enlace permanente a este encabezado"></a></h1>
+<p>Es posible tomar los valores que el usuario nos pasa al inicializar los objetos
+(en <code class="docutils literal notranslate"><span class="pre">__init__</span></code>) y guardarlos en variables privadas. Usamos el guión bajo inicial
+en la propiedades para indicar que estas son internas de la clase y que no deberián
+ser usadas. Esto es una convención pero no es obligatorio. Python no lanzará un error
+si los usuarios de nuestra clase usan estas propiedades privadas.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+<span class="linenos"> 2</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">apellido</span><span class="p">):</span>
+<span class="hll"><span class="linenos"> 3</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+</span><span class="hll"><span class="linenos"> 4</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span> <span class="o">=</span> <span class="n">apellido</span>
+</span><span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    <span class="nd">@property</span>
+<span class="linenos"> 7</span>    <span class="k">def</span> <span class="nf">nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="hll"><span class="linenos"> 8</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span>
+</span><span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="nd">@property</span>
+<span class="linenos">11</span>    <span class="k">def</span> <span class="nf">apellido</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="hll"><span class="linenos">12</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span>
+</span></pre></div>
+</div>
+<section id="que-es-property">
+<h2>¿Que es <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code>?<a class="headerlink" href="#que-es-property" title="Enlace permanente a este encabezado"></a></h2>
+<p>Antes de la definición de una función (esto puede hacerse dentro y fuera de las clases)
+es posible agregar lo que llamamos un decorador (o función decoradora). La sintaxis para
+hacerlo es simplemente agregar esta línea sobre la definición de una función y comenzarla
+con un <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>. Estos decoradores se usan para modificar a la función de
+formas que por el momento exceden lo que necesitamos conocer.
+En particular, <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> es usado por las clases en Python para marcar que una
+propiedad <strong>existe</strong> y que la funcion <em>decorada</em>
+sera la encargada de atender las llamadas de <strong>lectura</strong> de esta propiedad.
+La escritura/modificación de cada propiedad se hace de otra forma.</p>
+<p>Hasta aquí estas propiedades son <em>solo lectura</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">victor</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;Victor&#39;</span><span class="p">,</span> <span class="s1">&#39;Fernandez&#39;</span><span class="p">)</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">victor</span><span class="o">.</span><span class="n">apellido</span><span class="p">)</span>
+<span class="linenos">3</span><span class="c1"># funciona y devule</span>
+<span class="linenos">4</span><span class="s1">&#39;Fernandez&#39;</span>
+<span class="linenos">5</span><span class="c1"># La siguiente línea fallará porque no esta todavía definido como funcionará</span>
+<span class="linenos">6</span><span class="c1"># la asignación de esta propiedad</span>
+<span class="hll"><span class="linenos">7</span><span class="n">victor</span><span class="o">.</span><span class="n">apellido</span> <span class="o">=</span> <span class="s1">&#39;Gonzalez&#39;</span>
+</span></pre></div>
+</div>
+<p>A las funciones de una clase para <strong>leer</strong> una propiedad se les llama <code class="docutils literal notranslate"><span class="pre">getter</span></code>
+y las las funciones para escribir un nuevo valor a una propiedad se las llama
+<code class="docutils literal notranslate"><span class="pre">setter</span></code> (por <em>get</em> y <em>set</em> del ingles: <em>obtener</em> y <em>definir</em>).</p>
+<p>Formalmente ahora podemos decir que nuestras propiedades <code class="docutils literal notranslate"><span class="pre">nombre</span></code> y <code class="docutils literal notranslate"><span class="pre">apellido</span></code>
+tienen <code class="docutils literal notranslate"><span class="pre">getter</span></code> pero no <code class="docutils literal notranslate"><span class="pre">setter</span></code>.</p>
+<p>Veamos un ejemplo de <code class="docutils literal notranslate"><span class="pre">setter</span></code> para la propiedad <code class="docutils literal notranslate"><span class="pre">nombre</span></code> de la clase <code class="docutils literal notranslate"><span class="pre">Persona</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nd">@nombre</span><span class="o">.</span><span class="n">setter</span>
+<span class="linenos"> 2</span><span class="k">def</span> <span class="nf">nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="hll"><span class="linenos"> 3</span>    <span class="c1"># Antes de escribir mi variable privada _nombre, revisar que</span>
+</span><span class="hll"><span class="linenos"> 4</span>    <span class="c1"># cuampla con los requisitos definidos</span>
+</span><span class="linenos"> 5</span>    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">str</span><span class="p">:</span>
+<span class="linenos"> 6</span>        <span class="c1"># Si no es del tipo *string* lanzaremos (raise) un error</span>
+<span class="linenos"> 7</span>        <span class="c1"># (excepción) del Tipo Exception (hay otros tipos).</span>
+<span class="hll"><span class="linenos"> 8</span>        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Nombre inválido. Solo string permitido&#39;</span><span class="p">)</span>
+</span><span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="c1"># solo si pasa las validaciones (podrían ser varias)</span>
+<span class="linenos">11</span>    <span class="c1"># sobreescribimos nuestra variable privada con el nuevo valor.</span>
+<span class="linenos">12</span>    <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span> <span class="o">=</span> <span class="n">value</span>
+</pre></div>
+</div>
+<p>La función definida para ser <code class="docutils literal notranslate"><span class="pre">setter</span></code> debe cumplir las siguientes condiciones:</p>
+<ul class="simple">
+<li><p>Tener un decorador de la forma <code class="docutils literal notranslate"><span class="pre">&#64;NOMBRE_DE_LA_PROPIEDAD.setter</span></code>.</p></li>
+<li><p>Tener el mismo nombre que la función <code class="docutils literal notranslate"><span class="pre">getter</span></code>.</p></li>
+<li><p>Incluir un parámetro para recibir el valor que el usuario quiere definir
+(usualmente lo llamaremos <code class="docutils literal notranslate"><span class="pre">value</span></code>).</p></li>
+</ul>
+<p>Es posible tambien definir propiedades personalizadas a gusto.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nd">@property</span>
+<span class="hll"><span class="linenos">2</span><span class="k">def</span> <span class="nf">nombre_completo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class="linenos">3</span>    <span class="sd">&quot;&quot;&quot; devuelve el nombre completo &quot;&quot;&quot;</span>
+<span class="linenos">4</span>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="nd">@property</span>
+<span class="hll"><span class="linenos">7</span><span class="k">def</span> <span class="nf">nombre_formal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class="linenos">8</span>    <span class="sd">&quot;&quot;&quot; devuelve el nombre completo &quot;&quot;&quot;</span>
+<span class="linenos">9</span>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<p>Estas propiedades solo tienen sentido para ser leidas. Es por esto que no tienen una funcion <code class="docutils literal notranslate"><span class="pre">setter</span></code>.</p>
+<p>Ejemplos de uso:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">juan</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;juan carlos&#39;</span><span class="p">,</span> <span class="s1">&#39;perez&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">juan</span><span class="o">.</span><span class="n">nombre_completo</span><span class="p">)</span>
+<span class="s1">&#39;juan carlos perez&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">juan</span><span class="o">.</span><span class="n">nombre_formal</span><span class="p">)</span>
+<span class="s1">&#39;perez, juan carlos&#39;</span>
+<span class="c1"># Si intento asignar una propiedad que es solo lectura (no tienen una funcion setter)</span>
+<span class="c1"># dará un error &quot;can&#39;t set attribute&quot; (no se puede asignar esta propiedad)</span>
+<span class="n">juan</span><span class="o">.</span><span class="n">nombre_completo</span> <span class="o">=</span> <span class="s1">&#39;Nuevo nombre completo&#39;</span>
+</pre></div>
+</div>
+<p>Las propiedades <code class="docutils literal notranslate"><span class="pre">nombre</span></code> y <code class="docutils literal notranslate"><span class="pre">apellido</span></code> se pueden leer y escribir.
+Las propiedades <code class="docutils literal notranslate"><span class="pre">nombre_completo</span></code> y <code class="docutils literal notranslate"><span class="pre">nombre_formal</span></code> son simplemente combinaciones útiles
+de otras propiedades básica. Solo se puede leer.</p>
+</section>
+</section>
+<section id="funciones-de-mi-clase">
+<h1>Funciones de mi clase<a class="headerlink" href="#funciones-de-mi-clase" title="Enlace permanente a este encabezado"></a></h1>
+<p>Es también posible definir funciones</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">limpiar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Mejorar el nombre y el apellido &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">encabezado</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">titulo</span><span class="p">,</span> <span class="n">limpiar</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Genera y devuelve el nombre completo con</span>
+<span class="sd">        &quot;Sr.&quot; &quot;Sra.&quot; o algun otro titulo.</span>
+<span class="sd">        Opcionalmente se puede limpiar el nombre &quot;&quot;&quot;</span>
+    <span class="c1"># limpiar el nombre si se solicita</span>
+    <span class="k">if</span> <span class="n">limpiar</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">limpiar</span><span class="p">()</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">titulo</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre_completo</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="c1"># podemos tambien emular el comportamiento de los strings</span>
+<span class="c1"># e incluso copiar nombres de funciones de ellos</span>
+<span class="k">def</span> <span class="nf">lower</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; devuelve el nombre completo en minusculas &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre_completo</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">upper</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; devuelve el nombre completo en minusculas &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre_completo</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Algunos ejemplos de uso con estas nuevas funciones:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">juan</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;juan carlos&#39;</span><span class="p">,</span> <span class="s1">&#39;perez&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">juan</span><span class="o">.</span><span class="n">nombre_completo</span><span class="p">)</span>
+<span class="c1"># &#39;juan carlos perez&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">juan</span><span class="o">.</span><span class="n">nombre_formal</span><span class="p">)</span>
+<span class="c1"># &#39;perez, juan carlos&#39;</span>
+
+<span class="n">enc</span> <span class="o">=</span> <span class="n">juan</span><span class="o">.</span><span class="n">encabezado</span><span class="p">(</span><span class="s1">&#39;Sr.&#39;</span><span class="p">,</span> <span class="n">limpiar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">enc</span><span class="p">)</span>
+<span class="c1"># &#39;Sr. juan carlos perez&#39;</span>
+
+<span class="n">enc</span> <span class="o">=</span> <span class="n">juan</span><span class="o">.</span><span class="n">encabezado</span><span class="p">(</span><span class="s1">&#39;Sr.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">enc</span><span class="p">)</span>
+<span class="c1"># &#39;Sr. Juan Carlos Perez&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">juan</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+<span class="c1"># El nombre fue limpiado</span>
+<span class="c1"># &#39;Juan Carlos&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">juan</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="c1"># &#39;JUAN CARLOS PEREZ&#39;</span>
+</pre></div>
+</div>
+<p><strong>Nota importante: Las funciones se llaman con los parentesis (y parámetros si se requieren) y las
+propiedades se llaman sin ellos (y no puede requerir parámetros).</strong></p>
+<p>Código de la clase final
+<a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/class-00.py">aquí</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">apellido</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span> <span class="o">=</span> <span class="n">apellido</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span>
+
+    <span class="nd">@nombre</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">str</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Nombre inválido. Solo string permitido&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">apellido</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span>
+
+    <span class="nd">@nombre</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">apellido</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">str</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Apellido inválido. Solo string permitido&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nombre_completo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; devuelve el nombre completo &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nombre_formal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; devuelve el nombre completo en modo formal &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="k">def</span> <span class="nf">limpiar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Mejorar el nombre y el apellido &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nombre</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_apellido</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">encabezado</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">titulo</span><span class="p">,</span> <span class="n">limpiar</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Genera y devuelve el nombre completo con</span>
+<span class="sd">            &quot;Sr.&quot; &quot;Sra.&quot; o algun otro titulo.</span>
+<span class="sd">            Opcionalmente se puede limpiar el nombre &quot;&quot;&quot;</span>
+        <span class="c1"># limpiar el nombre si se solicita</span>
+        <span class="k">if</span> <span class="n">limpiar</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">limpiar</span><span class="p">()</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">titulo</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre_completo</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="c1"># podemos tambien emular el comportamiento de los strings</span>
+    <span class="c1"># e incluso copiar nombres de funciones de ellos</span>
+    <span class="k">def</span> <span class="nf">lower</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; devuelve el nombre completo en minusculas &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre_completo</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">upper</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; devuelve el nombre completo en minusculas &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre_completo</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="algunos-ejemplos-de-uso">
+<h2>Algunos ejemplos de uso<a class="headerlink" href="#algunos-ejemplos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Clase Carta para juegos de cartas</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="k">class</span> <span class="nc">Carta</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numero</span><span class="p">,</span> <span class="n">palo</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_numero</span> <span class="o">=</span> <span class="n">numero</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_palo</span> <span class="o">=</span> <span class="n">palo</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">numero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_numero</span>
+
+    <span class="nd">@numero</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">numero</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Solo están permitidos numeros&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_numero</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">palo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_palo</span>
+
+    <span class="nd">@palo</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">palo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_palo</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">numero</span><span class="si">}</span><span class="s1"> de </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">palo</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="c1"># Pruebas</span>
+
+<span class="n">carta1</span> <span class="o">=</span> <span class="n">Carta</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;espada&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">carta1</span><span class="p">))</span>
+<span class="s1">&#39;3 de espada&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="class.html" class="btn btn-neutral float-left" title="Clases y objetos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="class-extras.html" class="btn btn-neutral float-right" title="Funciones especiales de las clases" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

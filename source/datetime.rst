@@ -110,4 +110,4 @@ Tareas
 ~~~~~~
 
 *   Hacer una función que le pida al usuario que inserte su fecha 
-    de nacimiento y se le devuelva hace cuantos días nacio.  
+    de nacimiento y se le devuelva hace cuantos días nació.  

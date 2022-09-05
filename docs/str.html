@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadenadas de caracteres o strings &lt;str&gt; &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.2</title>
+  <title>Cadenadas de caracteres o strings &lt;str&gt; &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.3</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -50,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#algunos-ejemplos-de-uso">Algunos ejemplos de uso</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
@@ -65,6 +66,13 @@
 <li class="toctree-l1"><a class="reference internal" href="dict.html">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="random.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="datetime.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="class.html">Clases y objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html">Propiedades controladas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html#funciones-de-mi-clase">Funciones de mi clase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html">Funciones especiales de las clases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#add">__add__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#str">__str__</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#eq">__eq__</a></li>
 </ul>
 
         </div>
@@ -158,6 +166,36 @@ espacio definido directamente.</strong></p>
 <li><p><code class="docutils literal notranslate"><span class="pre">strip</span></code>:</p></li>
 </ul>
 <p>Se espera un archivo de Python con estas funciones en uso como ejemplo.</p>
+</section>
+<section id="algunos-ejemplos-de-uso">
+<h2>Algunos ejemplos de uso<a class="headerlink" href="#algunos-ejemplos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Opciones para concatenar strings con variables</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">nombre</span> <span class="o">=</span> <span class="s1">&#39;Pedro&#39;</span>
+<span class="n">pais</span> <span class="o">=</span> <span class="s1">&#39;Chile&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world </span><span class="si">{}</span><span class="s2"> de </span><span class="si">{}</span><span class="s2">!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">pais</span><span class="p">))</span>
+<span class="c1"># Hello world Pedro de Chile!</span>
+
+<span class="c1"># valores enumerados</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valores enumerados. Hello world </span><span class="si">{0}</span><span class="s2"> de </span><span class="si">{1}</span><span class="s2"> (</span><span class="si">{0}</span><span class="s2">-</span><span class="si">{1}</span><span class="s2">)!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">pais</span><span class="p">))</span>
+<span class="c1"># Valores enumerados. Hello world Pedro de Chile (Pedro-Chile)!</span>
+
+<span class="c1"># valores con nombre</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valores con nombre. Hello world </span><span class="si">{name}</span><span class="s2"> de </span><span class="si">{country}</span><span class="s2">!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">nombre</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="n">pais</span><span class="p">))</span>
+<span class="c1"># Valores con nombre. Hello world Pedro de Chile!</span>
+
+<span class="c1"># Estilo C</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estilo C. Hello world </span><span class="si">%s</span><span class="s2"> de </span><span class="si">%s</span><span class="s2"> !&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">pais</span><span class="p">))</span>
+<span class="c1"># Estilo C. Hello world Pedro de Chile !</span>
+
+<span class="c1"># Nueva opcion desde python 3.6</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello world </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2"> de </span><span class="si">{</span><span class="n">pais</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<span class="c1"># Hello world Pedro de Chile!</span>
+</pre></div>
+</div>
 </section>
 </section>
 

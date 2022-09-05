@@ -170,22 +170,48 @@ Tareas
 
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 020 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-020/ejercicio.py>`_
-    (contenido en este repositorio)
+
+.. include:: /ejercicios/ejercicio-020/ejercicio.py
+   :literal:
+
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 030 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-030/ejercicio.py>`_
+
+.. include:: /ejercicios/ejercicio-030/ejercicio.py
+   :literal:
+
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 031 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-031/ejercicio.py>`_
+
+.. include:: /ejercicios/ejercicio-031/ejercicio.py
+   :literal:
+
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 032 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-032/ejercicio.py>`_
+
+.. include:: /ejercicios/ejercicio-032/ejercicio.py
+   :literal:
+
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 041 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-041/ejercicio.py>`_
+
+.. include:: /ejercicios/ejercicio-041/ejercicio.py
+   :literal:
+
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 042 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-042/ejercicio.py>`_
 
+.. include:: /ejercicios/ejercicio-042/ejercicio.py
+   :literal:
 
 Algunos ejemplos de uso
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-*  `Diccionarios 00 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dicts-00.py>`_
-*  `Diccionarios 01 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dicts-01.py>`_
-*  `Diccionarios 02 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/dicts-02.py>`_
+.. include:: /code/01-basics/dicts-00.py
+   :literal:
+
+.. include:: /code/01-basics/dicts-01.py
+   :literal:
+
+.. include:: /code/01-basics/dicts-02.py
+   :literal:
