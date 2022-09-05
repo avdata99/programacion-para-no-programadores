@@ -68,7 +68,8 @@
 <li class="toctree-l1"><a class="reference internal" href="#add">__add__</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#str">__str__</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#eq">__eq__</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#codigo-final-de-nuestra-clase">Código final de nuestra clase</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="#codigo-final-de-nuestra-clase">Código final de nuestra clase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#otras-funciones-especiales">Otras funciones especiales</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#algunos-ejemplos-de-uso">Algunos ejemplos de uso</a></li>
 </ul>
 </li>
@@ -239,36 +240,31 @@ Al igual que <code class="docutils literal notranslate"><span class="pre">__add_
         <span class="n">servicios_iguales</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">servicio</span> <span class="o">==</span> <span class="n">otro</span><span class="o">.</span><span class="n">servicio</span>
 
         <span class="k">return</span> <span class="n">montos_iguales</span> <span class="ow">and</span> <span class="n">servicios_iguales</span>
-
-<span class="n">f1</span> <span class="o">=</span> <span class="n">FacturaServicio</span><span class="p">(</span><span class="mf">3500.90</span><span class="p">,</span> <span class="s1">&#39;Internet&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>
-
-<span class="n">f1</span> <span class="o">=</span> <span class="n">FacturaServicio</span><span class="p">(</span><span class="mf">3500.90</span><span class="p">,</span> <span class="s1">&#39;Internet&#39;</span><span class="p">)</span>
-<span class="n">f2</span> <span class="o">=</span> <span class="n">FacturaServicio</span><span class="p">(</span><span class="mf">1806.06</span><span class="p">,</span> <span class="s1">&#39;Telefono&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">f1</span> <span class="o">+</span> <span class="n">f2</span><span class="p">)</span>
-<span class="mf">5306.96</span>
-
-<span class="n">f1</span> <span class="o">=</span> <span class="n">FacturaServicio</span><span class="p">(</span><span class="mf">1500.90</span><span class="p">,</span> <span class="s1">&#39;Internet&#39;</span><span class="p">)</span>
-<span class="n">f2</span> <span class="o">=</span> <span class="n">FacturaServicio</span><span class="p">(</span><span class="mf">1500.90</span><span class="p">,</span> <span class="s1">&#39;Internet&#39;</span><span class="p">)</span>
-<span class="n">f3</span> <span class="o">=</span> <span class="n">FacturaServicio</span><span class="p">(</span><span class="mf">3500.90</span><span class="p">,</span> <span class="s1">&#39;Internet&#39;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">f1</span> <span class="o">==</span> <span class="n">f2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1 y f2 SI son iguales&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1 y f2 NO son iguales&#39;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">f2</span> <span class="o">==</span> <span class="n">f3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f2 y f3 SI son iguales&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f2 y f3 NO son iguales&#39;</span><span class="p">)</span>
-
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">f1 y f2 SI son iguales</span>
-<span class="sd">f2 y f3 NO son iguales</span>
-<span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
 </div>
+</section>
+<section id="otras-funciones-especiales">
+<h1>Otras funciones especiales<a class="headerlink" href="#otras-funciones-especiales" title="Enlace permanente a este encabezado"></a></h1>
+<p>Estas algunas otras de las funciones especiales.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__mul__</span></code>: Multiplipicación</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__sub__</span></code>: Resta (<em>Substraction</em>)</p></li>
+<li><p>Para que nuestros objetos se comporten como diccionarios</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__getitem__</span></code>: Obtener un item con la clave que se pasa como parámetro</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__setitem__</span></code>: Definir un item con la clave que se pasa como parámetro</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__delitem__</span></code>: Eliminar el item que tiene la clave que se pasa como parámetro</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__ne__</span></code>: No igual (<em>Not equal</em>) <code class="docutils literal notranslate"><span class="pre">!=</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__lt__</span></code>: Menor que (<em>less than</em>) <code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__gt__</span></code>: Mayor que (<em>grater than</em>) <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__neg__</span></code>: Negativo (para cuando usan <code class="docutils literal notranslate"><span class="pre">-MY-OBJETO</span></code>)</p></li>
+</ul>
+<p>Y hay muchas más.</p>
 <section id="algunos-ejemplos-de-uso">
 <h2>Algunos ejemplos de uso<a class="headerlink" href="#algunos-ejemplos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>

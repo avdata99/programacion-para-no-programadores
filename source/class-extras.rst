@@ -134,6 +134,26 @@ Disponible `aquí <https://github.com/avdata99/programacion-para-no-programadore
    :literal:
 
 
+Otras funciones especiales
+--------------------------
+
+Estas algunas otras de las funciones especiales.  
+
+*  ``__mul__``: Multiplipicación
+*  ``__sub__``: Resta (*Substraction*) 
+*  Para que nuestros objetos se comporten como diccionarios
+
+  *  ``__getitem__``: Obtener un item con la clave que se pasa como parámetro
+  *  ``__setitem__``: Definir un item con la clave que se pasa como parámetro
+  *  ``__delitem__``: Eliminar el item que tiene la clave que se pasa como parámetro
+
+*  ``__ne__``: No igual (*Not equal*) ``!=`` 
+*  ``__lt__``: Menor que (*less than*) ``<`` 
+*  ``__gt__``: Mayor que (*grater than*) ``>`` 
+*  ``__neg__``: Negativo (para cuando usan ``-MY-OBJETO``) 
+
+Y hay muchas más.   
+
 Algunos ejemplos de uso
 ~~~~~~~~~~~~~~~~~~~~~~~
 
