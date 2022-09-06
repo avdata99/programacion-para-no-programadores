@@ -70,6 +70,7 @@
 <li class="toctree-l1"><a class="reference internal" href="#eq">__eq__</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#codigo-final-de-nuestra-clase">Código final de nuestra clase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#otras-funciones-especiales">Otras funciones especiales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#algunos-ejemplos-de-uso">Algunos ejemplos de uso</a></li>
 </ul>
 </li>
@@ -254,7 +255,7 @@ Al igual que <code class="docutils literal notranslate"><span class="pre">__add_
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">__getitem__</span></code>: Obtener un item con la clave que se pasa como parámetro</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">__setitem__</span></code>: Definir un item con la clave que se pasa como parámetro</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__setitem__</span></code>: Definir un item con la clave y el valor que se pasan como parámetro</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__delitem__</span></code>: Eliminar el item que tiene la clave que se pasa como parámetro</p></li>
 </ul>
 </div></blockquote>
@@ -264,7 +265,19 @@ Al igual que <code class="docutils literal notranslate"><span class="pre">__add_
 <li><p><code class="docutils literal notranslate"><span class="pre">__gt__</span></code>: Mayor que (<em>grater than</em>) <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__neg__</span></code>: Negativo (para cuando usan <code class="docutils literal notranslate"><span class="pre">-MY-OBJETO</span></code>)</p></li>
 </ul>
-<p>Y hay muchas más.</p>
+<p><strong>Y hay muchas más.</strong></p>
+<section id="tareas">
+<h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p>Hacer un PR a la
+<a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/class-04.py">clase Carta</a>
+para agregar la función <code class="docutils literal notranslate"><span class="pre">__add__</span></code> para que devuelva un <code class="docutils literal notranslate"><span class="pre">int</span></code> calculando el envido <strong>solo</strong> de esas dos cartas. <strong>Incluir
+multiples asserts al final que pruebe al menos tres sumas (diferentes y variadas) y sus resultados (envidos) esperados</strong>.</p></li>
+<li><p>Hacer un PR a la
+<a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/class-04.py">clase Carta</a>
+para agregar la función <code class="docutils literal notranslate"><span class="pre">__eq__</span></code> para que devuelva <code class="docutils literal notranslate"><span class="pre">True</span></code> solo cuando el numero y el palo sean iguales.</p></li>
+</ul>
+</section>
 <section id="algunos-ejemplos-de-uso">
 <h2>Algunos ejemplos de uso<a class="headerlink" href="#algunos-ejemplos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>

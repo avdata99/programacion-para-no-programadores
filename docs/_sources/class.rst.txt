@@ -165,3 +165,8 @@ En nuestra clase, el siguiente comportamiento si esta permitido:
     diego.apellido = 17  # sería bueno evitar esto
     print(diego.apellido)
     17
+
+Tareas
+~~~~~~
+
+*  Crear una clase llamada ``Auto`` que se inicialice con algunas propiedades obligatorias y otras opcionales

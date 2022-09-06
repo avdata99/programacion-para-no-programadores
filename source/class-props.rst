@@ -185,6 +185,19 @@ Código de la clase final
    :literal:
 
 
+Tareas
+~~~~~~
+
+*  Hacer un PR a la 
+   `clase Persona <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/class-00.py>`_
+   para agregar la propiedad edad.
+*  Hacer un PR a la 
+   `clase Carta <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/class-04.py>`_
+   para validar que el ``palo`` es string en su función ``setter``.
+*  Hacer un PR a la 
+   `clase Carta <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/class-04.py>`_
+   para validar que el ``numero`` es mayor que cero y menor o igual que 12 en su función ``setter``.
+
 Algunos ejemplos de uso
 ~~~~~~~~~~~~~~~~~~~~~~~
 

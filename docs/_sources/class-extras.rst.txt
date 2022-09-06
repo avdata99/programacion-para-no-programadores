@@ -144,7 +144,7 @@ Estas algunas otras de las funciones especiales.
 *  Para que nuestros objetos se comporten como diccionarios
 
   *  ``__getitem__``: Obtener un item con la clave que se pasa como parámetro
-  *  ``__setitem__``: Definir un item con la clave que se pasa como parámetro
+  *  ``__setitem__``: Definir un item con la clave y el valor que se pasan como parámetro
   *  ``__delitem__``: Eliminar el item que tiene la clave que se pasa como parámetro
 
 *  ``__ne__``: No igual (*Not equal*) ``!=`` 
@@ -152,7 +152,18 @@ Estas algunas otras de las funciones especiales.
 *  ``__gt__``: Mayor que (*grater than*) ``>`` 
 *  ``__neg__``: Negativo (para cuando usan ``-MY-OBJETO``) 
 
-Y hay muchas más.   
+**Y hay muchas más.**   
+
+Tareas
+~~~~~~
+
+*  Hacer un PR a la 
+   `clase Carta <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/class-04.py>`_
+   para agregar la función ``__add__`` para que devuelva un ``int`` calculando el envido **solo** de esas dos cartas. **Incluir
+   multiples asserts al final que pruebe al menos tres sumas (diferentes y variadas) y sus resultados (envidos) esperados**.
+*  Hacer un PR a la 
+   `clase Carta <https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/class-04.py>`_
+   para agregar la función ``__eq__`` para que devuelva ``True`` solo cuando el numero y el palo sean iguales.
 
 Algunos ejemplos de uso
 ~~~~~~~~~~~~~~~~~~~~~~~
