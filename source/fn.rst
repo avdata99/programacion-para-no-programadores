@@ -122,6 +122,20 @@ usuarios querrán elevar números al cuadrado.
 Tareas
 ~~~~~~
 
+*  Un mago se para frente a su audiencia y les dice:
+
+   *  **Piensen un numero cualquiera**
+   *  Ahora súmenle 2
+   *  Multipliquen el resultado por 2
+   *  Resten al resultado el numero que pensaron al inicio
+   *  Sumen al resultado 8
+   *  Resten otra vez el numero pensado al principio.
+   
+   Finalmente les pregunta a todos el resultado final y **aplauden**
+   
+   Tarea:
+   Crear una funcion que haga paso a paso los calculos del mago ṕara llegar al resultado final.
+   Ejecutar la función para 5 numeros distintos y observar los resultados para entender que paso (editado) 
 *  Crear una funcion que calcule y devuelva la superficie de un rectangulo
    dados (como parámetros) los valores de sus lados. Usar esta funcion con
    valores ingresados por el usuario con ``input``.

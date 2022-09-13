@@ -40,6 +40,7 @@ release = u'v 0.4.4'
 # ones.
 extensions = [
     'sphinx.ext.githubpages',
+    'sphinx.ext.graphviz',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

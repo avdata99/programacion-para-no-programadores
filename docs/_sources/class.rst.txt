@@ -67,7 +67,7 @@ Anatomia de una clase
 *  ``__init__`` es hasta aquí nuestra única función (nos damos cuenta porque usa el ``def`` que
    ya conocemos junto a un grupo de parámetros). Cuando veamos estos guiones bajos dobles
    debemos interpretar que es una herramienta interna de Python. En este caso, todas las clases
-   tienen una función de inicialización de una clase (y siempre se llama ``__init__``).
+   tienen una función de inicialización (y siempre se llama ``__init__``).
    Ser la función inicializadora quiere decir que se va a ejecutar cuando
    los usuarios de la clase la usen para construir un objeto de este tipo.
 *  ``self`` es el primer parámetro de la función ``__init__``. Hablaremos en particular de este
@@ -85,7 +85,7 @@ Clases y objetos
 Las clases se usan para definir el comportamiento de los objetos que podremos crear a partir
 de ellas. Al proceso de crear un nuevo objeto se le dice *instanciar* y a cada objeto se le
 puede llamar *instancia*.  
-En el ejemplo anterior, las líneas
+En las siguientes líneas ...
 
 .. code-block:: python
 
@@ -94,7 +94,7 @@ En el ejemplo anterior, las líneas
     # como en las funciones, no es obligatorio nombrar los parámetros
     luis = Persona('Luis', 'Velez ')
 
-crean tres *instancias* del tipo ``Persona``. Cada una de ellas es un objeto distinto y por
+se crean tres *instancias* del tipo ``Persona``. Cada una de ellas es un objeto distinto y por
 lo tanto las propiedades que contienen son independientes y se procesan de manera aislada.
 
 .. code-block:: python
@@ -114,9 +114,9 @@ parámetro a ``self``. De esta forma, todo el objeto estará disponible dentro d
 función de la clase. Esto es obligatorio y olvidar colocarla generará errores difíciles
 de detectar en nuestras primeras experiencias con clases.  
 
-Cuando llamamos a funciones de la clase que usan ``self``, no debemos pasar nada. Debemos
-ignorarlo cuando estamos usando nuestro objeto. Esto es visible en todos los ejemplos
-usados en este manual.  
+Cuando llamamos a funciones de la clase que usan ``self``, no debemos pasar nada en
+lugar de este paràmetro. Debemos ignorarlo cuando estamos usando nuestro objeto.
+Esto es visible en todos los ejemplos usados en este manual.  
 
 Contenido de un clase
 ~~~~~~~~~~~~~~~~~~~~~
@@ -137,7 +137,7 @@ Estas líneas ...
             self.nombre = nombre
             self.apellido = apellido
 
-indican que todos los objetos de tipo ``Persona`` podrán referirse a las propiedades
+indican que todos los objetos de tipo ``Persona`` tendrán disponibles las propiedades
 ``nombre`` y ``apellido``. Además el valor de ellas será inicializado con los parámetros
 que usuario pase al construir estos objetos.  
 Al no tener valores predeterminados (funciona igual que las funciones) ambas propiedades

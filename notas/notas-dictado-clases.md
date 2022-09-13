@@ -20,4 +20,14 @@ Clase 2:
  - funciones
 
 Clase 3:
- - Revisar ejercicios funciones
+ - Revisar ejercicios funciones. 
+ - Toda la clase revisamos el material entregado por los alumnos
+ - Hay que reforzar algunas cosas en el dfictado de este tema
+  - Los que escriben las funciones y los que las usan deben ser pensados como personas distintas
+  - El alcance de las variables fuera y dentro de la funcion no esta claro.
+  - Los nombres de los parámetros y las variable usadas para llamar a las funciones se confunden
+  - Quizas las funciones deban mostrarse mas tarde en este curso
+  - Se agregaron mas ejercicios para seguir revisand la clase que viene
+
+Clase 4:
+ 

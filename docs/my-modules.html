@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escribiendo nuestro primer código &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.4</title>
+  <title>Paquetes y módulos &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.4</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -21,8 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Números enteros &lt;int&gt;" href="int.html" />
-    <link rel="prev" title="¿Donde escribimos nuestro código?" href="donde.html" /> 
+    <link rel="prev" title="Funciones especiales de las clases" href="class-extras.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,13 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Escribiendo nuestro primer código</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#que-es-una-variable">¿Qué es una variable?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#como-puede-saber-que-tipo-de-datos-almacena-una-variable">¿Cómo puede saber que tipo de datos almacena una variable?</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
@@ -78,7 +71,7 @@
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#eq">__eq__</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#codigo-final-de-nuestra-clase">Código final de nuestra clase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#otras-funciones-especiales">Otras funciones especiales</a></li>
-<li class="toctree-l1"><a class="reference internal" href="my-modules.html">Paquetes y módulos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Paquetes y módulos</a></li>
 </ul>
 
         </div>
@@ -95,9 +88,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Escribiendo nuestro primer código</li>
+      <li>Paquetes y módulos</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/interactivo.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+            <a href="_sources/my-modules.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
   </ul>
   <hr/>
@@ -105,82 +98,112 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="escribiendo-nuestro-primer-codigo">
-<h1>Escribiendo nuestro primer código<a class="headerlink" href="#escribiendo-nuestro-primer-codigo" title="Enlace permanente a este encabezado"></a></h1>
-<p>Cuando programamos parte de nuestro trabajo es tomar datos de entrada,
-procesarlos y finalmente transformarlos en datos de salida que necesitamos.
-Esta es una parte muy importante de nuestro trabajo como programadores. Es por
-esto que todos los lenguajes de programación incluyen formas de procesar datos
-de diferentes tipos.</p>
-<p>En Python (y en casi todos los lenguajes de programación) se utiliza el
-operador <code class="docutils literal notranslate"><span class="pre">=</span></code> como forma de asignar un valor (el de la izquierda) a una <em>variable</em>
-(a la derecha). De tal forma el código.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+  <section id="paquetes-y-modulos">
+<h1>Paquetes y módulos<a class="headerlink" href="#paquetes-y-modulos" title="Enlace permanente a este encabezado"></a></h1>
+<p>Hasta aquí hemos ejecutado nuestro código en un solo archivo.</p>
+<div class="tip admonition">
+<p class="admonition-title">pero …</p>
+<p>Bueno, en realidad cuando usamos algo como <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">random</span> <span class="pre">import</span> <span class="pre">ranint</span></code>
+estamos usando código que esta en otros archivos que no vemos (pero
+podemos, <a class="reference external" href="https://github.com/python/cpython/blob/main/Lib/random.py">aquí esta el modulo interno de python random.py</a>).</p>
+</div>
+<p>En la medida que el código que hacemos crece, es necesario mantener un orden.
+Es por esto que conviene empaquetar el código que hacemos. Esto incluso nos permite
+reutilizarlo en el futuro.</p>
+<div class="tip admonition">
+<p class="admonition-title">reutilizar y compartir</p>
+<p>Además de reutilizarlo nosotros lo podemos compartir
+abiertamente. La comunidad de Python es una de las más grandes en el desarrollo de
+software abierto. Al momento de escribir estas líneas, hay alrededor de 400.000 paquetes
+abiertos en <a class="reference external" href="https://pypi.org/">Pypi</a> (<em>The Python Package Index</em>). Todo este código
+esta disponible para nosotros.</p>
+</div>
+<p>Podemos pensar a los paquetes Python como carpetas que pueden contener más paquetes
+(sub-carpetas) y modulos (archivos de Python <code class="docutils literal notranslate"><span class="pre">.py</span></code>).</p>
+<p>Para indicar que una carpeta es un paquete alcanza con agregarle un archivo llamado
+<code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>. Por el momento alcanza con que este archivo este vacío.</p>
+<figure class="align-default" id="pkg-structure">
+<div class="graphviz"><img src="_images/graphviz-16754c4d8191cffa9801398f7d26d5cf82f3df74.png" alt="digraph {
+    compound=true;
+    rankdir=&quot;TB&quot;;
+    labeljust=l;
+
+    base [
+            label=&quot;Mi código (carpeta)&quot;,
+            shape=&quot;folder&quot;,
+            fillcolor=&quot;#ACA5DD&quot;,
+            style=filled
+        ];
+    main [
+            fontsize=&quot;9&quot;,
+            fontname=&quot;courier-new&quot;,
+            label=&quot;#opciones para importar\limport paquete\lfrom paquete import modulo\lfrom paquete.modulo import mi_funcion&quot;,
+            shape=&quot;component&quot;
+        ];
+    paquete [
+            label=&quot;paquete (carpeta)&quot;,
+            shape=&quot;folder&quot;
+        ];
+    init [
+            label=&quot;__init__.py&quot;,
+            shape=&quot;file&quot;
+        ];
+    fn [
+        fontsize=&quot;9&quot;
+        fontname=&quot;courier-new&quot;
+        label=&quot;def mi_funcion():&quot;,
+        shape=&quot;component&quot;
+    ]
+
+subgraph cluster_a {
+    color=&quot;#2344FF&quot;
+    label=&quot;modulo.py&quot;;
+    fn
+}
+
+subgraph cluster_b {
+    color=&quot;#2344FF&quot;
+    label=&quot;mi-programa.py&quot;
+    main
+}
+
+base -&gt; main [label=&quot;contiene a&quot; lhead=&quot;cluster_b&quot;];
+base -&gt; paquete;
+# main -&gt; paquete [label=&quot; import paquete &quot;, style=dashed, arrowhead=true];
+paquete -&gt; fn [label=&quot;contiene a&quot; lhead=&quot;cluster_a&quot;];
+paquete -&gt; init;
+# main -&gt; fn [label=&quot;from paquete\nimport module&quot;, style=dashed, lhead=&quot;cluster_a&quot;];
+# main -&gt; fn [label=&quot;from paquete.module\nimport my_function&quot;, style=dashed];
+}" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">Estructura de archivos y carpetas</span><a class="headerlink" href="#pkg-structure" title="Enlace permanente a esta imagen"></a></p>
+</figcaption>
+</figure>
+<p>De esta forma es posible mantener tu codigo ordenado y facil de mantener.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">funciones.py</span><a class="headerlink" href="#id1" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </pre></div>
 </div>
-<p>quiere decir: <em>asignar el valor 1 a la variable llamada</em> <cite>a</cite>.
-Si mas adelante en el código usamos <cite>a</cite> nos estaremos refiriendo a su contenido: <em>1</em>.
-Entonces …</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">otro_archivo_en_la_misma_carpeta.py</span><a class="headerlink" href="#id2" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">funciones</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">funciones</span><span class="o">.</span><span class="n">suma</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">funciones</span> <span class="kn">import</span> <span class="n">suma</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">suma</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>quiere decir <em>asignar el valor a+1 a la variable llamada</em> <code class="docutils literal notranslate"><span class="pre">b</span></code>.
-En este caso <code class="docutils literal notranslate"><span class="pre">b</span></code> será igual a 2 (1+1).</p>
-<section id="que-es-una-variable">
-<h2>¿Qué es una variable?<a class="headerlink" href="#que-es-una-variable" title="Enlace permanente a este encabezado"></a></h2>
-<p>Las <em>variables</em> son los instrumentos que usan los lenguajes de programación para
-almacenar datos de diferentes tipos.
-Deben tener un identificador o nombre (en los ejemplos anteriores <code class="docutils literal notranslate"><span class="pre">a</span></code> y <code class="docutils literal notranslate"><span class="pre">b</span></code>).</p>
-<p>Estos identificadores deben ser letras, números y el símbolo <em>_</em> (guión bajo) con estos límites:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>no puede tener espacios.</p></li>
-<li><p>no empezar con un número (si puede usarse despues del primer caracter).</p></li>
-<li><p>no puede ser una palabra que Python ya tiene reservado para otras funciones como <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, etc.</p></li>
-</ul>
-</div></blockquote>
-<p>De tal forma, los siguientes identificadores de variables son válidos:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">nombre</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">n3</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nombre_y_apellido</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">_dato_privado</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">f910293</span></code></p></li>
-</ul>
-</div></blockquote>
-<p>y los sigiuentes no son válidos:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">3n</span></code> (no se puede empezar con números)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code>  (es una palabra reservada de Python)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nombre</span> <span class="pre">apellido</span></code> (no se pueden usar espacios)</p></li>
-</ul>
-</div></blockquote>
-<section id="como-puede-saber-que-tipo-de-datos-almacena-una-variable">
-<h3>¿Cómo puede saber que tipo de datos almacena una variable?<a class="headerlink" href="#como-puede-saber-que-tipo-de-datos-almacena-una-variable" title="Enlace permanente a este encabezado"></a></h3>
-<p>Python incluye una herramienta llamada <code class="docutils literal notranslate"><span class="pre">type</span></code> que informa
-que tipo de datos contiene una variable dada.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="c1"># devuelve</span>
-<span class="c1"># &lt;class &#39;int&#39;&gt;</span>
-</pre></div>
 </div>
-<p>En este caso, la variable <code class="docutils literal notranslate"><span class="pre">a</span></code> es del tipo <code class="docutils literal notranslate"><span class="pre">int</span></code> (que veremos a continuación).
-<em>Nota: La palabra ``class`` cobrará sentido más adelante</em>.</p>
-<p>Los siguientes son ejemplo de uso de los tipos básicos de datos de los que
-disponemos en Python.</p>
-</section>
-</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="donde.html" class="btn btn-neutral float-left" title="¿Donde escribimos nuestro código?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="int.html" class="btn btn-neutral float-right" title="Números enteros &lt;int&gt;" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="class-extras.html" class="btn btn-neutral float-left" title="Funciones especiales de las clases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>

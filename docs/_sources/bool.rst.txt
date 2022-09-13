@@ -129,7 +129,7 @@ Tareas
 ~~~~~~
 
 *  Escribir una función que se llame ``es_par`` y que dado un número devuelva
-   ``True`` o ``False`` según corresponda. Tip: Los numeros pares tienen resto
+   ``True`` o ``False`` según corresponda. Tip: Los numeros pares tienen resto (operador ``%``)
    cero al dividirlos por 2.  
 *  Escribir una función que reciba 3 parametros: ``nombre``, ``edad`` y ``termino_secundario``.
    Si la edad es mayor que 18, ``termino_secundario`` es ``True`` y el nombre termina (tip:

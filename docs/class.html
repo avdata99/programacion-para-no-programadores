@@ -7,6 +7,7 @@
   <title>Clases y objetos &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.4</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -81,6 +82,7 @@
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#eq">__eq__</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#codigo-final-de-nuestra-clase">Código final de nuestra clase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#otras-funciones-especiales">Otras funciones especiales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="my-modules.html">Paquetes y módulos</a></li>
 </ul>
 
         </div>
@@ -167,7 +169,7 @@ Veremos más detalles a continuación.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__init__</span></code> es hasta aquí nuestra única función (nos damos cuenta porque usa el <code class="docutils literal notranslate"><span class="pre">def</span></code> que
 ya conocemos junto a un grupo de parámetros). Cuando veamos estos guiones bajos dobles
 debemos interpretar que es una herramienta interna de Python. En este caso, todas las clases
-tienen una función de inicialización de una clase (y siempre se llama <code class="docutils literal notranslate"><span class="pre">__init__</span></code>).
+tienen una función de inicialización (y siempre se llama <code class="docutils literal notranslate"><span class="pre">__init__</span></code>).
 Ser la función inicializadora quiere decir que se va a ejecutar cuando
 los usuarios de la clase la usen para construir un objeto de este tipo.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> es el primer parámetro de la función <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. Hablaremos en particular de este
@@ -185,14 +187,14 @@ parámetros que se hayan definido en <code class="docutils literal notranslate">
 <p>Las clases se usan para definir el comportamiento de los objetos que podremos crear a partir
 de ellas. Al proceso de crear un nuevo objeto se le dice <em>instanciar</em> y a cada objeto se le
 puede llamar <em>instancia</em>.
-En el ejemplo anterior, las líneas</p>
+En las siguientes líneas …</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">juan</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s1">&#39;juan carlos&#39;</span><span class="p">,</span> <span class="n">apellido</span><span class="o">=</span><span class="s1">&#39;perez&#39;</span><span class="p">)</span>
 <span class="n">pedro</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s1">&#39;pedro&#39;</span><span class="p">,</span> <span class="n">apellido</span><span class="o">=</span><span class="s1">&#39;gomez&#39;</span><span class="p">)</span>
 <span class="c1"># como en las funciones, no es obligatorio nombrar los parámetros</span>
 <span class="n">luis</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;Luis&#39;</span><span class="p">,</span> <span class="s1">&#39;Velez &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>crean tres <em>instancias</em> del tipo <code class="docutils literal notranslate"><span class="pre">Persona</span></code>. Cada una de ellas es un objeto distinto y por
+<p>se crean tres <em>instancias</em> del tipo <code class="docutils literal notranslate"><span class="pre">Persona</span></code>. Cada una de ellas es un objeto distinto y por
 lo tanto las propiedades que contienen son independientes y se procesan de manera aislada.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">juan</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
 <span class="s1">&#39;juan carlos&#39;</span>
@@ -208,9 +210,9 @@ lo tanto las propiedades que contienen son independientes y se procesan de maner
 parámetro a <code class="docutils literal notranslate"><span class="pre">self</span></code>. De esta forma, todo el objeto estará disponible dentro de cada
 función de la clase. Esto es obligatorio y olvidar colocarla generará errores difíciles
 de detectar en nuestras primeras experiencias con clases.</p>
-<p>Cuando llamamos a funciones de la clase que usan <code class="docutils literal notranslate"><span class="pre">self</span></code>, no debemos pasar nada. Debemos
-ignorarlo cuando estamos usando nuestro objeto. Esto es visible en todos los ejemplos
-usados en este manual.</p>
+<p>Cuando llamamos a funciones de la clase que usan <code class="docutils literal notranslate"><span class="pre">self</span></code>, no debemos pasar nada en
+lugar de este paràmetro. Debemos ignorarlo cuando estamos usando nuestro objeto.
+Esto es visible en todos los ejemplos usados en este manual.</p>
 </section>
 <section id="contenido-de-un-clase">
 <h3>Contenido de un clase<a class="headerlink" href="#contenido-de-un-clase" title="Enlace permanente a este encabezado"></a></h3>
@@ -225,7 +227,7 @@ estas propiedades en los objetos definidos.</p>
 </span><span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span> <span class="o">=</span> <span class="n">apellido</span>
 </span></pre></div>
 </div>
-<p>indican que todos los objetos de tipo <code class="docutils literal notranslate"><span class="pre">Persona</span></code> podrán referirse a las propiedades
+<p>indican que todos los objetos de tipo <code class="docutils literal notranslate"><span class="pre">Persona</span></code> tendrán disponibles las propiedades
 <code class="docutils literal notranslate"><span class="pre">nombre</span></code> y <code class="docutils literal notranslate"><span class="pre">apellido</span></code>. Además el valor de ellas será inicializado con los parámetros
 que usuario pase al construir estos objetos.
 Al no tener valores predeterminados (funciona igual que las funciones) ambas propiedades

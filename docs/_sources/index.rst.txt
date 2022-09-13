@@ -29,15 +29,12 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    class
    class-props
    class-extras
+   my-modules
 
 ..  
-  built-in modules (datetime random, math)
+  my-modules
   files, open
   *args and **kwargs
-  raise
-  Class
-  
-  my modules
   requests and external modules (local env?)
   jinja2
   flask
