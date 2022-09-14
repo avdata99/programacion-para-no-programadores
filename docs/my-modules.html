@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/curso.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -101,11 +102,11 @@
   <section id="paquetes-y-modulos">
 <h1>Paquetes y módulos<a class="headerlink" href="#paquetes-y-modulos" title="Enlace permanente a este encabezado"></a></h1>
 <p>Hasta aquí hemos ejecutado nuestro código en un solo archivo.</p>
-<div class="tip admonition">
-<p class="admonition-title">pero …</p>
-<p>Bueno, en realidad cuando usamos algo como <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">random</span> <span class="pre">import</span> <span class="pre">ranint</span></code>
-estamos usando código que esta en otros archivos que no vemos (pero
-podemos, <a class="reference external" href="https://github.com/python/cpython/blob/main/Lib/random.py">aquí esta el modulo interno de python random.py</a>).</p>
+<div class="hint admonition">
+<p class="admonition-title">no es exactamente así</p>
+<p>En realidad cuando usamos algo como <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">random</span> <span class="pre">import</span> <span class="pre">ranint</span></code>
+estamos usando (importando) código que esta en otros archivos que no vemos (pero
+podríamos, <a class="reference external" href="https://github.com/python/cpython/blob/main/Lib/random.py">aquí esta el modulo interno de python random.py</a>).</p>
 </div>
 <p>En la medida que el código que hacemos crece, es necesario mantener un orden.
 Es por esto que conviene empaquetar el código que hacemos. Esto incluso nos permite
@@ -119,7 +120,7 @@ abiertos en <a class="reference external" href="https://pypi.org/">Pypi</a> (<em
 esta disponible para nosotros.</p>
 </div>
 <p>Podemos pensar a los paquetes Python como carpetas que pueden contener más paquetes
-(sub-carpetas) y modulos (archivos de Python <code class="docutils literal notranslate"><span class="pre">.py</span></code>).</p>
+(sub-carpetas) y modulos (archivos de Python <code class="docutils literal notranslate"><span class="pre">.py</span></code>) con funciones y clases para reutilizar.</p>
 <p>Para indicar que una carpeta es un paquete alcanza con agregarle un archivo llamado
 <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>. Por el momento alcanza con que este archivo este vacío.</p>
 <figure class="align-default" id="pkg-structure">

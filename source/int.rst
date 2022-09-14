@@ -40,9 +40,12 @@ Es tambien posible usar las variables para hacer cálculos
     precio_final
     33
 
-En Python, todo es un *objeto*. El concepto de *objeto* lo vamos a ver en profundidad más adelante.  
-Por lo pronto diremos que un *objeto* en Python es un elemento que tiene propiedades (también
-llamados *atributos*) y funciones.  
+.. admonition:: variables y objetos
+    :class: hint
+
+    En Python, todo es un *objeto*. El concepto de *objeto* lo vamos a ver en profundidad más adelante.  
+    Por lo pronto diremos que en Python una variable es un *objeto* de un tipo específico.
+    Este objeto tiene propiedades (también llamados *atributos*) y funciones.  
 
 Por ejemplo, en el código anterior la variable *unidades* (definida en la linea que dice
 ``unidades = 3``) es en realidad un *objeto* de tipo ``int``.  
@@ -73,7 +76,8 @@ Si tenes curiosidad por conocer todas las propiedades y funciones de un *objeto*
 .. code-block:: python
 
     unidades = 3
-    unidades.__dir__()
+    unidades.__dir__()  # tambien puede obtenerse esta lista con dir(unidades)
+
     ['__repr__', '__hash__', '__getattribute__', '__lt__', '__le__', '__eq__',
      '__ne__', '__gt__', '__ge__', '__add__', '__radd__', '__sub__', '__rsub__',
      '__mul__', '__rmul__', '__mod__', '__rmod__', '__divmod__', '__rdivmod__',

@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/curso.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -138,9 +139,12 @@ interno, no tienen un significado especial para Python.</p>
 <span class="mi">33</span>
 </pre></div>
 </div>
+<div class="hint admonition">
+<p class="admonition-title">variables y objetos</p>
 <p>En Python, todo es un <em>objeto</em>. El concepto de <em>objeto</em> lo vamos a ver en profundidad más adelante.
-Por lo pronto diremos que un <em>objeto</em> en Python es un elemento que tiene propiedades (también
-llamados <em>atributos</em>) y funciones.</p>
+Por lo pronto diremos que en Python una variable es un <em>objeto</em> de un tipo específico.
+Este objeto tiene propiedades (también llamados <em>atributos</em>) y funciones.</p>
+</div>
 <p>Por ejemplo, en el código anterior la variable <em>unidades</em> (definida en la linea que dice
 <code class="docutils literal notranslate"><span class="pre">unidades</span> <span class="pre">=</span> <span class="pre">3</span></code>) es en realidad un <em>objeto</em> de tipo <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
 <p>Los objetos de tipo <code class="docutils literal notranslate"><span class="pre">int</span></code> no tienen muchas propiedades y funciones
@@ -163,7 +167,8 @@ Se hace de la forma <code class="docutils literal notranslate"><span class="pre"
 <p>Si tenes curiosidad por conocer todas las propiedades y funciones de un <em>objeto</em>
 (del tipo que sea) podes usar la funcion <code class="docutils literal notranslate"><span class="pre">__dir__()</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">unidades</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">unidades</span><span class="o">.</span><span class="fm">__dir__</span><span class="p">()</span>
+<span class="n">unidades</span><span class="o">.</span><span class="fm">__dir__</span><span class="p">()</span>  <span class="c1"># tambien puede obtenerse esta lista con dir(unidades)</span>
+
 <span class="p">[</span><span class="s1">&#39;__repr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__hash__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getattribute__&#39;</span><span class="p">,</span> <span class="s1">&#39;__lt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__le__&#39;</span><span class="p">,</span> <span class="s1">&#39;__eq__&#39;</span><span class="p">,</span>
  <span class="s1">&#39;__ne__&#39;</span><span class="p">,</span> <span class="s1">&#39;__gt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ge__&#39;</span><span class="p">,</span> <span class="s1">&#39;__add__&#39;</span><span class="p">,</span> <span class="s1">&#39;__radd__&#39;</span><span class="p">,</span> <span class="s1">&#39;__sub__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rsub__&#39;</span><span class="p">,</span>
  <span class="s1">&#39;__mul__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rmul__&#39;</span><span class="p">,</span> <span class="s1">&#39;__mod__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rmod__&#39;</span><span class="p">,</span> <span class="s1">&#39;__divmod__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rdivmod__&#39;</span><span class="p">,</span>

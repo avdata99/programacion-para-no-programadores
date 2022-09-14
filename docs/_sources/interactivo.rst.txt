@@ -7,6 +7,13 @@ Esta es una parte muy importante de nuestro trabajo como programadores. Es por
 esto que todos los lenguajes de programación incluyen formas de procesar datos
 de diferentes tipos.  
 
+.. admonition:: tipos de datos
+    :class: hint
+
+    Como permanentemente vamos a recibir, procesar y devolver datos es muy importante
+    conocer cuales son y de que herramientas dispone cada uno para resolver problemas
+    comunes. 
+
 En Python (y en casi todos los lenguajes de programación) se utiliza el
 operador ``=`` como forma de asignar un valor (el de la izquierda) a una *variable*
 (a la derecha). De tal forma el código.  

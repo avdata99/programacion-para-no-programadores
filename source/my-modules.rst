@@ -3,12 +3,12 @@ Paquetes y módulos
 
 Hasta aquí hemos ejecutado nuestro código en un solo archivo.  
 
-.. admonition:: pero ...
-    :class: tip
+.. admonition:: no es exactamente así
+    :class: hint
 
-    Bueno, en realidad cuando usamos algo como ``from random import ranint``
-    estamos usando código que esta en otros archivos que no vemos (pero
-    podemos, `aquí esta el modulo interno de python random.py <https://github.com/python/cpython/blob/main/Lib/random.py>`_).  
+    En realidad cuando usamos algo como ``from random import ranint``
+    estamos usando (importando) código que esta en otros archivos que no vemos (pero
+    podríamos, `aquí esta el modulo interno de python random.py <https://github.com/python/cpython/blob/main/Lib/random.py>`_).  
 
 En la medida que el código que hacemos crece, es necesario mantener un orden.  
 Es por esto que conviene empaquetar el código que hacemos. Esto incluso nos permite
@@ -24,7 +24,7 @@ reutilizarlo en el futuro.
     esta disponible para nosotros.  
 
 Podemos pensar a los paquetes Python como carpetas que pueden contener más paquetes
-(sub-carpetas) y modulos (archivos de Python ``.py``).  
+(sub-carpetas) y modulos (archivos de Python ``.py``) con funciones y clases para reutilizar.  
 
 Para indicar que una carpeta es un paquete alcanza con agregarle un archivo llamado
 ``__init__.py``. Por el momento alcanza con que este archivo este vacío.  
