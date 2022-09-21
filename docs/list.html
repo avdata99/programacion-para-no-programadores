@@ -184,7 +184,7 @@ disponibles, Python lanzara un error.</strong></p>
 <li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[-2]</span></code> devuelve el <strong>anteúltimo</strong> elemento de una lista.</p></li>
 </ul>
 <p>Es posible tambien obtener una sublista:
-<strong>Nota: esto es anti-intuitivo y confuso. Requiere práctica habituarse</strong></p>
+<strong>Nota: esto puede parecer anti-intuitivo y confuso. Requiere práctica habituarse</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[0:3]</span></code> devuelve una nueva lista cuyo primer elemento es
 <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[0]</span></code> y el últimos es <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[2]</span></code> (si, hasta
@@ -225,12 +225,19 @@ el final).</p></li>
 <span class="c1"># Lista invertida: [&#39;rodriguez&#39;, &#39;lopez&#39;, &#39;gonzalez&#39;, &#39;gomez&#39;, &#39;garcia&#39;]</span>
 </pre></div>
 </div>
-<p>¿Puede ser más complicado?
+<div class="hint admonition">
+<p class="admonition-title">funciones que transforman y funciones que devuelven</p>
+<p>Vale la pena notar que <code class="docutils literal notranslate"><span class="pre">reverse</span></code> y <code class="docutils literal notranslate"><span class="pre">sort</span></code> en las listas transforman al objeto que lo llama
+y no devuelven ningún (<code class="docutils literal notranslate"><span class="pre">None</span></code>) resultado; en cambio en los <em>strings</em>, las funciones <code class="docutils literal notranslate"><span class="pre">replace</span></code>,
+<code class="docutils literal notranslate"><span class="pre">title</span></code> y otras devuleven un resultado pero no cambian al objeto que los llamó.</p>
+</div>
+<p><strong>¿Puede ser más complicado?</strong>
 Si, un poco más. Podemos usar un tercer parámetro. Este indica los saltos que
 damos para seleccionar elementos. Predeterminado es 1 (vamos de un elemento al otro).</p>
-<p>De esta forma <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[1:6:2]</span></code> significa <em>los elementos desde el primero
-al quinto de dos en dos</em> y <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[::-1]</span></code> significa toda la lista completa
-en sentido inverso (tambien podemos usar <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista.reverse()</span></code>).</p>
+<p>De esta forma <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[1:6:2]</span></code> significa <em>los elementos desde el segundo
+al sexto de dos en dos</em> (desde <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[1]</span></code> a <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[5]</span></code>).
+Y <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista[::-1]</span></code> significa toda la lista completa
+en sentido inverso (tambien podemos usar <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista.reverse()</span></code> o <code class="docutils literal notranslate"><span class="pre">nombre_de_mi_lista.sort(reverse=True)</span></code>).</p>
 <section id="los-strings-tambien-son-listas">
 <h2>Los <em>strings</em> tambien son listas<a class="headerlink" href="#los-strings-tambien-son-listas" title="Enlace permanente a este encabezado"></a></h2>
 <p>Python permite tratar a los <em>strings</em> como listas.

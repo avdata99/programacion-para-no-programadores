@@ -27,7 +27,15 @@ Clase 3:
   - El alcance de las variables fuera y dentro de la funcion no esta claro.
   - Los nombres de los parámetros y las variable usadas para llamar a las funciones se confunden
   - Quizas las funciones deban mostrarse mas tarde en este curso
-  - Se agregaron mas ejercicios para seguir revisand la clase que viene
+  - Mostrar como evitar duplicar código con funciones
+  - Se agregaron mas ejercicios para seguir revisando la clase que viene
 
 Clase 4:
+ - Revisión ejercicio extra funciones: el mago
+ - Tema nuevo: funciones built-ins
+ - Tema nuevo: Boolean / if / operadores comparación
+ - Introducción a listas (no terminado)
+
+Clase 5:
+ -  
  

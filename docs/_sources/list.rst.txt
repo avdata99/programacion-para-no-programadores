@@ -86,7 +86,7 @@ Es posible tambien acceder a los elementos en orden inverso:
 *  ``nombre_de_mi_lista[-2]`` devuelve el **anteúltimo** elemento de una lista.
 
 Es posible tambien obtener una sublista:
-**Nota: esto es anti-intuitivo y confuso. Requiere práctica habituarse**
+**Nota: esto puede parecer anti-intuitivo y confuso. Requiere práctica habituarse**
 
 *  ``nombre_de_mi_lista[0:3]`` devuelve una nueva lista cuyo primer elemento es
    ``nombre_de_mi_lista[0]`` y el últimos es ``nombre_de_mi_lista[2]`` (si, hasta 
@@ -129,13 +129,21 @@ Veamos algunos ejemplos:
     print(f'Lista invertida: {apellidos}')
     # Lista invertida: ['rodriguez', 'lopez', 'gonzalez', 'gomez', 'garcia']
 
-¿Puede ser más complicado?  
+.. admonition:: funciones que transforman y funciones que devuelven
+    :class: hint
+    
+    Vale la pena notar que ``reverse`` y ``sort`` en las listas transforman al objeto que lo llama
+    y no devuelven ningún (``None``) resultado; en cambio en los *strings*, las funciones ``replace``,
+    ``title`` y otras devuleven un resultado pero no cambian al objeto que los llamó.
+
+**¿Puede ser más complicado?**  
 Si, un poco más. Podemos usar un tercer parámetro. Este indica los saltos que
 damos para seleccionar elementos. Predeterminado es 1 (vamos de un elemento al otro).  
 
-De esta forma ``nombre_de_mi_lista[1:6:2]`` significa *los elementos desde el primero
-al quinto de dos en dos* y ``nombre_de_mi_lista[::-1]`` significa toda la lista completa
-en sentido inverso (tambien podemos usar ``nombre_de_mi_lista.reverse()``).  
+De esta forma ``nombre_de_mi_lista[1:6:2]`` significa *los elementos desde el segundo 
+al sexto de dos en dos* (desde ``nombre_de_mi_lista[1]`` a ``nombre_de_mi_lista[5]``).  
+Y ``nombre_de_mi_lista[::-1]`` significa toda la lista completa
+en sentido inverso (tambien podemos usar ``nombre_de_mi_lista.reverse()`` o ``nombre_de_mi_lista.sort(reverse=True)``).  
 
 
 Los *strings* tambien son listas
