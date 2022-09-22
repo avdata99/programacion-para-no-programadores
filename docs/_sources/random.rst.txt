@@ -74,6 +74,10 @@ Ejemplo:
 Tareas
 ~~~~~~
 
+*  Escribir un programa que elija un numero al azar entre 1 y _N_ (el numero que quieras, puede ser 10 por ejemplo) y
+   le pida al usuario que lo adivine. El programa debe decirle al usuario si el numero que ingresó es mayor o menor
+   al numero que se eligió al azar. El programa debe terminar cuando el usuario adivine el numero elegido al azar.
+
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 045 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-045/ejercicio.py>`_
     (contenido en este repositorio)

@@ -207,6 +207,44 @@ Tambien es posible convertir el resultado de ``range`` a una lista
     34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64,
     66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98]
 
+Iterar *mientras* que algo suceda: ``while``
+--------------------------------------------
+
+En algunas ocasiones necesitamos iterar hasta que algo cambie.  
+Por ejemplo, hasta que el usuario ingrese un número válido.  
+
+Para estos casos existe la sentencia ``while``.  
+
+.. code-block:: python
+
+    numero_final = 0
+
+    # No salimos hasta que el numero sea válido
+    while numero_final == 0:
+        numero = input("Ingrese un número entre 1 y 10: ")
+        if not numero.isdigit():
+            print("No ingresaste un número válido")
+            continue
+        if int(numero) < 1 or int(numero) > 10:
+            print("El número debe estar entre 1 y 10")
+            continue
+        numero_final = int(numero)
+
+    print(f"Ingresaste el número {numero_final}")
+
+    """ TEST
+
+    Ingrese un número entre 1 y 10: a
+    No ingresaste un número válido
+    Ingrese un número entre 1 y 10: 11
+    El número debe estar entre 1 y 10
+    Ingrese un número entre 1 y 10: 0
+    El número debe estar entre 1 y 10
+    Ingrese un número entre 1 y 10: 3
+    Ingresaste el número 3
+
+    """
+
 Tareas
 ~~~~~~
 

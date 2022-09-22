@@ -62,7 +62,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#continue-y-break-en-ciclos-for"><code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">break</span></code> en ciclos <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#if-in"><code class="docutils literal notranslate"><span class="pre">if</span></code> + <code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#iterando-strings">Iterando <em>strings</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#agregado-range">Agregado: <code class="docutils literal notranslate"><span class="pre">range</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#agregado-range">Agregado: <code class="docutils literal notranslate"><span class="pre">range</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iterar-mientras-que-algo-suceda-while">Iterar <em>mientras</em> que algo suceda: <code class="docutils literal notranslate"><span class="pre">while</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#tareas">Tareas</a></li>
 </ul>
 </li>
@@ -291,6 +292,41 @@ resultado vaya de dos en dos).</p>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span>
 <span class="mi">34</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span>
 <span class="mi">66</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="iterar-mientras-que-algo-suceda-while">
+<h2>Iterar <em>mientras</em> que algo suceda: <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#iterar-mientras-que-algo-suceda-while" title="Enlace permanente a este encabezado"></a></h2>
+<p>En algunas ocasiones necesitamos iterar hasta que algo cambie.
+Por ejemplo, hasta que el usuario ingrese un número válido.</p>
+<p>Para estos casos existe la sentencia <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numero_final</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># No salimos hasta que el numero sea válido</span>
+<span class="k">while</span> <span class="n">numero_final</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">numero</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese un número entre 1 y 10: &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">numero</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No ingresaste un número válido&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="nb">int</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El número debe estar entre 1 y 10&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="n">numero_final</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ingresaste el número </span><span class="si">{</span><span class="n">numero_final</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot; TEST</span>
+
+<span class="sd">Ingrese un número entre 1 y 10: a</span>
+<span class="sd">No ingresaste un número válido</span>
+<span class="sd">Ingrese un número entre 1 y 10: 11</span>
+<span class="sd">El número debe estar entre 1 y 10</span>
+<span class="sd">Ingrese un número entre 1 y 10: 0</span>
+<span class="sd">El número debe estar entre 1 y 10</span>
+<span class="sd">Ingrese un número entre 1 y 10: 3</span>
+<span class="sd">Ingresaste el número 3</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
 </div>
 <section id="tareas">

@@ -37,5 +37,6 @@ Clase 4:
  - Introducción a listas (no terminado)
 
 Clase 5:
- -  
- 
+ - Repaso de los ejercicios de la clase pasada. 
+ - Esta vez hicimos una ronda de analisis. Cada alumno analizaba el código de los demás por turnos. Ayudo mucho a los que participan menos.
+ - Continuamos con listas. Los chicos van a leer del manual y hacer los ejercicios.
