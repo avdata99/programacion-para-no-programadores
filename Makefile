@@ -14,7 +14,7 @@ default: html
 all: html pdf epub mobi
 
 view:
-	open $(BUILDDIR)/index.html
+	xdg-open $(BUILDDIR)/index.html
 
 clean:
 	-rm -rf $(BUILDDIR)/*
