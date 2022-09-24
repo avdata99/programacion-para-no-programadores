@@ -19,14 +19,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'Curso de programación para no programadores con Python.'
-copyright = u'Andrés Vázquez @avdata99 Creative Commons BY-SA'
-author = u'Andrés Vázquez'
+project = 'Curso de programación para no programadores con Python.'
+copyright = 'Andrés Vázquez @avdata99 Creative Commons BY-SA'
+author = 'Andrés Vázquez'
 
 # The short X.Y version
-version = u'0.4.4'
+version = u'0.4.5'
 # The full version, including alpha/beta/rc tags
-release = u'v 0.4.4'
+release = u'v 0.4.5'
 
 
 # -- General configuration ---------------------------------------------------
@@ -111,19 +111,19 @@ html_sidebars = {
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Cursodeprogramacindoc'
+htmlhelp_basename = 'Curso-Python'
 
 
 # -- Options for LaTeX output ------------------------------------------------
 
+# latex_engine = 'xelatex'
+
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
+    'papersize': 'a4paper',
 
     # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
+    'pointsize': '12pt',
 
     # Additional stuff for the LaTeX preamble.
     #
@@ -137,9 +137,13 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'Cursodeprogramacin.tex', u'Curso de programación Documentation',
-     u'Andrés Vázquez', 'manual'),
+latex_documents = [(
+    master_doc,
+    'Curso-Python.tex',
+    'Curso de programación Documentation',
+    'Andrés Vázquez',
+    'manual'
+),
 ]
 
 
@@ -148,7 +152,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'cursodeprogramacin', u'Curso de programación Documentation',
+    (master_doc, 'curso-python', u'Curso de programación Documentation',
      [author], 1)
 ]
 
@@ -159,8 +163,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Cursodeprogramacin', u'Curso de programación Documentation',
-     author, 'Cursodeprogramacin', 'One line description of project.',
+    (master_doc, 'Curso-Python', u'Curso de programación Documentation',
+     author, 'Curso-Python', 'One line description of project.',
      'Miscellaneous'),
 ]
 
