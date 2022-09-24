@@ -172,10 +172,12 @@ texinfo_documents = [
 # -- Options for Epub output -------------------------------------------------
 
 # Bibliographic Dublin Core info.
+epub_basename = 'Curso-Python'
 epub_title = project
 epub_author = author
 epub_publisher = author
 epub_copyright = copyright
+# epub_cover = ('', '')
 
 # The unique identifier of the text. This can be a ISBN number
 # or the project homepage.

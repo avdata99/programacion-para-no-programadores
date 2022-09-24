@@ -24,6 +24,8 @@ html:
 
 epub:
 	sphinx-build -b epub $(SPHINXOPTS) $(SOURCEDIR) $(BUILDFORMATS)/epub
+	mv $(BUILDFORMATS)/epub/$(EXPORT-NAME).epub $(BUILDDIR)/$(EXPORT-NAME).epub
+	rm -rf $(BUILDFORMATS)/epub
 
 pdf:
 	rm -rf $(BUILDFORMATS)/latex
