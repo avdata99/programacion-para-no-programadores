@@ -186,7 +186,7 @@ Cuando llamamos a ``range`` con tres parámetros (siempre numeros)
 este devuelve un objeto que se puede iterar. Incluye los números
 desde el primer parámetro hasta el valor pasado como segundo
 parámetro menos uno. El último parámetro indica el tamaño del
-salto entre un elemento y otro (por ejemṕlo 2 hará que el
+salto entre un elemento y otro (por ejemplo 2 hará que el
 resultado vaya de dos en dos).  
 
 .. code-block:: python

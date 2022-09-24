@@ -134,7 +134,7 @@ Tareas
    Finalmente les pregunta a todos el resultado final y **aplauden**
    
    Tarea:
-   Crear una funcion que haga paso a paso los calculos del mago ṕara llegar al resultado final.
+   Crear una funcion que haga paso a paso los calculos del mago para llegar al resultado final.
    Ejecutar la función para 5 numeros distintos y observar los resultados para entender que paso (editado) 
 *  Crear una funcion que calcule y devuelva la superficie de un rectangulo
    dados (como parámetros) los valores de sus lados. Usar esta funcion con

@@ -90,10 +90,10 @@ Es posible tambien obtener una sublista:
 
 *  ``nombre_de_mi_lista[0:3]`` devuelve una nueva lista cuyo primer elemento es
    ``nombre_de_mi_lista[0]`` y el últimos es ``nombre_de_mi_lista[2]`` (si, hasta 
-   el 2). El segundo *parámetro* no esta incluido, el primero si. ¯\\_(ツ)_/¯
+   el 2). El segundo *parámetro* no esta incluido, el primero si. ¯\\_(-_-)_/¯
 *  ``nombre_de_mi_lista[2:-2]`` devuelve una nueva lista cuyo primer elemento es
    ``nombre_de_mi_lista[2]`` (el tercer elemento) y el últimos es 
-   ``nombre_de_mi_lista[-3]`` ¯\\_(ツ)_/¯
+   ``nombre_de_mi_lista[-3]`` ¯\\_(-_-)_/¯
 *  ``nombre_de_mi_lista[-2:]`` devuelve los ultimos dos elementos, desde 
    ``nombre_de_mi_lista[-2]`` hasta el final (no especificar nada significa hasta
    el final).

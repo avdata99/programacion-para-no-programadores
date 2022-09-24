@@ -74,7 +74,7 @@ Ejemplo:
 Tareas
 ~~~~~~
 
-*  Escribir un programa que elija un numero al azar entre 1 y _N_ (el numero que quieras, puede ser 10 por ejemplo) y
+*  Escribir un programa que elija un numero al azar entre 1 y 100 y
    le pida al usuario que lo adivine. El programa debe decirle al usuario si el numero que ingresó es mayor o menor
    al numero que se eligió al azar. El programa debe terminar cuando el usuario adivine el numero elegido al azar.
 

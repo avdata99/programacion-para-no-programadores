@@ -36,7 +36,7 @@ class Fraccion:
     def minimo_comun_multiplo(self, a, b):
         return a * b / self.maximo_comun_divisor(a, b)
 
-    #    sumar y devolver un objecto NUEVO tiṕo fraccion
+    #    sumar y devolver un objecto NUEVO tipo fraccion
     #    def __add__ ....
     #    validar que "otro" es una fraccion
     # hasta aca bien, ver el cuaderno y comparar donde dice formula del max_comun divisor
