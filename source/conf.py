@@ -93,6 +93,15 @@ html_css_files = [
     'css/curso.css'
 ]
 
+html_context = {
+    'display_github': True,
+    'github_user': 'avdata99',
+    'github_repo': 'programacion-para-no-programadores',
+    'theme_vcs_pageview_mode': 'edit',  # to use edit link
+    'github_version': 'master',  # Version
+    'conf_py_path': '/source/',  # Path in the checkout to the docs root
+}
+
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
