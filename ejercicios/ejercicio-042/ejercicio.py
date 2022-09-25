@@ -31,18 +31,18 @@ def crear_mazo_cartas_poker():
 # Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,
 #   crear un "pull request" y solicitar revision de un tercero.
 
-mazo_esp = crear_mazo_cartas_poker()
+mazo_poker = crear_mazo_cartas_poker()
 
-assert {'numero': 9, 'palo': 'pica'} in mazo_esp
-assert {'numero': 10, 'palo': 'pica'} in mazo_esp
-assert {'numero': 'J', 'palo': 'pica'} in mazo_esp
-assert {'numero': 'Q', 'palo': 'pica'} in mazo_esp
-assert {'numero': 'K', 'palo': 'pica'} in mazo_esp
+assert {'numero': 9, 'palo': 'pica'} in mazo_poker
+assert {'numero': 10, 'palo': 'pica'} in mazo_poker
+assert {'numero': 'J', 'palo': 'pica'} in mazo_poker
+assert {'numero': 'Q', 'palo': 'pica'} in mazo_poker
+assert {'numero': 'K', 'palo': 'pica'} in mazo_poker
 
-assert {'numero': 9, 'palo': 'diamante'} in mazo_esp
-assert {'numero': 10, 'palo': 'diamante'} in mazo_esp
-assert {'numero': 'J', 'palo': 'diamante'} in mazo_esp
-assert {'numero': 'Q', 'palo': 'diamante'} in mazo_esp
-assert {'numero': 'K', 'palo': 'diamante'} in mazo_esp
+assert {'numero': 9, 'palo': 'diamante'} in mazo_poker
+assert {'numero': 10, 'palo': 'diamante'} in mazo_poker
+assert {'numero': 'J', 'palo': 'diamante'} in mazo_poker
+assert {'numero': 'Q', 'palo': 'diamante'} in mazo_poker
+assert {'numero': 'K', 'palo': 'diamante'} in mazo_poker
 
 print('Ejercicio terminado OK')

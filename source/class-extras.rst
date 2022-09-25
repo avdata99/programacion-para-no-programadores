@@ -6,7 +6,7 @@ sinónimo de *función*) estas funciones se aplican a situaciones habituales de 
 objetos de Python. Estas situación son la suma, resta, division, comparación, etc.  
     
 __add__
--------
+~~~~~~~
 
 Que pasara si quisiéramos sumar dos ``Personas`` tal como las vimos en la clase anterior:
 
@@ -59,7 +59,7 @@ De la misma forma, podríamos sumar nuestro objetos con lo de otra clase. Nosotr
 distintos por cada tipo de objeto al que sumamos nuestro objeto.  
 
 __str__
--------
+~~~~~~~
 
 Es probablemente la función especial más usada. Se usa para definir que texto se va a devolver
 cuando el usuario necesite una representación *string* de este objeto.  
@@ -82,7 +82,7 @@ Ejemplo de uso:
     print(f1)
 
 __eq__
--------
+~~~~~~~
 
 Si queremos permitir la comparación de objetos de nuestra clase se puede definir esta función.   
 Esta función será llamada cuando nuestro objeto sea comparado con otro mediante el operador ``==``.  
