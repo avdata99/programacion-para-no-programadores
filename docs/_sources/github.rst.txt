@@ -44,7 +44,8 @@ Finalmente, debes ir al menú *View* -> *Terminal* y colocar:
 .. image:: /_static/imgs/vscode-terminal.png
 
 Para comenzar a trabajar sobre un repositorio de código debes usar el
-buscador o colocar la URL del repositorio.  
+buscador o colocar la URL del repositorio: 
+`https://github.com/avdata99/programacion-para-no-programadores <https://github.com/avdata99/programacion-para-no-programadores>`_  
 
 .. image:: /_static/imgs/vscode-open-clone.png
 

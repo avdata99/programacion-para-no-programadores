@@ -147,24 +147,26 @@ trabajo quede resuelto.
 Tarea
 ~~~~~~
 
-La carpeta `ejercicios <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios>`_
-de este repositorio tiene ya problemas para resolver mediante *pull requests*.  
+*  Buscar en el `repositorio de este curso <https://github.com/avdata99/programacion-para-no-programadores>`_ 
+   (al que ya nos conectamos) cualquiera de los archivos ``rst`` de la carpeta ``source`` algún error
+   ortográfico o sugerencia sobre el texto de este manual y enviarlo como PR.
 
-Se espera un *PR* para cada ejercicio, por lo tanto cada uno requiere una
-rama distinta **que siempre** salga desde master.  
+*  La carpeta `ejercicios <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios>`_
+   de este repositorio tiene ya problemas para resolver mediante *pull requests*.  
+   Se espera un *PR* para cada ejercicio, por lo tanto cada uno requiere una
+   rama distinta **que siempre** salga desde master.  
+   **Asegurarse de seguir todos los pasos para cada PR**.  
 
-**Asegurarse de seguir todos los pasos para cada PR**.  
+   *  Hacer un PR con una propuesta de solución para el
+      `ejercicio 001 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-001/ejercicio.py>`_
+      (contenido en este repositorio)
 
-*   Hacer un PR con una propuesta de solución para el
-    `ejercicio 001 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-001/ejercicio.py>`_
-    (contenido en este repositorio)
+   .. include:: /ejercicios/ejercicio-001/ejercicio.py
+      :literal:
 
-.. include:: /ejercicios/ejercicio-001/ejercicio.py
-   :literal:
+   *  Hacer un PR con una propuesta de solución para el
+      `ejercicio 002 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-002/ejercicio.py>`_
+      (contenido en este repositorio)
 
-*   Hacer un PR con una propuesta de solución para el
-    `ejercicio 002 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-002/ejercicio.py>`_
-    (contenido en este repositorio)
-
-.. include:: /ejercicios/ejercicio-002/ejercicio.py
-   :literal:
+   .. include:: /ejercicios/ejercicio-002/ejercicio.py
+      :literal:

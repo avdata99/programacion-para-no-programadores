@@ -67,10 +67,12 @@
 <li class="toctree-l1"><a class="reference internal" href="class.html">Clases y objetos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class-props.html">Propiedades controladas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class-props.html#funciones-de-mi-clase">Funciones de mi clase</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Funciones especiales de las clases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#add">__add__</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#str">__str__</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#eq">__eq__</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Funciones especiales de las clases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#add">__add__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#str">__str__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eq">__eq__</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="#codigo-final-de-nuestra-clase">Código final de nuestra clase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#otras-funciones-especiales">Otras funciones especiales</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
@@ -109,9 +111,8 @@
 <p>Tambien conocidos como <em>métodos mágicos</em> (podemos pensar a la palabra método como
 sinónimo de <em>función</em>) estas funciones se aplican a situaciones habituales de otros
 objetos de Python. Estas situación son la suma, resta, division, comparación, etc.</p>
-</section>
 <section id="add">
-<h1>__add__<a class="headerlink" href="#add" title="Enlace permanente a este encabezado"></a></h1>
+<h2>__add__<a class="headerlink" href="#add" title="Enlace permanente a este encabezado"></a></h2>
 <p>Que pasara si quisiéramos sumar dos <code class="docutils literal notranslate"><span class="pre">Personas</span></code> tal como las vimos en la clase anterior:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">juan</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;Juan&#39;</span><span class="p">,</span> <span class="s1">&#39;Perez&#39;</span><span class="p">)</span>
 <span class="n">victor</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;Victor&#39;</span><span class="p">,</span> <span class="s1">&#39;Gutierrez&#39;</span><span class="p">)</span>
@@ -156,7 +157,7 @@ De la misma forma, podríamos sumar nuestro objetos con lo de otra clase. Nosotr
 distintos por cada tipo de objeto al que sumamos nuestro objeto.</p>
 </section>
 <section id="str">
-<h1>__str__<a class="headerlink" href="#str" title="Enlace permanente a este encabezado"></a></h1>
+<h2>__str__<a class="headerlink" href="#str" title="Enlace permanente a este encabezado"></a></h2>
 <p>Es probablemente la función especial más usada. Se usa para definir que texto se va a devolver
 cuando el usuario necesite una representación <em>string</em> de este objeto.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -175,7 +176,7 @@ cuando el usuario necesite una representación <em>string</em> de este objeto.</
 </div>
 </section>
 <section id="eq">
-<h1>__eq__<a class="headerlink" href="#eq" title="Enlace permanente a este encabezado"></a></h1>
+<h2>__eq__<a class="headerlink" href="#eq" title="Enlace permanente a este encabezado"></a></h2>
 <p>Si queremos permitir la comparación de objetos de nuestra clase se puede definir esta función.
 Esta función será llamada cuando nuestro objeto sea comparado con otro mediante el operador <code class="docutils literal notranslate"><span class="pre">==</span></code>.
 Al igual que <code class="docutils literal notranslate"><span class="pre">__add__</span></code>, podríamos comparar nuestro objetos con lo de otra clase si fuera necesario
@@ -213,6 +214,7 @@ Al igual que <code class="docutils literal notranslate"><span class="pre">__add_
 <span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
 </div>
+</section>
 </section>
 <section id="codigo-final-de-nuestra-clase">
 <h1>Código final de nuestra clase<a class="headerlink" href="#codigo-final-de-nuestra-clase" title="Enlace permanente a este encabezado"></a></h1>
