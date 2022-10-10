@@ -2,7 +2,7 @@ Recibir datos del usuario ``input``
 ===================================
 
 Es posible detener la ejecución de tu programa para solicitar
-al usuario de nuetro programa que ingrese datos.  
+al usuario de nuestro programa que ingrese datos.  
 
 .. code-block:: python
 
@@ -10,7 +10,7 @@ al usuario de nuetro programa que ingrese datos.
     apellido = input('Ingresa tu apellido: ')
     print(f'Hola {nombre} {apellido}!')
 
-La funcion ``input`` devuelve como *string* lo que el usuario ingresa.  
+La función ``input`` devuelve como *string* lo que el usuario ingresa.  
 Si necesitaras un objeto de tipo ``int`` (por ejemplo para hacer cálculos)
 podes hacer la transformación con ``int(variable_string)``.  
 
@@ -36,7 +36,7 @@ podes hacer la transformación con ``int(variable_string)``.
 Tareas
 ~~~~~~
 
-*  ¿Que pasa si en el último ejemplo el usuario inserta una letra en lugar
+*  ¿Qué pasa si en el último ejemplo el usuario inserta una letra en lugar
    de un número? ¿Por qué?.
 *  Escribir un programa que le pida al usuario que ingrese los datos
    necesarios y calcule el `índice de masa corporal <https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal>`_.
