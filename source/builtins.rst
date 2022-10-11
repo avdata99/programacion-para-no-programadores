@@ -1,16 +1,16 @@
 Funciones incluidas en Python
 -----------------------------
 
-Así como nosotros definimos nuestras propias funciones, Python ya incluye
-algunas funciones. Ya hemos usado una de ella en nuestros códigos de
+Así como nosotros definimos nuestras propias funciones, Python incluye
+algunas funciones por defecto. Ya hemos usado una de ella en nuestros códigos de
 ejemplo: ``print``.  
 
-Estas funciones incorporadas y disponibles en Python se las conoce como *built-ins*.  
+A estas funciones incorporadas y disponibles en Python se las conoce como *built-ins*.  
 
-La funcion ``print`` simplemente *imprime* en nuestra terminal cualquier
+La función ``print`` simplemente *imprime* en nuestra terminal cualquier
 valor que se le pase como parámetro.  
 
-Algunos ejemplos:
+Veamos algunos ejemplos:
 
 .. code-block:: python
 
@@ -18,9 +18,9 @@ Algunos ejemplos:
     nombre = 'Juan'
     print(nombre)
 
-Pero ``print`` no es la única función disponible, son muchas.  
+Pero ``print`` no es la única función disponible, hay muchas.  
 
-Nota: La lista de todas las funciones built-ins de Python esta disponible 
+Nota: La lista de todas las funciones built-ins de Python está disponible 
 `aquí <https://docs.python.org/3/library/functions.html>`_.  
 
 Algunos ejemplos:
@@ -55,7 +55,7 @@ Tareas
 ~~~~~~
 
 *  Escribir una función que dadas tres palabras devuelva el
-   largo total de todas ellas juntas. Por ejemplo (si la funcion se llamara
+   largo total de todas ellas juntas. Por ejemplo (si la función se llamara
    ``largo_total``) la llamada ``largo_total('hola', 'chau', 'tercera')``
    debe devolver 15.
 *  Escribir una función que dados dos números devuelva el valor
