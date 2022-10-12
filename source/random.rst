@@ -15,7 +15,7 @@ Python al azar: ``random``
 El módulo ``random`` incluye una serie de funciones que permiten
 darle aleatoriedad a nuestro código.  
 
-Veamos un ejemplo. La funcion ``randint`` genera numeros al alzar
+Veamos un ejemplo. La función ``randint`` genera numeros al alzar
 entre dos valores pasados como parámetros.  
 
 .. code-block:: python
