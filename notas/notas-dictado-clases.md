@@ -40,3 +40,17 @@ Clase 5:
  - Repaso de los ejercicios de la clase pasada. 
  - Esta vez hicimos una ronda de analisis. Cada alumno analizaba el código de los demás por turnos. Ayudo mucho a los que participan menos.
  - Continuamos con listas. Los chicos van a leer del manual y hacer los ejercicios.
+
+Clase 6:
+ - Revision de los ejercicios de clase
+ - Nuevos temas: for/continue/break, range, while, if/in
+ - 2 hs de clase es poco. En general nos falta un poco si le queremos dar buen tiempo a los ejercicios. 2:30 hs parece mejor.
+
+Clase 7:
+ - Git, GitHub, repositorios y pull requests
+
+Clase 8:
+  - Revisión de los ejercicios de la clase pasada (PRs)
+  - Sería bueno tener gráficos de branchs y commits para enter porque hay que volver
+    a main/master para empezar un nuevo PR.
+  - Nuevo tema: diccionarios
