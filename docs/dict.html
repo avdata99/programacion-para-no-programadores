@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diccionarios: dict &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.5</title>
+  <title>Diccionarios: dict &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.6</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
           </a>
               <div class="version">
-                0.4.5
+                0.4.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -248,6 +248,14 @@ Las siguientes lineas son válidas para la estructura recién definida.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">d3</span><span class="p">)</span>
 <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Laura&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span> <span class="s1">&#39;documento&#39;</span><span class="p">:</span> <span class="mi">221029489</span><span class="p">}</span>
 </pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">No confundir diccionarios con <code class="docutils literal notranslate"><span class="pre">set</span></code></p>
+<p>En Python tambien se usan las llaves <code class="docutils literal notranslate"><span class="pre">{}</span></code> para definir conjuntos (<em>sets</em>).</p>
+<p>Por ejemplo <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5}</span></code> no es un dictionario, es un <em>set</em> y
+<code class="docutils literal notranslate"><span class="pre">type(s)</span></code> mostrará <code class="docutils literal notranslate"><span class="pre">&lt;class</span> <span class="pre">'set'&gt;</span></code></p>
+<p>Los <em>sets</em> son listas no ordenadas de elementos únicos (los duplicados se
+eliminan automáticamente).</p>
 </div>
 <section id="tareas">
 <h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
@@ -553,19 +561,19 @@ Las siguientes lineas son válidas para la estructura recién definida.</p>
 <span class="c1"># Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,</span>
 <span class="c1">#   crear un &quot;pull request&quot; y solicitar revision de un tercero.</span>
 
-<span class="n">mazo_esp</span> <span class="o">=</span> <span class="n">crear_mazo_cartas_poker</span><span class="p">()</span>
+<span class="n">mazo_poker</span> <span class="o">=</span> <span class="n">crear_mazo_cartas_poker</span><span class="p">()</span>
 
-<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
-<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
-<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
-<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
-<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_poker</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_poker</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_poker</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_poker</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;pica&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_poker</span>
 
-<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
-<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
-<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
-<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
-<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_esp</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_poker</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_poker</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_poker</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_poker</span>
+<span class="k">assert</span> <span class="p">{</span><span class="s1">&#39;numero&#39;</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;palo&#39;</span><span class="p">:</span> <span class="s1">&#39;diamante&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">mazo_poker</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ejercicio terminado OK&#39;</span><span class="p">)</span>
 </pre></div>

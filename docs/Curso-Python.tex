@@ -62,8 +62,8 @@
 
 
 \title{Curso de programación Documentation}
-\date{24 de septiembre de 2022}
-\release{v 0.4.5}
+\date{17 de octubre de 2022}
+\release{v 0.4.6}
 \author{Andrés Vázquez}
 \newcommand{\sphinxlogo}{\vbox{}}
 \renewcommand{\releasename}{Versión}
@@ -672,7 +672,7 @@ Se espera un archivo de Python con estas funciones en uso como ejemplo.
 \label{\detokenize{input:recibir-datos-del-usuario-input}}\label{\detokenize{input::doc}}
 \sphinxAtStartPar
 Es posible detener la ejecución de tu programa para solicitar
-al usuario de nuetro programa que ingrese datos.
+al usuario de nuestro programa que ingrese datos.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{nombre} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Ingresa tu nombre: }\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
@@ -681,7 +681,7 @@ al usuario de nuetro programa que ingrese datos.
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-La funcion \sphinxcode{\sphinxupquote{input}} devuelve como \sphinxstyleemphasis{string} lo que el usuario ingresa.
+La función \sphinxcode{\sphinxupquote{input}} devuelve como \sphinxstyleemphasis{string} lo que el usuario ingresa.
 Si necesitaras un objeto de tipo \sphinxcode{\sphinxupquote{int}} (por ejemplo para hacer cálculos)
 podes hacer la transformación con \sphinxcode{\sphinxupquote{int(variable\_string)}}.
 
@@ -709,7 +709,7 @@ podes hacer la transformación con \sphinxcode{\sphinxupquote{int(variable\_stri
 \label{\detokenize{input:tareas}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
-¿Que pasa si en el último ejemplo el usuario inserta una letra en lugar
+¿Qué pasa si en el último ejemplo el usuario inserta una letra en lugar
 de un número? ¿Por qué?.
 
 \item {} 
@@ -1047,19 +1047,19 @@ que funciona como es esperado.}
 \chapter{Funciones incluidas en Python}
 \label{\detokenize{builtins:funciones-incluidas-en-python}}\label{\detokenize{builtins::doc}}
 \sphinxAtStartPar
-Así como nosotros definimos nuestras propias funciones, Python ya incluye
-algunas funciones. Ya hemos usado una de ella en nuestros códigos de
+Así como nosotros definimos nuestras propias funciones, Python incluye
+algunas funciones por defecto. Ya hemos usado una de ella en nuestros códigos de
 ejemplo: \sphinxcode{\sphinxupquote{print}}.
 
 \sphinxAtStartPar
-Estas funciones incorporadas y disponibles en Python se las conoce como \sphinxstyleemphasis{built\sphinxhyphen{}ins}.
+A estas funciones incorporadas y disponibles en Python se las conoce como \sphinxstyleemphasis{built\sphinxhyphen{}ins}.
 
 \sphinxAtStartPar
-La funcion \sphinxcode{\sphinxupquote{print}} simplemente \sphinxstyleemphasis{imprime} en nuestra terminal cualquier
+La función \sphinxcode{\sphinxupquote{print}} simplemente \sphinxstyleemphasis{imprime} en nuestra terminal cualquier
 valor que se le pase como parámetro.
 
 \sphinxAtStartPar
-Algunos ejemplos:
+Veamos algunos ejemplos:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Hola}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
@@ -1068,10 +1068,10 @@ Algunos ejemplos:
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-Pero \sphinxcode{\sphinxupquote{print}} no es la única función disponible, son muchas.
+Pero \sphinxcode{\sphinxupquote{print}} no es la única función disponible, hay muchas.
 
 \sphinxAtStartPar
-Nota: La lista de todas las funciones built\sphinxhyphen{}ins de Python esta disponible
+Nota: La lista de todas las funciones built\sphinxhyphen{}ins de Python está disponible
 \sphinxhref{https://docs.python.org/3/library/functions.html}{aquí}.
 
 \sphinxAtStartPar
@@ -1109,7 +1109,7 @@ Algunos ejemplos:
 \item {} 
 \sphinxAtStartPar
 Escribir una función que dadas tres palabras devuelva el
-largo total de todas ellas juntas. Por ejemplo (si la funcion se llamara
+largo total de todas ellas juntas. Por ejemplo (si la función se llamara
 \sphinxcode{\sphinxupquote{largo\_total}}) la llamada \sphinxcode{\sphinxupquote{largo\_total(\textquotesingle{}hola\textquotesingle{}, \textquotesingle{}chau\textquotesingle{}, \textquotesingle{}tercera\textquotesingle{})}}
 debe devolver 15.
 
@@ -2041,9 +2041,9 @@ administrar código fuente en equipos de trabajo.
 \section{Control de versiones}
 \label{\detokenize{git:control-de-versiones}}
 \sphinxAtStartPar
-Permite hacer seguimiento del código que
+Git permite hacer seguimiento del código que
 escribimos y de todos los cambios que le hacemos. Es posible saber
-en cada momento cuando y quien escribión cada línea de código.
+en cada momento cuando y quien escribió cada línea de código.
 Tambien es posible ver y volver a versiones anteriores cuando sea
 necesario.
 
@@ -2119,7 +2119,8 @@ git config \PYGZhy{}\PYGZhy{}global user.name \PYG{l+s+s2}{\PYGZdq{}tu\PYGZus{}n
 
 \sphinxAtStartPar
 Para comenzar a trabajar sobre un repositorio de código debes usar el
-buscador o colocar la URL del repositorio.
+buscador o colocar la URL del repositorio:
+\sphinxurl{https://github.com/avdata99/programacion-para-no-programadores}
 
 \noindent\sphinxincludegraphics{{vscode-open-clone}.png}
 
@@ -2321,16 +2322,19 @@ trabajo quede resuelto.
 
 
 \subsection{Tarea}
-\label{\detokenize{mi-primer-pr:tarea}}
+\label{\detokenize{mi-primer-pr:tarea}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Buscar en el \sphinxhref{https://github.com/avdata99/programacion-para-no-programadores}{repositorio de este curso}
+(al que ya nos conectamos) cualquiera de los archivos \sphinxcode{\sphinxupquote{rst}} de la carpeta \sphinxcode{\sphinxupquote{source}} algún error
+ortográfico o sugerencia sobre el texto de este manual y enviarlo como PR.
+
+\item {} 
 \sphinxAtStartPar
 La carpeta \sphinxhref{https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios}{ejercicios}
 de este repositorio tiene ya problemas para resolver mediante \sphinxstyleemphasis{pull requests}.
-
-\sphinxAtStartPar
 Se espera un \sphinxstyleemphasis{PR} para cada ejercicio, por lo tanto cada uno requiere una
 rama distinta \sphinxstylestrong{que siempre} salga desde master.
-
-\sphinxAtStartPar
 \sphinxstylestrong{Asegurarse de seguir todos los pasos para cada PR}.
 \begin{itemize}
 \item {} 
@@ -2401,6 +2405,8 @@ Hacer un PR con una propuesta de solución para el
 
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Ejercicio terminado OK}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
+
+\end{itemize}
 
 \sphinxstepscope
 
@@ -2580,6 +2586,20 @@ También es posible usar \sphinxcode{\sphinxupquote{dict()}} para crear un dicci
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{d3}\PYG{p}{)}
 \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{nombre}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Laura}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{edad}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{47}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{documento}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{221029489}\PYG{p}{\PYGZcb{}}
 \end{sphinxVerbatim}
+
+\begin{sphinxadmonition}{note}{No confundir diccionarios con \sphinxstyleliteralintitle{\sphinxupquote{set}}}
+
+\sphinxAtStartPar
+En Python tambien se usan las llaves \sphinxcode{\sphinxupquote{\{\}}} para definir conjuntos (\sphinxstyleemphasis{sets}).
+
+\sphinxAtStartPar
+Por ejemplo \sphinxcode{\sphinxupquote{s = \{1, 2, 3, 4, 5\}}} no es un dictionario, es un \sphinxstyleemphasis{set} y
+\sphinxcode{\sphinxupquote{type(s)}} mostrará \sphinxcode{\sphinxupquote{\textless{}class \textquotesingle{}set\textquotesingle{}\textgreater{}}}
+
+\sphinxAtStartPar
+Los \sphinxstyleemphasis{sets} son listas no ordenadas de elementos únicos (los duplicados se
+eliminan automáticamente).
+\end{sphinxadmonition}
 
 
 \section{Tareas}
@@ -2910,19 +2930,19 @@ Hacer un PR con una propuesta de solución para el
 \PYG{c+c1}{\PYGZsh{} Si usas GitHub (o similares) podes hacer una nueva rama con esta solución,}
 \PYG{c+c1}{\PYGZsh{}   crear un \PYGZdq{}pull request\PYGZdq{} y solicitar revision de un tercero.}
 
-\PYG{n}{mazo\PYGZus{}esp} \PYG{o}{=} \PYG{n}{crear\PYGZus{}mazo\PYGZus{}cartas\PYGZus{}poker}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{mazo\PYGZus{}poker} \PYG{o}{=} \PYG{n}{crear\PYGZus{}mazo\PYGZus{}cartas\PYGZus{}poker}\PYG{p}{(}\PYG{p}{)}
 
-\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}esp}
-\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}esp}
-\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{J}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}esp}
-\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Q}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}esp}
-\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{K}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}esp}
+\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}poker}
+\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}poker}
+\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{J}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}poker}
+\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Q}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}poker}
+\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{K}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}poker}
 
-\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}esp}
-\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}esp}
-\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{J}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}esp}
-\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Q}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}esp}
-\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{K}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}esp}
+\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}poker}
+\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}poker}
+\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{J}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}poker}
+\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Q}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}poker}
+\PYG{k}{assert} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{numero}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{K}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{palo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{\PYGZcb{}} \PYG{o+ow}{in} \PYG{n}{mazo\PYGZus{}poker}
 
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Ejercicio terminado OK}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
@@ -3042,7 +3062,7 @@ El módulo \sphinxcode{\sphinxupquote{random}} incluye una serie de funciones qu
 darle aleatoriedad a nuestro código.
 
 \sphinxAtStartPar
-Veamos un ejemplo. La funcion \sphinxcode{\sphinxupquote{randint}} genera numeros al alzar
+Veamos un ejemplo. La función \sphinxcode{\sphinxupquote{randint}} genera numeros al alzar
 entre dos valores pasados como parámetros.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -4054,7 +4074,7 @@ sinónimo de \sphinxstyleemphasis{función}) estas funciones se aplican a situac
 objetos de Python. Estas situación son la suma, resta, division, comparación, etc.
 
 
-\chapter{\_\_add\_\_}
+\section{\_\_add\_\_}
 \label{\detokenize{class-extras:add}}
 \sphinxAtStartPar
 Que pasara si quisiéramos sumar dos \sphinxcode{\sphinxupquote{Personas}} tal como las vimos en la clase anterior:
@@ -4112,7 +4132,7 @@ De la misma forma, podríamos sumar nuestro objetos con lo de otra clase. Nosotr
 distintos por cada tipo de objeto al que sumamos nuestro objeto.
 
 
-\chapter{\_\_str\_\_}
+\section{\_\_str\_\_}
 \label{\detokenize{class-extras:str}}
 \sphinxAtStartPar
 Es probablemente la función especial más usada. Se usa para definir que texto se va a devolver
@@ -4137,7 +4157,7 @@ Ejemplo de uso:
 \end{sphinxVerbatim}
 
 
-\chapter{\_\_eq\_\_}
+\section{\_\_eq\_\_}
 \label{\detokenize{class-extras:eq}}
 \sphinxAtStartPar
 Si queremos permitir la comparación de objetos de nuestra clase se puede definir esta función.

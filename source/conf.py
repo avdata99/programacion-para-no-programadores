@@ -24,9 +24,9 @@ copyright = 'Andrés Vázquez @avdata99 Creative Commons BY-SA'
 author = 'Andrés Vázquez'
 
 # The short X.Y version
-version = u'0.4.5'
+version = u'0.4.6'
 # The full version, including alpha/beta/rc tags
-release = u'v 0.4.5'
+release = u'v 0.4.6'
 
 
 # -- General configuration ---------------------------------------------------

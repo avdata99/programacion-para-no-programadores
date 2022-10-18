@@ -165,6 +165,19 @@ También es posible usar ``dict()`` para crear un diccionario.
     print(d3)
     {'nombre': 'Laura', 'edad': 47, 'documento': 221029489}
 
+
+.. admonition:: No confundir diccionarios con ``set``
+    :class: warning
+
+    En Python tambien se usan las llaves ``{}`` para definir conjuntos (*sets*).
+
+    Por ejemplo ``s = {1, 2, 3, 4, 5}`` no es un dictionario, es un *set* y
+    ``type(s)`` mostrará ``<class 'set'>``
+
+    Los *sets* son listas no ordenadas de elementos únicos (los duplicados se
+    eliminan automáticamente).
+
+
 Tareas
 ~~~~~~
 
