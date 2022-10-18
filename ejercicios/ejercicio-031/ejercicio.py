@@ -50,13 +50,13 @@ def contar_si(lista, propiedad, valor):
 
 
 lista = [
-    {"genero": "M", "nombre": "Juan"},
-    {"genero": "F", "nombre": "Pablo"},
+    {"genero": "M", "nombre": "Juan", "apellido": None},
+    {"genero": "F", "nombre": "Pablo", "apellido": None},
     {"genero": "F", "nombre": "Juana", "apellido": "Gomez"},
-    {"genero": "M", "nombre": "Victor"},
+    {"genero": "M", "nombre": "Victor", "apellido":None},
     {"genero": "M", "nombre": "Juan Pablo", "apellido": "Velez"},
-    {"genero": "F", "nombre": "Juana"},
-    {"genero": "F", "nombre": "Victoria"}
+    {"genero": "F", "nombre": "Juana", "apellido": None},
+    {"genero": "F", "nombre": "Victoria", "apellido": None}
 ]
 
 assert contar_si(lista, "genero", "M") == 3
