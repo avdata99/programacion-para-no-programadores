@@ -54,3 +54,8 @@ Clase 8:
   - Sería bueno tener gráficos de branchs y commits para enter porque hay que volver
     a main/master para empezar un nuevo PR.
   - Nuevo tema: diccionarios
+
+Clase 9:
+ - Revisión de los PRs de tarea de la clase pasada
+ - Se creo un codigo solo a los fines de hacer lectura y análisis del mismo:
+   https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/open-random.py
