@@ -21,7 +21,7 @@
 
 project = 'Curso de programación para no programadores con Python.'
 copyright = 'Andrés Vázquez @avdata99 Creative Commons BY-SA'
-author = 'Andrés Vázquez'
+author = 'Andrés Vázquez Flexes'
 
 # The short X.Y version
 version = u'0.4.6'
