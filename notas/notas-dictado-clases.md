@@ -59,9 +59,9 @@ Clase 8 12-10:
   - Nuevo tema: diccionarios
 
 Clase 9 19-10:
- - Revisión de los PRs de tarea de la clase pasada
- - Se creo un codigo solo a los fines de hacer lectura y análisis del mismo:
+- Se creo un codigo solo a los fines de hacer lectura y análisis:
    https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/open-random.py
+ - Revisión de los PRs de tarea de la clase pasada
 
 Clase 10 26-10:
  - 
