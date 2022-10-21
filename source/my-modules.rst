@@ -91,16 +91,16 @@ De esta forma es posible mantener tu codigo ordenado y facil de mantener.
 
 
 .. code-block:: python
-    :caption: funciones.py
+    :caption: paquete/funciones.py
 
     def suma(a, b):
         return a + b
 
 .. code-block:: python
-    :caption: otro_archivo_en_la_misma_carpeta.py
+    :caption: mi_programa.py
 
-    import funciones
+    from paquete import funciones
     a = funciones.suma(4, 5)
 
-    from funciones import suma
+    from paquete.funciones import suma
     a = suma(4, 5)
