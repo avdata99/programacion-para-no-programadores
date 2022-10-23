@@ -5,7 +5,7 @@ para que devuleva resultados válidos.
 Nota: se debe importar y usar la funcion "randint" de "random"
 """
 
-from random import choice
+from random import choice, randint, random
 
 def carta_poker_al_azar():
     palos = ['pica', 'trebol', 'corazon', 'diamante']
@@ -18,10 +18,13 @@ def carta_poker_al_azar():
 
 def carta_espaniola_al_azar():
     palos = ['oro', 'basto', 'espada', 'copa']
+    numeros = list(range(1, 8)) + ['sota', 'caballo', 'rey']
+    nro = choice(numeros)
+    palo = choice(palos)
     
     # corregir estas dos lineas para devolver valores válidos
-    nro = 0
-    palo = ""
+    nro = randint, random
+    palo = random, randint
 
     carta = {"numero": nro, "palo": palo}
     return carta
