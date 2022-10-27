@@ -5,9 +5,10 @@ pase como parámetro)
 """
 
 
-def cambia_vocales(frase, vocal="a"):
-    pass
 
+def cambia_vocales(frase, vocal="a"):
+    nueva_frase = frase.replace("e", vocal).replace("i", vocal).replace("o", vocal).replace("u", vocal).replace("a", vocal)
+    return nueva_frase
 
 # ------------------------------------------------------------------------
 # NO BORRAR O MODIFICAR LAS LINEAS QUE SIGUEN
