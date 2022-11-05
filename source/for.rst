@@ -246,7 +246,7 @@ Para estos casos existe la sentencia ``while``.
     """
 
 Tareas
-~~~~~~
+------
 
 *  Escribir un programa que:
 
