@@ -62,7 +62,7 @@
 
 
 \title{Curso de programación Documentation}
-\date{17 de octubre de 2022}
+\date{05 de noviembre de 2022}
 \release{v 0.4.6}
 \author{Andrés Vázquez}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -1979,7 +1979,7 @@ Para estos casos existe la sentencia \sphinxcode{\sphinxupquote{while}}.
 \end{sphinxVerbatim}
 
 
-\subsection{Tareas}
+\section{Tareas}
 \label{\detokenize{for:tareas}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
@@ -2044,7 +2044,7 @@ administrar código fuente en equipos de trabajo.
 Git permite hacer seguimiento del código que
 escribimos y de todos los cambios que le hacemos. Es posible saber
 en cada momento cuando y quien escribió cada línea de código.
-Tambien es posible ver y volver a versiones anteriores cuando sea
+También es posible ver y volver a versiones anteriores cuando sea
 necesario.
 
 
@@ -2725,9 +2725,9 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{]}
 \PYG{l+s+sd}{Se esperan estos posibles resultados}
 
-\PYG{l+s+sd}{contar\PYGZus{}si(lista, \PYGZdq{}genero\PYGZdq{}, \PYGZdq{}M\PYGZdq{}) = 3}
-\PYG{l+s+sd}{contar\PYGZus{}si(lista, \PYGZdq{}genero\PYGZdq{}, \PYGZdq{}F\PYGZdq{}) = 4}
-\PYG{l+s+sd}{contar\PYGZus{}si(lista, \PYGZdq{}nombre\PYGZdq{}, \PYGZdq{}Juana\PYGZdq{}) = 2}
+\PYG{l+s+sd}{contar\PYGZus{}si(lista, \PYGZdq{}genero\PYGZdq{}, \PYGZdq{}M\PYGZdq{}) == 3}
+\PYG{l+s+sd}{contar\PYGZus{}si(lista, \PYGZdq{}genero\PYGZdq{}, \PYGZdq{}F\PYGZdq{}) == 4}
+\PYG{l+s+sd}{contar\PYGZus{}si(lista, \PYGZdq{}nombre\PYGZdq{}, \PYGZdq{}Juana\PYGZdq{}) == 2}
 
 \PYG{l+s+sd}{pero la funcion da error en algunos casos como}
 \PYG{l+s+sd}{contar\PYGZus{}si(lista, \PYGZdq{}apellido\PYGZdq{}, \PYGZdq{}Gomez\PYGZdq{})}
@@ -4464,22 +4464,35 @@ Para indicar que una carpeta es un paquete alcanza con agregarle un archivo llam
 \caption{Estructura de archivos y carpetas}\label{\detokenize{my-modules:pkg-structure}}\end{figure}
 
 \sphinxAtStartPar
-De esta forma es posible mantener tu codigo ordenado y facil de mantener.
-\sphinxSetupCaptionForVerbatim{funciones.py}
-\def\sphinxLiteralBlockLabel{\label{\detokenize{my-modules:id1}}}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{def} \PYG{n+nf}{suma}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}\PYG{p}{:}
-    \PYG{k}{return} \PYG{n}{a} \PYG{o}{+} \PYG{n}{b}
-\end{sphinxVerbatim}
-\sphinxSetupCaptionForVerbatim{otro\_archivo\_en\_la\_misma\_carpeta.py}
-\def\sphinxLiteralBlockLabel{\label{\detokenize{my-modules:id2}}}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{import} \PYG{n+nn}{funciones}
-\PYG{n}{a} \PYG{o}{=} \PYG{n}{funciones}\PYG{o}{.}\PYG{n}{suma}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{)}
+De esta forma es posible mantener el codigo ordenado y facil de mantener a medida que crece.
 
-\PYG{k+kn}{from} \PYG{n+nn}{funciones} \PYG{k+kn}{import} \PYG{n}{suma}
-\PYG{n}{a} \PYG{o}{=} \PYG{n}{suma}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{)}
-\end{sphinxVerbatim}
+
+\section{Tarea}
+\label{\detokenize{my-modules:tarea}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Crear un repositorio nuevo en GitHub, clonarlo localmente y agregar dos archivos:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{auto.py}} donde vamos a definir nuestra clase \sphinxcode{\sphinxupquote{Auto}}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{programa.py}} donde vamos a crear objetos de tipo \sphinxcode{\sphinxupquote{Auto}} y usarlos para probar su funcionalidad.
+
+\item {} 
+\sphinxAtStartPar
+Finalmente compartir el link del repositorio en el canal del curso.
+
+\end{itemize}
+
+\end{itemize}
+
+\sphinxAtStartPar
+Ejemplo
+
+\noindent\sphinxincludegraphics{{class-module-test}.png}
 
 
 \chapter{Indices y tablas}
