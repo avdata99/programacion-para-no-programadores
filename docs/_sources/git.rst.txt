@@ -12,7 +12,7 @@ Control de versiones
 Git permite hacer seguimiento del código que
 escribimos y de todos los cambios que le hacemos. Es posible saber
 en cada momento cuando y quien escribió cada línea de código.  
-Tambien es posible ver y volver a versiones anteriores cuando sea
+También es posible ver y volver a versiones anteriores cuando sea
 necesario.  
 
 Descentralizado
