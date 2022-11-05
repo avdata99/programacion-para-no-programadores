@@ -14,9 +14,9 @@ lista = [
 ]
 Se esperan estos posibles resultados
 
-contar_si(lista, "genero", "M") = 3
-contar_si(lista, "genero", "F") = 4
-contar_si(lista, "nombre", "Juana") = 2
+contar_si(lista, "genero", "M") == 3
+contar_si(lista, "genero", "F") == 4
+contar_si(lista, "nombre", "Juana") == 2
 
 pero la funcion da error en algunos casos como
 contar_si(lista, "apellido", "Gomez")
