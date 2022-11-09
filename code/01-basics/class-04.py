@@ -1,7 +1,3 @@
-"""
-Clase Carta para juegos de cartas
-"""
-
 class Carta:
     def __init__(self, numero, palo):
         self._numero = numero
@@ -15,7 +11,8 @@ class Carta:
     def numero(self, value):
         if type(value) != int:
             raise Exception('Solo están permitidos numeros')
-        self._numero = value
+        elif value >0 and value <= 12:
+            self._numero = value
 
     @property
     def palo(self):
@@ -32,4 +29,3 @@ class Carta:
 
 carta1 = Carta(3, 'espada')
 print(str(carta1))
-'3 de espada'
