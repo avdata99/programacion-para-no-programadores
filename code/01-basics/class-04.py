@@ -1,11 +1,16 @@
-"""
-Clase Carta para juegos de cartas
-"""
-
 class Carta:
     def __init__(self, numero, palo):
         self._numero = numero
-        self._palo = palo
+        self._palo = self._validar_palo(palo)
+        self.palos_validos = ['oro', 'copa', 'basto', 'espada']
+
+    def _validar_palo(self, value):
+        """ Devuelve el valor limpio o lanza un error si no es un palo valido """
+        if type(value) != str:
+            raise Exception ('Solo están permitidas letras')
+        if value.lower() not in self.palos_validos:
+            raise Exception('Palo invalido')
+        return value.lower()
 
     @property
     def numero(self):
@@ -23,7 +28,7 @@ class Carta:
 
     @palo.setter
     def palo(self, value):
-        self._palo = value
+        self._palo = self._validar_palo(value)
 
     def __str__(self):
         return f'{self.numero} de {self.palo}'
@@ -32,4 +37,5 @@ class Carta:
 
 carta1 = Carta(3, 'espada')
 print(str(carta1))
-'3 de espada'
+
+carta1.palo = 'Pooo'
