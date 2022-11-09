@@ -11,8 +11,10 @@ class Carta:
     def numero(self, value):
         if type(value) != int:
             raise Exception('Solo están permitidos numeros')
-        elif value >0 and value <= 12:
+        elif value > 0 and value <= 12:
             self._numero = value
+        else:
+            raise Exception('Solo están permitidos numeros del 1 al 12')
 
     @property
     def palo(self):
@@ -29,3 +31,5 @@ class Carta:
 
 carta1 = Carta(3, 'espada')
 print(str(carta1))
+
+carta1.numero = -17
