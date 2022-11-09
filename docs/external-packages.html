@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recibir datos del usuario input &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.6</title>
+  <title>Paquetes externos &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.6</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -22,8 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Entorno de desarrollo: Visual Studio Code" href="vscode.html" />
-    <link rel="prev" title="Cadenadas de caracteres o strings &lt;str&gt;" href="str.html" /> 
+    <link rel="prev" title="Paquetes y módulos" href="my-modules.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,10 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="vscode.html">Entorno de desarrollo: Visual Studio Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
@@ -74,7 +70,10 @@
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#codigo-final-de-nuestra-clase">Código final de nuestra clase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#otras-funciones-especiales">Otras funciones especiales</a></li>
 <li class="toctree-l1"><a class="reference internal" href="my-modules.html">Paquetes y módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="external-packages.html">Paquetes externos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Paquetes externos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tarea">Tarea</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -91,9 +90,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></li>
+      <li>Paquetes externos</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/input.rst" class="fa fa-github"> Editar en GitHub</a>
+              <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/external-packages.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -101,43 +100,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="recibir-datos-del-usuario-input">
-<h1>Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code><a class="headerlink" href="#recibir-datos-del-usuario-input" title="Enlace permanente a este encabezado"></a></h1>
-<p>Es posible detener la ejecución de tu programa para solicitar
-al usuario de nuestro programa que ingrese datos.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Ingresa tu nombre: &#39;</span><span class="p">)</span>
-<span class="n">apellido</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Ingresa tu apellido: &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hola </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">apellido</span><span class="si">}</span><span class="s1">!&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>La función <code class="docutils literal notranslate"><span class="pre">input</span></code> devuelve como <em>string</em> lo que el usuario ingresa.
-Si necesitaras un objeto de tipo <code class="docutils literal notranslate"><span class="pre">int</span></code> (por ejemplo para hacer cálculos)
-podes hacer la transformación con <code class="docutils literal notranslate"><span class="pre">int(variable_string)</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;POTENCIAS&#39;</span><span class="p">)</span>
-<span class="n">nro</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Ingresa un numero: &#39;</span><span class="p">)</span>
-<span class="n">base</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nro</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s1">² = </span><span class="si">{</span><span class="n">base</span><span class="o">**</span><span class="mi">2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s1">³ = </span><span class="si">{</span><span class="n">base</span><span class="o">**</span><span class="mi">3</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s1">⁴ = </span><span class="si">{</span><span class="n">base</span><span class="o">**</span><span class="mi">4</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s1">⁵ = </span><span class="si">{</span><span class="n">base</span><span class="o">**</span><span class="mi">5</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="sd">&quot;&quot;&quot; Ejemplo</span>
-<span class="sd">POTENCIAS</span>
-<span class="sd">Ingresa un numero: 7</span>
-<span class="sd">7² = 49</span>
-<span class="sd">7³ = 343</span>
-<span class="sd">7⁴ = 2401</span>
-<span class="sd">7⁵ = 16807</span>
-<span class="sd">&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-<section id="tareas">
-<h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+  <section id="paquetes-externos">
+<h1>Paquetes externos<a class="headerlink" href="#paquetes-externos" title="Enlace permanente a este encabezado"></a></h1>
+<p>Podemos pensar a los paquetes Python como carpetas que pueden contener más paquetes
+(sub-carpetas) y modulos (archivos de Python <code class="docutils literal notranslate"><span class="pre">.py</span></code>) con funciones y clases para reutilizar.</p>
+<p>Para indicar que una carpeta es un paquete alcanza con agregarle un archivo llamado
+<code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>. Por el momento alcanza con que este archivo este vacío.</p>
+<section id="tarea">
+<h2>Tarea<a class="headerlink" href="#tarea" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
-<li><p>¿Qué pasa si en el último ejemplo el usuario inserta una letra en lugar
-de un número? ¿Por qué?.</p></li>
-<li><p>Escribir un programa que le pida al usuario que ingrese los datos
-necesarios y calcule el <a class="reference external" href="https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal">índice de masa corporal</a>.</p></li>
+<li><p>Crear un repositorio nuevo en GitHub, clonarlo localmente y agregar dos archivos:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto.py</span></code> donde vamos a definir nuestra clase <code class="docutils literal notranslate"><span class="pre">Auto</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">programa.py</span></code> donde vamos a crear objetos de tipo <code class="docutils literal notranslate"><span class="pre">Auto</span></code> y usarlos para probar su funcionalidad.</p></li>
+<li><p>Finalmente compartir el link del repositorio en el canal del curso.</p></li>
+</ul>
+</li>
 </ul>
 </section>
 </section>
@@ -146,8 +124,7 @@ necesarios y calcule el <a class="reference external" href="https://es.wikipedia
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="str.html" class="btn btn-neutral float-left" title="Cadenadas de caracteres o strings &lt;str&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="vscode.html" class="btn btn-neutral float-right" title="Entorno de desarrollo: Visual Studio Code" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="my-modules.html" class="btn btn-neutral float-left" title="Paquetes y módulos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>
