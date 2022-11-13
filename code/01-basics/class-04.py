@@ -28,8 +28,19 @@ class Carta:
     def __str__(self):
         return f'{self.numero} de {self.palo}'
 
+    def __add__(self, value):
+        if type(value) != Carta:
+            raise Exception (f'Los objetos del tipo {type(Carta)} sólo pueden sumarse con objetos de la misma clase')
+        elif self._palo == value.palo:
+            print(f'Usted tiene {self._numero + value.numero} de envido')
+            return self._numero + value.numero
+        else:
+            pass
+
+
 # Pruebas
 
 carta1 = Carta(3, 'espada')
-print(str(carta1))
-'3 de espada'
+carta2 = Carta(5, 'espada')
+
+assert carta1 + carta2 == 8
