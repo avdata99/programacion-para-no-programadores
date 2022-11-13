@@ -53,10 +53,20 @@ def __add__(self, value1, value2):
         else:
             raise Exception('Algo hiciste mal pero no sé qué')
 
+def __eq__(self, value):
+    if type(value) != Carta:
+        raise Exception (f'Los objetos del tipo {type(Carta)} sólo pueden igualarse con objetos de la misma clase')
+    elif self._numero == value.numero and self._palo == value.palo:
+        return True
+    else:
+        return False
+
 # Pruebas
 
 carta1 = Carta(7, 'espada')
 carta2 = Carta(6, 'espada')
 carta3 = Carta(1, 'palo')
+carta4 = Carta(7, 'espada')
 
-assert carta1 + carta2 + carta3 == 33
+#assert print(carta1 != carta2)
+assert print(carta1 == carta4)
