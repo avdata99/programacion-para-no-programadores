@@ -71,7 +71,20 @@
 <li class="toctree-l1"><a class="reference internal" href="class-extras.html#otras-funciones-especiales">Otras funciones especiales</a></li>
 <li class="toctree-l1"><a class="reference internal" href="my-modules.html">Paquetes y módulos</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Paquetes externos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#tarea">Tarea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instalar-pip">Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#instalar-pip-en-windows">Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code> en Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instalar-pip-en-linux-ubuntu">Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code> en Linux (Ubuntu)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instalar-paquetes-con-pip">Instalar paquetes con <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#entornos-virtuales">Entornos virtuales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#crear-un-entorno-virtual">Crear un entorno virtual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#activar-un-entorno-virtual">Activar un entorno virtual</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tarea">Tarea</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -102,21 +115,95 @@
              
   <section id="paquetes-externos">
 <h1>Paquetes externos<a class="headerlink" href="#paquetes-externos" title="Enlace permanente a este encabezado"></a></h1>
-<p>Podemos pensar a los paquetes Python como carpetas que pueden contener más paquetes
-(sub-carpetas) y modulos (archivos de Python <code class="docutils literal notranslate"><span class="pre">.py</span></code>) con funciones y clases para reutilizar.</p>
-<p>Para indicar que una carpeta es un paquete alcanza con agregarle un archivo llamado
-<code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>. Por el momento alcanza con que este archivo este vacío.</p>
+<p>La construcción de paquetes en Python representan una de las mejores prácticas para
+distribuir código. Aislar correctamente la solución a un problema nos permite reutilizar
+esa porción de código en otros proyectos, y nos permite además compartirlo con la comunidad.
+<a class="reference external" href="https://pypi.org/">Pypi</a> es la biblioteca más usada por la comunidad de Python para
+redistribuir paquetes. Cientos de miles de paquetes estan disponibles allí para descarga.</p>
+<p>Los paquetes externos son paquetes que no vienen por defecto con Python, pero que se
+pueden instalar para ampliar las funcionalidades de Python.</p>
+<p>Cada proyecto de software incluye en general un conjunto de paquetes a instalar del cual depende.
+Para instalar un paquete externo, se usa la herramienta <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+<p>Si estas usando Git Bash en Windows, es posible que no tengas instalado <code class="docutils literal notranslate"><span class="pre">pip</span></code>. Para
+probar si ya lo tenes instalado poder ejecutar alguna de estas opciones.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip --version
+pip -V
+</pre></div>
+</div>
+<p>Si no recibis un mensaje de error y podes ver la versión de <code class="docutils literal notranslate"><span class="pre">pip</span></code> podes saltearte la
+siguiente sección</p>
+<section id="instalar-pip">
+<h2>Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#instalar-pip" title="Enlace permanente a este encabezado"></a></h2>
+<section id="instalar-pip-en-windows">
+<h3>Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code> en Windows<a class="headerlink" href="#instalar-pip-en-windows" title="Enlace permanente a este encabezado"></a></h3>
+<p>Descargar el script de instalación <a class="reference external" href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a> y
+ejecutarlo con Python desde tu terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python get-pip.py
+</pre></div>
+</div>
+</section>
+<section id="instalar-pip-en-linux-ubuntu">
+<h3>Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code> en Linux (Ubuntu)<a class="headerlink" href="#instalar-pip-en-linux-ubuntu" title="Enlace permanente a este encabezado"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install python3-pip
+</pre></div>
+</div>
+</section>
+<section id="instalar-paquetes-con-pip">
+<h3>Instalar paquetes con <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#instalar-paquetes-con-pip" title="Enlace permanente a este encabezado"></a></h3>
+<p>Una vez instalado pip ya podes instalar paquetes localmente.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install &lt;nombre_paquete&gt;
+<span class="c1"># opcionalmente se puede indicar la versión exacta a instalar</span>
+pip install &lt;nombre_paquete&gt;<span class="o">==</span>&lt;version&gt;
+<span class="c1"># Instalar una lista de paquetes desde un archivo de requerimientos</span>
+pip install -r requirements.txt
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="entornos-virtuales">
+<h1>Entornos virtuales<a class="headerlink" href="#entornos-virtuales" title="Enlace permanente a este encabezado"></a></h1>
+<p>Un desarrollador de software en general trabaja sobre más de un proyecto, y por lo tanto
+necesita instalar más de un conjunto de paquetes. Uno para cada proyecto.
+Para evitar conflictos entre las versiones usadas en cada proyecto, se recomienda usar
+entornos virtuales.
+Cada entorno virtual se crea con una versión específica de Python, y permite instalar
+un conjunto de paquetes específicos.
+Cada proyeto activa y se ejecuta dentro de estos entornos.
+Python permite crear y activar estos entornos virtuales con el módulo <code class="docutils literal notranslate"><span class="pre">venv</span></code>.</p>
+<section id="crear-un-entorno-virtual">
+<h2>Crear un entorno virtual<a class="headerlink" href="#crear-un-entorno-virtual" title="Enlace permanente a este encabezado"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m venv &lt;carpeta_donde_se_creara_el_entorno&gt;
+</pre></div>
+</div>
+</section>
+<section id="activar-un-entorno-virtual">
+<h2>Activar un entorno virtual<a class="headerlink" href="#activar-un-entorno-virtual" title="Enlace permanente a este encabezado"></a></h2>
+<p>La forma de activación de los entornos virtuales depende del sistema operativo.
+Para Windows el comando para activate un entorno es</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;carpeta_donde_se_creara_el_entorno&gt;<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
+</pre></div>
+</div>
+<p>Para Linux el comando para activar un entorno es</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> &lt;carpeta_donde_se_creara_el_entorno&gt;/bin/activate
+</pre></div>
+</div>
+<p>Una vez activado el entorno, el comando <code class="docutils literal notranslate"><span class="pre">pip</span></code> instalara los paquetes dentro de este.
+Para desactivar el entorno virtual, ejecutar el comando <code class="docutils literal notranslate"><span class="pre">deactivate</span></code> (el mismo para
+ambos sistemas operativos).</p>
 <section id="tarea">
-<h2>Tarea<a class="headerlink" href="#tarea" title="Enlace permanente a este encabezado"></a></h2>
+<h3>Tarea<a class="headerlink" href="#tarea" title="Enlace permanente a este encabezado"></a></h3>
 <ul class="simple">
-<li><p>Crear un repositorio nuevo en GitHub, clonarlo localmente y agregar dos archivos:</p>
+<li><p>Clonar el repositorio <a class="reference external" href="https://github.com/avdata99/autos-justicia-cordoba-2022">autos justicia 2022</a></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">auto.py</span></code> donde vamos a definir nuestra clase <code class="docutils literal notranslate"><span class="pre">Auto</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">programa.py</span></code> donde vamos a crear objetos de tipo <code class="docutils literal notranslate"><span class="pre">Auto</span></code> y usarlos para probar su funcionalidad.</p></li>
-<li><p>Finalmente compartir el link del repositorio en el canal del curso.</p></li>
+<li><p>Crear un entorno local, activarlo e instalar <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></p></li>
+<li><p>Si el entorno va a ser una carpeta dentro de la carpeta del proyecto, agregar la
+carpeta al archivo <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
+<li><p>Ejecutar el script scrape.py y asegurarse de que funcione como se espera.</p></li>
 </ul>
 </li>
 </ul>
+</section>
 </section>
 </section>
 

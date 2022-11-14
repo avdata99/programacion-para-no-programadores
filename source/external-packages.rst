@@ -45,7 +45,7 @@ Instalar ``pip`` en Linux (Ubuntu)
    sudo apt install python3-pip
 
 Instalar paquetes con ``pip``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Una vez instalado pip ya podes instalar paquetes localmente.  
 
