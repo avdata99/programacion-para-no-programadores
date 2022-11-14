@@ -123,10 +123,12 @@ redistribuir paquetes. Cientos de miles de paquetes estan disponibles allí para
 <p>Los paquetes externos son paquetes que no vienen por defecto con Python, pero que se
 pueden instalar para ampliar las funcionalidades de Python.</p>
 <p>Cada proyecto de software incluye en general un conjunto de paquetes a instalar del cual depende.
-Para instalar un paquete externo, se usa la herramienta <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
-<p>Si estas usando Git Bash en Windows, es posible que no tengas instalado <code class="docutils literal notranslate"><span class="pre">pip</span></code>. Para
-probar si ya lo tenes instalado poder ejecutar alguna de estas opciones.</p>
+Para instalar un paquete externo, se usa la herramienta <code class="docutils literal notranslate"><span class="pre">pip</span></code>. Esta herramienta puede usarse
+desde la terminal.</p>
+<p>Si estas usando Git Bash en Windows, es posible que ya tengas instalado <code class="docutils literal notranslate"><span class="pre">pip</span></code>.
+Para probar si ya lo tenes instalado poder ejecutar alguna de estas opciones.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip --version
+<span class="c1"># o lo que es lo mismo</span>
 pip -V
 </pre></div>
 </div>
@@ -154,7 +156,7 @@ ejecutarlo con Python desde tu terminal.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install &lt;nombre_paquete&gt;
 <span class="c1"># opcionalmente se puede indicar la versión exacta a instalar</span>
 pip install &lt;nombre_paquete&gt;<span class="o">==</span>&lt;version&gt;
-<span class="c1"># Instalar una lista de paquetes desde un archivo de requerimientos</span>
+<span class="c1"># Instalar una lista de paquetes desde un archivo de texto con los requerimientos</span>
 pip install -r requirements.txt
 </pre></div>
 </div>
@@ -180,7 +182,7 @@ Python permite crear y activar estos entornos virtuales con el módulo <code cla
 <section id="activar-un-entorno-virtual">
 <h2>Activar un entorno virtual<a class="headerlink" href="#activar-un-entorno-virtual" title="Enlace permanente a este encabezado"></a></h2>
 <p>La forma de activación de los entornos virtuales depende del sistema operativo.
-Para Windows el comando para activate un entorno es</p>
+Para Windows el comando para activate un entorno virtual es</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;carpeta_donde_se_creara_el_entorno&gt;<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
 </pre></div>
 </div>
@@ -188,7 +190,9 @@ Para Windows el comando para activate un entorno es</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> &lt;carpeta_donde_se_creara_el_entorno&gt;/bin/activate
 </pre></div>
 </div>
-<p>Una vez activado el entorno, el comando <code class="docutils literal notranslate"><span class="pre">pip</span></code> instalara los paquetes dentro de este.
+<p>Te vas a dar cuenta que el entorno esta activado porque tu terminal va a agregar
+el nombre de tu entorno entre parentesis en la linea de tu terminal.
+Una vez activado el entorno, el comando <code class="docutils literal notranslate"><span class="pre">pip</span></code> instalara los paquetes dentro de este.
 Para desactivar el entorno virtual, ejecutar el comando <code class="docutils literal notranslate"><span class="pre">deactivate</span></code> (el mismo para
 ambos sistemas operativos).</p>
 <section id="tarea">
@@ -199,7 +203,8 @@ ambos sistemas operativos).</p>
 <li><p>Crear un entorno local, activarlo e instalar <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></p></li>
 <li><p>Si el entorno va a ser una carpeta dentro de la carpeta del proyecto, agregar la
 carpeta al archivo <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
-<li><p>Ejecutar el script scrape.py y asegurarse de que funcione como se espera.</p></li>
+<li><p>Ejecutar el script <code class="docutils literal notranslate"><span class="pre">scrape.py</span></code> y asegurarse de que funcione como se espera.</p></li>
+<li><p>Analizar el código y proponer algún cambio mediante algún PR</p></li>
 </ul>
 </li>
 </ul>
