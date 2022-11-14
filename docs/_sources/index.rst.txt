@@ -31,6 +31,7 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    class-extras
    my-modules
    external-packages
+   requests
 
 ..  
   my-modules
