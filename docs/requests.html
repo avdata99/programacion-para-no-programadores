@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paquete requests &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.6</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/curso.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Paquetes externos" href="external-packages.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.4.6
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vscode.html">Entorno de desarrollo: Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="github.html">Git en la nube: GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mi-primer-pr.html">Mi primer <em>PR</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="random.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="datetime.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="class.html">Clases y objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html">Propiedades controladas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html#funciones-de-mi-clase">Funciones de mi clase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html">Funciones especiales de las clases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#codigo-final-de-nuestra-clase">Código final de nuestra clase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#otras-funciones-especiales">Otras funciones especiales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="my-modules.html">Paquetes y módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="external-packages.html">Paquetes externos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="external-packages.html#entornos-virtuales">Entornos virtuales</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Paquete <code class="docutils literal notranslate"><span class="pre">requests</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tarea">Tarea</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Paquete <code class="docutils literal notranslate"><span class="pre">requests</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/requests.rst" class="fa fa-github"> Editar en GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="paquete-requests">
+<h1>Paquete <code class="docutils literal notranslate"><span class="pre">requests</span></code><a class="headerlink" href="#paquete-requests" title="Enlace permanente a este encabezado"></a></h1>
+<p>El paquete <a class="reference external" href="https://pypi.org/project/requests/">requests</a> es uno muy usado.
+Formalmente podemos decir que es un cliente HTTP. Con el podemos realizar
+peticiones de recursos web de una forma muy sencilla.</p>
+<p>Veamos este ejemplo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://mendiolaza.gob.ar/&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">codigo</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Codigo de estado de la respuesta para </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Primeros caracteres de la respuesta </span><span class="si">{</span><span class="n">codigo</span><span class="p">[:</span><span class="mi">180</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># grabar el HTML resultante a disco</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;web.html&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">codigo</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Ese ejemplo muestra como descargar el contenido de una página web.
+El resultado obtenido es el código HTML de la página.
+Esto es similar a lo que hacen los navegadores de internet (Google
+Chrome o Mozilla Fiefox por ejemplo) cuando accedemos a una página web.</p>
+<p>Esto es muy útil para obtener información de una página web y procesarla
+con Python. Existen tecnicas para extraer información de un documento HTML
+y transformarlo en datos que podemos usar en nuestro programa.</p>
+<p>A estas técnicas se les llama <a class="reference external" href="https://es.wikipedia.org/wiki/Web_scraping">Web scraping</a>
+y son muy usadas.</p>
+<p>Pero no toda la web es HTML. Existen muchos otros formatos de datos que
+ya está pensados para ser leidos directamente por computadoras.
+El formato <code class="docutils literal notranslate"><span class="pre">JSON</span></code> es uno de los más usados.</p>
+<p>Veamos un ejemplo de un recurso web en formato <code class="docutils literal notranslate"><span class="pre">JSON</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># JSON con los datos de un usuario de GitHub</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.github.com/users/avdata99&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Datos: </span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># De que tipo es data?</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Ejemplo</span>
+
+<span class="sd">{</span>
+<span class="sd">    &#39;login&#39;: &#39;avdata99&#39;,</span>
+<span class="sd">    &#39;id&#39;: 3237309,</span>
+<span class="sd">    &#39;node_id&#39;: &#39;MDQ6VXNlcjMyMzczMDk=&#39;,</span>
+<span class="sd">    &#39;avatar_url&#39;: &#39;https://avatars.githubusercontent.com/u/3237309?v=4&#39;,</span>
+<span class="sd">    &#39;gravatar_id&#39;: &#39;&#39;,</span>
+<span class="sd">    &#39;url&#39;: &#39;https://api.github.com/users/avdata99&#39;,</span>
+<span class="sd">    &#39;html_url&#39;: &#39;https://github.com/avdata99&#39;,</span>
+<span class="sd">    &#39;followers_url&#39;: &#39;https://api.github.com/users/avdata99/followers&#39;,</span>
+<span class="sd">    &#39;following_url&#39;: &#39;https://api.github.com/users/avdata99/following{/other_user}&#39;,</span>
+<span class="sd">    &#39;gists_url&#39;: &#39;https://api.github.com/users/avdata99/gists{/gist_id}&#39;,</span>
+<span class="sd">    &#39;starred_url&#39;: &#39;https://api.github.com/users/avdata99/starred{/owner}{/repo}&#39;,</span>
+<span class="sd">    &#39;subscriptions_url&#39;: &#39;https://api.github.com/users/avdata99/subscriptions&#39;,</span>
+<span class="sd">    &#39;organizations_url&#39;: &#39;https://api.github.com/users/avdata99/orgs&#39;,</span>
+<span class="sd">    &#39;repos_url&#39;: &#39;https://api.github.com/users/avdata99/repos&#39;,</span>
+<span class="sd">    &#39;events_url&#39;: &#39;https://api.github.com/users/avdata99/events{/privacy}&#39;,</span>
+<span class="sd">    &#39;received_events_url&#39;: &#39;https://api.github.com/users/avdata99/received_events&#39;,</span>
+<span class="sd">    &#39;type&#39;: &#39;User&#39;,</span>
+<span class="sd">    &#39;site_admin&#39;: False,</span>
+<span class="sd">    &#39;name&#39;: &#39;Andres Vazquez&#39;,</span>
+<span class="sd">    &#39;company&#39;: None,</span>
+<span class="sd">    &#39;blog&#39;: &#39;http://andresvazquez.com.ar&#39;,</span>
+<span class="sd">    &#39;location&#39;: &#39;Mendiolaza, Cordoba, Argentina&#39;,</span>
+<span class="sd">    &#39;email&#39;: None,</span>
+<span class="sd">    &#39;hireable&#39;: None,</span>
+<span class="sd">    &#39;bio&#39;: None,</span>
+<span class="sd">    &#39;twitter_username&#39;: None,</span>
+<span class="sd">    &#39;public_repos&#39;: 130,</span>
+<span class="sd">    &#39;public_gists&#39;: 18,</span>
+<span class="sd">    &#39;followers&#39;: 66,</span>
+<span class="sd">    &#39;following&#39;: 14,</span>
+<span class="sd">    &#39;created_at&#39;: &#39;2013-01-10T17:45:49Z&#39;,</span>
+<span class="sd">    &#39;updated_at&#39;: &#39;2022-01-08T22:57:42Z&#39;</span>
+<span class="sd">}</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>En este caso podemos ver como el recurso JSON es transformado a diccionario
+con la funcion <code class="docutils literal notranslate"><span class="pre">json()</span></code> de la librería requests.</p>
+<p>Veamos un ejemplo de un recurso web en formato <code class="docutils literal notranslate"><span class="pre">txt</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Descargar un libro en formato texto y analizar </span>
+<span class="sd">algunos detalles generales de su contenido</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">path_libro</span> <span class="o">=</span> <span class="s1">&#39;florante.txt&#39;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path_libro</span><span class="p">):</span>    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;DESCARGANDO LIBRO&#39;</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://www.gutenberg.org/cache/epub/15531/pg15531.txt&#39;</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_libro</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_libro</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Leyendo archivo local&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Largo del texto </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Primeras 30 letras: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">text</span><span class="p">[:</span><span class="mi">30</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ultimas 30 letras: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="o">-</span><span class="mi">30</span><span class="p">:]))</span>
+
+<span class="c1"># analizar letras</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Letras mas usadas&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------------&#39;</span><span class="p">)</span>
+<span class="n">letras</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">letra</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    <span class="n">letra</span> <span class="o">=</span> <span class="n">letra</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">letra</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">letras</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">letras</span><span class="p">[</span><span class="n">letra</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="n">letras</span><span class="p">[</span><span class="n">letra</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">letras</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">letras</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">letras</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+
+
+<span class="c1"># analizar palabras</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Palabras mas usadas&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------------&#39;</span><span class="p">)</span>
+<span class="n">palabras</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">palabra</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+    <span class="n">palabra</span> <span class="o">=</span> <span class="n">palabra</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># omitir las palabras cortas</span>
+        <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">palabra</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">palabras</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">palabras</span><span class="p">[</span><span class="n">palabra</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="n">palabras</span><span class="p">[</span><span class="n">palabra</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">letras</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">palabras</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">letras</span><span class="p">[:</span><span class="mi">20</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>En este ejemplo nos descargamos un libro completo y analizamos las letras
+y las palabras más usadas.</p>
+<section id="tarea">
+<h2>Tarea<a class="headerlink" href="#tarea" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p>Clonar el repositorio <a class="reference external" href="https://github.com/avdata99/autos-justicia-cordoba-2022">autos justicia 2022</a></p>
+<ul>
+<li><p>Crear un entorno local, activarlo e instalar <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></p></li>
+<li><p>Si el entorno va a ser una carpeta dentro de la carpeta del proyecto, agregar la
+carpeta al archivo <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
+<li><p>Ejecutar el script <code class="docutils literal notranslate"><span class="pre">scrape.py</span></code> y asegurarse de que funcione como se espera.</p></li>
+<li><p>Analizar el código y proponer algún cambio mediante algún PR</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="external-packages.html" class="btn btn-neutral float-left" title="Paquetes externos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

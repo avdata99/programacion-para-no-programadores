@@ -86,21 +86,17 @@ Para indicar que una carpeta es un paquete alcanza con agregarle un archivo llam
     # main -> fn [label="from paquete.module\nimport my_function", style=dashed];
     }
 
-De esta forma es posible mantener tu codigo ordenado y facil de mantener.   
+De esta forma es posible mantener el codigo ordenado y facil de mantener a medida que crece.  
 
+Tarea
+~~~~~~
 
+*  Crear un repositorio nuevo en GitHub, clonarlo localmente y agregar dos archivos:
 
-.. code-block:: python
-    :caption: funciones.py
+   *  ``auto.py`` donde vamos a definir nuestra clase ``Auto``
+   *  ``programa.py`` donde vamos a crear objetos de tipo ``Auto`` y usarlos para probar su funcionalidad.
+   *  Finalmente compartir el link del repositorio en el canal del curso.
 
-    def suma(a, b):
-        return a + b
+Ejemplo
 
-.. code-block:: python
-    :caption: otro_archivo_en_la_misma_carpeta.py
-
-    import funciones
-    a = funciones.suma(4, 5)
-
-    from funciones import suma
-    a = suma(4, 5)
+.. image:: /_static/imgs/class-module-test.png

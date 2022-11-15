@@ -21,12 +21,12 @@
 
 project = 'Curso de programación para no programadores con Python.'
 copyright = 'Andrés Vázquez @avdata99 Creative Commons BY-SA'
-author = 'Andrés Vázquez'
+author = 'Andrés Vázquez Flexes'
 
 # The short X.Y version
-version = u'0.4.6'
+version = u'0.4.7'
 # The full version, including alpha/beta/rc tags
-release = u'v 0.4.6'
+release = u'v 0.4.7'
 
 
 # -- General configuration ---------------------------------------------------
@@ -129,19 +129,18 @@ htmlhelp_basename = 'Curso-Python'
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
-    'papersize': 'a4paper',
+    'papersize': 'a5paper',
 
     # The font size ('10pt', '11pt' or '12pt').
-    'pointsize': '12pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
+    'pointsize': '9pt',
+    'sphinxsetup': '''%
+        hmargin={1cm,1cm},
+        vmargin={2cm,2cm},
+        marginpar=1cm
+    ''',
 }
+
+latex_show_urls = 'footnote'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
