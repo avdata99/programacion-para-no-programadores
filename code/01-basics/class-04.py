@@ -29,6 +29,7 @@ class Carta:
         return f'{self.numero} de {self.palo}'
 
     def __add__(self, otro):
+        """ La suma de cartas devuelve el envido entre ellas dos """
         p1 = self._numero if self._numero < 10 else 0
         p2 = otro.numero if otro.numero < 10 else 0
         # if p1 >= 10:
