@@ -16,8 +16,7 @@ class Carta:
     def numero(self, value):
         if type(value) != int:
             raise Exception('Solo están permitidos numeros')
-        if value >=1:
-            if value <= 7:
+        if value >=1 and value <= 7:
                 return True 
         if value >=10:
             if value <=12:
