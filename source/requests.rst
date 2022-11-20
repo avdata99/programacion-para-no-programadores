@@ -43,8 +43,22 @@ En este ejemplo nos descargamos un libro completo y analizamos las letras
 y las palabras más usadas.  
 
 Tarea
-~~~~~~
+~~~~~
 
-*  XX
+*  Hacer un programa con Python que nos de el precio de alguna
+   criptomenedas que el usuario desee (usaremos el USDT como si
+   fuera el dólar como respuesta).
 
-   *  xx
+   *  Con ``input`` le pediremos al usuario que ingrese el código de la
+      criptomoneda que quiere consultar (por ejemplo ``ETH`` para Ethereum
+      o ``BTC`` para bitcoin).
+   *  Despues el precio puede devolverse de dos formas (elegir una):
+   
+      *   Hacer un request a https://api2.binance.com/api/v3/ticker/24hr
+          y obtener una lista de diccionarios obtenidos todos los precios.
+          Iterar la lista hasta que se encuentre el ``symbol`` igual a 
+          ``XXXUSDT`` (donde ``XXX`` es el código de la criptomoneda) y 
+          devolver el valor de ``lastPrice``.
+      *   Hacer un request a https://api2.binance.com/api/v3/ticker/24hr?symbol=XXXUSDT
+          (donde ``XXX`` es el código de la criptomoneda) y obtener un
+          diccionario con el precio. Devolver el valor de ``lastPrice``.
