@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>¿Donde escribimos nuestro código? &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.7</title>
+  <title>Aplicacion v2 &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.7</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -22,8 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Escribiendo nuestro primer código" href="interactivo.html" />
-    <link rel="prev" title="¿Que hace un programador?" href="hace.html" /> 
+    <link rel="prev" title="Aplicaciones web con Python" href="flask.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,7 +46,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
@@ -75,7 +74,7 @@
 <li class="toctree-l1"><a class="reference internal" href="external-packages.html#entornos-virtuales">Entornos virtuales</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requests.html">Paquete <code class="docutils literal notranslate"><span class="pre">requests</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask.html">Aplicaciones web con Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="flask-2.html">Aplicacion v2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Aplicacion v2</a></li>
 </ul>
 
         </div>
@@ -92,9 +91,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>¿Donde escribimos nuestro código?</li>
+      <li>Aplicacion v2</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/donde.rst" class="fa fa-github"> Editar en GitHub</a>
+              <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/flask-2.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -102,31 +101,78 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="donde-escribimos-nuestro-codigo">
-<h1>¿Donde escribimos nuestro código?<a class="headerlink" href="#donde-escribimos-nuestro-codigo" title="Enlace permanente a este encabezado"></a></h1>
-<p>Como dijimos programar es escribir instrucciones (las denominaremos código o <em>código fuente</em>). Para esto podríamos usar algún
-software de edición de texto pero existen herramientas específicas para esta tarea.</p>
-<p><a class="reference external" href="https://ide.atom.io/">Atom</a></p>
-<img alt="_images/hola3.png" src="_images/hola3.png" />
-<p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio</a> (de Microsoft)</p>
-<img alt="_images/hola2.png" src="_images/hola2.png" />
-<p>A estos entornos de trabajo se los conoce <em>Entornos de desarrollo Integrado</em> o
-IDE por sus siglas en inglés (Integrated Development Environment).
-Estas herramientas proveen funcionalidades que simplifican el trabajo de un programador.</p>
-<p>Es también posible ejecutar código Python línea a línea con la consola interactiva de Python.</p>
-<img alt="_images/hola4.png" src="_images/hola4.png" />
-<img alt="_images/hola5.png" src="_images/hola5.png" />
-<p>La consola interactiva nos permite escribir código Python al mismo tiempo que se ejecuta.
-Es ideal para probar pequeñas porciones de código. Una vez que la cerramos, todo lo que
-hemos escrito se pierde.</p>
+  <section id="aplicacion-v2">
+<h1>Aplicacion v2<a class="headerlink" href="#aplicacion-v2" title="Enlace permanente a este encabezado"></a></h1>
+<p>Nuestra archivo <code class="docutils literal notranslate"><span class="pre">app.py</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="kn">from</span> <span class="nn">models.bondis</span> <span class="kn">import</span> <span class="n">get_bondis_info</span><span class="p">,</span> <span class="n">get_bondi_info</span>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span>
+    <span class="vm">__name__</span><span class="p">,</span>
+    <span class="c1"># Carpeta donde se encuentran los archivos estáticos</span>
+    <span class="n">static_folder</span><span class="o">=</span><span class="s1">&#39;static&#39;</span><span class="p">,</span>
+    <span class="c1"># Carpeta donde se encuentran los templates para el frontend</span>
+    <span class="n">template_folder</span><span class="o">=</span><span class="s1">&#39;templates&#39;</span>
+<span class="p">)</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="n">site_title</span> <span class="o">=</span> <span class="s1">&#39;Mi aplicacion web&#39;</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&quot;index.html&quot;</span><span class="p">,</span> <span class="n">site_title</span><span class="o">=</span><span class="n">site_title</span><span class="p">)</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/datos/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">datos</span><span class="p">():</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">get_bondis_info</span><span class="p">()</span>
+    <span class="n">site_title</span> <span class="o">=</span> <span class="s1">&#39;Datos del sistema de transporte de la Ciudad de Córdoba&#39;</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&quot;datos.html&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">site_title</span><span class="o">=</span><span class="n">site_title</span><span class="p">)</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/bondi/&lt;int:bondi_id&gt;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">bondi</span><span class="p">(</span><span class="n">bondi_id</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">get_bondi_info</span><span class="p">(</span><span class="n">bondi_id</span><span class="p">)</span>
+    <span class="n">site_title</span> <span class="o">=</span> <span class="s1">&#39;Info de un solo bondi&#39;</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&quot;bondi.html&quot;</span><span class="p">,</span> <span class="n">bondi</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">site_title</span><span class="o">=</span><span class="n">site_title</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>El estilo CSS de nuestro sitio en <code class="docutils literal notranslate"><span class="pre">/static/base.css</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">h2</span> <span class="p">{</span>
+    <span class="n">color</span><span class="p">:</span> <span class="c1">#660000;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>El código JavaScript de nuestro sitio en <code class="docutils literal notranslate"><span class="pre">/static/base.css</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>El template HTML de la home de nuestra aplicacion web en <code class="docutils literal notranslate"><span class="pre">/templates/index.html</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&#39;{{ url_for(&quot;static&quot;, filename=&quot;base.css&quot;) }}&#39;&gt;
+    &lt;script src=&#39;{{ url_for(&quot;static&quot;, filename=&quot;base.js&quot;) }}&#39;&gt;&lt;/script&gt;
+    &lt;title&gt;{{ site_title }}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;{{ site_title }}&lt;/h2&gt;
+    &lt;p&gt;
+        &lt;a href=&quot;{{ url_for(&#39;datos&#39;) }}&quot;&gt;Ver datos&lt;/a&gt;
+    &lt;/p&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="hace.html" class="btn btn-neutral float-left" title="¿Que hace un programador?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="interactivo.html" class="btn btn-neutral float-right" title="Escribiendo nuestro primer código" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="flask.html" class="btn btn-neutral float-left" title="Aplicaciones web con Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>

@@ -1,0 +1,22 @@
+Aplicacion v2
+-------------
+
+Nuestra archivo ``app.py``
+
+.. include:: /code/02-web/flask/prj-03/app.py
+    :literal:
+
+El estilo CSS de nuestro sitio en ``/static/base.css``
+
+.. include:: /code/02-web/flask/prj-03/static/base.css
+    :literal:
+
+El código JavaScript de nuestro sitio en ``/static/base.css``
+
+.. include:: /code/02-web/flask/prj-03/static/base.js
+    :literal:
+
+El template HTML de la home de nuestra aplicacion web en ``/templates/index.html``
+
+.. include:: /code/02-web/flask/prj-03/templates/index.html
+    :literal:

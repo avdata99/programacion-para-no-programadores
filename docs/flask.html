@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplicaciones web con Python &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.7</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/curso.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Aplicacion v2" href="flask-2.html" />
+    <link rel="prev" title="Paquete requests" href="requests.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+          </a>
+              <div class="version">
+                0.4.7
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vscode.html">Entorno de desarrollo: Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bool.html">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">Listas en Python &lt;list&gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for.html">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Cuidando nuestro código: <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="github.html">Git en la nube: GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mi-primer-pr.html">Mi primer <em>PR</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">Diccionarios: <code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="random.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="datetime.html">Librerías incluida: <code class="docutils literal notranslate"><span class="pre">datetime</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="class.html">Clases y objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html">Propiedades controladas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-props.html#funciones-de-mi-clase">Funciones de mi clase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html">Funciones especiales de las clases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#codigo-final-de-nuestra-clase">Código final de nuestra clase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class-extras.html#otras-funciones-especiales">Otras funciones especiales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="my-modules.html">Paquetes y módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="external-packages.html">Paquetes externos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="external-packages.html#entornos-virtuales">Entornos virtuales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requests.html">Paquete <code class="docutils literal notranslate"><span class="pre">requests</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Aplicaciones web con Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nuestra-primera-aplicacion-web-con-flask">Nuestra primera aplicacion web con Flask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#notas-de-esta-aplicacion">Notas de esta aplicación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flask-2.html">Aplicacion v2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Curso de programación para no programadores con Python.</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Aplicaciones web con Python</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/flask.rst" class="fa fa-github"> Editar en GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aplicaciones-web-con-python">
+<h1>Aplicaciones web con Python<a class="headerlink" href="#aplicaciones-web-con-python" title="Enlace permanente a este encabezado"></a></h1>
+<p>Las aplicaciones web son programas que funcionan en servidores de internet.
+No es necesario instalarlos en nuestra computadora y se acceden
+desde un navegador web (como Google Chrome, Mozilla Firefox u otros).
+Algunos ejemplos son google.com, pypi.org, wikipedia.org, etc.</p>
+<p>Cuando se accede a una aplicación web a través de su URL, el
+navegador envía una petición al servidor donde está alojada la aplicación.
+El servidor procesa esa solicitud y envía una respuesta al navegador.</p>
+<p>A muy grandes rasgos (y omitiendo muchos detalles sobre el desarrollo
+de aplicaciones webs modernas) podemos decir que una aplicación
+web tiene dos partes:</p>
+<ul class="simple">
+<li><p>El <em>backend</em>: es el programa que procesa las peticiones y
+genera las respuestas.</p></li>
+<li><p>El <em>frontend</em>: es la cara visible de la aplicación. Es el responsable
+de definir que vemos y como interactuamos con la aplicación.</p></li>
+</ul>
+<p>Ambas partes pueden estar en el mismo servidor o en servidores diferentes.</p>
+<section id="nuestra-primera-aplicacion-web-con-flask">
+<h2>Nuestra primera aplicacion web con Flask<a class="headerlink" href="#nuestra-primera-aplicacion-web-con-flask" title="Enlace permanente a este encabezado"></a></h2>
+<p>Flask es un (micro)framework para Python que permite crear aplicaciones
+web muy rápidamente.
+Con flask podemos definir <em>frontend</em> y <em>backend</em> en la misma aplicación.</p>
+<p>Antes de empezar a programar, creamos y activamos un entorno virtual
+para nuestra aplicación.
+Para instalar Flask y comenzar nuestra primera aplicación web,
+ejecutamo el siguiente comando en la terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install Flask
+</pre></div>
+</div>
+<p>Ahora creamos un archivo llamado <code class="docutils literal notranslate"><span class="pre">app.py</span></code> con el siguiente contenido:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importar la clase Flask</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="c1"># Crear una aplicacion Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># Definir la respuesta que va a devolver nuestro servidor</span>
+<span class="c1"># cuando alguien acceda a la URL raiz (/)</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hola usuario!&#39;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/otro-recurso&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">otro</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hola usuario en &lt;i&gt;otro recurso!&lt;/i&gt;&#39;</span>
+</pre></div>
+</div>
+<p>Finalmente ejecutamos el servidor de desarrollo de Flask:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flask run
+
+<span class="c1"># Y veremos ...</span>
+* Environment: production
+WARNING: This is a development server. Do not use it <span class="k">in</span> a production deployment.
+Use a production WSGI server instead.
+* Debug mode: off
+* Running on http://127.0.0.1:5000/ <span class="o">(</span>Press CTRL+C to quit<span class="o">)</span>
+</pre></div>
+</div>
+<p>Si vamos al navegador e ingresamos a <a class="reference external" href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a>
+vamos a ver la respuesta que definimos en nuestra aplicación:
+<code class="docutils literal notranslate"><span class="pre">Hola</span> <span class="pre">usuario!</span></code>.</p>
+<p>En la linea de comandos queda regisro de esa visita</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">127</span>.0.0.1 - - <span class="o">[</span><span class="m">22</span>/Jan/2022 <span class="m">11</span>:54:52<span class="o">]</span> <span class="s2">&quot;GET / HTTP/1.1&quot;</span> <span class="m">200</span> -
+<span class="m">127</span>.0.0.1 - - <span class="o">[</span><span class="m">22</span>/Jan/2022 <span class="m">11</span>:54:52<span class="o">]</span> <span class="s2">&quot;GET /favicon.ico HTTP/1.1&quot;</span> <span class="m">404</span> -
+</pre></div>
+</div>
+<p>Si nos dirigimos a la URL <a class="reference external" href="http://127.0.0.1:5000/otro-recurso">http://127.0.0.1:5000/otro-recurso</a> vamos a ver
+la respuesta que definimos para ese recurso: <code class="docutils literal notranslate"><span class="pre">Hola</span> <span class="pre">usuario</span> <span class="pre">en</span> <span class="pre">&lt;i&gt;otro</span> <span class="pre">recurso!&lt;/i&gt;</span></code>.</p>
+<p>¿Que son <code class="docutils literal notranslate"><span class="pre">&lt;i&gt;</span></code> e <code class="docutils literal notranslate"><span class="pre">&lt;/i&gt;</span></code>?
+Son etiquetas HTML que definen un texto en <em>cursiva</em>.
+Veremos un poco mas adelante que es HTML y que más podemos hacer con él.</p>
+<section id="notas-de-esta-aplicacion">
+<h3>Notas de esta aplicación<a class="headerlink" href="#notas-de-esta-aplicacion" title="Enlace permanente a este encabezado"></a></h3>
+<p>Esta aplicación es muy simple pero nos permite ver de forma básica
+como funciona una aplicación web.</p>
+<p>Por un lado el usuario accede a nuestro servidor desde su navegador
+en las URLs <code class="docutils literal notranslate"><span class="pre">127.0.0.1:5000</span></code> y <code class="docutils literal notranslate"><span class="pre">127.0.0.1:5000/otro-recurso</span></code>.</p>
+<ul class="simple">
+<li><p><em>127.0.0.1</em> significa «nuestra computadora» (tambien llamado <em>localhost</em>)</p></li>
+<li><p><em>5000</em> es el puerto que este servidor temporal de desarrollo
+utiliza para escuchar peticiones.</p></li>
+<li><p>Luego de la barra (/) viene el <em>recurso</em> que estamos solicitando.
+En este caso, el recurso es la raiz (<code class="docutils literal notranslate"><span class="pre">/</span></code>) u <code class="docutils literal notranslate"><span class="pre">/otro-recurso</span></code>.
+Necesitamos tener una función definida para cada recurso, si
+el usuario intenta acceder a un recurso que no esta definido
+en nuestro servidor, recibirá un error 404 (<em>not found</em> / no encontrado).</p></li>
+</ul>
+<p>Nuestras funciones <code class="docutils literal notranslate"><span class="pre">hello()</span></code> y <code class="docutils literal notranslate"><span class="pre">otro()</span></code> son las encargadas de procesar
+las peticiones y generar las respuestas. En estos casos no hay ningun
+procesamiento antes de enviar la respuesta. Nuestro backend realmente no
+está haciendo nada.</p>
+<p>El contenido que estas funciones devuelven es el que el navegador
+va a mostrar al usuario. Esto es lo que llamamos <em>frontend</em>.
+En este caso nuestro frontend es muy simple, solo enviamos texto.
+No hay mucho valor hasta aquí.</p>
+<p>Avancemos a una versión más avanzada de nuestra aplicación web
+donde <em>frontend</em> y <em>backend</em> sean un poco más interesantes.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="requests.html" class="btn btn-neutral float-left" title="Paquete requests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="flask-2.html" class="btn btn-neutral float-right" title="Aplicacion v2" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Andrés Vázquez @avdata99 Creative Commons BY-SA.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

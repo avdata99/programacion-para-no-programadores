@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paquete requests &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.6</title>
+  <title>Paquete requests &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.7</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -22,6 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Aplicaciones web con Python" href="flask.html" />
     <link rel="prev" title="Paquetes externos" href="external-packages.html" /> 
 </head>
 
@@ -33,7 +34,7 @@
             <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
           </a>
               <div class="version">
-                0.4.6
+                0.4.7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -76,6 +77,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#tarea">Tarea</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">Aplicaciones web con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask-2.html">Aplicacion v2</a></li>
 </ul>
 
         </div>
@@ -151,38 +154,38 @@ El formato <code class="docutils literal notranslate"><span class="pre">JSON</sp
 <span class="sd">Ejemplo</span>
 
 <span class="sd">{</span>
-<span class="sd">    &#39;login&#39;: &#39;avdata99&#39;,</span>
-<span class="sd">    &#39;id&#39;: 3237309,</span>
-<span class="sd">    &#39;node_id&#39;: &#39;MDQ6VXNlcjMyMzczMDk=&#39;,</span>
-<span class="sd">    &#39;avatar_url&#39;: &#39;https://avatars.githubusercontent.com/u/3237309?v=4&#39;,</span>
-<span class="sd">    &#39;gravatar_id&#39;: &#39;&#39;,</span>
-<span class="sd">    &#39;url&#39;: &#39;https://api.github.com/users/avdata99&#39;,</span>
-<span class="sd">    &#39;html_url&#39;: &#39;https://github.com/avdata99&#39;,</span>
-<span class="sd">    &#39;followers_url&#39;: &#39;https://api.github.com/users/avdata99/followers&#39;,</span>
-<span class="sd">    &#39;following_url&#39;: &#39;https://api.github.com/users/avdata99/following{/other_user}&#39;,</span>
-<span class="sd">    &#39;gists_url&#39;: &#39;https://api.github.com/users/avdata99/gists{/gist_id}&#39;,</span>
-<span class="sd">    &#39;starred_url&#39;: &#39;https://api.github.com/users/avdata99/starred{/owner}{/repo}&#39;,</span>
-<span class="sd">    &#39;subscriptions_url&#39;: &#39;https://api.github.com/users/avdata99/subscriptions&#39;,</span>
-<span class="sd">    &#39;organizations_url&#39;: &#39;https://api.github.com/users/avdata99/orgs&#39;,</span>
-<span class="sd">    &#39;repos_url&#39;: &#39;https://api.github.com/users/avdata99/repos&#39;,</span>
-<span class="sd">    &#39;events_url&#39;: &#39;https://api.github.com/users/avdata99/events{/privacy}&#39;,</span>
-<span class="sd">    &#39;received_events_url&#39;: &#39;https://api.github.com/users/avdata99/received_events&#39;,</span>
-<span class="sd">    &#39;type&#39;: &#39;User&#39;,</span>
-<span class="sd">    &#39;site_admin&#39;: False,</span>
-<span class="sd">    &#39;name&#39;: &#39;Andres Vazquez&#39;,</span>
-<span class="sd">    &#39;company&#39;: None,</span>
-<span class="sd">    &#39;blog&#39;: &#39;http://andresvazquez.com.ar&#39;,</span>
-<span class="sd">    &#39;location&#39;: &#39;Mendiolaza, Cordoba, Argentina&#39;,</span>
-<span class="sd">    &#39;email&#39;: None,</span>
-<span class="sd">    &#39;hireable&#39;: None,</span>
-<span class="sd">    &#39;bio&#39;: None,</span>
-<span class="sd">    &#39;twitter_username&#39;: None,</span>
-<span class="sd">    &#39;public_repos&#39;: 130,</span>
-<span class="sd">    &#39;public_gists&#39;: 18,</span>
-<span class="sd">    &#39;followers&#39;: 66,</span>
-<span class="sd">    &#39;following&#39;: 14,</span>
-<span class="sd">    &#39;created_at&#39;: &#39;2013-01-10T17:45:49Z&#39;,</span>
-<span class="sd">    &#39;updated_at&#39;: &#39;2022-01-08T22:57:42Z&#39;</span>
+<span class="sd">    &quot;login&quot;: &quot;avdata99&quot;,</span>
+<span class="sd">    &quot;id&quot;: 3237309,</span>
+<span class="sd">    &quot;node_id&quot;: &quot;MDQ6VXNlcjMyMzczMDk=&quot;,</span>
+<span class="sd">    &quot;avatar_url&quot;: &quot;https://avatars.githubusercontent.com/u/3237309?v=4&quot;,</span>
+<span class="sd">    &quot;gravatar_id&quot;: &quot;&quot;,</span>
+<span class="sd">    &quot;url&quot;: &quot;https://api.github.com/users/avdata99&quot;,</span>
+<span class="sd">    &quot;html_url&quot;: &quot;https://github.com/avdata99&quot;,</span>
+<span class="sd">    &quot;followers_url&quot;: &quot;https://api.github.com/users/avdata99/followers&quot;,</span>
+<span class="sd">    &quot;following_url&quot;: &quot;https://api.github.com/users/avdata99/following{/other_user}&quot;,</span>
+<span class="sd">    &quot;gists_url&quot;: &quot;https://api.github.com/users/avdata99/gists{/gist_id}&quot;,</span>
+<span class="sd">    &quot;starred_url&quot;: &quot;https://api.github.com/users/avdata99/starred{/owner}{/repo}&quot;,</span>
+<span class="sd">    &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/avdata99/subscriptions&quot;,</span>
+<span class="sd">    &quot;organizations_url&quot;: &quot;https://api.github.com/users/avdata99/orgs&quot;,</span>
+<span class="sd">    &quot;repos_url&quot;: &quot;https://api.github.com/users/avdata99/repos&quot;,</span>
+<span class="sd">    &quot;events_url&quot;: &quot;https://api.github.com/users/avdata99/events{/privacy}&quot;,</span>
+<span class="sd">    &quot;received_events_url&quot;: &quot;https://api.github.com/users/avdata99/received_events&quot;,</span>
+<span class="sd">    &quot;type&quot;: &quot;User&quot;,</span>
+<span class="sd">    &quot;site_admin&quot;: false,</span>
+<span class="sd">    &quot;name&quot;: &quot;Andres Vazquez&quot;,</span>
+<span class="sd">    &quot;company&quot;: &quot;OKFN&quot;,</span>
+<span class="sd">    &quot;blog&quot;: &quot;http://andresvazquez.com.ar&quot;,</span>
+<span class="sd">    &quot;location&quot;: &quot;Mendiolaza, Cordoba, Argentina&quot;,</span>
+<span class="sd">    &quot;email&quot;: null,</span>
+<span class="sd">    &quot;hireable&quot;: null,</span>
+<span class="sd">    &quot;bio&quot;: null,</span>
+<span class="sd">    &quot;twitter_username&quot;: &quot;avdata99&quot;,</span>
+<span class="sd">    &quot;public_repos&quot;: 153,</span>
+<span class="sd">    &quot;public_gists&quot;: 19,</span>
+<span class="sd">    &quot;followers&quot;: 82,</span>
+<span class="sd">    &quot;following&quot;: 18,</span>
+<span class="sd">    &quot;created_at&quot;: &quot;2013-01-10T17:45:49Z&quot;,</span>
+<span class="sd">    &quot;updated_at&quot;: &quot;2022-08-28T17:01:16Z&quot;</span>
 <span class="sd">}</span>
 <span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
@@ -257,13 +260,25 @@ y las palabras más usadas.</p>
 <section id="tarea">
 <h2>Tarea<a class="headerlink" href="#tarea" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
-<li><p>Clonar el repositorio <a class="reference external" href="https://github.com/avdata99/autos-justicia-cordoba-2022">autos justicia 2022</a></p>
+<li><p>Hacer un programa con Python que nos de el precio de alguna
+criptomenedas que el usuario desee (usaremos el USDT como si
+fuera el dólar como respuesta).</p>
 <ul>
-<li><p>Crear un entorno local, activarlo e instalar <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></p></li>
-<li><p>Si el entorno va a ser una carpeta dentro de la carpeta del proyecto, agregar la
-carpeta al archivo <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
-<li><p>Ejecutar el script <code class="docutils literal notranslate"><span class="pre">scrape.py</span></code> y asegurarse de que funcione como se espera.</p></li>
-<li><p>Analizar el código y proponer algún cambio mediante algún PR</p></li>
+<li><p>Con <code class="docutils literal notranslate"><span class="pre">input</span></code> le pediremos al usuario que ingrese el código de la
+criptomoneda que quiere consultar (por ejemplo <code class="docutils literal notranslate"><span class="pre">ETH</span></code> para Ethereum
+o <code class="docutils literal notranslate"><span class="pre">BTC</span></code> para bitcoin).</p></li>
+<li><p>Despues el precio puede devolverse de dos formas (elegir una):</p>
+<ul>
+<li><p>Hacer un request a <a class="reference external" href="https://api2.binance.com/api/v3/ticker/24hr">https://api2.binance.com/api/v3/ticker/24hr</a>
+y obtener una lista de diccionarios obtenidos todos los precios.
+Iterar la lista hasta que se encuentre el <code class="docutils literal notranslate"><span class="pre">symbol</span></code> igual a
+<code class="docutils literal notranslate"><span class="pre">XXXUSDT</span></code> (donde <code class="docutils literal notranslate"><span class="pre">XXX</span></code> es el código de la criptomoneda) y
+devolver el valor de <code class="docutils literal notranslate"><span class="pre">lastPrice</span></code>.</p></li>
+<li><p>Hacer un request a <a class="reference external" href="https://api2.binance.com/api/v3/ticker/24hr?symbol=XXXUSDT">https://api2.binance.com/api/v3/ticker/24hr?symbol=XXXUSDT</a>
+(donde <code class="docutils literal notranslate"><span class="pre">XXX</span></code> es el código de la criptomoneda) y obtener un
+diccionario con el precio. Devolver el valor de <code class="docutils literal notranslate"><span class="pre">lastPrice</span></code>.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -275,6 +290,7 @@ carpeta al archivo <code class="docutils literal notranslate"><span class="pre">
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="external-packages.html" class="btn btn-neutral float-left" title="Paquetes externos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="flask.html" class="btn btn-neutral float-right" title="Aplicaciones web con Python" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
