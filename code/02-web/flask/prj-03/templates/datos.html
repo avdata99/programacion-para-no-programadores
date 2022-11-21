@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site_title }}</title>
+</head>
+<body>
+    <h2>{{ site_title }}</h2>
+    <p>
+      <ul>
+        <li>Bondis activos: <b>{{ data.bondis_activos }}</b></li>
+        <li>Bondi más rápido: {{ data.bondi_mas_rapido }} km/h</li>
+        <li>Bondis adaptados: {{ data.adaptados }} ({{ (100 * data.adaptados / data.bondis_activos)|round }} %)</li>
+      </ul>
+    </p>
+    <p>
+      <a href="{{ url_for('index') }}">Volver al inicio</a>
+    </p>
+    <p>
+      <h3>Lista de bondis</h3>
+      <ul>
+        {% for bondi in data.bondis %}
+        {% if bondi.id %}
+        <li>
+          <a href="{{ url_for('bondi', bondi_id=bondi.id) }}">
+            <b>{{ bondi.properties.nombre }}</b>
+          </a>
+          : 
+          {{ bondi.properties.ultimas_velocidades_promedio }} km/h</li>
+        {% endif%}
+        {% endfor %}
+      </ul>
+    </p>
+</body>
+</html>

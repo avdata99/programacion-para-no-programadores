@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href='{{ url_for("static", filename="base.css") }}'>
+    <script src='{{ url_for("static", filename="base.js") }}'></script>
+    <title>{{ site_title }}</title>
+</head>
+<body>
+    <h2>{{ site_title }}</h2>
+    <p>
+        <a href="{{ url_for('datos') }}">Ver datos</a>
+    </p>
+    
+</body>
+</html>
