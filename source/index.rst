@@ -32,16 +32,14 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
    my-modules
    external-packages
    requests
+   flask
+   flask-2
+
 
 ..  
-  my-modules
-  files, open
-  *args and **kwargs
-  requests and external modules (local env?)
   jinja2
   flask
   comprehension lists
-
   answers, resultados de los ejercicios
 
 Indices y tablas
