@@ -9,3 +9,5 @@ epub/
 source/code
 source/ejercicios
 code/tarea*
+
+.env
