@@ -14,10 +14,14 @@ A muy grandes rasgos (y omitiendo muchos detalles sobre el desarrollo
 de aplicaciones webs modernas) podemos decir que una aplicación
 web tiene dos partes:
 
-* El *backend*: es el programa que procesa las peticiones y
-  genera las respuestas.
 * El *frontend*: es la cara visible de la aplicación. Es el responsable
   de definir que vemos y como interactuamos con la aplicación.
+  Para el frontend necesitamos conocer HTML, CSS y JavaScript.
+* El *backend*: es la parte de la aplicación que no vemos. Procesa
+  internamente las peticiones del usuario y genera las respuestas.
+  Puede leer y escribir bases de datos, archivos, etc.
+  Python, Java, Javascript, PHP, Ruby y otros pueden ser usados en el
+  backend.
 
 Ambas partes pueden estar en el mismo servidor o en servidores diferentes.
 
@@ -30,6 +34,16 @@ Con flask podemos definir *frontend* y *backend* en la misma aplicación.
 
 Antes de empezar a programar, creamos y activamos un entorno virtual
 para nuestra aplicación.  
+
+.. code-block:: bash
+
+   # crear el entorno
+   python -m venv <carpeta_donde_se_creara_el_entorno>
+   # activar el entorno (en Windows)
+   <carpeta_donde_se_creara_el_entorno>\Scripts\activate.bat
+   # activar el entorno (en Linux)
+   source <carpeta_donde_se_creara_el_entorno>/bin/activate
+   
 Para instalar Flask y comenzar nuestra primera aplicación web,
 ejecutamo el siguiente comando en la terminal:
 
@@ -86,6 +100,7 @@ Si nos dirigimos a la URL http://127.0.0.1:5000/otro-recurso vamos a ver
 la respuesta que definimos para ese recurso: ``Hola usuario en <i>otro recurso!</i>``.
 
 ¿Que son ``<i>`` e ``</i>``?  
+
 Son etiquetas HTML que definen un texto en *cursiva*.  
 Veremos un poco mas adelante que es HTML y que más podemos hacer con él.  
 

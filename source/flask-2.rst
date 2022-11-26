@@ -27,5 +27,6 @@ El template HTML de la home de nuestra aplicacion web en ``/templates/index.html
     :literal:
 
 El template HTML de la pagina de detalle de una criptomoneda en ``/templates/datos.html``
+
 .. include:: /code/02-web/flask/prj-03/templates/datos.html
     :literal:

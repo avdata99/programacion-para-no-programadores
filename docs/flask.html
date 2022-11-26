@@ -121,10 +121,14 @@ El servidor procesa esa solicitud y envía una respuesta al navegador.</p>
 de aplicaciones webs modernas) podemos decir que una aplicación
 web tiene dos partes:</p>
 <ul class="simple">
-<li><p>El <em>backend</em>: es el programa que procesa las peticiones y
-genera las respuestas.</p></li>
 <li><p>El <em>frontend</em>: es la cara visible de la aplicación. Es el responsable
-de definir que vemos y como interactuamos con la aplicación.</p></li>
+de definir que vemos y como interactuamos con la aplicación.
+Para el frontend necesitamos conocer HTML, CSS y JavaScript.</p></li>
+<li><p>El <em>backend</em>: es la parte de la aplicación que no vemos. Procesa
+internamente las peticiones del usuario y genera las respuestas.
+Puede leer y escribir bases de datos, archivos, etc.
+Python, Java, Javascript, PHP, Ruby y otros pueden ser usados en el
+backend.</p></li>
 </ul>
 <p>Ambas partes pueden estar en el mismo servidor o en servidores diferentes.</p>
 <section id="nuestra-primera-aplicacion-web-con-flask">
@@ -133,8 +137,16 @@ de definir que vemos y como interactuamos con la aplicación.</p></li>
 web muy rápidamente.
 Con flask podemos definir <em>frontend</em> y <em>backend</em> en la misma aplicación.</p>
 <p>Antes de empezar a programar, creamos y activamos un entorno virtual
-para nuestra aplicación.
-Para instalar Flask y comenzar nuestra primera aplicación web,
+para nuestra aplicación.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># crear el entorno</span>
+python -m venv &lt;carpeta_donde_se_creara_el_entorno&gt;
+<span class="c1"># activar el entorno (en Windows)</span>
+&lt;carpeta_donde_se_creara_el_entorno&gt;<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
+<span class="c1"># activar el entorno (en Linux)</span>
+<span class="nb">source</span> &lt;carpeta_donde_se_creara_el_entorno&gt;/bin/activate
+</pre></div>
+</div>
+<p>Para instalar Flask y comenzar nuestra primera aplicación web,
 ejecutamo el siguiente comando en la terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install Flask
 </pre></div>
@@ -178,8 +190,8 @@ vamos a ver la respuesta que definimos en nuestra aplicación:
 </div>
 <p>Si nos dirigimos a la URL <a class="reference external" href="http://127.0.0.1:5000/otro-recurso">http://127.0.0.1:5000/otro-recurso</a> vamos a ver
 la respuesta que definimos para ese recurso: <code class="docutils literal notranslate"><span class="pre">Hola</span> <span class="pre">usuario</span> <span class="pre">en</span> <span class="pre">&lt;i&gt;otro</span> <span class="pre">recurso!&lt;/i&gt;</span></code>.</p>
-<p>¿Que son <code class="docutils literal notranslate"><span class="pre">&lt;i&gt;</span></code> e <code class="docutils literal notranslate"><span class="pre">&lt;/i&gt;</span></code>?
-Son etiquetas HTML que definen un texto en <em>cursiva</em>.
+<p>¿Que son <code class="docutils literal notranslate"><span class="pre">&lt;i&gt;</span></code> e <code class="docutils literal notranslate"><span class="pre">&lt;/i&gt;</span></code>?</p>
+<p>Son etiquetas HTML que definen un texto en <em>cursiva</em>.
 Veremos un poco mas adelante que es HTML y que más podemos hacer con él.</p>
 <section id="notas-de-esta-aplicacion">
 <h3>Notas de esta aplicación<a class="headerlink" href="#notas-de-esta-aplicacion" title="Enlace permanente a este encabezado"></a></h3>
