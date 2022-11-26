@@ -161,64 +161,64 @@
 </pre></div>
 </div>
 <p>El template HTML de la home de nuestra aplicacion web en <code class="docutils literal notranslate"><span class="pre">/templates/index.html</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;es&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&#39;{{ url_for(&quot;static&quot;, filename=&quot;base.css&quot;) }}&#39;&gt;
-    &lt;script src=&#39;{{ url_for(&quot;static&quot;, filename=&quot;base.js&quot;) }}&#39;&gt;&lt;/script&gt;
-    &lt;title&gt;{{ site_title }}&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h2&gt;{{ site_title }}&lt;/h2&gt;
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;{{ url_for(&quot;static&quot;, filename=&quot;base.css&quot;) }}&#39;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;{{ url_for(&quot;static&quot;, filename=&quot;base.js&quot;) }}&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ site_title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ site_title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 
-    &lt;p&gt;
-    &lt;h3&gt;Ver precios de criptomonedas&lt;/h3&gt;
-    &lt;ul&gt;
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Ver precios de criptomonedas<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
         {% for coin in [&#39;BTC&#39;, &#39;ETH&#39;, &#39;LTC&#39;] %}
-        &lt;li&gt;
-        &lt;a href=&quot;{{ url_for(&#39;datos&#39;, symbol=coin) }}&quot;&gt;
-            &lt;b&gt;{{ coin }}&lt;/b&gt;
-        &lt;/a&gt;
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url_for(&#39;datos&#39;, symbol=coin) }}&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>{{ coin }}<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
         {% endfor %}
-    &lt;/ul&gt;
-    &lt;/p&gt;
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-&lt;/body&gt;
-&lt;/html&gt;
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>El template HTML de la pagina de detalle de una criptomoneda en <code class="docutils literal notranslate"><span class="pre">/templates/datos.html</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;es&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;{{ site_title }}&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h2&gt;{{ site_title }}&lt;/h2&gt;
-    &lt;p&gt;
-      Precio de {{ symbol }} a {{ to_symbol }}: &lt;b&gt;{{ data.lastPrice }}&lt;/b&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ site_title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ site_title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      Precio de {{ symbol }} a {{ to_symbol }}: <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>{{ data.lastPrice }}<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
       Otros datos: {{ data }}
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;{{ url_for(&#39;index&#39;) }}&quot;&gt;Volver al inicio&lt;/a&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;h3&gt;Ver otros cambios&lt;/h3&gt;
-      &lt;ul&gt;
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url_for(&#39;index&#39;) }}&quot;</span><span class="p">&gt;</span>Volver al inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Ver otros cambios<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
         {% for coin in [&#39;BTC&#39;, &#39;ETH&#39;, &#39;LTC&#39;] %}
-        &lt;li&gt;
-          &lt;a href=&quot;{{ url_for(&#39;datos&#39;, symbol=coin) }}&quot;&gt;
-            &lt;b&gt;{{ coin }}&lt;/b&gt;
-          &lt;/a&gt;
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url_for(&#39;datos&#39;, symbol=coin) }}&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>{{ coin }}<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
         {% endfor %}
-      &lt;/ul&gt;
-    &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+      <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </section>

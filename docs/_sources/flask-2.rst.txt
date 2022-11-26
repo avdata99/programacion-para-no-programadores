@@ -23,10 +23,10 @@ El código JavaScript de nuestro sitio en ``/static/base.js``
 
 El template HTML de la home de nuestra aplicacion web en ``/templates/index.html``
 
-.. include:: /code/02-web/flask/prj-03/templates/index.html
-    :literal:
+.. literalinclude:: /code/02-web/flask/prj-03/templates/index.html
+    :language: html
 
 El template HTML de la pagina de detalle de una criptomoneda en ``/templates/datos.html``
 
-.. include:: /code/02-web/flask/prj-03/templates/datos.html
-    :literal:
+.. literalinclude:: /code/02-web/flask/prj-03/templates/datos.html
+   :language: html
