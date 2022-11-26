@@ -7,27 +7,22 @@
 <body>
     <h2>{{ site_title }}</h2>
     <p>
-      <ul>
-        <li>Bondis activos: <b>{{ data.bondis_activos }}</b></li>
-        <li>Bondi más rápido: {{ data.bondi_mas_rapido }} km/h</li>
-        <li>Bondis adaptados: {{ data.adaptados }} ({{ (100 * data.adaptados / data.bondis_activos)|round }} %)</li>
-      </ul>
+      Precio de {{ symbol }} a {{ to_symbol }}: <b>{{ data.lastPrice }}</b>
+    </p>
+    <p>
+      Otros datos: {{ data }}
     </p>
     <p>
       <a href="{{ url_for('index') }}">Volver al inicio</a>
     </p>
     <p>
-      <h3>Lista de bondis</h3>
+      <h3>Ver otros cambios</h3>
       <ul>
-        {% for bondi in data.bondis %}
-        {% if bondi.id %}
+        {% for coin in ['BTC', 'ETH', 'LTC'] %}
         <li>
-          <a href="{{ url_for('bondi', bondi_id=bondi.id) }}">
-            <b>{{ bondi.properties.nombre }}</b>
+          <a href="{{ url_for('datos', symbol=coin) }}">
+            <b>{{ coin }}</b>
           </a>
-          : 
-          {{ bondi.properties.ultimas_velocidades_promedio }} km/h</li>
-        {% endif%}
         {% endfor %}
       </ul>
     </p>

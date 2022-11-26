@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from models.bondis import get_bondis_info, get_bondi_info
+from cripto.data import get_price
 
 
 app = Flask(
@@ -17,15 +17,14 @@ def index():
     return render_template("index.html", site_title=site_title)
 
 
-@app.route("/datos/")
-def datos():
-    data = get_bondis_info()
+@app.route("/price/<symbol>")
+@app.route("/price/<symbol>/<to_symbol>")
+def datos(symbol, to_symbol='USDT'):
+    data = get_price(symbol, to_symbol)
+    context = {
+        'symbol': symbol,
+        'to_symbol': to_symbol,
+        'data': data,
+    }
     site_title = 'Datos del sistema de transporte de la Ciudad de Córdoba'
-    return render_template("datos.html", data=data, site_title=site_title)
-
-
-@app.route("/bondi/<int:bondi_id>/")
-def bondi(bondi_id):
-    data = get_bondi_info(bondi_id)
-    site_title = 'Info de un solo bondi'
-    return render_template("bondi.html", bondi=data, site_title=site_title)
+    return render_template("datos.html", site_title=site_title, **context)
