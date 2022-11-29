@@ -74,7 +74,10 @@
 <li class="toctree-l1"><a class="reference internal" href="external-packages.html#entornos-virtuales">Entornos virtuales</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requests.html">Paquete <code class="docutils literal notranslate"><span class="pre">requests</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask.html">Aplicaciones web con Python</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Aplicacion v2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Aplicacion v2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tarea">Tarea</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -152,12 +155,43 @@
 </div>
 <p>El estilo CSS de nuestro sitio en <code class="docutils literal notranslate"><span class="pre">/static/base.css</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">h2</span> <span class="p">{</span>
-    <span class="n">color</span><span class="p">:</span> <span class="c1">#660000;</span>
+    <span class="n">color</span><span class="p">:</span> <span class="c1">#064096;</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.2</span><span class="n">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">h3</span> <span class="p">{</span>
+    <span class="n">color</span><span class="p">:</span> <span class="c1">#05624c;</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.1</span><span class="n">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">moneda</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">weight</span><span class="p">:</span> <span class="n">bold</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">#lista-monedas {</span>
+    <span class="n">margin</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+    <span class="n">padding</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+    <span class="n">border</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#aaaaaa;</span>
+    <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#bbbbbb;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>El código JavaScript de nuestro sitio en <code class="docutils literal notranslate"><span class="pre">/static/base.js</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">agregar_moneda</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">let</span> <span class="n">symbol</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">&quot;nueva-moneda&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">symbol</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">alert</span><span class="p">(</span><span class="s2">&quot;Debe ingresar un símbolo de moneda!&quot;</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">let</span> <span class="n">a</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">);</span>               
+    <span class="n">let</span> <span class="n">link</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createTextNode</span><span class="p">(</span><span class="n">symbol</span><span class="p">);</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">link</span><span class="p">);</span> 
+    <span class="n">a</span><span class="o">.</span><span class="n">href</span> <span class="o">=</span> <span class="s2">&quot;/price/&quot;</span> <span class="o">+</span> <span class="n">symbol</span><span class="p">;</span> 
+    <span class="n">let</span> <span class="n">lista_monedas</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">&quot;lista-monedas&quot;</span><span class="p">);</span>
+    <span class="n">let</span> <span class="n">new_li</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">&quot;li&quot;</span><span class="p">);</span>
+    <span class="n">new_li</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="n">lista_monedas</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">new_li</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>El template HTML de la home de nuestra aplicacion web en <code class="docutils literal notranslate"><span class="pre">/templates/index.html</span></code></p>
@@ -174,14 +208,18 @@
 
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Ver precios de criptomonedas<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lista-monedas&quot;</span><span class="p">&gt;</span>
         {% for coin in [&#39;BTC&#39;, &#39;ETH&#39;, &#39;LTC&#39;] %}
-        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;monedas&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url_for(&#39;datos&#39;, symbol=coin) }}&quot;</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>{{ coin }}<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
+            {{ coin }}
         <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
         {% endfor %}
     <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nueva-moneda&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Introduce una nueva moneda&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;boton-nueva-moneda&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;agregar_moneda()&quot;</span><span class="p">&gt;</span>Añadir<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -191,8 +229,10 @@
 <p>El template HTML de la pagina de detalle de una criptomoneda en <code class="docutils literal notranslate"><span class="pre">/templates/datos.html</span></code></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;{{ url_for(&quot;static&quot;, filename=&quot;base.css&quot;) }}&#39;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;{{ url_for(&quot;static&quot;, filename=&quot;base.js&quot;) }}&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ site_title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -206,21 +246,21 @@
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url_for(&#39;index&#39;) }}&quot;</span><span class="p">&gt;</span>Volver al inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Ver otros cambios<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-        {% for coin in [&#39;BTC&#39;, &#39;ETH&#39;, &#39;LTC&#39;] %}
-        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url_for(&#39;datos&#39;, symbol=coin) }}&quot;</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>{{ coin }}<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
-          <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-        {% endfor %}
-      <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
+<section id="tarea">
+<h2>Tarea<a class="headerlink" href="#tarea" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p>Crear una lista de criptomonedas en el backend y sacar la que esta en el frontend.
+Asegurarse que el sitio siga funcionando de la misma forma.</p></li>
+<li><p>Agrega un nuevo template HTML para mostrar un mensaje de error cuando
+no se encuentre la criptomoneda buscada.
+<strong>Nota:</strong> Cuando una criptomenoda no existe, el API devuelven
+<code class="docutils literal notranslate"><span class="pre">{'code':</span> <span class="pre">-1121,</span> <span class="pre">'msg':</span> <span class="pre">'Invalid</span> <span class="pre">symbol.'}</span></code>.</p></li>
+</ul>
+</section>
 </section>
 
 
