@@ -15,6 +15,6 @@ h3 {
 #lista-monedas {
     margin: 20px;
     padding: 20px;
-    border-color: #aaaaaa;
-    background-color: #bbbbbb;
+    border: 1px solid #222222;
+    background-color: #bbbbbb33;
 }

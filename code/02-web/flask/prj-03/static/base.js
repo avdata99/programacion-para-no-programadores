@@ -1,4 +1,8 @@
 function agregar_moneda() {
+    /*
+    agregar la moneda que el usuario escribio en la caja de texto
+    a la lista de criptomonedas que se muestran en la pagina.
+    */
     let symbol = document.getElementById("nueva-moneda").value;
     if (symbol == "") {
         alert("Debe ingresar un símbolo de moneda!");
