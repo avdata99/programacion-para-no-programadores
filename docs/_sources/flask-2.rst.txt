@@ -34,7 +34,9 @@ El template HTML de la pagina de detalle de una criptomoneda en ``/templates/dat
 Tarea
 ~~~~~
 
-*   Crear una lista de criptomonedas en el backend y sacar la que esta en el frontend.
+*   Crear una lista de criptomonedas en el backend y sacar la que esta en el frontend
+    (la que dice ``['BTC', 'ETH', 'LTC']``). Se deberá pasar como variable de contexto
+    al template.
     Asegurarse que el sitio siga funcionando de la misma forma.
 *   Agrega un nuevo template HTML para mostrar un mensaje de error cuando
     no se encuentre la criptomoneda buscada.

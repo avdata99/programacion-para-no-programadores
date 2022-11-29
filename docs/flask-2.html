@@ -171,13 +171,17 @@
 <span class="c1">#lista-monedas {</span>
     <span class="n">margin</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
     <span class="n">padding</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
-    <span class="n">border</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#aaaaaa;</span>
-    <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#bbbbbb;</span>
+    <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="c1">#222222;</span>
+    <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#bbbbbb33;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>El código JavaScript de nuestro sitio en <code class="docutils literal notranslate"><span class="pre">/static/base.js</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">agregar_moneda</span><span class="p">()</span> <span class="p">{</span>
+    <span class="o">/*</span>
+    <span class="n">agregar</span> <span class="n">la</span> <span class="n">moneda</span> <span class="n">que</span> <span class="n">el</span> <span class="n">usuario</span> <span class="n">escribio</span> <span class="n">en</span> <span class="n">la</span> <span class="n">caja</span> <span class="n">de</span> <span class="n">texto</span>
+    <span class="n">a</span> <span class="n">la</span> <span class="n">lista</span> <span class="n">de</span> <span class="n">criptomonedas</span> <span class="n">que</span> <span class="n">se</span> <span class="n">muestran</span> <span class="n">en</span> <span class="n">la</span> <span class="n">pagina</span><span class="o">.</span>
+    <span class="o">*/</span>
     <span class="n">let</span> <span class="n">symbol</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">&quot;nueva-moneda&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">symbol</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">alert</span><span class="p">(</span><span class="s2">&quot;Debe ingresar un símbolo de moneda!&quot;</span><span class="p">);</span>
@@ -253,7 +257,9 @@
 <section id="tarea">
 <h2>Tarea<a class="headerlink" href="#tarea" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
-<li><p>Crear una lista de criptomonedas en el backend y sacar la que esta en el frontend.
+<li><p>Crear una lista de criptomonedas en el backend y sacar la que esta en el frontend
+(la que dice <code class="docutils literal notranslate"><span class="pre">['BTC',</span> <span class="pre">'ETH',</span> <span class="pre">'LTC']</span></code>). Se deberá pasar como variable de contexto
+al template.
 Asegurarse que el sitio siga funcionando de la misma forma.</p></li>
 <li><p>Agrega un nuevo template HTML para mostrar un mensaje de error cuando
 no se encuentre la criptomoneda buscada.
