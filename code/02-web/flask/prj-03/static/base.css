@@ -1,3 +1,20 @@
 h2 {
-    color: #660000;
+    color: #064096;
+    font-size: 1.2em;
+}
+
+h3 {
+    color: #05624c;
+    font-size: 1.1em;
+}
+
+.moneda {
+    font-weight: bold;
+}
+
+#lista-monedas {
+    margin: 20px;
+    padding: 20px;
+    border-color: #aaaaaa;
+    background-color: #bbbbbb;
 }

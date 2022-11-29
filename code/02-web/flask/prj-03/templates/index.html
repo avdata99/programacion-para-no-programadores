@@ -11,14 +11,18 @@
 
     <p>
     <h3>Ver precios de criptomonedas</h3>
-    <ul>
+    <ul id="lista-monedas">
         {% for coin in ['BTC', 'ETH', 'LTC'] %}
-        <li>
+        <li class="monedas">
         <a href="{{ url_for('datos', symbol=coin) }}">
-            <b>{{ coin }}</b>
+            {{ coin }}
         </a>
         {% endfor %}
     </ul>
+    </p>
+    <p>
+        <input type="text" id="nueva-moneda" placeholder="Introduce una nueva moneda">
+        <button id="boton-nueva-moneda" onclick="agregar_moneda()">Añadir</button>
     </p>
 
 </body>

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href='{{ url_for("static", filename="base.css") }}'>
+    <script src='{{ url_for("static", filename="base.js") }}'></script>
     <title>{{ site_title }}</title>
 </head>
 <body>
@@ -14,17 +16,6 @@
     </p>
     <p>
       <a href="{{ url_for('index') }}">Volver al inicio</a>
-    </p>
-    <p>
-      <h3>Ver otros cambios</h3>
-      <ul>
-        {% for coin in ['BTC', 'ETH', 'LTC'] %}
-        <li>
-          <a href="{{ url_for('datos', symbol=coin) }}">
-            <b>{{ coin }}</b>
-          </a>
-        {% endfor %}
-      </ul>
     </p>
 </body>
 </html>
