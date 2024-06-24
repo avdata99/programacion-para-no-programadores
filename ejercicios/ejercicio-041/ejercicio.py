@@ -8,7 +8,7 @@ La tarea de este ejercicio es reparar esta función para que el mazo este comple
 def crear_mazo_cartas_espaniolas():
     palos = ['oro', 'copa', 'espada', 'basto']
     mazo = []
-    for n in range(1, 12):
+    for n in range(1, 13):
         for palo in palos:
             carta = {'numero': n, 'palo': palo}
             mazo.append(carta)
