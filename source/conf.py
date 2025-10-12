@@ -24,9 +24,9 @@ copyright = 'Andrés Vázquez @avdata99 Creative Commons BY-SA'
 author = 'Andrés Vázquez Flexes'
 
 # The short X.Y version
-version = u'0.4.7'
+version = '0.4.8'
 # The full version, including alpha/beta/rc tags
-release = u'v 0.4.7'
+release = 'v 0.4.8'
 
 
 # -- General configuration ---------------------------------------------------
@@ -60,7 +60,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = u'es'
+language = 'es'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -83,12 +83,17 @@ html_theme = 'sphinx_rtd_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'style_external_links': True,
+    'prev_next_buttons_location': 'both',
+    'navigation_depth': 3,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_extra_path = ['../extra_html']
 html_css_files = [
     'css/curso.css'
 ]
@@ -114,7 +119,9 @@ html_context = {
 
 html_show_sourcelink = True
 html_sidebars = {
-    "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
+    "**": [
+        "logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"
+    ]
 }
 
 # -- Options for HTMLHelp output ---------------------------------------------
@@ -160,7 +167,7 @@ latex_documents = [(
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'curso-python', u'Curso de programación Documentation',
+    (master_doc, 'curso-python', 'Curso de programación Documentation',
      [author], 1)
 ]
 
@@ -171,7 +178,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Curso-Python', u'Curso de programación Documentation',
+    (master_doc, 'Curso-Python', 'Curso de programación Documentation',
      author, 'Curso-Python', 'One line description of project.',
      'Miscellaneous'),
 ]
