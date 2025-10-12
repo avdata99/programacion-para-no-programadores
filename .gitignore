@@ -11,3 +11,4 @@ source/ejercicios
 code/tarea*
 
 .env
+uv.lock
