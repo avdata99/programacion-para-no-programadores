@@ -12,3 +12,6 @@ code/tarea*
 
 .env
 uv.lock
+docs/.buildinfo
+docs/.buildinfo.bak
+docs/.doctrees/
