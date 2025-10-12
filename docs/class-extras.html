@@ -1,24 +1,24 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="es" >
+<html class="writer-html5" lang="es" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Funciones especiales de las clases &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.7</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/curso.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Funciones especiales de las clases &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.8</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/css/curso.css?v=44266ca0" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/translations.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c1717702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -31,14 +31,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Curso de programación para no programadores con Python.
           </a>
-              <div class="version">
-                0.4.7
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -97,27 +98,30 @@
       </nav>
 
       <div class="wy-nav-content">
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Funciones especiales de las clases</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Funciones especiales de las clases</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/class-extras.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
-  </ul>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="class-props.html" class="btn btn-neutral float-left" title="Propiedades controladas" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="my-modules.html" class="btn btn-neutral float-right" title="Paquetes y módulos" accesskey="n">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
   <section id="funciones-especiales-de-las-clases">
-<h1>Funciones especiales de las clases<a class="headerlink" href="#funciones-especiales-de-las-clases" title="Enlace permanente a este encabezado"></a></h1>
+<h1>Funciones especiales de las clases<a class="headerlink" href="#funciones-especiales-de-las-clases" title="Link to this heading"></a></h1>
 <p>Tambien conocidos como <em>métodos mágicos</em> (podemos pensar a la palabra método como
 sinónimo de <em>función</em>) estas funciones se aplican a situaciones habituales de otros
 objetos de Python. Estas situación son la suma, resta, division, comparación, etc.</p>
 <section id="add">
-<h2>__add__<a class="headerlink" href="#add" title="Enlace permanente a este encabezado"></a></h2>
+<h2>__add__<a class="headerlink" href="#add" title="Link to this heading"></a></h2>
 <p>Que pasara si quisiéramos sumar dos <code class="docutils literal notranslate"><span class="pre">Personas</span></code> tal como las vimos en la clase anterior:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">juan</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;Juan&#39;</span><span class="p">,</span> <span class="s1">&#39;Perez&#39;</span><span class="p">)</span>
 <span class="n">victor</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s1">&#39;Victor&#39;</span><span class="p">,</span> <span class="s1">&#39;Gutierrez&#39;</span><span class="p">)</span>
@@ -128,14 +132,14 @@ objetos de Python. Estas situación son la suma, resta, division, comparación, 
 <p>Este código daría un error porque no esta definida la función especial (o mágica) <code class="docutils literal notranslate"><span class="pre">__add__</span></code>.
 No esta definida porque esta suma no tendría sentido en estos objetos.
 Veamos un ejemplo donde si pudiera ser útil.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FacturaServicio</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Cada factura para el pago de servicios hogareños &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">monto</span><span class="p">,</span> <span class="n">servicio</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">FacturaServicio</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Cada factura para el pago de servicios hogareños &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">monto</span><span class="p">,</span> <span class="n">servicio</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">monto</span> <span class="o">=</span> <span class="n">monto</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">servicio</span> <span class="o">=</span> <span class="n">servicio</span>
 
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Sumar esta factura a otra factura</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Sumar esta factura a otra factura</span>
 <span class="sd">            Notar que el resultado no es otro objeto de este tipo,</span>
 <span class="sd">            es solo un numero.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">otro</span><span class="p">)</span> <span class="o">!=</span> <span class="n">FacturaServicio</span><span class="p">:</span>
@@ -162,10 +166,10 @@ De la misma forma, podríamos sumar nuestro objetos con lo de otra clase. Nosotr
 distintos por cada tipo de objeto al que sumamos nuestro objeto.</p>
 </section>
 <section id="str">
-<h2>__str__<a class="headerlink" href="#str" title="Enlace permanente a este encabezado"></a></h2>
+<h2>__str__<a class="headerlink" href="#str" title="Link to this heading"></a></h2>
 <p>Es probablemente la función especial más usada. Se usa para definir que texto se va a devolver
 cuando el usuario necesite una representación <em>string</em> de este objeto.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$ </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">monto</span><span class="si">}</span><span class="s1"> a pagar por el servicio de </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">servicio</span><span class="si">}</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
@@ -181,13 +185,13 @@ cuando el usuario necesite una representación <em>string</em> de este objeto.</
 </div>
 </section>
 <section id="eq">
-<h2>__eq__<a class="headerlink" href="#eq" title="Enlace permanente a este encabezado"></a></h2>
+<h2>__eq__<a class="headerlink" href="#eq" title="Link to this heading"></a></h2>
 <p>Si queremos permitir la comparación de objetos de nuestra clase se puede definir esta función.
 Esta función será llamada cuando nuestro objeto sea comparado con otro mediante el operador <code class="docutils literal notranslate"><span class="pre">==</span></code>.
 Al igual que <code class="docutils literal notranslate"><span class="pre">__add__</span></code>, podríamos comparar nuestro objetos con lo de otra clase si fuera necesario
 (este no es el caso).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Revisar si son iguales a otra factura &quot;&quot;&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Revisar si son iguales a otra factura &quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">otro</span><span class="p">)</span> <span class="o">!=</span> <span class="n">FacturaServicio</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;La comparacion solo está permitida para objetos del mismo tipo&#39;</span><span class="p">)</span>
@@ -222,16 +226,16 @@ Al igual que <code class="docutils literal notranslate"><span class="pre">__add_
 </section>
 </section>
 <section id="codigo-final-de-nuestra-clase">
-<h1>Código final de nuestra clase<a class="headerlink" href="#codigo-final-de-nuestra-clase" title="Enlace permanente a este encabezado"></a></h1>
+<h1>Código final de nuestra clase<a class="headerlink" href="#codigo-final-de-nuestra-clase" title="Link to this heading"></a></h1>
 <p>Disponible <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/class-01.py">aquí</a>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FacturaServicio</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Cada factura para el pago de servicios hogareños &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">monto</span><span class="p">,</span> <span class="n">servicio</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">FacturaServicio</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Cada factura para el pago de servicios hogareños &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">monto</span><span class="p">,</span> <span class="n">servicio</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">monto</span> <span class="o">=</span> <span class="n">monto</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">servicio</span> <span class="o">=</span> <span class="n">servicio</span>
 
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Sumar esta factura a otra factura </span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Sumar esta factura a otra factura </span>
 <span class="sd">            Notar que el resultado no es otro objeto de este tipo,</span>
 <span class="sd">            es solo un numero.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">otro</span><span class="p">)</span> <span class="o">!=</span> <span class="n">FacturaServicio</span><span class="p">:</span>
@@ -239,11 +243,11 @@ Al igual que <code class="docutils literal notranslate"><span class="pre">__add_
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">monto</span> <span class="o">+</span> <span class="n">otro</span><span class="o">.</span><span class="n">monto</span>
 
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$ </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">monto</span><span class="si">}</span><span class="s1"> a pagar por el servicio de </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">servicio</span><span class="si">}</span><span class="s1">&#39;</span>
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Revisar si son iguales a otra factura &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Revisar si son iguales a otra factura &quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">otro</span><span class="p">)</span> <span class="o">!=</span> <span class="n">FacturaServicio</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;La comparacion solo está permitida para objetos del mismo tipo&#39;</span><span class="p">)</span>
@@ -256,7 +260,7 @@ Al igual que <code class="docutils literal notranslate"><span class="pre">__add_
 </div>
 </section>
 <section id="otras-funciones-especiales">
-<h1>Otras funciones especiales<a class="headerlink" href="#otras-funciones-especiales" title="Enlace permanente a este encabezado"></a></h1>
+<h1>Otras funciones especiales<a class="headerlink" href="#otras-funciones-especiales" title="Link to this heading"></a></h1>
 <p>Estas algunas otras de las funciones especiales.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">__mul__</span></code>: Multiplipicación</p></li>
@@ -278,7 +282,7 @@ Al igual que <code class="docutils literal notranslate"><span class="pre">__add_
 </ul>
 <p><strong>Y hay muchas más.</strong></p>
 <section id="tareas">
-<h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Tareas<a class="headerlink" href="#tareas" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Hacer un PR a la
 <a class="reference external" href="https://github.com/avdata99/programacion-para-no-programadores/blob/master/code/01-basics/class-04.py">clase Carta</a>
@@ -290,17 +294,17 @@ para agregar la función <code class="docutils literal notranslate"><span class=
 </ul>
 </section>
 <section id="algunos-ejemplos-de-uso">
-<h2>Algunos ejemplos de uso<a class="headerlink" href="#algunos-ejemplos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Algunos ejemplos de uso<a class="headerlink" href="#algunos-ejemplos-de-uso" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Ejemplo de una clase para manejar fracciones</span>
 <span class="sd">(de numerador y denominador entero y positivo)</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<span class="k">class</span> <span class="nc">Fraccion</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Clase para manejar fracciones de numeros enteros positivos &quot;&quot;&quot;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Fraccion</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Clase para manejar fracciones de numeros enteros positivos &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numerador</span><span class="p">,</span> <span class="n">denominador</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numerador</span><span class="p">,</span> <span class="n">denominador</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">numerador</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">int</span> <span class="ow">or</span> <span class="nb">type</span><span class="p">(</span><span class="n">denominador</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Solo numeros enteros aceptados&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">numerador</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">denominador</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
@@ -311,11 +315,11 @@ para agregar la función <code class="docutils literal notranslate"><span class=
         <span class="bp">self</span><span class="o">.</span><span class="n">_simplificar</span><span class="p">()</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">numerador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">numerador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_numerador</span>
     
     <span class="nd">@numerador</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">numerador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">numerador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Tipo de dato no admitido para numerador&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
@@ -324,11 +328,11 @@ para agregar la función <code class="docutils literal notranslate"><span class=
         <span class="bp">self</span><span class="o">.</span><span class="n">_simplificar</span><span class="p">()</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">denominador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">denominador</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_denominador</span>
     
     <span class="nd">@denominador</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">denominador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">den</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">denominador</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">den</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">den</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Tipo de dato no admitido para denominador&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">den</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
@@ -336,8 +340,8 @@ para agregar la función <code class="docutils literal notranslate"><span class=
         <span class="bp">self</span><span class="o">.</span><span class="n">_denominador</span> <span class="o">=</span> <span class="n">den</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_simplificar</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">_simplificar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Simplificar la fraccion a los numeros mas bajos posibles &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_simplificar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Simplificar la fraccion a los numeros mas bajos posibles &quot;&quot;&quot;</span>
         <span class="n">men</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_numerador</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_denominador</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">men</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
             <span class="c1"># Si este numero divide a los dos, entonces los divido</span>
@@ -346,8 +350,8 @@ para agregar la función <code class="docutils literal notranslate"><span class=
                 <span class="bp">self</span><span class="o">.</span><span class="n">_denominador</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_denominador</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
                 <span class="k">break</span>
 
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Sumar fracciones&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Sumar fracciones&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">otro</span><span class="p">)</span> <span class="o">!=</span> <span class="n">Fraccion</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Solo suma aceptada entre fracciones&#39;</span><span class="p">)</span>
     
@@ -356,16 +360,16 @@ para agregar la función <code class="docutils literal notranslate"><span class=
 
         <span class="k">return</span> <span class="n">Fraccion</span><span class="p">(</span><span class="n">nuevo_numerador</span><span class="p">,</span> <span class="n">nuevo_denominador</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otro</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">otro</span><span class="p">)</span> <span class="o">!=</span> <span class="n">Fraccion</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No son objetos iguales&#39;</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_numerador</span> <span class="o">==</span> <span class="n">otro</span><span class="o">.</span><span class="n">numerador</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_denominador</span> <span class="o">==</span> <span class="n">otro</span><span class="o">.</span><span class="n">denominador</span>
 
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_numerador</span><span class="si">}</span><span class="s1"> / </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_denominador</span><span class="si">}</span><span class="s1">)&#39;</span>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;Fraccion </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_numerador</span><span class="si">}</span><span class="s1"> / </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_denominador</span><span class="si">}</span><span class="s1">&gt;&#39;</span>
 
 
@@ -384,7 +388,7 @@ para agregar la función <code class="docutils literal notranslate"><span class=
 <span class="k">assert</span> <span class="n">f1</span> <span class="o">==</span> <span class="n">Fraccion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 
 <span class="n">f1</span><span class="o">.</span><span class="n">numerador</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="k">assert</span> <span class="n">f1</span> <span class="o">==</span> <span class="n">Fraccion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">f1</span><span class="si">}</span><span class="s1"> no es igual a </span><span class="si">{</span><span class="n">Fraccion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="k">assert</span> <span class="n">f1</span> <span class="o">==</span> <span class="n">Fraccion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">f1</span><span class="si">}</span><span class="s1"> no es igual a </span><span class="si">{</span><span class="n">Fraccion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
 
 <span class="n">f1</span><span class="o">.</span><span class="n">denominador</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="k">assert</span> <span class="n">f1</span> <span class="o">==</span> <span class="n">Fraccion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>

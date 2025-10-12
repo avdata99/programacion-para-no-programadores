@@ -1,24 +1,24 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="es" >
+<html class="writer-html5" lang="es" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aplicaciones web con Python &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.7</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/curso.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Aplicaciones web con Python &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.8</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/css/curso.css?v=44266ca0" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/translations.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c1717702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -31,14 +31,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Curso de programación para no programadores con Python.
           </a>
-              <div class="version">
-                0.4.7
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -94,22 +95,25 @@
       </nav>
 
       <div class="wy-nav-content">
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Aplicaciones web con Python</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Aplicaciones web con Python</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/flask.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
-  </ul>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="requests.html" class="btn btn-neutral float-left" title="Paquete requests" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="flask-2.html" class="btn btn-neutral float-right" title="Aplicacion v2" accesskey="n">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
   <section id="aplicaciones-web-con-python">
-<h1>Aplicaciones web con Python<a class="headerlink" href="#aplicaciones-web-con-python" title="Enlace permanente a este encabezado"></a></h1>
+<h1>Aplicaciones web con Python<a class="headerlink" href="#aplicaciones-web-con-python" title="Link to this heading"></a></h1>
 <p>Las aplicaciones web son programas que funcionan en servidores de internet.
 No es necesario instalarlos en nuestra computadora y se acceden
 desde un navegador web (como Google Chrome, Mozilla Firefox u otros).
@@ -132,28 +136,28 @@ backend.</p></li>
 </ul>
 <p>Ambas partes pueden estar en el mismo servidor o en servidores diferentes.</p>
 <section id="nuestra-primera-aplicacion-web-con-flask">
-<h2>Nuestra primera aplicacion web con Flask<a class="headerlink" href="#nuestra-primera-aplicacion-web-con-flask" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Nuestra primera aplicacion web con Flask<a class="headerlink" href="#nuestra-primera-aplicacion-web-con-flask" title="Link to this heading"></a></h2>
 <p>Flask es un (micro)framework para Python que permite crear aplicaciones
 web muy rápidamente.
 Con flask podemos definir <em>frontend</em> y <em>backend</em> en la misma aplicación.</p>
 <p>Antes de empezar a programar, creamos y activamos un entorno virtual
 para nuestra aplicación.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># crear el entorno</span>
-python -m venv &lt;carpeta_donde_se_creara_el_entorno&gt;
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;carpeta_donde_se_creara_el_entorno&gt;
 <span class="c1"># activar el entorno (en Windows)</span>
 &lt;carpeta_donde_se_creara_el_entorno&gt;<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
 <span class="c1"># activar el entorno (en Linux)</span>
-<span class="nb">source</span> &lt;carpeta_donde_se_creara_el_entorno&gt;/bin/activate
+<span class="nb">source</span><span class="w"> </span>&lt;carpeta_donde_se_creara_el_entorno&gt;/bin/activate
 </pre></div>
 </div>
 <p>Para instalar Flask y comenzar nuestra primera aplicación web,
 ejecutamo el siguiente comando en la terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install Flask
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>Flask
 </pre></div>
 </div>
 <p>Ahora creamos un archivo llamado <code class="docutils literal notranslate"><span class="pre">app.py</span></code> con el siguiente contenido:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importar la clase Flask</span>
-<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span>
 
 <span class="c1"># Crear una aplicacion Flask</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
@@ -161,31 +165,31 @@ ejecutamo el siguiente comando en la terminal:</p>
 <span class="c1"># Definir la respuesta que va a devolver nuestro servidor</span>
 <span class="c1"># cuando alguien acceda a la URL raiz (/)</span>
 <span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hello</span><span class="p">():</span>
     <span class="k">return</span> <span class="s1">&#39;Hola usuario!&#39;</span>
 
 <span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/otro-recurso&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">otro</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">otro</span><span class="p">():</span>
     <span class="k">return</span> <span class="s1">&#39;Hola usuario en &lt;i&gt;otro recurso!&lt;/i&gt;&#39;</span>
 </pre></div>
 </div>
 <p>Finalmente ejecutamos el servidor de desarrollo de Flask:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flask run
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flask<span class="w"> </span>run
 
 <span class="c1"># Y veremos ...</span>
-* Environment: production
-WARNING: This is a development server. Do not use it <span class="k">in</span> a production deployment.
-Use a production WSGI server instead.
-* Debug mode: off
-* Running on http://127.0.0.1:5000/ <span class="o">(</span>Press CTRL+C to quit<span class="o">)</span>
+*<span class="w"> </span>Environment:<span class="w"> </span>production
+WARNING:<span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>development<span class="w"> </span>server.<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>use<span class="w"> </span>it<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>production<span class="w"> </span>deployment.
+Use<span class="w"> </span>a<span class="w"> </span>production<span class="w"> </span>WSGI<span class="w"> </span>server<span class="w"> </span>instead.
+*<span class="w"> </span>Debug<span class="w"> </span>mode:<span class="w"> </span>off
+*<span class="w"> </span>Running<span class="w"> </span>on<span class="w"> </span>http://127.0.0.1:5000/<span class="w"> </span><span class="o">(</span>Press<span class="w"> </span>CTRL+C<span class="w"> </span>to<span class="w"> </span>quit<span class="o">)</span>
 </pre></div>
 </div>
 <p>Si vamos al navegador e ingresamos a <a class="reference external" href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a>
 vamos a ver la respuesta que definimos en nuestra aplicación:
 <code class="docutils literal notranslate"><span class="pre">Hola</span> <span class="pre">usuario!</span></code>.</p>
 <p>En la linea de comandos queda regisro de esa visita</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">127</span>.0.0.1 - - <span class="o">[</span><span class="m">22</span>/Jan/2022 <span class="m">11</span>:54:52<span class="o">]</span> <span class="s2">&quot;GET / HTTP/1.1&quot;</span> <span class="m">200</span> -
-<span class="m">127</span>.0.0.1 - - <span class="o">[</span><span class="m">22</span>/Jan/2022 <span class="m">11</span>:54:52<span class="o">]</span> <span class="s2">&quot;GET /favicon.ico HTTP/1.1&quot;</span> <span class="m">404</span> -
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">127</span>.0.0.1<span class="w"> </span>-<span class="w"> </span>-<span class="w"> </span><span class="o">[</span><span class="m">22</span>/Jan/2022<span class="w"> </span><span class="m">11</span>:54:52<span class="o">]</span><span class="w"> </span><span class="s2">&quot;GET / HTTP/1.1&quot;</span><span class="w"> </span><span class="m">200</span><span class="w"> </span>-
+<span class="m">127</span>.0.0.1<span class="w"> </span>-<span class="w"> </span>-<span class="w"> </span><span class="o">[</span><span class="m">22</span>/Jan/2022<span class="w"> </span><span class="m">11</span>:54:52<span class="o">]</span><span class="w"> </span><span class="s2">&quot;GET /favicon.ico HTTP/1.1&quot;</span><span class="w"> </span><span class="m">404</span><span class="w"> </span>-
 </pre></div>
 </div>
 <p>Si nos dirigimos a la URL <a class="reference external" href="http://127.0.0.1:5000/otro-recurso">http://127.0.0.1:5000/otro-recurso</a> vamos a ver
@@ -194,7 +198,7 @@ la respuesta que definimos para ese recurso: <code class="docutils literal notra
 <p>Son etiquetas HTML que definen un texto en <em>cursiva</em>.
 Veremos un poco mas adelante que es HTML y que más podemos hacer con él.</p>
 <section id="notas-de-esta-aplicacion">
-<h3>Notas de esta aplicación<a class="headerlink" href="#notas-de-esta-aplicacion" title="Enlace permanente a este encabezado"></a></h3>
+<h3>Notas de esta aplicación<a class="headerlink" href="#notas-de-esta-aplicacion" title="Link to this heading"></a></h3>
 <p>Esta aplicación es muy simple pero nos permite ver de forma básica
 como funciona una aplicación web.</p>
 <p>Por un lado el usuario accede a nuestro servidor desde su navegador

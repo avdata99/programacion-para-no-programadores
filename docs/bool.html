@@ -1,24 +1,24 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="es" >
+<html class="writer-html5" lang="es" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Booleanos &lt;bool&gt; + operadores de comparación + ìf &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.7</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/curso.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Booleanos &lt;bool&gt; + operadores de comparación + ìf &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.8</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/css/curso.css?v=44266ca0" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/translations.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c1717702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -31,14 +31,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Curso de programación para no programadores con Python.
           </a>
-              <div class="version">
-                0.4.7
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -98,22 +99,25 @@
       </nav>
 
       <div class="wy-nav-content">
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code></li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/bool.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
-  </ul>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="builtins.html" class="btn btn-neutral float-left" title="Funciones incluidas en Python" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="list.html" class="btn btn-neutral float-right" title="Listas en Python &lt;list&gt;" accesskey="n">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
   <section id="booleanos-bool-operadores-de-comparacion-if">
-<h1>Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code><a class="headerlink" href="#booleanos-bool-operadores-de-comparacion-if" title="Enlace permanente a este encabezado"></a></h1>
+<h1>Booleanos &lt;bool&gt; + operadores de comparación + <code class="docutils literal notranslate"><span class="pre">ìf</span></code><a class="headerlink" href="#booleanos-bool-operadores-de-comparacion-if" title="Link to this heading"></a></h1>
 <p>El tipo de datos <code class="docutils literal notranslate"><span class="pre">&lt;bool&gt;</span></code> (nombrados así en memoria de matemático inglés
 George Boole) solo usa dos valores: <code class="docutils literal notranslate"><span class="pre">True</span></code> y <code class="docutils literal notranslate"><span class="pre">False</span></code> (<em>verdadero</em> y <em>falso</em>).
 Es el tipo de datos más simple y uno de los más usados.
@@ -151,13 +155,13 @@ Es por esto que en Python podemos decir que “alpha” &lt; “beta” es <code
 </pre></div>
 </div>
 <section id="control-de-flujo-if-elif-else">
-<h2>Control de flujo -&gt; <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">/</span> <span class="pre">elif</span> <span class="pre">/</span> <span class="pre">else</span></code><a class="headerlink" href="#control-de-flujo-if-elif-else" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Control de flujo -&gt; <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">/</span> <span class="pre">elif</span> <span class="pre">/</span> <span class="pre">else</span></code><a class="headerlink" href="#control-de-flujo-if-elif-else" title="Link to this heading"></a></h2>
 <p>El flujo de un programa no tiene que ser siempre lineal.
 Diferentes porciones de código pueden ejecutarse si alguna condicion esperada se cumple.
 Para esto existe la sentencia <code class="docutils literal notranslate"><span class="pre">if</span></code> (traducido, es el <em>si</em> condicional del español).</p>
 <p>Veamos su funcionamiento con simples ejemplos:</p>
 <section id="if">
-<h3><code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Enlace permanente a este encabezado"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Link to this heading"></a></h3>
 <p>Uso de <code class="docutils literal notranslate"><span class="pre">if</span></code> solo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="mi">1</span>
 <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># nótese que la línea debe terminar en &quot;:&quot; como las funciones</span>
@@ -168,7 +172,7 @@ Para esto existe la sentencia <code class="docutils literal notranslate"><span c
 debe estar tabulada (tal como lo hacemos en las funciones).</strong></p>
 </section>
 <section id="else">
-<h3><code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#else" title="Enlace permanente a este encabezado"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#else" title="Link to this heading"></a></h3>
 <p>Opcionalmente, podemos usar <code class="docutils literal notranslate"><span class="pre">else</span></code> para capturar los casos que no cumplen la condición.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span> <span class="o">=</span> <span class="mi">33</span>
 <span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
@@ -183,11 +187,11 @@ debe estar tabulada (tal como lo hacemos en las funciones).</strong></p>
 de código a ejecutar según la condición. Puede ser más de una línea.</strong></p>
 </section>
 <section id="elif">
-<h3><code class="docutils literal notranslate"><span class="pre">elif</span></code><a class="headerlink" href="#elif" title="Enlace permanente a este encabezado"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">elif</span></code><a class="headerlink" href="#elif" title="Link to this heading"></a></h3>
 <p>Entre <code class="docutils literal notranslate"><span class="pre">if</span></code> y <code class="docutils literal notranslate"><span class="pre">else</span></code> podemos usar uno o varios <code class="docutils literal notranslate"><span class="pre">elif</span></code> para identificar mas casos buscados.
 Nota: <code class="docutils literal notranslate"><span class="pre">elif</span></code> es una forma abreviada para <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code>.</p>
 <p>Veamos un ejemplo un poco mas complejo de una función que usa <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">identificar_bicho</span><span class="p">(</span><span class="n">patas</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">identificar_bicho</span><span class="p">(</span><span class="n">patas</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">patas</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es un insecto&#39;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">patas</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
@@ -205,7 +209,7 @@ Nota: <code class="docutils literal notranslate"><span class="pre">elif</span></
 </div>
 </section>
 <section id="and-y-or">
-<h3><code class="docutils literal notranslate"><span class="pre">and</span></code> y <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#and-y-or" title="Enlace permanente a este encabezado"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">and</span></code> y <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#and-y-or" title="Link to this heading"></a></h3>
 <p>Si queremos consultar mas de una condicón simultanemante podemos
 usar <code class="docutils literal notranslate"><span class="pre">and</span></code> u <code class="docutils literal notranslate"><span class="pre">or</span></code> (<em>y</em> u <em>o</em>).</p>
 <p>Por ejemplo:</p>
@@ -221,7 +225,7 @@ usar <code class="docutils literal notranslate"><span class="pre">and</span></co
 </div>
 </section>
 <section id="tareas">
-<h3>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h3>
+<h3>Tareas<a class="headerlink" href="#tareas" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Escribir una función que se llame <code class="docutils literal notranslate"><span class="pre">es_par</span></code> y que dado un número devuelva
 <code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code> según corresponda. Tip: Los numeros pares tienen resto (operador <code class="docutils literal notranslate"><span class="pre">%</span></code>)

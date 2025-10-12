@@ -181,6 +181,9 @@ También es posible usar ``dict()`` para crear un diccionario.
 Tareas
 ~~~~~~
 
+Nota: Si no completaste los módulos de Git y GitHub deberás reemplazar *Hacer un PR*
+por *Enviar tu versión modificada*.  
+
 *   Hacer un PR con una propuesta de solución para el
     `ejercicio 020 <https://github.com/avdata99/programacion-para-no-programadores/blob/master/ejercicios/ejercicio-020/ejercicio.py>`_
 

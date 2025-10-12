@@ -1,24 +1,24 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="es" >
+<html class="writer-html5" lang="es" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iterando ando: for &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.7</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/curso.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Iterando ando: for &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.8</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/css/curso.css?v=44266ca0" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/translations.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c1717702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -31,14 +31,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Curso de programación para no programadores con Python.
           </a>
-              <div class="version">
-                0.4.7
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -97,22 +98,25 @@
       </nav>
 
       <div class="wy-nav-content">
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code></li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/for.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
-  </ul>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="list.html" class="btn btn-neutral float-left" title="Listas en Python &lt;list&gt;" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="git.html" class="btn btn-neutral float-right" title="Cuidando nuestro código: git" accesskey="n">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
   <section id="iterando-ando-for">
-<h1>Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#iterando-ando-for" title="Enlace permanente a este encabezado"></a></h1>
+<h1>Iterando ando: <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#iterando-ando-for" title="Link to this heading"></a></h1>
 <p>En Python algunos objetos se pueden iterar. Esto es: <strong>recorrer su
 elementos de uno a la vez</strong>. Muchos objetos tiene definida una forma
 de iterarse, por ejemplo las listas.</p>
@@ -137,7 +141,7 @@ Estos es, una por cada uno de los elementos de <code class="docutils literal not
 La sentencia <code class="docutils literal notranslate"><span class="pre">for</span></code> inicia un loop que <strong>va a terminar cuando se quede
 sin elementos que recorrer</strong>.</p>
 <section id="anatomia-de-un-for">
-<h2>Anatomía de un <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#anatomia-de-un-for" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Anatomía de un <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#anatomia-de-un-for" title="Link to this heading"></a></h2>
 <p>La línea <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">persona</span> <span class="pre">in</span> <span class="pre">mi_lista:</span></code> podría traducirse como:
 <em>por cada persona en mi_lista hacer lo siguiente:</em></p>
 <p>Analicémosla:</p>
@@ -176,7 +180,7 @@ Si, claro. Veamos un ejemplo:</p>
 </div>
 </section>
 <section id="continue-y-break-en-ciclos-for">
-<h2><code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">break</span></code> en ciclos <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#continue-y-break-en-ciclos-for" title="Enlace permanente a este encabezado"></a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">continue</span></code> y <code class="docutils literal notranslate"><span class="pre">break</span></code> en ciclos <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#continue-y-break-en-ciclos-for" title="Link to this heading"></a></h2>
 <p>Dentro de una iteración, existen formas de salir de
 ella (<code class="docutils literal notranslate"><span class="pre">break</span></code>) y de saltearse un elemento (<code class="docutils literal notranslate"><span class="pre">continue</span></code>).</p>
 <p>Veamos un ejemplo:</p>
@@ -215,7 +219,7 @@ El error <code class="docutils literal notranslate"><span class="pre">'XXX'</spa
 </div>
 </section>
 <section id="if-in">
-<h2><code class="docutils literal notranslate"><span class="pre">if</span></code> + <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#if-in" title="Enlace permanente a este encabezado"></a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">if</span></code> + <code class="docutils literal notranslate"><span class="pre">in</span></code><a class="headerlink" href="#if-in" title="Link to this heading"></a></h2>
 <p>Tambien podemos combinar <code class="docutils literal notranslate"><span class="pre">if</span></code> con <code class="docutils literal notranslate"><span class="pre">in</span></code> para saber si un objeto
 esta contenido en una lista.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -230,7 +234,7 @@ esta contenido en una lista.</p>
 </div>
 </section>
 <section id="iterando-strings">
-<h2>Iterando <em>strings</em><a class="headerlink" href="#iterando-strings" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Iterando <em>strings</em><a class="headerlink" href="#iterando-strings" title="Link to this heading"></a></h2>
 <p>Como ya vimos antes, los strings tambien pueden usarse como
 listas y por lo tanto se puede iterar.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Victor&quot;</span>
@@ -250,7 +254,7 @@ listas y por lo tanto se puede iterar.</p>
 </div>
 </section>
 <section id="agregado-range">
-<h2>Agregado: <code class="docutils literal notranslate"><span class="pre">range</span></code><a class="headerlink" href="#agregado-range" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Agregado: <code class="docutils literal notranslate"><span class="pre">range</span></code><a class="headerlink" href="#agregado-range" title="Link to this heading"></a></h2>
 <p>Python tiene una funcion (técnicamente no es una función pero
 por ahora podemos pensarla como tal) includa (<em>built-in</em>) que
 permite iterar sobre una serie de números. Se llama <code class="docutils literal notranslate"><span class="pre">range</span></code>
@@ -296,7 +300,7 @@ resultado vaya de dos en dos).</p>
 </div>
 </section>
 <section id="iterar-mientras-que-algo-suceda-while">
-<h2>Iterar <em>mientras</em> que algo suceda: <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#iterar-mientras-que-algo-suceda-while" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Iterar <em>mientras</em> que algo suceda: <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#iterar-mientras-que-algo-suceda-while" title="Link to this heading"></a></h2>
 <p>En algunas ocasiones necesitamos iterar hasta que algo cambie.
 Por ejemplo, hasta que el usuario ingrese un número válido.</p>
 <p>Para estos casos existe la sentencia <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
@@ -331,7 +335,7 @@ Por ejemplo, hasta que el usuario ingrese un número válido.</p>
 </div>
 </section>
 <section id="tareas">
-<h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Tareas<a class="headerlink" href="#tareas" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Escribir un programa que:</p>
 <ul>

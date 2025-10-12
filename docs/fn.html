@@ -1,24 +1,24 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="es" >
+<html class="writer-html5" lang="es" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Funciones en Python &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.7</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/curso.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Funciones en Python &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.8</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/css/curso.css?v=44266ca0" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/translations.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c1717702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -31,14 +31,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Curso de programación para no programadores con Python.
           </a>
-              <div class="version">
-                0.4.7
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -95,27 +96,30 @@
       </nav>
 
       <div class="wy-nav-content">
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Funciones en Python</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Funciones en Python</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/fn.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
-  </ul>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="vscode.html" class="btn btn-neutral float-left" title="Entorno de desarrollo: Visual Studio Code" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="builtins.html" class="btn btn-neutral float-right" title="Funciones incluidas en Python" accesskey="n">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
   <section id="funciones-en-python">
-<h1>Funciones en Python<a class="headerlink" href="#funciones-en-python" title="Enlace permanente a este encabezado"></a></h1>
+<h1>Funciones en Python<a class="headerlink" href="#funciones-en-python" title="Link to this heading"></a></h1>
 <p>En este curso hemos nombrado y usado sin definir todavia a las <em>funciones</em>.
 Una funcion en Python es una porción de código que cumple una tarea determinada
 y opcionalmente devuelve un resultado.</p>
 <p>Veamos un ejemplo:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">segundos_en_un_dia</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">segundos_en_un_dia</span><span class="p">():</span>
     <span class="n">segundos_en_una_hora</span> <span class="o">=</span> <span class="mi">60</span>
     <span class="n">minutos_en_una_hora</span> <span class="o">=</span> <span class="mi">60</span>
     <span class="n">horas_en_un_dia</span> <span class="o">=</span> <span class="mi">24</span>
@@ -128,7 +132,7 @@ y opcionalmente devuelve un resultado.</p>
 </pre></div>
 </div>
 <section id="anatomia-de-una-funcion-simple">
-<h2>Anatomía de una función simple<a class="headerlink" href="#anatomia-de-una-funcion-simple" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Anatomía de una función simple<a class="headerlink" href="#anatomia-de-una-funcion-simple" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">def</span></code> es una palabra reservada de Python (no la podemos usar como nombre de variable)
 que usamos para indicar que estamos definiendo una función.</p></li>
@@ -153,14 +157,14 @@ una función se puede llamar simplemente con su nombre y los paréntesis.</p></l
 </ul>
 </section>
 <section id="funciones-con-parametros">
-<h2>Funciones con parámetros<a class="headerlink" href="#funciones-con-parametros" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Funciones con parámetros<a class="headerlink" href="#funciones-con-parametros" title="Link to this heading"></a></h2>
 <p>Muchas funciones procesan datos que ya conocemos pero en muchos casos necesitamos que nuestra
 función procese datos que pueden variar. Para estos casos necesitamos darle a nuestra funcion
 la posibilidad de agregar valores variables llamados <em>parámetros</em>.
 Estos parámetros se incluyen dentro de los paréntesis del encabezado de nuestra funcion
 <strong>separados por comas</strong>.</p>
 <p>Ejemplo de una función con parámetros.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Se llamo a la funcion sumar con </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1"> y </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 
@@ -193,7 +197,7 @@ funcion <code class="docutils literal notranslate"><span class="pre">suma</span>
 es solo dentro de la función que la declaró como parámetro.</p>
 </section>
 <section id="funciones-con-parametros-opcionales">
-<h2>Funciones con parámetros opcionales<a class="headerlink" href="#funciones-con-parametros-opcionales" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Funciones con parámetros opcionales<a class="headerlink" href="#funciones-con-parametros-opcionales" title="Link to this heading"></a></h2>
 <p>En algunos casos no necesitamos que todos los parámetros sean obligatorios.
 Muchas veces hay valores que son de uso más frecuente y el usuario no querrá
 definirlos cada vez que llama a la función.
@@ -202,7 +206,7 @@ valor predeterminado para los parámetros en el encabezado de la función y
 es suficiente.
 Tomemos el ejemplo de la funcion <em>potencia</em> y asumamos que en general los
 usuarios querrán elevar números al cuadrado.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencia</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">potencia</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Se llamo a la funcion potencia con </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1"> y </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span>
 
@@ -222,7 +226,7 @@ usuarios querrán elevar números al cuadrado.</p>
 </div>
 </section>
 <section id="tareas">
-<h2>Tareas<a class="headerlink" href="#tareas" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Tareas<a class="headerlink" href="#tareas" title="Link to this heading"></a></h2>
 <ul>
 <li><p>Un mago se para frente a su audiencia y les dice:</p>
 <ul class="simple">
@@ -253,9 +257,9 @@ valores ingresados por el usuario con <code class="docutils literal notranslate"
 que funciona como es esperado.</strong></p>
 </section>
 <section id="algunos-ejemplos-de-uso">
-<h2>Algunos ejemplos de uso<a class="headerlink" href="#algunos-ejemplos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Algunos ejemplos de uso<a class="headerlink" href="#algunos-ejemplos-de-uso" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Se llamo a la funcion sumar con </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1"> y </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 
@@ -264,7 +268,7 @@ que funciona como es esperado.</strong></p>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="k">def</span> <span class="nf">potencia</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">potencia</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Se llamo a la funcion potencia con </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1"> y </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span>
 
@@ -276,7 +280,7 @@ que funciona como es esperado.</strong></p>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="k">def</span> <span class="nf">raiz</span><span class="p">(</span><span class="n">numero</span><span class="p">,</span> <span class="n">raiz</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">raiz</span><span class="p">(</span><span class="n">numero</span><span class="p">,</span> <span class="n">raiz</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Se llamo a la funcion raiz con </span><span class="si">{</span><span class="n">numero</span><span class="si">}</span><span class="s1"> y </span><span class="si">{</span><span class="n">raiz</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">numero</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">raiz</span><span class="p">)</span>
 
@@ -288,7 +292,7 @@ que funciona como es esperado.</strong></p>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="k">def</span> <span class="nf">mi_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mi_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Argumentos sin nombre: </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Argumentos con nombre: </span><span class="si">{</span><span class="n">kwargs</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 

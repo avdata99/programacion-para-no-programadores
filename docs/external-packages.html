@@ -1,24 +1,24 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="es" >
+<html class="writer-html5" lang="es" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paquetes externos &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.7</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/curso.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Paquetes externos &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.8</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/css/curso.css?v=44266ca0" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/translations.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c1717702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -31,14 +31,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Curso de programación para no programadores con Python.
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Curso de programación para no programadores con Python.
           </a>
-              <div class="version">
-                0.4.7
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -103,22 +104,25 @@
       </nav>
 
       <div class="wy-nav-content">
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Paquetes externos</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Paquetes externos</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/external-packages.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
-  </ul>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="my-modules.html" class="btn btn-neutral float-left" title="Paquetes y módulos" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="requests.html" class="btn btn-neutral float-right" title="Paquete requests" accesskey="n">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
   <section id="paquetes-externos">
-<h1>Paquetes externos<a class="headerlink" href="#paquetes-externos" title="Enlace permanente a este encabezado"></a></h1>
+<h1>Paquetes externos<a class="headerlink" href="#paquetes-externos" title="Link to this heading"></a></h1>
 <p>La construcción de paquetes en Python representan una de las mejores prácticas para
 distribuir código. Aislar correctamente la solución a un problema nos permite reutilizar
 esa porción de código en otros proyectos, y nos permite además compartirlo con la comunidad.
@@ -131,44 +135,44 @@ Para instalar un paquete externo, se usa la herramienta <code class="docutils li
 desde la terminal.</p>
 <p>Si estas usando Git Bash en Windows, es posible que ya tengas instalado <code class="docutils literal notranslate"><span class="pre">pip</span></code>.
 Para probar si ya lo tenes instalado poder ejecutar alguna de estas opciones.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip --version
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>--version
 <span class="c1"># o lo que es lo mismo</span>
-pip -V
+pip<span class="w"> </span>-V
 </pre></div>
 </div>
 <p>Si no recibis un mensaje de error y podes ver la versión de <code class="docutils literal notranslate"><span class="pre">pip</span></code> podes saltearte la
 siguiente sección</p>
 <section id="instalar-pip">
-<h2>Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#instalar-pip" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#instalar-pip" title="Link to this heading"></a></h2>
 <section id="instalar-pip-en-windows">
-<h3>Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code> en Windows<a class="headerlink" href="#instalar-pip-en-windows" title="Enlace permanente a este encabezado"></a></h3>
+<h3>Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code> en Windows<a class="headerlink" href="#instalar-pip-en-windows" title="Link to this heading"></a></h3>
 <p>Descargar el script de instalación <a class="reference external" href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a> y
 ejecutarlo con Python desde tu terminal.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python get-pip.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>get-pip.py
 </pre></div>
 </div>
 </section>
 <section id="instalar-pip-en-linux-ubuntu">
-<h3>Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code> en Linux (Ubuntu)<a class="headerlink" href="#instalar-pip-en-linux-ubuntu" title="Enlace permanente a este encabezado"></a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install python3-pip
+<h3>Instalar <code class="docutils literal notranslate"><span class="pre">pip</span></code> en Linux (Ubuntu)<a class="headerlink" href="#instalar-pip-en-linux-ubuntu" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
 </pre></div>
 </div>
 </section>
 <section id="instalar-paquetes-con-pip">
-<h3>Instalar paquetes con <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#instalar-paquetes-con-pip" title="Enlace permanente a este encabezado"></a></h3>
+<h3>Instalar paquetes con <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#instalar-paquetes-con-pip" title="Link to this heading"></a></h3>
 <p>Una vez instalado pip ya podes instalar paquetes localmente.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install &lt;nombre_paquete&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>&lt;nombre_paquete&gt;
 <span class="c1"># opcionalmente se puede indicar la versión exacta a instalar</span>
-pip install &lt;nombre_paquete&gt;<span class="o">==</span>&lt;version&gt;
+pip<span class="w"> </span>install<span class="w"> </span>&lt;nombre_paquete&gt;<span class="o">==</span>&lt;version&gt;
 <span class="c1"># Instalar una lista de paquetes desde un archivo de texto con los requerimientos</span>
-pip install -r requirements.txt
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </pre></div>
 </div>
 </section>
 </section>
 </section>
 <section id="entornos-virtuales">
-<h1>Entornos virtuales<a class="headerlink" href="#entornos-virtuales" title="Enlace permanente a este encabezado"></a></h1>
+<h1>Entornos virtuales<a class="headerlink" href="#entornos-virtuales" title="Link to this heading"></a></h1>
 <p>Un desarrollador de software en general trabaja sobre más de un proyecto, y por lo tanto
 necesita instalar más de un conjunto de paquetes. Uno para cada proyecto.
 Para evitar conflictos entre las versiones usadas en cada proyecto, se recomienda usar
@@ -178,20 +182,20 @@ un conjunto de paquetes específicos.
 Cada proyeto activa y se ejecuta dentro de estos entornos.
 Python permite crear y activar estos entornos virtuales con el módulo <code class="docutils literal notranslate"><span class="pre">venv</span></code>.</p>
 <section id="crear-un-entorno-virtual">
-<h2>Crear un entorno virtual<a class="headerlink" href="#crear-un-entorno-virtual" title="Enlace permanente a este encabezado"></a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m venv &lt;carpeta_donde_se_creara_el_entorno&gt;
+<h2>Crear un entorno virtual<a class="headerlink" href="#crear-un-entorno-virtual" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;carpeta_donde_se_creara_el_entorno&gt;
 </pre></div>
 </div>
 </section>
 <section id="activar-un-entorno-virtual">
-<h2>Activar un entorno virtual<a class="headerlink" href="#activar-un-entorno-virtual" title="Enlace permanente a este encabezado"></a></h2>
+<h2>Activar un entorno virtual<a class="headerlink" href="#activar-un-entorno-virtual" title="Link to this heading"></a></h2>
 <p>La forma de activación de los entornos virtuales depende del sistema operativo.
 Para Windows el comando para activate un entorno virtual es</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;carpeta_donde_se_creara_el_entorno&gt;<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
 </pre></div>
 </div>
 <p>Para Linux el comando para activar un entorno es</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> &lt;carpeta_donde_se_creara_el_entorno&gt;/bin/activate
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>&lt;carpeta_donde_se_creara_el_entorno&gt;/bin/activate
 </pre></div>
 </div>
 <p>Te vas a dar cuenta que el entorno esta activado porque tu terminal va a agregar
@@ -200,7 +204,7 @@ Una vez activado el entorno, el comando <code class="docutils literal notranslat
 Para desactivar el entorno virtual, ejecutar el comando <code class="docutils literal notranslate"><span class="pre">deactivate</span></code> (el mismo para
 ambos sistemas operativos).</p>
 <section id="tarea">
-<h3>Tarea<a class="headerlink" href="#tarea" title="Enlace permanente a este encabezado"></a></h3>
+<h3>Tarea<a class="headerlink" href="#tarea" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Clonar el repositorio <a class="reference external" href="https://github.com/avdata99/autos-justicia-cordoba-2022">autos justicia 2022</a></p>
 <ul>
