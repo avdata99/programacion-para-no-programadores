@@ -10,6 +10,9 @@
 %% let collapsible pdf bookmarks panel have high depth per default
 \PassOptionsToPackage{bookmarksdepth=5}{hyperref}
 
+\PassOptionsToPackage{booktabs}{sphinx}
+\PassOptionsToPackage{colorrows}{sphinx}
+
 \PassOptionsToPackage{warn}{textcomp}
 \usepackage[utf8]{inputenc}
 \ifdefined\DeclareUnicodeCharacter
@@ -66,8 +69,8 @@
 
 
 \title{Curso de programación Documentation}
-\date{26 de noviembre de 2022}
-\release{v 0.4.7}
+\date{12 de octubre de 2025}
+\release{v 0.4.8}
 \author{Andrés Vázquez}
 \newcommand{\sphinxlogo}{\vbox{}}
 \renewcommand{\releasename}{Versión}
@@ -799,7 +802,7 @@ y opcionalmente devuelve un resultado.
 Veamos un ejemplo:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{def} \PYG{n+nf}{segundos\PYGZus{}en\PYGZus{}un\PYGZus{}dia}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{segundos\PYGZus{}en\PYGZus{}un\PYGZus{}dia}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
     \PYG{n}{segundos\PYGZus{}en\PYGZus{}una\PYGZus{}hora} \PYG{o}{=} \PYG{l+m+mi}{60}
     \PYG{n}{minutos\PYGZus{}en\PYGZus{}una\PYGZus{}hora} \PYG{o}{=} \PYG{l+m+mi}{60}
     \PYG{n}{horas\PYGZus{}en\PYGZus{}un\PYGZus{}dia} \PYG{o}{=} \PYG{l+m+mi}{24}
@@ -871,7 +874,7 @@ Estos parámetros se incluyen dentro de los paréntesis del encabezado de nuestr
 Ejemplo de una función con parámetros.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{def} \PYG{n+nf}{sumar}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{sumar}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}\PYG{p}{:}
     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Se llamo a la funcion sumar con }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{a}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ y }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{b}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
     \PYG{k}{return} \PYG{n}{a} \PYG{o}{+} \PYG{n}{b}
 
@@ -918,7 +921,7 @@ Tomemos el ejemplo de la funcion \sphinxstyleemphasis{potencia} y asumamos que e
 usuarios querrán elevar números al cuadrado.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{def} \PYG{n+nf}{potencia}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{potencia}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{:}
     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Se llamo a la funcion potencia con }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{a}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ y }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{b}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
     \PYG{k}{return} \PYG{n}{a} \PYG{o}{*}\PYG{o}{*} \PYG{n}{b}
 
@@ -1010,7 +1013,7 @@ que funciona como es esperado.}
 \label{\detokenize{fn:algunos-ejemplos-de-uso}}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
-\PYG{k}{def} \PYG{n+nf}{sumar}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{sumar}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}\PYG{p}{:}
     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Se llamo a la funcion sumar con }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{a}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ y }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{b}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
     \PYG{k}{return} \PYG{n}{a} \PYG{o}{+} \PYG{n}{b}
 
@@ -1020,7 +1023,7 @@ que funciona como es esperado.}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
-\PYG{k}{def} \PYG{n+nf}{potencia}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{potencia}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{:}
     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Se llamo a la funcion potencia con }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{a}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ y }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{b}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
     \PYG{k}{return} \PYG{n}{a} \PYG{o}{*}\PYG{o}{*} \PYG{n}{b}
 
@@ -1033,7 +1036,7 @@ que funciona como es esperado.}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
-\PYG{k}{def} \PYG{n+nf}{raiz}\PYG{p}{(}\PYG{n}{numero}\PYG{p}{,} \PYG{n}{raiz}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{raiz}\PYG{p}{(}\PYG{n}{numero}\PYG{p}{,} \PYG{n}{raiz}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{:}
     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Se llamo a la funcion raiz con }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{numero}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ y }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{raiz}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
     \PYG{k}{return} \PYG{n}{numero} \PYG{o}{*}\PYG{o}{*} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{raiz}\PYG{p}{)}
 
@@ -1046,7 +1049,7 @@ que funciona como es esperado.}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
-\PYG{k}{def} \PYG{n+nf}{mi\PYGZus{}function}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwargs}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{mi\PYGZus{}function}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwargs}\PYG{p}{)}\PYG{p}{:}
     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Argumentos sin nombre: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{args}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Argumentos con nombre: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{kwargs}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 
@@ -1259,7 +1262,7 @@ Nota: \sphinxcode{\sphinxupquote{elif}} es una forma abreviada para \sphinxcode{
 Veamos un ejemplo un poco mas complejo de una función que usa \sphinxcode{\sphinxupquote{if/elif/else}}.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{def} \PYG{n+nf}{identificar\PYGZus{}bicho}\PYG{p}{(}\PYG{n}{patas}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{identificar\PYGZus{}bicho}\PYG{p}{(}\PYG{n}{patas}\PYG{p}{)}\PYG{p}{:}
     \PYG{k}{if} \PYG{n}{patas} \PYG{o}{==} \PYG{l+m+mi}{6}\PYG{p}{:}
         \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Es un insecto}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
     \PYG{k}{elif} \PYG{n}{patas} \PYG{o}{==} \PYG{l+m+mi}{8}\PYG{p}{:}
@@ -2143,8 +2146,8 @@ Despues de un proceso de conectar tu cuenta de GitHub, esta ya
 Finalmente, debes ir al menú \sphinxstyleemphasis{View} \sphinxhyphen{}\textgreater{} \sphinxstyleemphasis{Terminal} y colocar:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-git config \PYGZhy{}\PYGZhy{}global user.email \PYG{l+s+s2}{\PYGZdq{}tu\PYGZhy{}email@xxx.com\PYGZdq{}}
-git config \PYGZhy{}\PYGZhy{}global user.name \PYG{l+s+s2}{\PYGZdq{}tu\PYGZus{}nombre\PYGZus{}de\PYGZus{}usuario\PYGZdq{}}
+git\PYG{+w}{ }config\PYG{+w}{ }\PYGZhy{}\PYGZhy{}global\PYG{+w}{ }user.email\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}tu\PYGZhy{}email@xxx.com\PYGZdq{}}
+git\PYG{+w}{ }config\PYG{+w}{ }\PYGZhy{}\PYGZhy{}global\PYG{+w}{ }user.name\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}tu\PYGZus{}nombre\PYGZus{}de\PYGZus{}usuario\PYGZdq{}}
 \end{sphinxVerbatim}
 
 \noindent\sphinxincludegraphics{{vscode-terminal}.png}
@@ -2233,9 +2236,9 @@ Desde tu terminal esto puede hacerse así:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} posicionarme en la rama principal}
-git checkout master
+git\PYG{+w}{ }checkout\PYG{+w}{ }master
 \PYG{c+c1}{\PYGZsh{} traer (pull) los ultimos cambios}
-git pull
+git\PYG{+w}{ }pull
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -2265,7 +2268,7 @@ Desde tu terminal esto puede hacerse con:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} posicionarme en la rama principal}
-git checkout \PYGZhy{}b nombre\PYGZus{}de\PYGZus{}mi\PYGZus{}rama
+git\PYG{+w}{ }checkout\PYG{+w}{ }\PYGZhy{}b\PYG{+w}{ }nombre\PYGZus{}de\PYGZus{}mi\PYGZus{}rama
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -2293,7 +2296,7 @@ Desde tu terminal esto puede hacerse con:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} agregar los cambios en un archivo a lo que será nuestro commit}
-git add archivo\PYGZus{}que\PYGZus{}cambio.py
+git\PYG{+w}{ }add\PYG{+w}{ }archivo\PYGZus{}que\PYGZus{}cambio.py
 \end{sphinxVerbatim}
 
 \noindent\sphinxincludegraphics{{vscode-add}.png}
@@ -2314,7 +2317,7 @@ Desde tu terminal esto puede hacerse con:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} agregar los cambios en un archivo a lo que será nuestro commit}
-git commit \PYGZhy{}m \PYG{l+s+s2}{\PYGZdq{}Descripcion de mi cambio\PYGZdq{}}
+git\PYG{+w}{ }commit\PYG{+w}{ }\PYGZhy{}m\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Descripcion de mi cambio\PYGZdq{}}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -2338,7 +2341,7 @@ Desde tu terminal esto puede hacerse con:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} agregar los cambios en un archivo a lo que será nuestro commit}
-git push
+git\PYG{+w}{ }push
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -2404,7 +2407,7 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
 
-\PYG{k}{def} \PYG{n+nf}{hola}\PYG{p}{(}\PYG{n}{nombre}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{hola}\PYG{p}{(}\PYG{n}{nombre}\PYG{p}{)}\PYG{p}{:}
     \PYG{k}{pass}
 
 \PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
@@ -2442,7 +2445,7 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
 
-\PYG{k}{def} \PYG{n+nf}{suma}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{suma}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}\PYG{p}{:}
     \PYG{k}{pass}
 
 
@@ -2659,7 +2662,11 @@ eliminan automáticamente).
 
 
 \section{Tareas}
-\label{\detokenize{dict:tareas}}\begin{itemize}
+\label{\detokenize{dict:tareas}}
+\sphinxAtStartPar
+Nota: Si no completaste los módulos de Git y GitHub deberás reemplazar \sphinxstyleemphasis{Hacer un PR}
+por \sphinxstyleemphasis{Enviar tu versión modificada}.
+\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 Hacer un PR con una propuesta de solución para el
@@ -2679,7 +2686,7 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
 
-\PYG{k}{def} \PYG{n+nf}{cambia\PYGZus{}vocales}\PYG{p}{(}\PYG{n}{frase}\PYG{p}{,} \PYG{n}{vocal}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{a}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{cambia\PYGZus{}vocales}\PYG{p}{(}\PYG{n}{frase}\PYG{p}{,} \PYG{n}{vocal}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{a}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{:}
     \PYG{k}{pass}
 
 
@@ -2725,8 +2732,8 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
 
-\PYG{k}{def} \PYG{n+nf}{contar\PYGZus{}palabras}\PYG{p}{(}\PYG{n}{frase}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} }
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{contar\PYGZus{}palabras}\PYG{p}{(}\PYG{n}{frase}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} }
 \PYG{l+s+sd}{    Esta funcion toma una frase y devuelve un diccionario}
 \PYG{l+s+sd}{    con una llave por cada palabra y un valor igual a la}
 \PYG{l+s+sd}{    cantidad de veces que aparece en la frase}
@@ -2805,8 +2812,8 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
 
-\PYG{k}{def} \PYG{n+nf}{contar\PYGZus{}si}\PYG{p}{(}\PYG{n}{lista}\PYG{p}{,} \PYG{n}{propiedad}\PYG{p}{,} \PYG{n}{valor}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} }
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{contar\PYGZus{}si}\PYG{p}{(}\PYG{n}{lista}\PYG{p}{,} \PYG{n}{propiedad}\PYG{p}{,} \PYG{n}{valor}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} }
 \PYG{l+s+sd}{    Esta funcion cuenta la cantidad de elementos (diccionarios) en \PYGZdq{}lista\PYGZdq{}}
 \PYG{l+s+sd}{    que tiene una \PYGZdq{}propiedad\PYGZdq{} con un \PYGZdq{}valor\PYGZdq{} específico.}
 \PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
@@ -2868,8 +2875,8 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
 
-\PYG{k}{def} \PYG{n+nf}{agregar\PYGZus{}item}\PYG{p}{(}\PYG{n}{factura}\PYG{p}{,} \PYG{n}{producto}\PYG{p}{,} \PYG{n}{precio\PYGZus{}unitario}\PYG{p}{,} \PYG{n}{cantidad}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{agregar\PYGZus{}item}\PYG{p}{(}\PYG{n}{factura}\PYG{p}{,} \PYG{n}{producto}\PYG{p}{,} \PYG{n}{precio\PYGZus{}unitario}\PYG{p}{,} \PYG{n}{cantidad}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 \PYG{l+s+sd}{    Agregar un item a una factura que se pasa como parámetro}
 \PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     \PYG{n}{precio\PYGZus{}total} \PYG{o}{=} \PYG{n}{cantidad} \PYG{o}{*} \PYG{n}{precio\PYGZus{}unitario}
@@ -2883,8 +2890,8 @@ Hacer un PR con una propuesta de solución para el
     \PYG{n}{factura}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{items}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{item}\PYG{p}{)}
     \PYG{n}{factura}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{total}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{+}\PYG{o}{=} \PYG{n}{precio\PYGZus{}total}
 
-\PYG{k}{def} \PYG{n+nf}{crear\PYGZus{}factura}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Crear una factura \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{crear\PYGZus{}factura}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Crear una factura \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     \PYG{n}{factura} \PYG{o}{=} \PYG{p}{\PYGZob{}}
         \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{total}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
         \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{items}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{p}{]}  \PYG{c+c1}{\PYGZsh{} lista de items}
@@ -2935,7 +2942,7 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
 
-\PYG{k}{def} \PYG{n+nf}{crear\PYGZus{}mazo\PYGZus{}cartas\PYGZus{}espaniolas}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{crear\PYGZus{}mazo\PYGZus{}cartas\PYGZus{}espaniolas}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
     \PYG{n}{palos} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{oro}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{copa}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{espada}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{basto}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
     \PYG{n}{mazo} \PYG{o}{=} \PYG{p}{[}\PYG{p}{]}
     \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{)}\PYG{p}{:}
@@ -2989,7 +2996,7 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
 
-\PYG{k}{def} \PYG{n+nf}{crear\PYGZus{}mazo\PYGZus{}cartas\PYGZus{}poker}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{crear\PYGZus{}mazo\PYGZus{}cartas\PYGZus{}poker}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
     \PYG{n}{palos} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{trebol}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{corazon}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
     \PYG{n}{mazo} \PYG{o}{=} \PYG{p}{[}\PYG{p}{]}
 
@@ -3146,13 +3153,13 @@ Veamos un ejemplo. La función \sphinxcode{\sphinxupquote{randint}} genera numer
 entre dos valores pasados como parámetros.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{from} \PYG{n+nn}{random} \PYG{k+kn}{import} \PYG{n}{randint}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{random}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{randint}
 
 \PYG{n}{al\PYGZus{}azar} \PYG{o}{=} \PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{)}
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{al\PYGZus{}azar}\PYG{p}{)}
 
 \PYG{c+c1}{\PYGZsh{} otra forma de usarlo podría ser}
-\PYG{k+kn}{import} \PYG{n+nn}{random}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{random}
 \PYG{n}{al\PYGZus{}azar} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{)}
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{al\PYGZus{}azar}\PYG{p}{)}
 \end{sphinxVerbatim}
@@ -3169,7 +3176,7 @@ La función \sphinxcode{\sphinxupquote{choice}} recibe como parámetro una lista
 devolverá un elemento al azar.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{from} \PYG{n+nn}{random} \PYG{k+kn}{import} \PYG{n}{choice}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{random}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{choice}
 
 \PYG{n}{opciones} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{piedra}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{papel}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{tijeras}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]}
 \PYG{n}{opcion\PYGZus{}elegida} \PYG{o}{=} \PYG{n}{choice}\PYG{p}{(}\PYG{n}{opciones}\PYG{p}{)}
@@ -3188,7 +3195,7 @@ como parámetro y la desordena aleatoriamente.
 Ejemplo:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{from} \PYG{n+nn}{random} \PYG{k+kn}{import} \PYG{n}{shuffle}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{random}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{shuffle}
 
 \PYG{n}{mazo} \PYG{o}{=} \PYG{p}{[}
     \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{numero}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{palo}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{espada}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{\PYGZcb{}}\PYG{p}{,}
@@ -3231,9 +3238,9 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{Nota: se debe importar y usar la funcion \PYGZdq{}randint\PYGZdq{} de \PYGZdq{}random\PYGZdq{}}
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
-\PYG{k+kn}{from} \PYG{n+nn}{random} \PYG{k+kn}{import} \PYG{n}{choice}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{random}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{choice}
 
-\PYG{k}{def} \PYG{n+nf}{carta\PYGZus{}poker\PYGZus{}al\PYGZus{}azar}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{carta\PYGZus{}poker\PYGZus{}al\PYGZus{}azar}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
     \PYG{n}{palos} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pica}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{trebol}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{corazon}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diamante}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
     \PYG{n}{numeros} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{J}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Q}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{K}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
     \PYG{n}{nro} \PYG{o}{=} \PYG{n}{choice}\PYG{p}{(}\PYG{n}{numeros}\PYG{p}{)}
@@ -3242,7 +3249,7 @@ Hacer un PR con una propuesta de solución para el
     \PYG{n}{carta} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{numero}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{n}{nro}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{palo}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{n}{palo}\PYG{p}{\PYGZcb{}}
     \PYG{k}{return} \PYG{n}{carta}
 
-\PYG{k}{def} \PYG{n+nf}{carta\PYGZus{}espaniola\PYGZus{}al\PYGZus{}azar}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{carta\PYGZus{}espaniola\PYGZus{}al\PYGZus{}azar}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
     \PYG{n}{palos} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{oro}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{basto}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{espada}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{copa}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
     
     \PYG{c+c1}{\PYGZsh{} corregir estas dos lineas para devolver valores válidos}
@@ -3301,8 +3308,8 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
 
-\PYG{k}{def} \PYG{n+nf}{generar\PYGZus{}quiniela}\PYG{p}{(}\PYG{n}{minimo}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{maximo}\PYG{o}{=}\PYG{l+m+mi}{9999}\PYG{p}{,} \PYG{n}{total\PYGZus{}numeros}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Generar varios numeros al azar definidos}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{generar\PYGZus{}quiniela}\PYG{p}{(}\PYG{n}{minimo}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{maximo}\PYG{o}{=}\PYG{l+m+mi}{9999}\PYG{p}{,} \PYG{n}{total\PYGZus{}numeros}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Generar varios numeros al azar definidos}
 \PYG{l+s+sd}{        entre máximo y minimo (sin numeros duplicados) \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     \PYG{k}{return} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{]}
 
@@ -3377,10 +3384,10 @@ Hacer un PR con una propuesta de solución para el
 \PYG{l+s+sd}{entender como funciona y por que falla.}
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
-\PYG{k+kn}{from} \PYG{n+nn}{random} \PYG{k+kn}{import} \PYG{n}{randint}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{random}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{randint}
 
-\PYG{k}{def} \PYG{n+nf}{tirar\PYGZus{}dados}\PYG{p}{(}\PYG{n}{lados}\PYG{o}{=}\PYG{l+m+mi}{6}\PYG{p}{,} \PYG{n}{veces}\PYG{o}{=}\PYG{l+m+mi}{100}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Generar aleatoriamente los tiros de un lado de cantidad}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{tirar\PYGZus{}dados}\PYG{p}{(}\PYG{n}{lados}\PYG{o}{=}\PYG{l+m+mi}{6}\PYG{p}{,} \PYG{n}{veces}\PYG{o}{=}\PYG{l+m+mi}{100}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Generar aleatoriamente los tiros de un lado de cantidad}
 \PYG{l+s+sd}{        de lados variable.}
 \PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     
@@ -3391,8 +3398,8 @@ Hacer un PR con una propuesta de solución para el
     
     \PYG{k}{return} \PYG{n}{tiros}
 
-\PYG{k}{def} \PYG{n+nf}{detectar\PYGZus{}escaleras}\PYG{p}{(}\PYG{n}{lista\PYGZus{}tiros}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Detectar las escaleras ascendentes encontradas}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{detectar\PYGZus{}escaleras}\PYG{p}{(}\PYG{n}{lista\PYGZus{}tiros}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Detectar las escaleras ascendentes encontradas}
 \PYG{l+s+sd}{        en los tiros de al menos 3 elementos \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     
     \PYG{c+c1}{\PYGZsh{} aqui guardamos las escaleras que se consiguieron con 3 o más elementos}
@@ -3500,7 +3507,7 @@ Si solo necesitamos una fecha general solo con día + mes + año podemos usar
 objetos de tipo \sphinxcode{\sphinxupquote{date}}.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{date}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{datetime}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{date}
 
 \PYG{n}{hoy} \PYG{o}{=} \PYG{n}{date}\PYG{o}{.}\PYG{n}{today}\PYG{p}{(}\PYG{p}{)}
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{hoy}\PYG{p}{)}
@@ -3519,7 +3526,7 @@ objetos de tipo \sphinxcode{\sphinxupquote{date}}.
 Para sumar o restar persiodos de tiempo a una fecha existe \sphinxcode{\sphinxupquote{timedelta}}:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{date}\PYG{p}{,} \PYG{n}{timedelta}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{datetime}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{date}\PYG{p}{,} \PYG{n}{timedelta}
 \PYG{n}{hoy} \PYG{o}{=} \PYG{n}{date}\PYG{o}{.}\PYG{n}{today}\PYG{p}{(}\PYG{p}{)}
 \PYG{n}{manana} \PYG{o}{=} \PYG{n}{hoy} \PYG{o}{+} \PYG{n}{timedelta}\PYG{p}{(}\PYG{n}{days}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{manana}\PYG{p}{)}
@@ -3538,7 +3545,7 @@ son cosas distintas. Uno es la libreria y otro es la clase para construir
 fecha/horas o datetimes.}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime}\PYG{p}{,} \PYG{n}{timedelta}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{datetime}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{datetime}\PYG{p}{,} \PYG{n}{timedelta}
 
 \PYG{n}{ahora} \PYG{o}{=} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{now}\PYG{p}{(}\PYG{p}{)}
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{ahora}\PYG{p}{)}
@@ -3570,7 +3577,7 @@ Para estos casos se usan las funciones \sphinxcode{\sphinxupquote{strftime}} (fe
 string) y \sphinxcode{\sphinxupquote{strptime}} (string a fecha).
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{date}\PYG{p}{,} \PYG{n}{datetime}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{datetime}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{date}\PYG{p}{,} \PYG{n}{datetime}
 
 \PYG{n}{hoy} \PYG{o}{=} \PYG{n}{date}\PYG{o}{.}\PYG{n}{today}\PYG{p}{(}\PYG{p}{)}
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{hoy}\PYG{o}{.}\PYG{n}{strftime}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s2}{/}\PYG{l+s+s2}{\PYGZpc{}}\PYG{l+s+s2}{m/}\PYG{l+s+s2}{\PYGZpc{}}\PYG{l+s+s2}{Y}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{)}
@@ -3624,8 +3631,8 @@ Veamos un ejemplo basico. Queremos definir un tipo de dato nuevo: \sphinxcode{\s
 
 \fvset{hllines={, 1,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\},numbers=left,firstnumber=1,stepnumber=1]
-\PYG{k}{class} \PYG{n+nc}{Persona}\PYG{p}{:}
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{nombre}\PYG{p}{,} \PYG{n}{apellido}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Persona}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{nombre}\PYG{p}{,} \PYG{n}{apellido}\PYG{p}{)}\PYG{p}{:}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nombre} \PYG{o}{=} \PYG{n}{nombre}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{apellido} \PYG{o}{=} \PYG{n}{apellido}
 
@@ -3770,8 +3777,8 @@ Estas líneas …
 
 \fvset{hllines={, 3, 4,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{class} \PYG{n+nc}{Persona}\PYG{p}{:}
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{nombre}\PYG{p}{,} \PYG{n}{apellido}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Persona}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{nombre}\PYG{p}{,} \PYG{n}{apellido}\PYG{p}{)}\PYG{p}{:}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nombre} \PYG{o}{=} \PYG{n}{nombre}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{apellido} \PYG{o}{=} \PYG{n}{apellido}
 \end{sphinxVerbatim}
@@ -3833,17 +3840,17 @@ si los usuarios de nuestra clase usan estas propiedades privadas.
 
 \fvset{hllines={, 3, 4, 8, 12,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\},numbers=left,firstnumber=1,stepnumber=1]
-\PYG{k}{class} \PYG{n+nc}{Persona}\PYG{p}{:}
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{nombre}\PYG{p}{,} \PYG{n}{apellido}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Persona}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{nombre}\PYG{p}{,} \PYG{n}{apellido}\PYG{p}{)}\PYG{p}{:}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre} \PYG{o}{=} \PYG{n}{nombre}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido} \PYG{o}{=} \PYG{n}{apellido}
 
     \PYG{n+nd}{@property}
-    \PYG{k}{def} \PYG{n+nf}{nombre}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{nombre}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre}
 
     \PYG{n+nd}{@property}
-    \PYG{k}{def} \PYG{n+nf}{apellido}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{apellido}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido}
 \end{sphinxVerbatim}
 \sphinxresetverbatimhllines
@@ -3892,7 +3899,7 @@ Veamos un ejemplo de \sphinxcode{\sphinxupquote{setter}} para la propiedad \sphi
 \fvset{hllines={, 3, 4, 8,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\},numbers=left,firstnumber=1,stepnumber=1]
 \PYG{n+nd}{@nombre}\PYG{o}{.}\PYG{n}{setter}
-\PYG{k}{def} \PYG{n+nf}{nombre}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{nombre}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}\PYG{p}{:}
     \PYG{c+c1}{\PYGZsh{} Antes de escribir mi variable privada \PYGZus{}nombre, revisar que}
     \PYG{c+c1}{\PYGZsh{} cuampla con los requisitos definidos}
     \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{value}\PYG{p}{)} \PYG{o}{!=} \PYG{n+nb}{str}\PYG{p}{:}
@@ -3930,13 +3937,13 @@ Es posible tambien definir propiedades personalizadas a gusto.
 \fvset{hllines={, 2, 7,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\},numbers=left,firstnumber=1,stepnumber=1]
 \PYG{n+nd}{@property}
-\PYG{k}{def} \PYG{n+nf}{nombre\PYGZus{}completo}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{nombre\PYGZus{}completo}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
 
 \PYG{n+nd}{@property}
-\PYG{k}{def} \PYG{n+nf}{nombre\PYGZus{}formal}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{nombre\PYGZus{}formal}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{, }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
 \end{sphinxVerbatim}
 \sphinxresetverbatimhllines
@@ -3970,13 +3977,13 @@ de otras propiedades básica. Solo se puede leer.
 Es también posible definir funciones
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{def} \PYG{n+nf}{limpiar}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Mejorar el nombre y el apellido \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{limpiar}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Mejorar el nombre y el apellido \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{(}\PYG{p}{)}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{p}{)}
     \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{(}\PYG{p}{)}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{p}{)}
 
-\PYG{k}{def} \PYG{n+nf}{encabezado}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{titulo}\PYG{p}{,} \PYG{n}{limpiar}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Genera y devuelve el nombre completo con}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{encabezado}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{titulo}\PYG{p}{,} \PYG{n}{limpiar}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Genera y devuelve el nombre completo con}
 \PYG{l+s+sd}{        \PYGZdq{}Sr.\PYGZdq{} \PYGZdq{}Sra.\PYGZdq{} o algun otro titulo.}
 \PYG{l+s+sd}{        Opcionalmente se puede limpiar el nombre \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     \PYG{c+c1}{\PYGZsh{} limpiar el nombre si se solicita}
@@ -3986,12 +3993,12 @@ Es también posible definir funciones
 
 \PYG{c+c1}{\PYGZsh{} podemos tambien emular el comportamiento de los strings}
 \PYG{c+c1}{\PYGZsh{} e incluso copiar nombres de funciones de ellos}
-\PYG{k}{def} \PYG{n+nf}{lower}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo en minusculas \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{lower}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo en minusculas \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nombre\PYGZus{}completo}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{(}\PYG{p}{)}
 
-\PYG{k}{def} \PYG{n+nf}{upper}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo en minusculas \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{upper}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo en minusculas \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nombre\PYGZus{}completo}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{(}\PYG{p}{)}
 \end{sphinxVerbatim}
 
@@ -4035,48 +4042,48 @@ Código de la clase final
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
-\PYG{k}{class} \PYG{n+nc}{Persona}\PYG{p}{:}
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{nombre}\PYG{p}{,} \PYG{n}{apellido}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Persona}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{nombre}\PYG{p}{,} \PYG{n}{apellido}\PYG{p}{)}\PYG{p}{:}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre} \PYG{o}{=} \PYG{n}{nombre}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido} \PYG{o}{=} \PYG{n}{apellido}
 
     \PYG{n+nd}{@property}
-    \PYG{k}{def} \PYG{n+nf}{nombre}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{nombre}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre}
 
     \PYG{n+nd}{@nombre}\PYG{o}{.}\PYG{n}{setter}
-    \PYG{k}{def} \PYG{n+nf}{nombre}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{nombre}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{value}\PYG{p}{)} \PYG{o}{!=} \PYG{n+nb}{str}\PYG{p}{:}
             \PYG{k}{raise} \PYG{n+ne}{Exception}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Nombre inválido. Solo string permitido}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre} \PYG{o}{=} \PYG{n}{value}
 
     \PYG{n+nd}{@property}
-    \PYG{k}{def} \PYG{n+nf}{apellido}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{apellido}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre}
 
     \PYG{n+nd}{@nombre}\PYG{o}{.}\PYG{n}{setter}
-    \PYG{k}{def} \PYG{n+nf}{apellido}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{apellido}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{value}\PYG{p}{)} \PYG{o}{!=} \PYG{n+nb}{str}\PYG{p}{:}
             \PYG{k}{raise} \PYG{n+ne}{Exception}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Apellido inválido. Solo string permitido}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre} \PYG{o}{=} \PYG{n}{value}
 
     \PYG{n+nd}{@property}
-    \PYG{k}{def} \PYG{n+nf}{nombre\PYGZus{}completo}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{nombre\PYGZus{}completo}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo \PYGZdq{}\PYGZdq{}\PYGZdq{}}
         \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
 
     \PYG{n+nd}{@property}
-    \PYG{k}{def} \PYG{n+nf}{nombre\PYGZus{}formal}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo en modo formal \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{nombre\PYGZus{}formal}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo en modo formal \PYGZdq{}\PYGZdq{}\PYGZdq{}}
         \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{, }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
 
-    \PYG{k}{def} \PYG{n+nf}{limpiar}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Mejorar el nombre y el apellido \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{limpiar}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Mejorar el nombre y el apellido \PYGZdq{}\PYGZdq{}\PYGZdq{}}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}nombre}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{(}\PYG{p}{)}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{p}{)}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}apellido}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{(}\PYG{p}{)}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{p}{)}
 
-    \PYG{k}{def} \PYG{n+nf}{encabezado}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{titulo}\PYG{p}{,} \PYG{n}{limpiar}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Genera y devuelve el nombre completo con}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{encabezado}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{titulo}\PYG{p}{,} \PYG{n}{limpiar}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Genera y devuelve el nombre completo con}
 \PYG{l+s+sd}{            \PYGZdq{}Sr.\PYGZdq{} \PYGZdq{}Sra.\PYGZdq{} o algun otro titulo.}
 \PYG{l+s+sd}{            Opcionalmente se puede limpiar el nombre \PYGZdq{}\PYGZdq{}\PYGZdq{}}
         \PYG{c+c1}{\PYGZsh{} limpiar el nombre si se solicita}
@@ -4086,12 +4093,12 @@ Código de la clase final
 
     \PYG{c+c1}{\PYGZsh{} podemos tambien emular el comportamiento de los strings}
     \PYG{c+c1}{\PYGZsh{} e incluso copiar nombres de funciones de ellos}
-    \PYG{k}{def} \PYG{n+nf}{lower}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo en minusculas \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{lower}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo en minusculas \PYGZdq{}\PYGZdq{}\PYGZdq{}}
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nombre\PYGZus{}completo}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{(}\PYG{p}{)}
 
-    \PYG{k}{def} \PYG{n+nf}{upper}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo en minusculas \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{upper}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} devuelve el nombre completo en minusculas \PYGZdq{}\PYGZdq{}\PYGZdq{}}
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nombre\PYGZus{}completo}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{(}\PYG{p}{)}
 \end{sphinxVerbatim}
 
@@ -4138,30 +4145,30 @@ para validar que el \sphinxcode{\sphinxupquote{numero}} es mayor que cero y meno
 \PYG{l+s+sd}{Clase Carta para juegos de cartas}
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
-\PYG{k}{class} \PYG{n+nc}{Carta}\PYG{p}{:}
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{numero}\PYG{p}{,} \PYG{n}{palo}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Carta}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{numero}\PYG{p}{,} \PYG{n}{palo}\PYG{p}{)}\PYG{p}{:}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}numero} \PYG{o}{=} \PYG{n}{numero}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}palo} \PYG{o}{=} \PYG{n}{palo}
 
     \PYG{n+nd}{@property}
-    \PYG{k}{def} \PYG{n+nf}{numero}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{numero}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}numero}
 
     \PYG{n+nd}{@numero}\PYG{o}{.}\PYG{n}{setter}
-    \PYG{k}{def} \PYG{n+nf}{numero}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{numero}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{value}\PYG{p}{)} \PYG{o}{!=} \PYG{n+nb}{int}\PYG{p}{:}
             \PYG{k}{raise} \PYG{n+ne}{Exception}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Solo están permitidos numeros}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}numero} \PYG{o}{=} \PYG{n}{value}
 
     \PYG{n+nd}{@property}
-    \PYG{k}{def} \PYG{n+nf}{palo}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{palo}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}palo}
 
     \PYG{n+nd}{@palo}\PYG{o}{.}\PYG{n}{setter}
-    \PYG{k}{def} \PYG{n+nf}{palo}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{palo}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}\PYG{p}{:}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}palo} \PYG{o}{=} \PYG{n}{value}
 
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{numero}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ de }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{palo}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
 
 \PYG{c+c1}{\PYGZsh{} Pruebas}
@@ -4200,14 +4207,14 @@ No esta definida porque esta suma no tendría sentido en estos objetos.
 Veamos un ejemplo donde si pudiera ser útil.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{class} \PYG{n+nc}{FacturaServicio}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Cada factura para el pago de servicios hogareños \PYGZdq{}\PYGZdq{}\PYGZdq{}}
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{monto}\PYG{p}{,} \PYG{n}{servicio}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{FacturaServicio}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Cada factura para el pago de servicios hogareños \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{monto}\PYG{p}{,} \PYG{n}{servicio}\PYG{p}{)}\PYG{p}{:}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{monto} \PYG{o}{=} \PYG{n}{monto}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{servicio} \PYG{o}{=} \PYG{n}{servicio}
 
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}add\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Sumar esta factura a otra factura}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}add\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Sumar esta factura a otra factura}
 \PYG{l+s+sd}{            Notar que el resultado no es otro objeto de este tipo,}
 \PYG{l+s+sd}{            es solo un numero.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{otro}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{FacturaServicio}\PYG{p}{:}
@@ -4247,7 +4254,7 @@ Es probablemente la función especial más usada. Se usa para definir que texto 
 cuando el usuario necesite una representación \sphinxstyleemphasis{string} de este objeto.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
     \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{} }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{monto}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ a pagar por el servicio de }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{servicio}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
 \end{sphinxVerbatim}
 
@@ -4274,8 +4281,8 @@ Al igual que \sphinxcode{\sphinxupquote{\_\_add\_\_}}, podríamos comparar nuest
 (este no es el caso).
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}eq\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Revisar si son iguales a otra factura \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}eq\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Revisar si son iguales a otra factura \PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
     \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{otro}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{FacturaServicio}\PYG{p}{:}
         \PYG{k}{raise} \PYG{n+ne}{Exception}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{La comparacion solo está permitida para objetos del mismo tipo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
@@ -4321,14 +4328,14 @@ Disponible \sphinxhref{https://github.com/avdata99/programacion-para-no-programa
 \end{footnote}.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{class} \PYG{n+nc}{FacturaServicio}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Cada factura para el pago de servicios hogareños \PYGZdq{}\PYGZdq{}\PYGZdq{}}
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{monto}\PYG{p}{,} \PYG{n}{servicio}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{FacturaServicio}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Cada factura para el pago de servicios hogareños \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{monto}\PYG{p}{,} \PYG{n}{servicio}\PYG{p}{)}\PYG{p}{:}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{monto} \PYG{o}{=} \PYG{n}{monto}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{servicio} \PYG{o}{=} \PYG{n}{servicio}
 
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}add\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Sumar esta factura a otra factura }
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}add\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Sumar esta factura a otra factura }
 \PYG{l+s+sd}{            Notar que el resultado no es otro objeto de este tipo,}
 \PYG{l+s+sd}{            es solo un numero.\PYGZdq{}\PYGZdq{}\PYGZdq{}}
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{otro}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{FacturaServicio}\PYG{p}{:}
@@ -4336,11 +4343,11 @@ Disponible \sphinxhref{https://github.com/avdata99/programacion-para-no-programa
 
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{monto} \PYG{o}{+} \PYG{n}{otro}\PYG{o}{.}\PYG{n}{monto}
 
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{} }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{monto}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ a pagar por el servicio de }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{servicio}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
 
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}eq\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Revisar si son iguales a otra factura \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}eq\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Revisar si son iguales a otra factura \PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{otro}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{FacturaServicio}\PYG{p}{:}
             \PYG{k}{raise} \PYG{n+ne}{Exception}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{La comparacion solo está permitida para objetos del mismo tipo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
@@ -4442,10 +4449,10 @@ para agregar la función \sphinxcode{\sphinxupquote{\_\_eq\_\_}} para que devuel
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
 
-\PYG{k}{class} \PYG{n+nc}{Fraccion}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Clase para manejar fracciones de numeros enteros positivos \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Fraccion}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Clase para manejar fracciones de numeros enteros positivos \PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{numerador}\PYG{p}{,} \PYG{n}{denominador}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{numerador}\PYG{p}{,} \PYG{n}{denominador}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{numerador}\PYG{p}{)} \PYG{o}{!=} \PYG{n+nb}{int} \PYG{o+ow}{or} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{denominador}\PYG{p}{)} \PYG{o}{!=} \PYG{n+nb}{int}\PYG{p}{:}
             \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Solo numeros enteros aceptados}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
         \PYG{k}{if} \PYG{n}{numerador} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{0} \PYG{o+ow}{or} \PYG{n}{denominador} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{:}
@@ -4456,11 +4463,11 @@ para agregar la función \sphinxcode{\sphinxupquote{\_\_eq\_\_}} para que devuel
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}simplificar}\PYG{p}{(}\PYG{p}{)}
 
     \PYG{n+nd}{@property}
-    \PYG{k}{def} \PYG{n+nf}{numerador}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{numerador}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}numerador}
     
     \PYG{n+nd}{@numerador}\PYG{o}{.}\PYG{n}{setter}
-    \PYG{k}{def} \PYG{n+nf}{numerador}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{num}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{numerador}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{num}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{num}\PYG{p}{)} \PYG{o}{!=} \PYG{n+nb}{int}\PYG{p}{:}
             \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tipo de dato no admitido para numerador}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
         \PYG{k}{if} \PYG{n}{num} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{:}
@@ -4469,11 +4476,11 @@ para agregar la función \sphinxcode{\sphinxupquote{\_\_eq\_\_}} para que devuel
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}simplificar}\PYG{p}{(}\PYG{p}{)}
 
     \PYG{n+nd}{@property}
-    \PYG{k}{def} \PYG{n+nf}{denominador}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{denominador}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}denominador}
     
     \PYG{n+nd}{@denominador}\PYG{o}{.}\PYG{n}{setter}
-    \PYG{k}{def} \PYG{n+nf}{denominador}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{den}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{denominador}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{den}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{den}\PYG{p}{)} \PYG{o}{!=} \PYG{n+nb}{int}\PYG{p}{:}
             \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Tipo de dato no admitido para denominador}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
         \PYG{k}{if} \PYG{n}{den} \PYG{o}{\PYGZlt{}}\PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{:}
@@ -4481,8 +4488,8 @@ para agregar la función \sphinxcode{\sphinxupquote{\_\_eq\_\_}} para que devuel
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}denominador} \PYG{o}{=} \PYG{n}{den}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}simplificar}\PYG{p}{(}\PYG{p}{)}
 
-    \PYG{k}{def} \PYG{n+nf}{\PYGZus{}simplificar}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Simplificar la fraccion a los numeros mas bajos posibles \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{\PYGZus{}simplificar}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Simplificar la fraccion a los numeros mas bajos posibles \PYGZdq{}\PYGZdq{}\PYGZdq{}}
         \PYG{n}{men} \PYG{o}{=} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}numerador}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}denominador}\PYG{p}{)}
         \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{men}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{:}
             \PYG{c+c1}{\PYGZsh{} Si este numero divide a los dos, entonces los divido}
@@ -4491,8 +4498,8 @@ para agregar la función \sphinxcode{\sphinxupquote{\_\_eq\_\_}} para que devuel
                 \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}denominador} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}denominador} \PYG{o}{/} \PYG{n}{n}\PYG{p}{)}
                 \PYG{k}{break}
 
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}add\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
-        \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Sumar fracciones\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}add\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Sumar fracciones\PYGZdq{}\PYGZdq{}\PYGZdq{}}
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{otro}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{Fraccion}\PYG{p}{:}
             \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Solo suma aceptada entre fracciones}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
     
@@ -4501,16 +4508,16 @@ para agregar la función \sphinxcode{\sphinxupquote{\_\_eq\_\_}} para que devuel
 
         \PYG{k}{return} \PYG{n}{Fraccion}\PYG{p}{(}\PYG{n}{nuevo\PYGZus{}numerador}\PYG{p}{,} \PYG{n}{nuevo\PYGZus{}denominador}\PYG{p}{)}
 
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}eq\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}eq\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{otro}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{otro}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{Fraccion}\PYG{p}{:}
             \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{No son objetos iguales}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 
         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}numerador} \PYG{o}{==} \PYG{n}{otro}\PYG{o}{.}\PYG{n}{numerador} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}denominador} \PYG{o}{==} \PYG{n}{otro}\PYG{o}{.}\PYG{n}{denominador}
 
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{(}\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}numerador}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ / }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}denominador}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{)}\PYG{l+s+s1}{\PYGZsq{}}
 
-    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}repr\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}repr\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{p}{:}
         \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZlt{}Fraccion }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}numerador}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ / }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}denominador}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZgt{}}\PYG{l+s+s1}{\PYGZsq{}}
 
 
@@ -4529,7 +4536,7 @@ para agregar la función \sphinxcode{\sphinxupquote{\_\_eq\_\_}} para que devuel
 \PYG{k}{assert} \PYG{n}{f1} \PYG{o}{==} \PYG{n}{Fraccion}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
 
 \PYG{n}{f1}\PYG{o}{.}\PYG{n}{numerador} \PYG{o}{=} \PYG{l+m+mi}{2}
-\PYG{k}{assert} \PYG{n}{f1} \PYG{o}{==} \PYG{n}{Fraccion}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{f1}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ no es igual a }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{Fraccion}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
+\PYG{k}{assert} \PYG{n}{f1} \PYG{o}{==} \PYG{n}{Fraccion}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{f1}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ no es igual a }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{Fraccion}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
 
 \PYG{n}{f1}\PYG{o}{.}\PYG{n}{denominador} \PYG{o}{=} \PYG{l+m+mi}{8}
 \PYG{k}{assert} \PYG{n}{f1} \PYG{o}{==} \PYG{n}{Fraccion}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}
@@ -4588,7 +4595,7 @@ Para indicar que una carpeta es un paquete alcanza con agregarle un archivo llam
 \centering
 \capstart
 
-\sphinxincludegraphics[]{graphviz-16754c4d8191cffa9801398f7d26d5cf82f3df74.pdf}
+\sphinxincludegraphics[]{graphviz-83654dbe8a0fff92a4fb3a939b0b0e1a936f6588.pdf}
 \caption{Estructura de archivos y carpetas}\label{\detokenize{my-modules:pkg-structure}}\end{figure}
 
 \sphinxAtStartPar
@@ -4652,9 +4659,9 @@ Si estas usando Git Bash en Windows, es posible que ya tengas instalado \sphinxc
 Para probar si ya lo tenes instalado poder ejecutar alguna de estas opciones.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-pip \PYGZhy{}\PYGZhy{}version
+pip\PYG{+w}{ }\PYGZhy{}\PYGZhy{}version
 \PYG{c+c1}{\PYGZsh{} o lo que es lo mismo}
-pip \PYGZhy{}V
+pip\PYG{+w}{ }\PYGZhy{}V
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -4676,14 +4683,14 @@ Descargar el script de instalación \sphinxhref{https://bootstrap.pypa.io/get-pi
 ejecutarlo con Python desde tu terminal.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-python get\PYGZhy{}pip.py
+python\PYG{+w}{ }get\PYGZhy{}pip.py
 \end{sphinxVerbatim}
 
 
 \subsection{Instalar \sphinxstyleliteralintitle{\sphinxupquote{pip}} en Linux (Ubuntu)}
 \label{\detokenize{external-packages:instalar-pip-en-linux-ubuntu}}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-sudo apt install python3\PYGZhy{}pip
+sudo\PYG{+w}{ }apt\PYG{+w}{ }install\PYG{+w}{ }python3\PYGZhy{}pip
 \end{sphinxVerbatim}
 
 
@@ -4693,11 +4700,11 @@ sudo apt install python3\PYGZhy{}pip
 Una vez instalado pip ya podes instalar paquetes localmente.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-pip install \PYGZlt{}nombre\PYGZus{}paquete\PYGZgt{}
+pip\PYG{+w}{ }install\PYG{+w}{ }\PYGZlt{}nombre\PYGZus{}paquete\PYGZgt{}
 \PYG{c+c1}{\PYGZsh{} opcionalmente se puede indicar la versión exacta a instalar}
-pip install \PYGZlt{}nombre\PYGZus{}paquete\PYGZgt{}\PYG{o}{=}\PYG{o}{=}\PYGZlt{}version\PYGZgt{}
+pip\PYG{+w}{ }install\PYG{+w}{ }\PYGZlt{}nombre\PYGZus{}paquete\PYGZgt{}\PYG{o}{=}\PYG{o}{=}\PYGZlt{}version\PYGZgt{}
 \PYG{c+c1}{\PYGZsh{} Instalar una lista de paquetes desde un archivo de texto con los requerimientos}
-pip install \PYGZhy{}r requirements.txt
+pip\PYG{+w}{ }install\PYG{+w}{ }\PYGZhy{}r\PYG{+w}{ }requirements.txt
 \end{sphinxVerbatim}
 
 
@@ -4717,7 +4724,7 @@ Python permite crear y activar estos entornos virtuales con el módulo \sphinxco
 \section{Crear un entorno virtual}
 \label{\detokenize{external-packages:crear-un-entorno-virtual}}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-python \PYGZhy{}m venv \PYGZlt{}carpeta\PYGZus{}donde\PYGZus{}se\PYGZus{}creara\PYGZus{}el\PYGZus{}entorno\PYGZgt{}
+python\PYG{+w}{ }\PYGZhy{}m\PYG{+w}{ }venv\PYG{+w}{ }\PYGZlt{}carpeta\PYGZus{}donde\PYGZus{}se\PYGZus{}creara\PYGZus{}el\PYGZus{}entorno\PYGZgt{}
 \end{sphinxVerbatim}
 
 
@@ -4735,7 +4742,7 @@ Para Windows el comando para activate un entorno virtual es
 Para Linux el comando para activar un entorno es
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nb}{source} \PYGZlt{}carpeta\PYGZus{}donde\PYGZus{}se\PYGZus{}creara\PYGZus{}el\PYGZus{}entorno\PYGZgt{}/bin/activate
+\PYG{n+nb}{source}\PYG{+w}{ }\PYGZlt{}carpeta\PYGZus{}donde\PYGZus{}se\PYGZus{}creara\PYGZus{}el\PYGZus{}entorno\PYGZgt{}/bin/activate
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -4795,7 +4802,7 @@ peticiones de recursos web de una forma muy sencilla.
 Veamos este ejemplo:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{import} \PYG{n+nn}{requests}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{requests}
 
 \PYG{n}{url} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{https://mendiolaza.gob.ar/}\PYG{l+s+s1}{\PYGZsq{}}
 \PYG{n}{response} \PYG{o}{=} \PYG{n}{requests}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{url}\PYG{p}{)}
@@ -4838,7 +4845,7 @@ El formato \sphinxcode{\sphinxupquote{JSON}} es uno de los más usados.
 Veamos un ejemplo de un recurso web en formato \sphinxcode{\sphinxupquote{JSON}}:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{import} \PYG{n+nn}{requests}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{requests}
 
 \PYG{c+c1}{\PYGZsh{} JSON con los datos de un usuario de GitHub}
 \PYG{n}{url} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{https://api.github.com/users/avdata99}\PYG{l+s+s1}{\PYGZsq{}}
@@ -4902,8 +4909,8 @@ Veamos un ejemplo de un recurso web en formato \sphinxcode{\sphinxupquote{txt}}:
 \PYG{l+s+sd}{algunos detalles generales de su contenido}
 \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
 
-\PYG{k+kn}{import} \PYG{n+nn}{requests}
-\PYG{k+kn}{import} \PYG{n+nn}{os}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{requests}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{os}
 
 \PYG{n}{path\PYGZus{}libro} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{florante.txt}\PYG{l+s+s1}{\PYGZsq{}}
 \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{(}\PYG{n}{path\PYGZus{}libro}\PYG{p}{)}\PYG{p}{:}    
@@ -5056,11 +5063,11 @@ para nuestra aplicación.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} crear el entorno}
-python \PYGZhy{}m venv \PYGZlt{}carpeta\PYGZus{}donde\PYGZus{}se\PYGZus{}creara\PYGZus{}el\PYGZus{}entorno\PYGZgt{}
+python\PYG{+w}{ }\PYGZhy{}m\PYG{+w}{ }venv\PYG{+w}{ }\PYGZlt{}carpeta\PYGZus{}donde\PYGZus{}se\PYGZus{}creara\PYGZus{}el\PYGZus{}entorno\PYGZgt{}
 \PYG{c+c1}{\PYGZsh{} activar el entorno (en Windows)}
 \PYGZlt{}carpeta\PYGZus{}donde\PYGZus{}se\PYGZus{}creara\PYGZus{}el\PYGZus{}entorno\PYGZgt{}\PYG{l+s+se}{\PYGZbs{}S}cripts\PYG{l+s+se}{\PYGZbs{}a}ctivate.bat
 \PYG{c+c1}{\PYGZsh{} activar el entorno (en Linux)}
-\PYG{n+nb}{source} \PYGZlt{}carpeta\PYGZus{}donde\PYGZus{}se\PYGZus{}creara\PYGZus{}el\PYGZus{}entorno\PYGZgt{}/bin/activate
+\PYG{n+nb}{source}\PYG{+w}{ }\PYGZlt{}carpeta\PYGZus{}donde\PYGZus{}se\PYGZus{}creara\PYGZus{}el\PYGZus{}entorno\PYGZgt{}/bin/activate
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -5068,7 +5075,7 @@ Para instalar Flask y comenzar nuestra primera aplicación web,
 ejecutamo el siguiente comando en la terminal:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-pip install Flask
+pip\PYG{+w}{ }install\PYG{+w}{ }Flask
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -5076,7 +5083,7 @@ Ahora creamos un archivo llamado \sphinxcode{\sphinxupquote{app.py}} con el sigu
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{} Importar la clase Flask}
-\PYG{k+kn}{from} \PYG{n+nn}{flask} \PYG{k+kn}{import} \PYG{n}{Flask}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{flask}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{Flask}
 
 \PYG{c+c1}{\PYGZsh{} Crear una aplicacion Flask}
 \PYG{n}{app} \PYG{o}{=} \PYG{n}{Flask}\PYG{p}{(}\PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}\PYG{p}{)}
@@ -5084,11 +5091,11 @@ Ahora creamos un archivo llamado \sphinxcode{\sphinxupquote{app.py}} con el sigu
 \PYG{c+c1}{\PYGZsh{} Definir la respuesta que va a devolver nuestro servidor}
 \PYG{c+c1}{\PYGZsh{} cuando alguien acceda a la URL raiz (/)}
 \PYG{n+nd}{@app}\PYG{o}{.}\PYG{n}{route}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{/}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{k}{def} \PYG{n+nf}{hello}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{hello}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
     \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Hola usuario!}\PYG{l+s+s1}{\PYGZsq{}}
 
 \PYG{n+nd}{@app}\PYG{o}{.}\PYG{n}{route}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{/otro\PYGZhy{}recurso}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{k}{def} \PYG{n+nf}{otro}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{otro}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
     \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Hola usuario en \PYGZlt{}i\PYGZgt{}otro recurso!\PYGZlt{}/i\PYGZgt{}}\PYG{l+s+s1}{\PYGZsq{}}
 \end{sphinxVerbatim}
 
@@ -5096,14 +5103,14 @@ Ahora creamos un archivo llamado \sphinxcode{\sphinxupquote{app.py}} con el sigu
 Finalmente ejecutamos el servidor de desarrollo de Flask:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-flask run
+flask\PYG{+w}{ }run
 
 \PYG{c+c1}{\PYGZsh{} Y veremos ...}
-* Environment: production
-WARNING: This is a development server. Do not use it \PYG{k}{in} a production deployment.
-Use a production WSGI server instead.
-* Debug mode: off
-* Running on http://127.0.0.1:5000/ \PYG{o}{(}Press CTRL+C to quit\PYG{o}{)}
+*\PYG{+w}{ }Environment:\PYG{+w}{ }production
+WARNING:\PYG{+w}{ }This\PYG{+w}{ }is\PYG{+w}{ }a\PYG{+w}{ }development\PYG{+w}{ }server.\PYG{+w}{ }Do\PYG{+w}{ }not\PYG{+w}{ }use\PYG{+w}{ }it\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }a\PYG{+w}{ }production\PYG{+w}{ }deployment.
+Use\PYG{+w}{ }a\PYG{+w}{ }production\PYG{+w}{ }WSGI\PYG{+w}{ }server\PYG{+w}{ }instead.
+*\PYG{+w}{ }Debug\PYG{+w}{ }mode:\PYG{+w}{ }off
+*\PYG{+w}{ }Running\PYG{+w}{ }on\PYG{+w}{ }http://127.0.0.1:5000/\PYG{+w}{ }\PYG{o}{(}Press\PYG{+w}{ }CTRL+C\PYG{+w}{ }to\PYG{+w}{ }quit\PYG{o}{)}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -5115,8 +5122,8 @@ vamos a ver la respuesta que definimos en nuestra aplicación:
 En la linea de comandos queda regisro de esa visita
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{l+m}{127}.0.0.1 \PYGZhy{} \PYGZhy{} \PYG{o}{[}\PYG{l+m}{22}/Jan/2022 \PYG{l+m}{11}:54:52\PYG{o}{]} \PYG{l+s+s2}{\PYGZdq{}GET / HTTP/1.1\PYGZdq{}} \PYG{l+m}{200} \PYGZhy{}
-\PYG{l+m}{127}.0.0.1 \PYGZhy{} \PYGZhy{} \PYG{o}{[}\PYG{l+m}{22}/Jan/2022 \PYG{l+m}{11}:54:52\PYG{o}{]} \PYG{l+s+s2}{\PYGZdq{}GET /favicon.ico HTTP/1.1\PYGZdq{}} \PYG{l+m}{404} \PYGZhy{}
+\PYG{l+m}{127}.0.0.1\PYG{+w}{ }\PYGZhy{}\PYG{+w}{ }\PYGZhy{}\PYG{+w}{ }\PYG{o}{[}\PYG{l+m}{22}/Jan/2022\PYG{+w}{ }\PYG{l+m}{11}:54:52\PYG{o}{]}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}GET / HTTP/1.1\PYGZdq{}}\PYG{+w}{ }\PYG{l+m}{200}\PYG{+w}{ }\PYGZhy{}
+\PYG{l+m}{127}.0.0.1\PYG{+w}{ }\PYGZhy{}\PYG{+w}{ }\PYGZhy{}\PYG{+w}{ }\PYG{o}{[}\PYG{l+m}{22}/Jan/2022\PYG{+w}{ }\PYG{l+m}{11}:54:52\PYG{o}{]}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}GET /favicon.ico HTTP/1.1\PYGZdq{}}\PYG{+w}{ }\PYG{l+m}{404}\PYG{+w}{ }\PYGZhy{}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -5185,8 +5192,8 @@ donde \sphinxstyleemphasis{frontend} y \sphinxstyleemphasis{backend} sean un poc
 Nuestra archivo \sphinxcode{\sphinxupquote{app.py}}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{from} \PYG{n+nn}{flask} \PYG{k+kn}{import} \PYG{n}{Flask}\PYG{p}{,} \PYG{n}{render\PYGZus{}template}
-\PYG{k+kn}{from} \PYG{n+nn}{cripto}\PYG{n+nn}{.}\PYG{n+nn}{data} \PYG{k+kn}{import} \PYG{n}{get\PYGZus{}price}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{flask}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{Flask}\PYG{p}{,} \PYG{n}{render\PYGZus{}template}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{cripto}\PYG{n+nn}{.}\PYG{n+nn}{data}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{get\PYGZus{}price}
 
 
 \PYG{n}{app} \PYG{o}{=} \PYG{n}{Flask}\PYG{p}{(}
@@ -5199,14 +5206,14 @@ Nuestra archivo \sphinxcode{\sphinxupquote{app.py}}
 
 
 \PYG{n+nd}{@app}\PYG{o}{.}\PYG{n}{route}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{/}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{k}{def} \PYG{n+nf}{index}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{index}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
     \PYG{n}{site\PYGZus{}title} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Mi aplicacion web}\PYG{l+s+s1}{\PYGZsq{}}
     \PYG{k}{return} \PYG{n}{render\PYGZus{}template}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{index.html}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{site\PYGZus{}title}\PYG{o}{=}\PYG{n}{site\PYGZus{}title}\PYG{p}{)}
 
 
 \PYG{n+nd}{@app}\PYG{o}{.}\PYG{n}{route}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{/price/\PYGZlt{}symbol\PYGZgt{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \PYG{n+nd}{@app}\PYG{o}{.}\PYG{n}{route}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{/price/\PYGZlt{}symbol\PYGZgt{}/\PYGZlt{}to\PYGZus{}symbol\PYGZgt{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{k}{def} \PYG{n+nf}{datos}\PYG{p}{(}\PYG{n}{symbol}\PYG{p}{,} \PYG{n}{to\PYGZus{}symbol}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{USDT}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{datos}\PYG{p}{(}\PYG{n}{symbol}\PYG{p}{,} \PYG{n}{to\PYGZus{}symbol}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{USDT}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{:}
     \PYG{n}{data} \PYG{o}{=} \PYG{n}{get\PYGZus{}price}\PYG{p}{(}\PYG{n}{symbol}\PYG{p}{,} \PYG{n}{to\PYGZus{}symbol}\PYG{p}{)}
     \PYG{n}{context} \PYG{o}{=} \PYG{p}{\PYGZob{}}
         \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{symbol}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{n}{symbol}\PYG{p}{,}
@@ -5221,11 +5228,11 @@ Nuestra archivo \sphinxcode{\sphinxupquote{app.py}}
 Nuestro archivo \sphinxcode{\sphinxupquote{cripto/data.py}} (recuerda agregar un archivo vacío \sphinxcode{\sphinxupquote{cripto/\_\_init\_\_.py}})
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{import} \PYG{n+nn}{requests}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{requests}
 
 
-\PYG{k}{def} \PYG{n+nf}{get\PYGZus{}price}\PYG{p}{(}\PYG{n}{symbol}\PYG{p}{,} \PYG{n}{to\PYGZus{}symbol}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{USDT}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{:}
-    \PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Obtener el precio de alguna criptomoneda \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{get\PYGZus{}price}\PYG{p}{(}\PYG{n}{symbol}\PYG{p}{,} \PYG{n}{to\PYGZus{}symbol}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{USDT}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{} Obtener el precio de alguna criptomoneda \PYGZdq{}\PYGZdq{}\PYGZdq{}}
     \PYG{n}{url} \PYG{o}{=} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{https://api2.binance.com/api/v3/ticker/24hr?symbol=}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{symbol}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{to\PYGZus{}symbol}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
     \PYG{n}{response} \PYG{o}{=} \PYG{n}{requests}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{url}\PYG{p}{)}
 
@@ -5239,7 +5246,24 @@ El estilo CSS de nuestro sitio en \sphinxcode{\sphinxupquote{/static/base.css}}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{h2} \PYG{p}{\PYGZob{}}
-    \PYG{n}{color}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{}660000;}
+    \PYG{n}{color}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{}064096;}
+    \PYG{n}{font}\PYG{o}{\PYGZhy{}}\PYG{n}{size}\PYG{p}{:} \PYG{l+m+mf}{1.2}\PYG{n}{em}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{h3} \PYG{p}{\PYGZob{}}
+    \PYG{n}{color}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{}05624c;}
+    \PYG{n}{font}\PYG{o}{\PYGZhy{}}\PYG{n}{size}\PYG{p}{:} \PYG{l+m+mf}{1.1}\PYG{n}{em}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{o}{.}\PYG{n}{moneda} \PYG{p}{\PYGZob{}}
+    \PYG{n}{font}\PYG{o}{\PYGZhy{}}\PYG{n}{weight}\PYG{p}{:} \PYG{n}{bold}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{}lista\PYGZhy{}monedas \PYGZob{}}
+    \PYG{n}{margin}\PYG{p}{:} \PYG{l+m+mi}{20}\PYG{n}{px}\PYG{p}{;}
+    \PYG{n}{padding}\PYG{p}{:} \PYG{l+m+mi}{20}\PYG{n}{px}\PYG{p}{;}
+    \PYG{n}{border}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{n}{px} \PYG{n}{solid} \PYG{c+c1}{\PYGZsh{}222222;}
+    \PYG{n}{background}\PYG{o}{\PYGZhy{}}\PYG{n}{color}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{}bbbbbb33;}
 \PYG{p}{\PYGZcb{}}
 \end{sphinxVerbatim}
 
@@ -5247,90 +5271,122 @@ El estilo CSS de nuestro sitio en \sphinxcode{\sphinxupquote{/static/base.css}}
 El código JavaScript de nuestro sitio en \sphinxcode{\sphinxupquote{/static/base.js}}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-
+\PYG{n}{function} \PYG{n}{agregar\PYGZus{}moneda}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{o}{/}\PYG{o}{*}
+    \PYG{n}{agregar} \PYG{n}{la} \PYG{n}{moneda} \PYG{n}{que} \PYG{n}{el} \PYG{n}{usuario} \PYG{n}{escribio} \PYG{n}{en} \PYG{n}{la} \PYG{n}{caja} \PYG{n}{de} \PYG{n}{texto}
+    \PYG{n}{a} \PYG{n}{la} \PYG{n}{lista} \PYG{n}{de} \PYG{n}{criptomonedas} \PYG{n}{que} \PYG{n}{se} \PYG{n}{muestran} \PYG{n}{en} \PYG{n}{la} \PYG{n}{pagina}\PYG{o}{.}
+    \PYG{o}{*}\PYG{o}{/}
+    \PYG{n}{let} \PYG{n}{symbol} \PYG{o}{=} \PYG{n}{document}\PYG{o}{.}\PYG{n}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{nueva\PYGZhy{}moneda}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{value}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{symbol} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{alert}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Debe ingresar un símbolo de moneda!}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+        \PYG{k}{return}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{let} \PYG{n}{a} \PYG{o}{=} \PYG{n}{document}\PYG{o}{.}\PYG{n}{createElement}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{a}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}               
+    \PYG{n}{let} \PYG{n}{link} \PYG{o}{=} \PYG{n}{document}\PYG{o}{.}\PYG{n}{createTextNode}\PYG{p}{(}\PYG{n}{symbol}\PYG{p}{)}\PYG{p}{;}
+    \PYG{n}{a}\PYG{o}{.}\PYG{n}{appendChild}\PYG{p}{(}\PYG{n}{link}\PYG{p}{)}\PYG{p}{;} 
+    \PYG{n}{a}\PYG{o}{.}\PYG{n}{href} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{/price/}\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n}{symbol}\PYG{p}{;} 
+    \PYG{n}{let} \PYG{n}{lista\PYGZus{}monedas} \PYG{o}{=} \PYG{n}{document}\PYG{o}{.}\PYG{n}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{lista\PYGZhy{}monedas}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+    \PYG{n}{let} \PYG{n}{new\PYGZus{}li} \PYG{o}{=} \PYG{n}{document}\PYG{o}{.}\PYG{n}{createElement}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{li}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+    \PYG{n}{new\PYGZus{}li}\PYG{o}{.}\PYG{n}{appendChild}\PYG{p}{(}\PYG{n}{a}\PYG{p}{)}\PYG{p}{;}
+    \PYG{n}{lista\PYGZus{}monedas}\PYG{o}{.}\PYG{n}{appendChild}\PYG{p}{(}\PYG{n}{new\PYGZus{}li}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
 El template HTML de la home de nuestra aplicacion web en \sphinxcode{\sphinxupquote{/templates/index.html}}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}!DOCTYPE html\PYGZgt{}
-\PYGZlt{}html lang=\PYGZdq{}es\PYGZdq{}\PYGZgt{}
-\PYGZlt{}head\PYGZgt{}
-    \PYGZlt{}meta charset=\PYGZdq{}UTF\PYGZhy{}8\PYGZdq{}\PYGZgt{}
-    \PYGZlt{}link rel=\PYGZdq{}stylesheet\PYGZdq{} href=\PYGZsq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZdq{}static\PYGZdq{}, filename=\PYGZdq{}base.css\PYGZdq{}) \PYGZcb{}\PYGZcb{}\PYGZsq{}\PYGZgt{}
-    \PYGZlt{}script src=\PYGZsq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZdq{}static\PYGZdq{}, filename=\PYGZdq{}base.js\PYGZdq{}) \PYGZcb{}\PYGZcb{}\PYGZsq{}\PYGZgt{}\PYGZlt{}/script\PYGZgt{}
-    \PYGZlt{}title\PYGZgt{}\PYGZob{}\PYGZob{} site\PYGZus{}title \PYGZcb{}\PYGZcb{}\PYGZlt{}/title\PYGZgt{}
-\PYGZlt{}/head\PYGZgt{}
-\PYGZlt{}body\PYGZgt{}
-    \PYGZlt{}h2\PYGZgt{}\PYGZob{}\PYGZob{} site\PYGZus{}title \PYGZcb{}\PYGZcb{}\PYGZlt{}/h2\PYGZgt{}
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html} \PYG{n+na}{lang}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}es\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}UTF\PYGZhy{}8\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{link} \PYG{n+na}{rel}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}stylesheet\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZdq{}static\PYGZdq{}, filename=\PYGZdq{}base.css\PYGZdq{}) \PYGZcb{}\PYGZcb{}\PYGZsq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZdq{}static\PYGZdq{}, filename=\PYGZdq{}base.js\PYGZdq{}) \PYGZcb{}\PYGZcb{}\PYGZsq{}}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}\PYGZob{}\PYGZob{} site\PYGZus{}title \PYGZcb{}\PYGZcb{}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h2}\PYG{p}{\PYGZgt{}}\PYGZob{}\PYGZob{} site\PYGZus{}title \PYGZcb{}\PYGZcb{}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{h2}\PYG{p}{\PYGZgt{}}
 
-    \PYGZlt{}p\PYGZgt{}
-    \PYGZlt{}h3\PYGZgt{}Ver precios de criptomonedas\PYGZlt{}/h3\PYGZgt{}
-    \PYGZlt{}ul\PYGZgt{}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h3}\PYG{p}{\PYGZgt{}}Ver precios de criptomonedas\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{h3}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{ul} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}lista\PYGZhy{}monedas\PYGZdq{}}\PYG{p}{\PYGZgt{}}
         \PYGZob{}\PYGZpc{} for coin in [\PYGZsq{}BTC\PYGZsq{}, \PYGZsq{}ETH\PYGZsq{}, \PYGZsq{}LTC\PYGZsq{}] \PYGZpc{}\PYGZcb{}
-        \PYGZlt{}li\PYGZgt{}
-        \PYGZlt{}a href=\PYGZdq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZsq{}datos\PYGZsq{}, symbol=coin) \PYGZcb{}\PYGZcb{}\PYGZdq{}\PYGZgt{}
-            \PYGZlt{}b\PYGZgt{}\PYGZob{}\PYGZob{} coin \PYGZcb{}\PYGZcb{}\PYGZlt{}/b\PYGZgt{}
-        \PYGZlt{}/a\PYGZgt{}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{li} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}monedas\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZsq{}datos\PYGZsq{}, symbol=coin) \PYGZcb{}\PYGZcb{}\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYGZob{}\PYGZob{} coin \PYGZcb{}\PYGZcb{}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
         \PYGZob{}\PYGZpc{} endfor \PYGZpc{}\PYGZcb{}
-    \PYGZlt{}/ul\PYGZgt{}
-    \PYGZlt{}/p\PYGZgt{}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{ul}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}nueva\PYGZhy{}moneda\PYGZdq{}} \PYG{n+na}{placeholder}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Introduce una nueva moneda\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}boton\PYGZhy{}nueva\PYGZhy{}moneda\PYGZdq{}} \PYG{n+na}{onclick}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}agregar\PYGZus{}moneda()\PYGZdq{}}\PYG{p}{\PYGZgt{}}Añadir\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
 
-\PYGZlt{}/body\PYGZgt{}
-\PYGZlt{}/html\PYGZgt{}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
 El template HTML de la pagina de detalle de una criptomoneda en \sphinxcode{\sphinxupquote{/templates/datos.html}}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}!DOCTYPE html\PYGZgt{}
-\PYGZlt{}html lang=\PYGZdq{}es\PYGZdq{}\PYGZgt{}
-\PYGZlt{}head\PYGZgt{}
-    \PYGZlt{}meta charset=\PYGZdq{}UTF\PYGZhy{}8\PYGZdq{}\PYGZgt{}
-    \PYGZlt{}title\PYGZgt{}\PYGZob{}\PYGZob{} site\PYGZus{}title \PYGZcb{}\PYGZcb{}\PYGZlt{}/title\PYGZgt{}
-\PYGZlt{}/head\PYGZgt{}
-\PYGZlt{}body\PYGZgt{}
-    \PYGZlt{}h2\PYGZgt{}\PYGZob{}\PYGZob{} site\PYGZus{}title \PYGZcb{}\PYGZcb{}\PYGZlt{}/h2\PYGZgt{}
-    \PYGZlt{}p\PYGZgt{}
-      Precio de \PYGZob{}\PYGZob{} symbol \PYGZcb{}\PYGZcb{} a \PYGZob{}\PYGZob{} to\PYGZus{}symbol \PYGZcb{}\PYGZcb{}: \PYGZlt{}b\PYGZgt{}\PYGZob{}\PYGZob{} data.lastPrice \PYGZcb{}\PYGZcb{}\PYGZlt{}/b\PYGZgt{}
-    \PYGZlt{}/p\PYGZgt{}
-    \PYGZlt{}p\PYGZgt{}
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html} \PYG{n+na}{lang}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}es\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}UTF\PYGZhy{}8\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{link} \PYG{n+na}{rel}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}stylesheet\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZdq{}static\PYGZdq{}, filename=\PYGZdq{}base.css\PYGZdq{}) \PYGZcb{}\PYGZcb{}\PYGZsq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZdq{}static\PYGZdq{}, filename=\PYGZdq{}base.js\PYGZdq{}) \PYGZcb{}\PYGZcb{}\PYGZsq{}}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}\PYGZob{}\PYGZob{} site\PYGZus{}title \PYGZcb{}\PYGZcb{}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h2}\PYG{p}{\PYGZgt{}}\PYGZob{}\PYGZob{} site\PYGZus{}title \PYGZcb{}\PYGZcb{}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{h2}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+      Precio de \PYGZob{}\PYGZob{} symbol \PYGZcb{}\PYGZcb{} a \PYGZob{}\PYGZob{} to\PYGZus{}symbol \PYGZcb{}\PYGZcb{}: \PYG{p}{\PYGZlt{}}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}\PYGZob{}\PYGZob{} data.lastPrice \PYGZcb{}\PYGZcb{}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{b}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
       Otros datos: \PYGZob{}\PYGZob{} data \PYGZcb{}\PYGZcb{}
-    \PYGZlt{}/p\PYGZgt{}
-    \PYGZlt{}p\PYGZgt{}
-      \PYGZlt{}a href=\PYGZdq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZsq{}index\PYGZsq{}) \PYGZcb{}\PYGZcb{}\PYGZdq{}\PYGZgt{}Volver al inicio\PYGZlt{}/a\PYGZgt{}
-    \PYGZlt{}/p\PYGZgt{}
-    \PYGZlt{}p\PYGZgt{}
-      \PYGZlt{}h3\PYGZgt{}Ver otros cambios\PYGZlt{}/h3\PYGZgt{}
-      \PYGZlt{}ul\PYGZgt{}
-        \PYGZob{}\PYGZpc{} for coin in [\PYGZsq{}BTC\PYGZsq{}, \PYGZsq{}ETH\PYGZsq{}, \PYGZsq{}LTC\PYGZsq{}] \PYGZpc{}\PYGZcb{}
-        \PYGZlt{}li\PYGZgt{}
-          \PYGZlt{}a href=\PYGZdq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZsq{}datos\PYGZsq{}, symbol=coin) \PYGZcb{}\PYGZcb{}\PYGZdq{}\PYGZgt{}
-            \PYGZlt{}b\PYGZgt{}\PYGZob{}\PYGZob{} coin \PYGZcb{}\PYGZcb{}\PYGZlt{}/b\PYGZgt{}
-          \PYGZlt{}/a\PYGZgt{}
-        \PYGZob{}\PYGZpc{} endfor \PYGZpc{}\PYGZcb{}
-      \PYGZlt{}/ul\PYGZgt{}
-    \PYGZlt{}/p\PYGZgt{}
-\PYGZlt{}/body\PYGZgt{}
-\PYGZlt{}/html\PYGZgt{}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+      \PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZob{} url\PYGZus{}for(\PYGZsq{}index\PYGZsq{}) \PYGZcb{}\PYGZcb{}\PYGZdq{}}\PYG{p}{\PYGZgt{}}Volver al inicio\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
 \end{sphinxVerbatim}
+
+
+\section{Tarea}
+\label{\detokenize{flask-2:tarea}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Crear una lista de criptomonedas en el backend y sacar la que esta en el frontend
+(la que dice \sphinxcode{\sphinxupquote{{[}\textquotesingle{}BTC\textquotesingle{}, \textquotesingle{}ETH\textquotesingle{}, \textquotesingle{}LTC\textquotesingle{}{]}}}). Se deberá pasar como variable de contexto
+al template.
+Asegurarse que el sitio siga funcionando de la misma forma.
+
+\item {} 
+\sphinxAtStartPar
+Agrega un nuevo template HTML para mostrar un mensaje de error cuando
+no se encuentre la criptomoneda buscada.
+\sphinxstylestrong{Nota:} Cuando una criptomenoda no existe, el API devuelven
+\sphinxcode{\sphinxupquote{\{\textquotesingle{}code\textquotesingle{}: \sphinxhyphen{}1121, \textquotesingle{}msg\textquotesingle{}: \textquotesingle{}Invalid symbol.\textquotesingle{}\}}}.
+
+\end{itemize}
 
 
 \chapter{Indices y tablas}
 \label{\detokenize{index:indices-y-tablas}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
-\DUrole{xref,std,std-ref}{genindex}
+\DUrole{xref}{\DUrole{std}{\DUrole{std-ref}{genindex}}}
 
 \item {} 
 \sphinxAtStartPar
-\DUrole{xref,std,std-ref}{modindex}
+\DUrole{xref}{\DUrole{std}{\DUrole{std-ref}{modindex}}}
 
 \item {} 
 \sphinxAtStartPar
-\DUrole{xref,std,std-ref}{search}
+\DUrole{xref}{\DUrole{std}{\DUrole{std-ref}{search}}}
 
 \end{itemize}
 
