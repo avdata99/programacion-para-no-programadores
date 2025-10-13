@@ -3,3 +3,7 @@
     margin-right: 12%;
     border: 1px solid #0000004a;
 }
+
+.wy-nav-content {
+    max-width: 90% !important;
+}
