@@ -15,7 +15,21 @@ Hay muchos productos disponibles y todos tienen funcionalidades similares.
 Visual Studio Code
 ------------------
 
+Visual Studio Code (VSCode) es un editor de texto desarrollado por Microsoft
+y es gratuito. Tambien existe una versión más libre llamada VSCodium.  
+En este curso podremos usar cualquiera de los dos indistintamente.  
+
+VSCodium
+^^^^^^^^
+
+.. image:: /_static/imgs/vscodium-ms-python.png
+
+VSCode
+^^^^^^
+
 .. image:: /_static/imgs/vscode1.png
+
+En ambos casos vamos a instalar la extensión oficial de Python.  
 
 Algunas funcionalidades interesantes:
 

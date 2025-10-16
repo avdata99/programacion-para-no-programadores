@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recibir datos del usuario input &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.8</title>
+  <title>Instalando Python &mdash; documentación de Curso de programación para no programadores con Python. - v 0.4.8</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
@@ -22,8 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Entorno de desarrollo: Visual Studio Code" href="vscode.html" />
-    <link rel="prev" title="Cadenadas de caracteres o strings &lt;str&gt;" href="str.html" /> 
+    <link rel="next" title="¿Donde escribimos nuestro código?" href="donde.html" />
+    <link rel="prev" title="¿Que hace un programador?" href="hace.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,15 +48,16 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="que.html">¿Que es programar?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hace.html">¿Que hace un programador?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python.html">Instalando Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instalando Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#consola-python">Consola Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usando-powershell">Usando PowerShell</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="donde.html">¿Donde escribimos nuestro código?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interactivo.html">Escribiendo nuestro primer código</a></li>
 <li class="toctree-l1"><a class="reference internal" href="int.html">Números enteros &lt;int&gt;</a></li>
 <li class="toctree-l1"><a class="reference internal" href="str.html">Cadenadas de caracteres o <em>strings</em> &lt;str&gt;</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#tareas">Tareas</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="vscode.html">Entorno de desarrollo: Visual Studio Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fn.html">Funciones en Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="builtins.html">Funciones incluidas en Python</a></li>
@@ -97,57 +98,69 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code></li>
+      <li class="breadcrumb-item active">Instalando Python</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/input.rst" class="fa fa-github"> Editar en GitHub</a>
+              <a href="https://github.com/avdata99/programacion-para-no-programadores/edit/master/source/python.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="str.html" class="btn btn-neutral float-left" title="Cadenadas de caracteres o strings &lt;str&gt;" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="vscode.html" class="btn btn-neutral float-right" title="Entorno de desarrollo: Visual Studio Code" accesskey="n">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="hace.html" class="btn btn-neutral float-left" title="¿Que hace un programador?" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="donde.html" class="btn btn-neutral float-right" title="¿Donde escribimos nuestro código?" accesskey="n">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="recibir-datos-del-usuario-input">
-<h1>Recibir datos del usuario <code class="docutils literal notranslate"><span class="pre">input</span></code><a class="headerlink" href="#recibir-datos-del-usuario-input" title="Link to this heading"></a></h1>
-<p>Es posible detener la ejecución de tu programa para solicitar
-al usuario de nuestro programa que ingrese datos.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Ingresa tu nombre: &#39;</span><span class="p">)</span>
-<span class="n">apellido</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Ingresa tu apellido: &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hola </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">apellido</span><span class="si">}</span><span class="s1">!&#39;</span><span class="p">)</span>
+  <section id="instalando-python">
+<h1>Instalando Python<a class="headerlink" href="#instalando-python" title="Link to this heading"></a></h1>
+<p>Para comenzar a programar en Python, primero necesitamos instalar Python en nuestra computadora.
+Python es el lenguaje de programación que usaremos en este curso es fácil de aprender y con
+una gran comunidad de usuarios.</p>
+<p>El primer paso es descargar el instalador de Python desde su sitio web oficial: <a class="reference external" href="https://www.python.org/">https://www.python.org/</a></p>
+<img alt="_images/install-python-win.png" src="_images/install-python-win.png" />
+<p>… y luego seguir los pasos del instalador.</p>
+<img alt="_images/install-python-win-2.png" src="_images/install-python-win-2.png" />
+<img alt="_images/install-python-win-3.png" src="_images/install-python-win-3.png" />
+<img alt="_images/install-python-win-4.png" src="_images/install-python-win-4.png" />
+<img alt="_images/install-python-win-5.png" src="_images/install-python-win-5.png" />
+<img alt="_images/install-python-win-6.png" src="_images/install-python-win-6.png" />
+<section id="consola-python">
+<h2>Consola Python<a class="headerlink" href="#consola-python" title="Link to this heading"></a></h2>
+<p>Listo, ya tenemos Python instalado en nuestra computadora.
+Ya podemos abrir una terminal (o consola) de Python y probar que todo funciona correctamente.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Probando&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>La función <code class="docutils literal notranslate"><span class="pre">input</span></code> devuelve como <em>string</em> lo que el usuario ingresa.
-Si necesitaras un objeto de tipo <code class="docutils literal notranslate"><span class="pre">int</span></code> (por ejemplo para hacer cálculos)
-podes hacer la transformación con <code class="docutils literal notranslate"><span class="pre">int(variable_string)</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;POTENCIAS&#39;</span><span class="p">)</span>
-<span class="n">nro</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Ingresa un numero: &#39;</span><span class="p">)</span>
-<span class="n">base</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nro</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s1">² = </span><span class="si">{</span><span class="n">base</span><span class="o">**</span><span class="mi">2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s1">³ = </span><span class="si">{</span><span class="n">base</span><span class="o">**</span><span class="mi">3</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s1">⁴ = </span><span class="si">{</span><span class="n">base</span><span class="o">**</span><span class="mi">4</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s1">⁵ = </span><span class="si">{</span><span class="n">base</span><span class="o">**</span><span class="mi">5</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="sd">&quot;&quot;&quot; Ejemplo</span>
-<span class="sd">POTENCIAS</span>
-<span class="sd">Ingresa un numero: 7</span>
-<span class="sd">7² = 49</span>
-<span class="sd">7³ = 343</span>
-<span class="sd">7⁴ = 2401</span>
-<span class="sd">7⁵ = 16807</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<img alt="_images/install-python-win-7.png" src="_images/install-python-win-7.png" />
+<p>Podemos tambien probar que Python funciona correctamente desde PowerShell (que será nuestra
+terminal en Windows).</p>
+<p>Podemos ver la versión de Python instalada con el comando:
+.. code-block:: powershell</p>
+<blockquote>
+<div><p>python -V</p>
+</div></blockquote>
+<img alt="_images/install-python-win-8-test-powershell.png" src="_images/install-python-win-8-test-powershell.png" />
+<p>Tambien alli mismo podemos abrir la terminal interactiva de Python con el comando:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
 </pre></div>
 </div>
-<section id="tareas">
-<h2>Tareas<a class="headerlink" href="#tareas" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p>¿Qué pasa si en el último ejemplo el usuario inserta una letra en lugar
-de un número? ¿Por qué?.</p></li>
-<li><p>Escribir un programa que le pida al usuario que ingrese los datos
-necesarios y calcule el <a class="reference external" href="https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal">índice de masa corporal</a>.</p></li>
-</ul>
+</section>
+<section id="usando-powershell">
+<h2>Usando PowerShell<a class="headerlink" href="#usando-powershell" title="Link to this heading"></a></h2>
+<img alt="_images/python-win-9-powershell-ni-notepad.png" src="_images/python-win-9-powershell-ni-notepad.png" />
+<p>Aqui podemos ver el uso de algunos comandos básicos de PowerShell (la terminal que usaremos en Windows):</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">nombre_carpeta</span></code>:</dt><dd><p>Crea una nueva carpeta con el nombre indicado.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">nombre_carpeta</span></code>:</dt><dd><p>Cambia el directorio actual a la carpeta indicada.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ni</span> <span class="pre">nombre_archivo</span></code>:</dt><dd><p>Crea un nuevo archivo con el nombre indicado.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">notepad</span> <span class="pre">nombre_archivo.py</span></code>:</dt><dd><p>Abre el archivo indicado con el editor de texto Notepad (en este caso un archivo Python).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">nombre_archivo.py</span></code>:</dt><dd><p>Ejecuta el archivo Python indicado.</p>
+</dd>
+</dl>
 </section>
 </section>
 
@@ -155,8 +168,8 @@ necesarios y calcule el <a class="reference external" href="https://es.wikipedia
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="str.html" class="btn btn-neutral float-left" title="Cadenadas de caracteres o strings &lt;str&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="vscode.html" class="btn btn-neutral float-right" title="Entorno de desarrollo: Visual Studio Code" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="hace.html" class="btn btn-neutral float-left" title="¿Que hace un programador?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="donde.html" class="btn btn-neutral float-right" title="¿Donde escribimos nuestro código?" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

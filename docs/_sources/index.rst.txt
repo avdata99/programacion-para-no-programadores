@@ -9,6 +9,7 @@ El presente curso esta orientado a comenzar a programar desde cero usando el len
 
    que
    hace
+   python
    donde
    interactivo
    int
