@@ -8,7 +8,7 @@ import turtle
 # sets window to 200x200 pixels, in upper left of screen
 turtle.setup(width=600, height=400, startx=0, starty=0)
 turtle.colormode(255)
-
+turtle.speed(0)
 for x in range(1, 250):
     move = x * 0.85
     turtle.forward(move)
