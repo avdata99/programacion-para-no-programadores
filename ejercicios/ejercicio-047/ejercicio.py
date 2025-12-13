@@ -12,22 +12,24 @@ entender como funciona y por que falla.
 
 from random import randint
 
+
 def tirar_dados(lados=6, veces=100):
     """ Generar aleatoriamente los tiros de un lado de cantidad
         de lados variable.
     """
-    
+
     tiros = []
     for _ in range(veces):
         numero = randint(1, lados)
         tiros.append(numero)
-    
+
     return tiros
+
 
 def detectar_escaleras(lista_tiros):
     """ Detectar las escaleras ascendentes encontradas
         en los tiros de al menos 3 elementos """
-    
+
     # aqui guardamos las escaleras que se consiguieron con 3 o más elementos
     escaleras_buenas = []
     # lista temporal para ir testeando todos los tiros

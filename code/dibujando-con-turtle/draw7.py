@@ -3,7 +3,8 @@ instalar python3-tk
 Linux: 
  - sudo apt-get install python3-tk
 """
-import turtle 
+import turtle
+
 
 # sets window to 200x200 pixels, in upper left of screen
 turtle.setup(width=600, height=400, startx=0, starty=0)
