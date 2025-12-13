@@ -9,6 +9,7 @@ epub/
 source/code
 source/ejercicios
 code/tarea*
+code/requests/gpt/settings.py
 
 .env
 uv.lock
