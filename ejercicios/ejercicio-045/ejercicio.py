@@ -18,10 +18,10 @@ def carta_poker_al_azar():
 
 def carta_espaniola_al_azar():
     palos = ['oro', 'basto', 'espada', 'copa']
-    
+    numeros= range(1,13)
     # corregir estas dos lineas para devolver valores válidos
-    nro = 0
-    palo = ""
+    nro = choice(numeros)
+    palo = choice(palos)
 
     carta = {"numero": nro, "palo": palo}
     return carta
