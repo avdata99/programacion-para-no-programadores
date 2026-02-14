@@ -5,7 +5,8 @@ de los parámetros pasados a y b.
 
 
 def suma(a, b):
-    pass
+    sum= a + b
+    return sum
 
 
 # ------------------------------------------------------------------------
