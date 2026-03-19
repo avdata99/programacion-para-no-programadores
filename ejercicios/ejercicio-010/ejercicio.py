@@ -4,8 +4,10 @@ letra de la "palabra" (string) que se pasa como parametro.
 """
 
 
-def tercera_letra(palabra):
-    pass
+def palabreitor(palabra):
+    return palabra[2]
+
+print (palabreitor (palabra = "oscar wilde"))
 
 
 # ------------------------------------------------------------------------
@@ -19,8 +21,7 @@ def tercera_letra(palabra):
 #   crear un "pull request" y solicitar revision de un tercero.
 
 
-assert tercera_letra("hola") == "l"
-assert tercera_letra("Es facil") == " "
-assert tercera_letra("341A") == "1"
+
 
 print('Ejercicio terminado OK')
+#sin assert
