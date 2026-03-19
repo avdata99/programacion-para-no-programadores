@@ -9,10 +9,13 @@ Tarea:
 """
 
 
+from random import random
+
+
 def generar_quiniela(minimo=0, maximo=9999, total_numeros=10):
     """ Generar varios numeros al azar definidos
         entre máximo y minimo (sin numeros duplicados) """
-    return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    return random[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 numeros_quiniela = generar_quiniela()
 print(f'Numeros resultantes {numeros_quiniela}')
